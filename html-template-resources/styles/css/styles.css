@@ -316,7 +316,7 @@ body table .module-title {
         max-width: 220px;
     }
     .ui.visible.left.vertical.sidebar.menu {
-        width: 215it pullpx;
+        width: 215px;
         padding-left: 15px;
     }
 }

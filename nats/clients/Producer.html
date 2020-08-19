@@ -359,7 +359,7 @@ The <code>nats:Producer</code> needs the <code>nats:Connection</code> to be init
             <h2 > publish </h2>
     </div>
     <pre class="method-signature">
-        <code class="language-ballerina break-spaces">function publish(<span class="builtin-type">string</span> subject, <a href="../../nats/types.html#Content">Content</a> data, <span class="builtin-type">string</span> | <span class="builtin-type">service</span> | <span class="builtin-type">()</span> replyTo) returns <a href="../../nats/errors.html#Error">Error</a>? </code>
+        <code class="language-ballerina break-spaces">function publish(<span class="builtin-type">string</span> subject, <a href="../../nats/types.html#Content">Content</a> data, <span class="builtin-type">string</span> | <span class="builtin-type">service</span> replyTo) returns <a href="../../nats/errors.html#Error">Error</a>? </code>
     </pre>
     <div class="function-desc">
         
@@ -406,8 +406,8 @@ The <code>nats:Producer</code> needs the <code>nats:Connection</code> to be init
                 <ul>
                     <li>
                         <span >replyTo</span>
-                        <span class="type">  <span class="builtin-type">string</span> | <span class="builtin-type">service</span> | <span class="builtin-type">()</span> </span>
-                        <span class="default"> (default ())</span>
+                        <span class="type">  <span class="builtin-type">string</span> | <span class="builtin-type">service</span> </span>
+                        <span class="default"> (default &lt;(string|service)?&gt; ())</span>
                     </li>
                     <p>
                         
@@ -487,7 +487,7 @@ The <code>nats:Producer</code> needs the <code>nats:Connection</code> to be init
                     <li>
                         <span >duration</span>
                         <span class="type">  <span class="builtin-type">int?</span> </span>
-                        <span class="default"> (default ())</span>
+                        <span class="default"> (default &lt;int?&gt; ())</span>
                     </li>
                     <p>
                         
