@@ -1,0 +1,1020 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="This module provides Ballerina transaction manager implementation.
+">
+    <meta name="keywords" content="ballerina,ballerina lang,api docs,transactions">
+
+    <title>API Docs - Functions : transactions</title>
+
+    <script src="../html-template-resources/jquery.min.js"></script>
+    <link rel="stylesheet" href="../html-template-resources/semantic.min.css">
+    <link rel="stylesheet" href="../html-template-resources/components/icon.min.css">
+    <link rel="stylesheet" href="../html-template-resources/styles/css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/themes/prism.min.css" rel="stylesheet" />
+    <script src="../html-template-resources/semantic.min.js"></script>
+
+</head>
+
+
+<body>
+    <div class="pusher">
+        <div class="mobile-logo-div">
+            <div class="ui secondary menu">
+                <a href="../index.html">
+                    <img class="mobile-logo" src="../html-template-resources/images/ballerina-logo.png">
+                </a>
+                <div class="right item">
+                    <button class="ui icon button" onclick="toggleMenu()">
+                     <i class="large bars icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="toc">
+            <div class="ui visible left vertical sidebar menu">
+                <a href="
+                    ../index.html">
+                    <img class="logo" src="../html-template-resources/images/ballerina-logo.png">
+                </a>
+                
+                    
+                        <div class="header capitalize">
+                            
+    Functions
+
+                        </div>
+                        <div class="menu">
+                            
+    
+        <a class="item" href="#ballerina/transactions:0.5.0.&lt;init&gt;0">ballerina/transactions:0.5.0.&lt;init&gt;0</a>
+    
+        <a class="item" href="#ballerina/transactions:0.5.0.&lt;init&gt;1">ballerina/transactions:0.5.0.&lt;init&gt;1</a>
+    
+        <a class="item" href="#ballerina/transactions:0.5.0.&lt;init&gt;2">ballerina/transactions:0.5.0.&lt;init&gt;2</a>
+    
+        <a class="item" href="#ballerina/transactions:0.5.0.&lt;init&gt;3">ballerina/transactions:0.5.0.&lt;init&gt;3</a>
+    
+        <a class="item" href="#ballerina/transactions:0.5.0.&lt;init&gt;4">ballerina/transactions:0.5.0.&lt;init&gt;4</a>
+    
+        <a class="item" href="#beginTransaction">beginTransaction</a>
+    
+        <a class="item" href="#cleanupTransactionContext">cleanupTransactionContext</a>
+    
+        <a class="item" href="#endTransaction">endTransaction</a>
+    
+        <a class="item" href="#getAndClearFailure">getAndClearFailure</a>
+    
+        <a class="item" href="#getCurrentTransactionId">getCurrentTransactionId</a>
+    
+        <a class="item" href="#rollbackTransaction">rollbackTransaction</a>
+    
+        <a class="item" href="#setTransactionContext">setTransactionContext</a>
+    
+
+                        </div>
+                        <div class="ui divider"></div>
+                    
+                    <div class="header">
+                        <a class="capitalize" href="../transactions/index.html">
+                            transactions Module
+                        </a>
+                    </div>
+                    <div class="menu">
+    
+        
+            <a class="item" data="records" href="../transactions/index.html#records">Records</a>
+        
+    
+    
+    
+    
+    
+        <a class="item" data="functions" href="../transactions/index.html#functions">Functions</a>
+    
+    
+        <a class="item" data="constants" href="../transactions/index.html#constants">Constants</a>
+    
+    
+        <a class="item" data="annotations" href="../transactions/index.html#annotations">Annotations</a>
+    
+    
+    
+        <a class="item" data="errors" href="../transactions/index.html#errors">Errors</a>
+    
+    <div class="ui divider"></div>
+</div>
+
+                    <div class="header capitalize">
+                        Other Modules
+                    </div>
+                    <div id="modules-list" class="menu"></div>
+                    <div class="ui divider"></div>
+                
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="row nav-bar">
+                <div class="ui secondary menu">
+                    <div class="search-bar">
+                        <div class="ui category search item search-bar">
+                            <i class="search link icon"></i>
+                            <div class="ui transparent icon input">
+                                <input class="prompt" id="searchBox" type="text" placeholder="Search API Docs..."/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right menu">
+                        <a class="item active">Learn</a>
+                        <a class="item">Events</a>
+                        <a class="item">Central</a>
+                        <a class="item">Community</a>
+                        <a class="item">Blog</a>
+                        <div class="ui dropdown item ballerina" id="version-picker">
+                            Version
+                            <i class="dropdown icon"></i>
+                            <div class="menu">
+                                <a class="item" value="1.0">1.0</a>
+                                <a class="item" value="1.1">1.1</a>
+                                <a class="item" value="1.2">1.2</a>
+                                <a class="item" value="swan-lake">Swan Lake</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div id="mobMenu" class="mob-menu">
+                    <div class="ui stackable secondary menu">
+                        <div class="item">
+                            <div class="search-bar">
+                                <div class="ui category search item search-bar">
+                                    <i class="search link icon"></i>
+                                    <div class="ui transparent icon input">
+                                        <input class="prompt" id="searchBoxMob" type="text" placeholder="Search API Docs..."/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                            
+                                <div class="ui dropdown item capitalize">
+                                    
+    Functions
+<i class="dropdown icon"></i>
+                                    <div class="menu">
+                                        
+    
+        <a class="item" href="#ballerina/transactions:0.5.0.&lt;init&gt;0">ballerina/transactions:0.5.0.&lt;init&gt;0</a>
+    
+        <a class="item" href="#ballerina/transactions:0.5.0.&lt;init&gt;1">ballerina/transactions:0.5.0.&lt;init&gt;1</a>
+    
+        <a class="item" href="#ballerina/transactions:0.5.0.&lt;init&gt;2">ballerina/transactions:0.5.0.&lt;init&gt;2</a>
+    
+        <a class="item" href="#ballerina/transactions:0.5.0.&lt;init&gt;3">ballerina/transactions:0.5.0.&lt;init&gt;3</a>
+    
+        <a class="item" href="#ballerina/transactions:0.5.0.&lt;init&gt;4">ballerina/transactions:0.5.0.&lt;init&gt;4</a>
+    
+        <a class="item" href="#beginTransaction">beginTransaction</a>
+    
+        <a class="item" href="#cleanupTransactionContext">cleanupTransactionContext</a>
+    
+        <a class="item" href="#endTransaction">endTransaction</a>
+    
+        <a class="item" href="#getAndClearFailure">getAndClearFailure</a>
+    
+        <a class="item" href="#getCurrentTransactionId">getCurrentTransactionId</a>
+    
+        <a class="item" href="#rollbackTransaction">rollbackTransaction</a>
+    
+        <a class="item" href="#setTransactionContext">setTransactionContext</a>
+    
+
+                                    </div>
+                                </div>
+                            
+                            <div class="ui dropdown item capitalize">
+                                transactions Module <i class="dropdown icon"></i>
+                                <div class="menu">
+    
+        
+            <a class="item" data="records" href="../transactions/index.html#records">Records</a>
+        
+    
+    
+    
+    
+    
+        <a class="item" data="functions" href="../transactions/index.html#functions">Functions</a>
+    
+    
+        <a class="item" data="constants" href="../transactions/index.html#constants">Constants</a>
+    
+    
+        <a class="item" data="annotations" href="../transactions/index.html#annotations">Annotations</a>
+    
+    
+    
+        <a class="item" data="errors" href="../transactions/index.html#errors">Errors</a>
+    
+    <div class="ui divider"></div>
+</div>
+
+                            </div>
+                            <div class="ui dropdown item">
+                                Other Modules <i class="dropdown icon"></i>
+                                <div id="modules-list-mob" class="menu"></div>
+                            </div>
+                        
+
+                            <div class="ui dropdown item" id="version-picker-mob">
+                                Version <i class="dropdown icon"></i>
+                                <div class="menu">
+                                    <a class="item" value="1.0">1.0</a>
+                                    <a class="item" value="1.1">1.1</a>
+                                    <a class="item" value="1.2">1.2</a>
+                                    <a class="item" value="swan-lake">Swan Lake</a>
+                                </div>
+                            </div>
+                            <div class="ui dropdown item ballerina">
+                                Ballerina <i class="dropdown icon"></i>
+                                <div class="menu">
+                                    <a class="item active">Learn</a>
+                                    <a class="item">Events</a>
+                                    <a class="item">Central</a>
+                                    <a class="item">Community</a>
+                                </div>
+                            </div>
+
+                    </div>
+                </div>
+                <div id="search-impl"></div>
+                <div id="main">
+                    
+                        <div class="ui breadcrumb">
+                            <a class="section" href="
+                                 ../index.html">Modules</a>
+                            <i class="right angle icon divider"></i>
+                            <a class="section capitalize " href="../transactions/index.html">transactions</a>
+                            
+                                <i class="right angle icon divider"></i>
+                                <a class="section active" href="../transactions/index.html#functions">
+    Functions
+</a>
+                                
+                            
+                        </div>
+                    
+
+                    <div class="ui very padded segment module-data">
+                            <h1 class="capitalize">
+    Functions
+
+                            
+                            </h1>
+                        
+    <div class="constants">
+        <table class="ui very basic table">
+            <tbody>
+                
+                    <tr>
+                        <td width="30%"><a class="functions " href="#ballerina/transactions:0.5.0.&lt;init&gt;0">ballerina/transactions:0.5.0.&lt;init&gt;0</a></td>
+                        <td width="70%">
+                            <div class="function-desc">
+                                
+                                
+                            </div>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td width="30%"><a class="functions " href="#ballerina/transactions:0.5.0.&lt;init&gt;1">ballerina/transactions:0.5.0.&lt;init&gt;1</a></td>
+                        <td width="70%">
+                            <div class="function-desc">
+                                
+                                
+                            </div>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td width="30%"><a class="functions " href="#ballerina/transactions:0.5.0.&lt;init&gt;2">ballerina/transactions:0.5.0.&lt;init&gt;2</a></td>
+                        <td width="70%">
+                            <div class="function-desc">
+                                
+                                
+                            </div>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td width="30%"><a class="functions " href="#ballerina/transactions:0.5.0.&lt;init&gt;3">ballerina/transactions:0.5.0.&lt;init&gt;3</a></td>
+                        <td width="70%">
+                            <div class="function-desc">
+                                
+                                
+                            </div>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td width="30%"><a class="functions " href="#ballerina/transactions:0.5.0.&lt;init&gt;4">ballerina/transactions:0.5.0.&lt;init&gt;4</a></td>
+                        <td width="70%">
+                            <div class="function-desc">
+                                
+                                
+                            </div>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td width="30%"><a class="functions strike" href="#beginTransaction">beginTransaction</a></td>
+                        <td width="70%">
+                            <div class="function-desc">
+                                
+                                    <span class="stab">Deprecated</span>
+                                
+                                When a transaction block in Ballerina code begins, it will call this function to begin a transaction.
+                            </div>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td width="30%"><a class="functions strike" href="#cleanupTransactionContext">cleanupTransactionContext</a></td>
+                        <td width="70%">
+                            <div class="function-desc">
+                                
+                                    <span class="stab">Deprecated</span>
+                                
+                                Cleanup the transaction context.
+                            </div>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td width="30%"><a class="functions strike" href="#endTransaction">endTransaction</a></td>
+                        <td width="70%">
+                            <div class="function-desc">
+                                
+                                    <span class="stab">Deprecated</span>
+                                
+                                When a transaction block in Ballerina code ends, it will call this function to end a transaction.
+                            </div>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td width="30%"><a class="functions strike" href="#getAndClearFailure">getAndClearFailure</a></td>
+                        <td width="70%">
+                            <div class="function-desc">
+                                
+                                    <span class="stab">Deprecated</span>
+                                
+                                Get and Cleanup the failure.
+                            </div>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td width="30%"><a class="functions strike" href="#getCurrentTransactionId">getCurrentTransactionId</a></td>
+                        <td width="70%">
+                            <div class="function-desc">
+                                
+                                    <span class="stab">Deprecated</span>
+                                
+                                Get the current transaction id.
+                            </div>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td width="30%"><a class="functions strike" href="#rollbackTransaction">rollbackTransaction</a></td>
+                        <td width="70%">
+                            <div class="function-desc">
+                                
+                                    <span class="stab">Deprecated</span>
+                                
+                                Rollback the transaction.
+                            </div>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td width="30%"><a class="functions strike" href="#setTransactionContext">setTransactionContext</a></td>
+                        <td width="70%">
+                            <div class="function-desc">
+                                
+                                    <span class="stab">Deprecated</span>
+                                
+                                Set the transactionContext.
+                            </div>
+                        </td>
+                    </tr>
+                
+            </tbody>
+        </table>
+        <div>
+            
+                <div>
+                    
+                        <div class="method-content">
+    <div class="main-method-title" id="ballerina/transactions:0.5.0.&lt;init&gt;0" title="ballerina/transactions:0.5.0.&lt;init&gt;0">
+             <a class="url-link" href="#ballerina/transactions:0.5.0.&lt;init&gt;0">
+                <img class="url-link-img" src="../html-template-resources/images/link.svg">
+            </a>
+            <h2 > ballerina/transactions:0.5.0.&lt;init&gt;0 </h2>
+    </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function ballerina/transactions:0.5.0.&lt;init&gt;0() returns <a href="../null/types.html#error?">error?</a> </code>
+    </pre>
+    <div class="function-desc">
+        
+        
+    </div>
+    
+
+    
+        
+        <div class="returns-listing">
+            <h3 class="type">Return Type</h3> (<span class="type"><a href="../null/types.html#error?">error?</a></span>)
+            
+        </div>
+        
+    
+</div>
+                    
+                        <div class="method-content">
+    <div class="main-method-title" id="ballerina/transactions:0.5.0.&lt;init&gt;1" title="ballerina/transactions:0.5.0.&lt;init&gt;1">
+             <a class="url-link" href="#ballerina/transactions:0.5.0.&lt;init&gt;1">
+                <img class="url-link-img" src="../html-template-resources/images/link.svg">
+            </a>
+            <h2 > ballerina/transactions:0.5.0.&lt;init&gt;1 </h2>
+    </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function ballerina/transactions:0.5.0.&lt;init&gt;1() returns <a href="../null/types.html#error?">error?</a> </code>
+    </pre>
+    <div class="function-desc">
+        
+        
+    </div>
+    
+
+    
+        
+        <div class="returns-listing">
+            <h3 class="type">Return Type</h3> (<span class="type"><a href="../null/types.html#error?">error?</a></span>)
+            
+        </div>
+        
+    
+</div>
+                    
+                        <div class="method-content">
+    <div class="main-method-title" id="ballerina/transactions:0.5.0.&lt;init&gt;2" title="ballerina/transactions:0.5.0.&lt;init&gt;2">
+             <a class="url-link" href="#ballerina/transactions:0.5.0.&lt;init&gt;2">
+                <img class="url-link-img" src="../html-template-resources/images/link.svg">
+            </a>
+            <h2 > ballerina/transactions:0.5.0.&lt;init&gt;2 </h2>
+    </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function ballerina/transactions:0.5.0.&lt;init&gt;2() returns <a href="../null/types.html#error?">error?</a> </code>
+    </pre>
+    <div class="function-desc">
+        
+        
+    </div>
+    
+
+    
+        
+        <div class="returns-listing">
+            <h3 class="type">Return Type</h3> (<span class="type"><a href="../null/types.html#error?">error?</a></span>)
+            
+        </div>
+        
+    
+</div>
+                    
+                        <div class="method-content">
+    <div class="main-method-title" id="ballerina/transactions:0.5.0.&lt;init&gt;3" title="ballerina/transactions:0.5.0.&lt;init&gt;3">
+             <a class="url-link" href="#ballerina/transactions:0.5.0.&lt;init&gt;3">
+                <img class="url-link-img" src="../html-template-resources/images/link.svg">
+            </a>
+            <h2 > ballerina/transactions:0.5.0.&lt;init&gt;3 </h2>
+    </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function ballerina/transactions:0.5.0.&lt;init&gt;3() returns <a href="../null/types.html#error?">error?</a> </code>
+    </pre>
+    <div class="function-desc">
+        
+        
+    </div>
+    
+
+    
+        
+        <div class="returns-listing">
+            <h3 class="type">Return Type</h3> (<span class="type"><a href="../null/types.html#error?">error?</a></span>)
+            
+        </div>
+        
+    
+</div>
+                    
+                        <div class="method-content">
+    <div class="main-method-title" id="ballerina/transactions:0.5.0.&lt;init&gt;4" title="ballerina/transactions:0.5.0.&lt;init&gt;4">
+             <a class="url-link" href="#ballerina/transactions:0.5.0.&lt;init&gt;4">
+                <img class="url-link-img" src="../html-template-resources/images/link.svg">
+            </a>
+            <h2 > ballerina/transactions:0.5.0.&lt;init&gt;4 </h2>
+    </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function ballerina/transactions:0.5.0.&lt;init&gt;4() returns <a href="../null/types.html#error?">error?</a> </code>
+    </pre>
+    <div class="function-desc">
+        
+        
+    </div>
+    
+
+    
+        
+        <div class="returns-listing">
+            <h3 class="type">Return Type</h3> (<span class="type"><a href="../null/types.html#error?">error?</a></span>)
+            
+        </div>
+        
+    
+</div>
+                    
+                        <div class="method-content">
+    <div class="main-method-title" id="beginTransaction" title="beginTransaction">
+             <a class="url-link" href="#beginTransaction">
+                <img class="url-link-img" src="../html-template-resources/images/link.svg">
+            </a>
+            <h2 class="strike"> beginTransaction </h2>
+    </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function beginTransaction(<span class="builtin-type">string?</span> transactionId, <span class="builtin-type">string</span> transactionBlockId, <span class="builtin-type">string</span> registerAtUrl, <span class="builtin-type">string</span> coordinationType) returns <a href="../transactions/records/TransactionContext.html">TransactionContext</a> | <span class="builtin-type">error</span> </code>
+    </pre>
+    <div class="function-desc">
+        
+            <span class="stab">Deprecated</span>
+        
+        When a transaction block in Ballerina code begins, it will call this function to begin a transaction.
+If this is a new transaction (transactionId == () ), then this instance will become the initiator and will
+create a new transaction context.
+If the participant and initiator are in the same process, this transaction block will register with the local
+initiator via a local function call.
+If the participant and initiator are in different processes, this transaction block will register with the remote
+initiator via a network call.
+
+    </div>
+    
+        <div class="parameters">
+            <h3 class="param-title">Parameters</h3>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >transactionId</span>
+                        <span class="type">  <span class="builtin-type">string?</span> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p>Globally unique transaction ID. If this is a new transaction which is initiated, then this
+will be null.
+If this is a participant in an existing transaction, then it will have a value.</p>
+
+                    </p>
+                </ul>
+            </div>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >transactionBlockId</span>
+                        <span class="type">  <span class="builtin-type">string</span> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p>ID of the transaction block. Each transaction block in a process has a unique ID.</p>
+
+                    </p>
+                </ul>
+            </div>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >registerAtUrl</span>
+                        <span class="type">  <span class="builtin-type">string</span> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p>The URL of the initiator</p>
+
+                    </p>
+                </ul>
+            </div>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >coordinationType</span>
+                        <span class="type">  <span class="builtin-type">string</span> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p>Coordination type of this transaction</p>
+
+                    </p>
+                </ul>
+            </div>
+            
+        </div>
+    
+
+    
+        
+        <div class="returns-listing">
+            <h3 class="type">Return Type</h3> (<span class="type"><a href="../transactions/records/TransactionContext.html">TransactionContext</a> | <span class="builtin-type">error</span></span>)
+            <p>Newly created/existing TransactionContext for this transaction.</p>
+
+        </div>
+        
+    
+</div>
+                    
+                        <div class="method-content">
+    <div class="main-method-title" id="cleanupTransactionContext" title="cleanupTransactionContext">
+             <a class="url-link" href="#cleanupTransactionContext">
+                <img class="url-link-img" src="../html-template-resources/images/link.svg">
+            </a>
+            <h2 class="strike"> cleanupTransactionContext </h2>
+    </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function cleanupTransactionContext(<span class="builtin-type">string</span> transactionBlockId)</code>
+    </pre>
+    <div class="function-desc">
+        
+            <span class="stab">Deprecated</span>
+        
+        Cleanup the transaction context.
+
+    </div>
+    
+        <div class="parameters">
+            <h3 class="param-title">Parameters</h3>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >transactionBlockId</span>
+                        <span class="type">  <span class="builtin-type">string</span> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p>ID of the transaction block.</p>
+
+                    </p>
+                </ul>
+            </div>
+            
+        </div>
+    
+
+    
+</div>
+                    
+                        <div class="method-content">
+    <div class="main-method-title" id="endTransaction" title="endTransaction">
+             <a class="url-link" href="#endTransaction">
+                <img class="url-link-img" src="../html-template-resources/images/link.svg">
+            </a>
+            <h2 class="strike"> endTransaction </h2>
+    </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function endTransaction(<span class="builtin-type">string</span> transactionId, <span class="builtin-type">string</span> transactionBlockId) returns <span class="builtin-type">string</span> | <span class="builtin-type">error</span> </code>
+    </pre>
+    <div class="function-desc">
+        
+            <span class="stab">Deprecated</span>
+        
+        When a transaction block in Ballerina code ends, it will call this function to end a transaction.
+Ending a transaction by a participant has no effect because it is the initiator who can decide whether to
+commit or abort a transaction.
+Depending on the state of the transaction, the initiator decides to commit or abort the transaction.
+
+    </div>
+    
+        <div class="parameters">
+            <h3 class="param-title">Parameters</h3>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >transactionId</span>
+                        <span class="type">  <span class="builtin-type">string</span> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p>Globally unique transaction ID.</p>
+
+                    </p>
+                </ul>
+            </div>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >transactionBlockId</span>
+                        <span class="type">  <span class="builtin-type">string</span> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p>ID of the transaction block. Each transaction block in a process has a unique ID.</p>
+
+                    </p>
+                </ul>
+            </div>
+            
+        </div>
+    
+
+    
+        
+        <div class="returns-listing">
+            <h3 class="type">Return Type</h3> (<span class="type"><span class="builtin-type">string</span> | <span class="builtin-type">error</span></span>)
+            <p>A string or an error representing the transaction end succcess status or failure respectively.</p>
+
+        </div>
+        
+    
+</div>
+                    
+                        <div class="method-content">
+    <div class="main-method-title" id="getAndClearFailure" title="getAndClearFailure">
+             <a class="url-link" href="#getAndClearFailure">
+                <img class="url-link-img" src="../html-template-resources/images/link.svg">
+            </a>
+            <h2 class="strike"> getAndClearFailure </h2>
+    </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function getAndClearFailure() returns <span class="builtin-type">boolean</span> </code>
+    </pre>
+    <div class="function-desc">
+        
+            <span class="stab">Deprecated</span>
+        
+        Get and Cleanup the failure.
+
+    </div>
+    
+
+    
+        
+        <div class="returns-listing">
+            <h3 class="type">Return Type</h3> (<span class="type"><span class="builtin-type">boolean</span></span>)
+            <p>is failed.</p>
+
+        </div>
+        
+    
+</div>
+                    
+                        <div class="method-content">
+    <div class="main-method-title" id="getCurrentTransactionId" title="getCurrentTransactionId">
+             <a class="url-link" href="#getCurrentTransactionId">
+                <img class="url-link-img" src="../html-template-resources/images/link.svg">
+            </a>
+            <h2 class="strike"> getCurrentTransactionId </h2>
+    </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function getCurrentTransactionId() returns <span class="builtin-type">string</span> </code>
+    </pre>
+    <div class="function-desc">
+        
+            <span class="stab">Deprecated</span>
+        
+        Get the current transaction id. This function is useful for user code to save state against a transaction ID,
+so that when the <code>oncommit</code> or <code>onabort</code> functions registered for a transaction can retrieve that state using the
+transaction  that is passed in to those functions.
+
+    </div>
+    
+
+    
+        
+        <div class="returns-listing">
+            <h3 class="type">Return Type</h3> (<span class="type"><span class="builtin-type">string</span></span>)
+            <p>A string representing the ID of the current transaction.</p>
+
+        </div>
+        
+    
+</div>
+                    
+                        <div class="method-content">
+    <div class="main-method-title" id="rollbackTransaction" title="rollbackTransaction">
+             <a class="url-link" href="#rollbackTransaction">
+                <img class="url-link-img" src="../html-template-resources/images/link.svg">
+            </a>
+            <h2 class="strike"> rollbackTransaction </h2>
+    </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function rollbackTransaction(<span class="builtin-type">string</span> transactionBlockId, <span class="builtin-type">error?</span> err)</code>
+    </pre>
+    <div class="function-desc">
+        
+            <span class="stab">Deprecated</span>
+        
+        Rollback the transaction.
+
+    </div>
+    
+        <div class="parameters">
+            <h3 class="param-title">Parameters</h3>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >transactionBlockId</span>
+                        <span class="type">  <span class="builtin-type">string</span> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p>ID of the transaction block.</p>
+
+                    </p>
+                </ul>
+            </div>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >err</span>
+                        <span class="type">  <span class="builtin-type">error?</span> </span>
+                        <span class="default"> (default &lt;error?&gt; ())</span>
+                    </li>
+                    <p>
+                        
+                        <p>The cause of the rollback.</p>
+
+                    </p>
+                </ul>
+            </div>
+            
+        </div>
+    
+
+    
+</div>
+                    
+                        <div class="method-content">
+    <div class="main-method-title" id="setTransactionContext" title="setTransactionContext">
+             <a class="url-link" href="#setTransactionContext">
+                <img class="url-link-img" src="../html-template-resources/images/link.svg">
+            </a>
+            <h2 class="strike"> setTransactionContext </h2>
+    </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function setTransactionContext(<a href="../transactions/records/TransactionContext.html">TransactionContext</a> transactionContext, <a href="../transactions/records/Info.html">Info</a>? prevAttempt)</code>
+    </pre>
+    <div class="function-desc">
+        
+            <span class="stab">Deprecated</span>
+        
+        Set the transactionContext.
+
+    </div>
+    
+        <div class="parameters">
+            <h3 class="param-title">Parameters</h3>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >transactionContext</span>
+                        <span class="type">  <a href="../transactions/records/TransactionContext.html">TransactionContext</a> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p>Transaction context.</p>
+
+                    </p>
+                </ul>
+            </div>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >prevAttempt</span>
+                        <span class="type">  <a href="../transactions/records/Info.html">Info</a>? </span>
+                        <span class="default"> (default &lt;ballerina/transactions:0.5.0:Info?&gt; ())</span>
+                    </li>
+                    <p>
+                        
+                        <p>Information related to previous attempt.</p>
+
+                    </p>
+                </ul>
+            </div>
+            
+        </div>
+    
+
+    
+</div>
+                    
+                </div>
+            
+        </div>
+    </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/components/prism-core.min.js"></script>
+<script src="../syntax-highlighter/prism-ballerina.js"></script>
+<script>
+    function toggleMenu() {
+        $('#mobMenu').transition('slide down')
+    }
+    $(document).ready(function () {
+        $('.ui.dropdown').dropdown();
+        $('#version-picker').dropdown('set selected', "1.2");
+        $('#version-picker-mob').dropdown('set selected', "1.2");
+
+    });
+
+    let mainNavLinks = document.querySelectorAll(".toc .ui.visible.left.vertical.sidebar.menu .menu a");
+    console.log(mainNavLinks);
+    let contentWrapper = document.querySelector(".content");
+    contentWrapper.addEventListener("scroll", event => {
+      let fromTop = contentWrapper.scrollTop;
+
+      mainNavLinks.forEach(link => {
+        let section = document.querySelector("#" + link.attributes.getNamedItem("data").textContent);
+
+        if (
+          section.offsetTop <= fromTop &&
+          section.offsetTop + section.offsetHeight > fromTop
+        ) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    });
+
+</script>
+<script>
+    var rootPath = "../";
+</script>
+<script src="../doc-search/search-data.js"></script>
+<script src="../doc-search/search.js"></script>
+<script>
+    var str = "";
+    var currentModule = "transactions";
+    searchData.modules.forEach(function(module) {
+        var active = "";
+        if (currentModule==module.id) {
+            active = " active";
+        }
+        str += '<a class="item' + active + '" href="' + rootPath + module.id + '/index.html">' + module.id + '</a>';
+    });
+    document.getElementById("modules-list").innerHTML = str;
+    document.getElementById("modules-list-mob").innerHTML = str;
+</script>
+
+
+

@@ -1,0 +1,992 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="This module provides an implementation for connecting and interacting with HTTP, HTTP2, and WebSocket endpoints. The module facilitates two types of network entry points as ‘Client’ and ‘Listener’.
+">
+    <meta name="keywords" content="ballerina,ballerina lang,api docs,http">
+
+    <title>API Docs - Functions : http</title>
+
+    <script src="../html-template-resources/jquery.min.js"></script>
+    <link rel="stylesheet" href="../html-template-resources/semantic.min.css">
+    <link rel="stylesheet" href="../html-template-resources/components/icon.min.css">
+    <link rel="stylesheet" href="../html-template-resources/styles/css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/themes/prism.min.css" rel="stylesheet" />
+    <script src="../html-template-resources/semantic.min.js"></script>
+
+</head>
+
+
+<body>
+    <div class="pusher">
+        <div class="mobile-logo-div">
+            <div class="ui secondary menu">
+                <a href="../index.html">
+                    <img class="mobile-logo" src="../html-template-resources/images/ballerina-logo.png">
+                </a>
+                <div class="right item">
+                    <button class="ui icon button" onclick="toggleMenu()">
+                     <i class="large bars icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="toc">
+            <div class="ui visible left vertical sidebar menu">
+                <a href="
+                    ../index.html">
+                    <img class="logo" src="../html-template-resources/images/ballerina-logo.png">
+                </a>
+                
+                    
+                        <div class="header capitalize">
+                            
+    Functions
+
+                        </div>
+                        <div class="menu">
+                            
+    
+        <a class="item" href="#addCookies">addCookies</a>
+    
+        <a class="item" href="#ballerina/http:1.0.0.&lt;init&gt;0">ballerina/http:1.0.0.&lt;init&gt;0</a>
+    
+        <a class="item" href="#ballerina/http:1.0.0.&lt;init&gt;1">ballerina/http:1.0.0.&lt;init&gt;1</a>
+    
+        <a class="item" href="#ballerina/http:1.0.0.&lt;init&gt;2">ballerina/http:1.0.0.&lt;init&gt;2</a>
+    
+        <a class="item" href="#createHttpCachingClient">createHttpCachingClient</a>
+    
+        <a class="item" href="#createHttpSecureClient">createHttpSecureClient</a>
+    
+        <a class="item" href="#extractAuthorizationHeaderValue">extractAuthorizationHeaderValue</a>
+    
+        <a class="item" href="#invokeEndpoint">invokeEndpoint</a>
+    
+        <a class="item" href="#isResourceSecured">isResourceSecured</a>
+    
+        <a class="item" href="#parseHeader">parseHeader</a>
+    
+
+                        </div>
+                        <div class="ui divider"></div>
+                    
+                    <div class="header">
+                        <a class="capitalize" href="../http/index.html">
+                            http Module
+                        </a>
+                    </div>
+                    <div class="menu">
+    
+        
+            <a class="item" data="records" href="../http/index.html#records">Records</a>
+        
+    
+    
+        
+            <a class="item" data="objects" href="../http/index.html#objects">Objects</a>
+        
+    
+    
+        <a class="item" data="clients" href="../http/index.html#clients">Clients</a>
+    
+    
+        <a class="item" data="listeners" href="../http/index.html#listeners">Listeners</a>
+    
+    
+        <a class="item" data="functions" href="../http/index.html#functions">Functions</a>
+    
+    
+        <a class="item" data="constants" href="../http/index.html#constants">Constants</a>
+    
+    
+        <a class="item" data="annotations" href="../http/index.html#annotations">Annotations</a>
+    
+    
+        <a class="item" ata="types" href="../http/index.html#types">Types</a>
+    
+    
+        <a class="item" data="errors" href="../http/index.html#errors">Errors</a>
+    
+    <div class="ui divider"></div>
+</div>
+
+                    <div class="header capitalize">
+                        Other Modules
+                    </div>
+                    <div id="modules-list" class="menu"></div>
+                    <div class="ui divider"></div>
+                
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="row nav-bar">
+                <div class="ui secondary menu">
+                    <div class="search-bar">
+                        <div class="ui category search item search-bar">
+                            <i class="search link icon"></i>
+                            <div class="ui transparent icon input">
+                                <input class="prompt" id="searchBox" type="text" placeholder="Search API Docs..."/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right menu">
+                        <a class="item active">Learn</a>
+                        <a class="item">Events</a>
+                        <a class="item">Central</a>
+                        <a class="item">Community</a>
+                        <a class="item">Blog</a>
+                        <div class="ui dropdown item ballerina" id="version-picker">
+                            Version
+                            <i class="dropdown icon"></i>
+                            <div class="menu">
+                                <a class="item" value="1.0">1.0</a>
+                                <a class="item" value="1.1">1.1</a>
+                                <a class="item" value="1.2">1.2</a>
+                                <a class="item" value="swan-lake">Swan Lake</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div id="mobMenu" class="mob-menu">
+                    <div class="ui stackable secondary menu">
+                        <div class="item">
+                            <div class="search-bar">
+                                <div class="ui category search item search-bar">
+                                    <i class="search link icon"></i>
+                                    <div class="ui transparent icon input">
+                                        <input class="prompt" id="searchBoxMob" type="text" placeholder="Search API Docs..."/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                            
+                                <div class="ui dropdown item capitalize">
+                                    
+    Functions
+<i class="dropdown icon"></i>
+                                    <div class="menu">
+                                        
+    
+        <a class="item" href="#addCookies">addCookies</a>
+    
+        <a class="item" href="#ballerina/http:1.0.0.&lt;init&gt;0">ballerina/http:1.0.0.&lt;init&gt;0</a>
+    
+        <a class="item" href="#ballerina/http:1.0.0.&lt;init&gt;1">ballerina/http:1.0.0.&lt;init&gt;1</a>
+    
+        <a class="item" href="#ballerina/http:1.0.0.&lt;init&gt;2">ballerina/http:1.0.0.&lt;init&gt;2</a>
+    
+        <a class="item" href="#createHttpCachingClient">createHttpCachingClient</a>
+    
+        <a class="item" href="#createHttpSecureClient">createHttpSecureClient</a>
+    
+        <a class="item" href="#extractAuthorizationHeaderValue">extractAuthorizationHeaderValue</a>
+    
+        <a class="item" href="#invokeEndpoint">invokeEndpoint</a>
+    
+        <a class="item" href="#isResourceSecured">isResourceSecured</a>
+    
+        <a class="item" href="#parseHeader">parseHeader</a>
+    
+
+                                    </div>
+                                </div>
+                            
+                            <div class="ui dropdown item capitalize">
+                                http Module <i class="dropdown icon"></i>
+                                <div class="menu">
+    
+        
+            <a class="item" data="records" href="../http/index.html#records">Records</a>
+        
+    
+    
+        
+            <a class="item" data="objects" href="../http/index.html#objects">Objects</a>
+        
+    
+    
+        <a class="item" data="clients" href="../http/index.html#clients">Clients</a>
+    
+    
+        <a class="item" data="listeners" href="../http/index.html#listeners">Listeners</a>
+    
+    
+        <a class="item" data="functions" href="../http/index.html#functions">Functions</a>
+    
+    
+        <a class="item" data="constants" href="../http/index.html#constants">Constants</a>
+    
+    
+        <a class="item" data="annotations" href="../http/index.html#annotations">Annotations</a>
+    
+    
+        <a class="item" ata="types" href="../http/index.html#types">Types</a>
+    
+    
+        <a class="item" data="errors" href="../http/index.html#errors">Errors</a>
+    
+    <div class="ui divider"></div>
+</div>
+
+                            </div>
+                            <div class="ui dropdown item">
+                                Other Modules <i class="dropdown icon"></i>
+                                <div id="modules-list-mob" class="menu"></div>
+                            </div>
+                        
+
+                            <div class="ui dropdown item" id="version-picker-mob">
+                                Version <i class="dropdown icon"></i>
+                                <div class="menu">
+                                    <a class="item" value="1.0">1.0</a>
+                                    <a class="item" value="1.1">1.1</a>
+                                    <a class="item" value="1.2">1.2</a>
+                                    <a class="item" value="swan-lake">Swan Lake</a>
+                                </div>
+                            </div>
+                            <div class="ui dropdown item ballerina">
+                                Ballerina <i class="dropdown icon"></i>
+                                <div class="menu">
+                                    <a class="item active">Learn</a>
+                                    <a class="item">Events</a>
+                                    <a class="item">Central</a>
+                                    <a class="item">Community</a>
+                                </div>
+                            </div>
+
+                    </div>
+                </div>
+                <div id="search-impl"></div>
+                <div id="main">
+                    
+                        <div class="ui breadcrumb">
+                            <a class="section" href="
+                                 ../index.html">Modules</a>
+                            <i class="right angle icon divider"></i>
+                            <a class="section capitalize " href="../http/index.html">http</a>
+                            
+                                <i class="right angle icon divider"></i>
+                                <a class="section active" href="../http/index.html#functions">
+    Functions
+</a>
+                                
+                            
+                        </div>
+                    
+
+                    <div class="ui very padded segment module-data">
+                            <h1 class="capitalize">
+    Functions
+
+                            
+                            </h1>
+                        
+    <div class="constants">
+        <table class="ui very basic table">
+            <tbody>
+                
+                    <tr>
+                        <td width="30%"><a class="functions " href="#addCookies">addCookies</a></td>
+                        <td width="70%">
+                            <div class="function-desc">
+                                
+                                <p>Adds cookies to the custom header.
+                            </div>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td width="30%"><a class="functions " href="#ballerina/http:1.0.0.&lt;init&gt;0">ballerina/http:1.0.0.&lt;init&gt;0</a></td>
+                        <td width="70%">
+                            <div class="function-desc">
+                                
+                                
+                            </div>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td width="30%"><a class="functions " href="#ballerina/http:1.0.0.&lt;init&gt;1">ballerina/http:1.0.0.&lt;init&gt;1</a></td>
+                        <td width="70%">
+                            <div class="function-desc">
+                                
+                                
+                            </div>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td width="30%"><a class="functions " href="#ballerina/http:1.0.0.&lt;init&gt;2">ballerina/http:1.0.0.&lt;init&gt;2</a></td>
+                        <td width="70%">
+                            <div class="function-desc">
+                                
+                                
+                            </div>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td width="30%"><a class="functions " href="#createHttpCachingClient">createHttpCachingClient</a></td>
+                        <td width="70%">
+                            <div class="function-desc">
+                                
+                                <p>Creates an HTTP client capable of caching HTTP responses.
+                            </div>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td width="30%"><a class="functions " href="#createHttpSecureClient">createHttpSecureClient</a></td>
+                        <td width="70%">
+                            <div class="function-desc">
+                                
+                                <p>Creates an HTTP client capable of securing HTTP requests with authentication.
+                            </div>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td width="30%"><a class="functions " href="#extractAuthorizationHeaderValue">extractAuthorizationHeaderValue</a></td>
+                        <td width="70%">
+                            <div class="function-desc">
+                                
+                                <p>Extracts the Authorization header value from the request.
+                            </div>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td width="30%"><a class="functions " href="#invokeEndpoint">invokeEndpoint</a></td>
+                        <td width="70%">
+                            <div class="function-desc">
+                                
+                                <p>The HEAD remote function implementation of the Circuit Breaker.
+                            </div>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td width="30%"><a class="functions " href="#isResourceSecured">isResourceSecured</a></td>
+                        <td width="70%">
+                            <div class="function-desc">
+                                
+                                <p>Checks whether the calling resource is secured by evaluating the authentication hierarchy.
+                            </div>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td width="30%"><a class="functions " href="#parseHeader">parseHeader</a></td>
+                        <td width="70%">
+                            <div class="function-desc">
+                                
+                                <p>Parses the given header value to extract its value and parameter map.
+                            </div>
+                        </td>
+                    </tr>
+                
+            </tbody>
+        </table>
+        <div>
+            
+                <div>
+                    
+                        <div class="method-content">
+    <div class="main-method-title" id="addCookies" title="addCookies">
+             <a class="url-link" href="#addCookies">
+                <img class="url-link-img" src="../html-template-resources/images/link.svg">
+            </a>
+            <h2 > addCookies </h2>
+    </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function addCookies(<a href="../http/records/WebSocketClientConfiguration.html">WebSocketClientConfiguration</a> | <a href="../http/records/WebSocketFailoverClientConfiguration.html">WebSocketFailoverClientConfiguration</a> config)</code>
+    </pre>
+    <div class="function-desc">
+        
+        <p>Adds cookies to the custom header.</p>
+
+    </div>
+    
+        <div class="parameters">
+            <h3 class="param-title">Parameters</h3>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >config</span>
+                        <span class="type">  <a href="../http/records/WebSocketClientConfiguration.html">WebSocketClientConfiguration</a> | <a href="../http/records/WebSocketFailoverClientConfiguration.html">WebSocketFailoverClientConfiguration</a> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p>Represents the cookies to be added</p>
+
+                    </p>
+                </ul>
+            </div>
+            
+        </div>
+    
+
+    
+</div>
+                    
+                        <div class="method-content">
+    <div class="main-method-title" id="ballerina/http:1.0.0.&lt;init&gt;0" title="ballerina/http:1.0.0.&lt;init&gt;0">
+             <a class="url-link" href="#ballerina/http:1.0.0.&lt;init&gt;0">
+                <img class="url-link-img" src="../html-template-resources/images/link.svg">
+            </a>
+            <h2 > ballerina/http:1.0.0.&lt;init&gt;0 </h2>
+    </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function ballerina/http:1.0.0.&lt;init&gt;0() returns <a href="../null/types.html#error?">error?</a> </code>
+    </pre>
+    <div class="function-desc">
+        
+        
+    </div>
+    
+
+    
+        
+        <div class="returns-listing">
+            <h3 class="type">Return Type</h3> (<span class="type"><a href="../null/types.html#error?">error?</a></span>)
+            
+        </div>
+        
+    
+</div>
+                    
+                        <div class="method-content">
+    <div class="main-method-title" id="ballerina/http:1.0.0.&lt;init&gt;1" title="ballerina/http:1.0.0.&lt;init&gt;1">
+             <a class="url-link" href="#ballerina/http:1.0.0.&lt;init&gt;1">
+                <img class="url-link-img" src="../html-template-resources/images/link.svg">
+            </a>
+            <h2 > ballerina/http:1.0.0.&lt;init&gt;1 </h2>
+    </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function ballerina/http:1.0.0.&lt;init&gt;1() returns <a href="../null/types.html#error?">error?</a> </code>
+    </pre>
+    <div class="function-desc">
+        
+        
+    </div>
+    
+
+    
+        
+        <div class="returns-listing">
+            <h3 class="type">Return Type</h3> (<span class="type"><a href="../null/types.html#error?">error?</a></span>)
+            
+        </div>
+        
+    
+</div>
+                    
+                        <div class="method-content">
+    <div class="main-method-title" id="ballerina/http:1.0.0.&lt;init&gt;2" title="ballerina/http:1.0.0.&lt;init&gt;2">
+             <a class="url-link" href="#ballerina/http:1.0.0.&lt;init&gt;2">
+                <img class="url-link-img" src="../html-template-resources/images/link.svg">
+            </a>
+            <h2 > ballerina/http:1.0.0.&lt;init&gt;2 </h2>
+    </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function ballerina/http:1.0.0.&lt;init&gt;2() returns <a href="../null/types.html#error?">error?</a> </code>
+    </pre>
+    <div class="function-desc">
+        
+        
+    </div>
+    
+
+    
+        
+        <div class="returns-listing">
+            <h3 class="type">Return Type</h3> (<span class="type"><a href="../null/types.html#error?">error?</a></span>)
+            
+        </div>
+        
+    
+</div>
+                    
+                        <div class="method-content">
+    <div class="main-method-title" id="createHttpCachingClient" title="createHttpCachingClient">
+             <a class="url-link" href="#createHttpCachingClient">
+                <img class="url-link-img" src="../html-template-resources/images/link.svg">
+            </a>
+            <h2 > createHttpCachingClient </h2>
+    </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function createHttpCachingClient(<span class="builtin-type">string</span> url, <a href="../http/records/ClientConfiguration.html">ClientConfiguration</a> config, <a href="../http/records/CacheConfig.html">CacheConfig</a> cacheConfig) returns <a href="../http/clients/HttpClient.html">HttpClient</a> | <a href="../http/types.html#ClientError">ClientError</a> </code>
+    </pre>
+    <div class="function-desc">
+        
+        <p>Creates an HTTP client capable of caching HTTP responses.</p>
+
+    </div>
+    
+        <div class="parameters">
+            <h3 class="param-title">Parameters</h3>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >url</span>
+                        <span class="type">  <span class="builtin-type">string</span> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p>The URL of the HTTP endpoint to connect</p>
+
+                    </p>
+                </ul>
+            </div>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >config</span>
+                        <span class="type">  <a href="../http/records/ClientConfiguration.html">ClientConfiguration</a> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p>The configurations for the client endpoint associated with the caching client</p>
+
+                    </p>
+                </ul>
+            </div>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >cacheConfig</span>
+                        <span class="type">  <a href="../http/records/CacheConfig.html">CacheConfig</a> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p>The configurations for the HTTP cache to be used with the caching client</p>
+
+                    </p>
+                </ul>
+            </div>
+            
+        </div>
+    
+
+    
+        
+        <div class="returns-listing">
+            <h3 class="type">Return Type</h3> (<span class="type"><a href="../http/clients/HttpClient.html">HttpClient</a> | <a href="../http/types.html#ClientError">ClientError</a></span>)
+            <p>An <code>http:HttpCachingClient</code> instance, which wraps the base <code>http:Client</code> with a caching layer
+or else an <code>http:ClientError</code></p>
+
+        </div>
+        
+    
+</div>
+                    
+                        <div class="method-content">
+    <div class="main-method-title" id="createHttpSecureClient" title="createHttpSecureClient">
+             <a class="url-link" href="#createHttpSecureClient">
+                <img class="url-link-img" src="../html-template-resources/images/link.svg">
+            </a>
+            <h2 > createHttpSecureClient </h2>
+    </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function createHttpSecureClient(<span class="builtin-type">string</span> url, <a href="../http/records/ClientConfiguration.html">ClientConfiguration</a> config) returns <a href="../http/clients/HttpClient.html">HttpClient</a> | <a href="../http/types.html#ClientError">ClientError</a> </code>
+    </pre>
+    <div class="function-desc">
+        
+        <p>Creates an HTTP client capable of securing HTTP requests with authentication.</p>
+
+    </div>
+    
+        <div class="parameters">
+            <h3 class="param-title">Parameters</h3>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >url</span>
+                        <span class="type">  <span class="builtin-type">string</span> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p>Base URL</p>
+
+                    </p>
+                </ul>
+            </div>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >config</span>
+                        <span class="type">  <a href="../http/records/ClientConfiguration.html">ClientConfiguration</a> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p>Client endpoint configurations</p>
+
+                    </p>
+                </ul>
+            </div>
+            
+        </div>
+    
+
+    
+        
+        <div class="returns-listing">
+            <h3 class="type">Return Type</h3> (<span class="type"><a href="../http/clients/HttpClient.html">HttpClient</a> | <a href="../http/types.html#ClientError">ClientError</a></span>)
+            <p>Created secure HTTP client</p>
+
+        </div>
+        
+    
+</div>
+                    
+                        <div class="method-content">
+    <div class="main-method-title" id="extractAuthorizationHeaderValue" title="extractAuthorizationHeaderValue">
+             <a class="url-link" href="#extractAuthorizationHeaderValue">
+                <img class="url-link-img" src="../html-template-resources/images/link.svg">
+            </a>
+            <h2 > extractAuthorizationHeaderValue </h2>
+    </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function extractAuthorizationHeaderValue(<a href="../http/objects/Request.html">Request</a> req) returns <span class="builtin-type">string</span> </code>
+    </pre>
+    <div class="function-desc">
+        
+        <p>Extracts the Authorization header value from the request.</p>
+
+    </div>
+    
+        <div class="parameters">
+            <h3 class="param-title">Parameters</h3>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >req</span>
+                        <span class="type">  <a href="../http/objects/Request.html">Request</a> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p>The <code>Request</code> instance</p>
+
+                    </p>
+                </ul>
+            </div>
+            
+        </div>
+    
+
+    
+        
+        <div class="returns-listing">
+            <h3 class="type">Return Type</h3> (<span class="type"><span class="builtin-type">string</span></span>)
+            <p>Value of the Authorization header</p>
+
+        </div>
+        
+    
+</div>
+                    
+                        <div class="method-content">
+    <div class="main-method-title" id="invokeEndpoint" title="invokeEndpoint">
+             <a class="url-link" href="#invokeEndpoint">
+                <img class="url-link-img" src="../html-template-resources/images/link.svg">
+            </a>
+            <h2 > invokeEndpoint </h2>
+    </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function invokeEndpoint(<span class="builtin-type">string</span> path, <a href="../http/objects/Request.html">Request</a> outRequest, <a href="../http/types.html#HttpOperation">HttpOperation</a> requestAction, <a href="../http/clients/HttpClient.html">HttpClient</a> httpClient, <span class="builtin-type">string</span> verb) returns <span class="builtin-type">HttpResponse</span> | <a href="../http/types.html#ClientError">ClientError</a> </code>
+    </pre>
+    <div class="function-desc">
+        
+        <p>The HEAD remote function implementation of the Circuit Breaker. This wraps the <code>head</code> function of the underlying
+HTTP remote function provider.</p>
+
+    </div>
+    
+        <div class="parameters">
+            <h3 class="param-title">Parameters</h3>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >path</span>
+                        <span class="type">  <span class="builtin-type">string</span> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p>Resource path</p>
+
+                    </p>
+                </ul>
+            </div>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >outRequest</span>
+                        <span class="type">  <a href="../http/objects/Request.html">Request</a> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p>A Request struct</p>
+
+                    </p>
+                </ul>
+            </div>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >requestAction</span>
+                        <span class="type">  <a href="../http/types.html#HttpOperation">HttpOperation</a> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p><code>HttpOperation</code> related to the request</p>
+
+                    </p>
+                </ul>
+            </div>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >httpClient</span>
+                        <span class="type">  <a href="../http/clients/HttpClient.html">HttpClient</a> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p>HTTP client which uses to call the relevant functions</p>
+
+                    </p>
+                </ul>
+            </div>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >verb</span>
+                        <span class="type">  <span class="builtin-type">string</span> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p>HTTP verb used for submit method</p>
+
+                    </p>
+                </ul>
+            </div>
+            
+        </div>
+    
+
+    
+        
+        <div class="returns-listing">
+            <h3 class="type">Return Type</h3> (<span class="type"><span class="builtin-type">HttpResponse</span> | <a href="../http/types.html#ClientError">ClientError</a></span>)
+            <p>The response for the request or an <code>http:ClientError</code> if failed to establish communication with the upstream server</p>
+
+        </div>
+        
+    
+</div>
+                    
+                        <div class="method-content">
+    <div class="main-method-title" id="isResourceSecured" title="isResourceSecured">
+             <a class="url-link" href="#isResourceSecured">
+                <img class="url-link-img" src="../html-template-resources/images/link.svg">
+            </a>
+            <h2 > isResourceSecured </h2>
+    </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function isResourceSecured(<a href="../http/objects/FilterContext.html">FilterContext</a> context) returns <span class="builtin-type">boolean</span> </code>
+    </pre>
+    <div class="function-desc">
+        
+        <p>Checks whether the calling resource is secured by evaluating the authentication hierarchy.</p>
+
+    </div>
+    
+        <div class="parameters">
+            <h3 class="param-title">Parameters</h3>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >context</span>
+                        <span class="type">  <a href="../http/objects/FilterContext.html">FilterContext</a> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p>The <code>FilterContext</code> instance</p>
+
+                    </p>
+                </ul>
+            </div>
+            
+        </div>
+    
+
+    
+        
+        <div class="returns-listing">
+            <h3 class="type">Return Type</h3> (<span class="type"><span class="builtin-type">boolean</span></span>)
+            <p>The status of calling resource is secured or not</p>
+
+        </div>
+        
+    
+</div>
+                    
+                        <div class="method-content">
+    <div class="main-method-title" id="parseHeader" title="parseHeader">
+             <a class="url-link" href="#parseHeader">
+                <img class="url-link-img" src="../html-template-resources/images/link.svg">
+            </a>
+            <h2 > parseHeader </h2>
+    </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function parseHeader(<span class="builtin-type">string</span> headerValue) returns <span>[</span><span class="builtin-type">string</span>, <span class="builtin-type">map</span><<span class="builtin-type">any</span>><span>]</span> | <a href="../http/types.html#ClientError">ClientError</a> </code>
+    </pre>
+    <div class="function-desc">
+        
+        <p>Parses the given header value to extract its value and parameter map.</p>
+
+    </div>
+    
+        <div class="parameters">
+            <h3 class="param-title">Parameters</h3>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >headerValue</span>
+                        <span class="type">  <span class="builtin-type">string</span> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p>The header value</p>
+
+                    </p>
+                </ul>
+            </div>
+            
+        </div>
+    
+
+    
+        
+        <div class="returns-listing">
+            <h3 class="type">Return Type</h3> (<span class="type"><span>[</span><span class="builtin-type">string</span>, <span class="builtin-type">map</span><<span class="builtin-type">any</span>><span>]</span> | <a href="../http/types.html#ClientError">ClientError</a></span>)
+            <p>A tuple containing the value and its parameter map or else an <code>http:ClientError</code> if the header parsing fails</p>
+
+        </div>
+        
+    
+</div>
+                    
+                </div>
+            
+        </div>
+    </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/components/prism-core.min.js"></script>
+<script src="../syntax-highlighter/prism-ballerina.js"></script>
+<script>
+    function toggleMenu() {
+        $('#mobMenu').transition('slide down')
+    }
+    $(document).ready(function () {
+        $('.ui.dropdown').dropdown();
+        $('#version-picker').dropdown('set selected', "1.2");
+        $('#version-picker-mob').dropdown('set selected', "1.2");
+
+    });
+
+    let mainNavLinks = document.querySelectorAll(".toc .ui.visible.left.vertical.sidebar.menu .menu a");
+    console.log(mainNavLinks);
+    let contentWrapper = document.querySelector(".content");
+    contentWrapper.addEventListener("scroll", event => {
+      let fromTop = contentWrapper.scrollTop;
+
+      mainNavLinks.forEach(link => {
+        let section = document.querySelector("#" + link.attributes.getNamedItem("data").textContent);
+
+        if (
+          section.offsetTop <= fromTop &&
+          section.offsetTop + section.offsetHeight > fromTop
+        ) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    });
+
+</script>
+<script>
+    var rootPath = "../";
+</script>
+<script src="../doc-search/search-data.js"></script>
+<script src="../doc-search/search.js"></script>
+<script>
+    var str = "";
+    var currentModule = "http";
+    searchData.modules.forEach(function(module) {
+        var active = "";
+        if (currentModule==module.id) {
+            active = " active";
+        }
+        str += '<a class="item' + active + '" href="' + rootPath + module.id + '/index.html">' + module.id + '</a>';
+    });
+    document.getElementById("modules-list").innerHTML = str;
+    document.getElementById("modules-list-mob").innerHTML = str;
+</script>
+
+
+

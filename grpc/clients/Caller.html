@@ -1,0 +1,743 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="This module provides support for the gRPC messaging protocol. gRPC is an inter-process communication technology that allows you to connect, invoke and operate distributed heterogeneous applications as easily as making a local function call. The gRPC protocol is layered over HTTP/2 and It uses Protocol Buffers for marshaling/unmarshaling messages. This makes gRPC, highly efficient on wire and a simple service definition framework.
+">
+    <meta name="keywords" content="ballerina,ballerina lang,api docs,grpc">
+
+    <title>API Docs - Client : Caller</title>
+
+    <script src="../../html-template-resources/jquery.min.js"></script>
+    <link rel="stylesheet" href="../../html-template-resources/semantic.min.css">
+    <link rel="stylesheet" href="../../html-template-resources/components/icon.min.css">
+    <link rel="stylesheet" href="../../html-template-resources/styles/css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/themes/prism.min.css" rel="stylesheet" />
+    <script src="../../html-template-resources/semantic.min.js"></script>
+
+</head>
+
+
+<body>
+    <div class="pusher">
+        <div class="mobile-logo-div">
+            <div class="ui secondary menu">
+                <a href="../index.html">
+                    <img class="mobile-logo" src="../../html-template-resources/images/ballerina-logo.png">
+                </a>
+                <div class="right item">
+                    <button class="ui icon button" onclick="toggleMenu()">
+                     <i class="large bars icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="toc">
+            <div class="ui visible left vertical sidebar menu">
+                <a href="
+                    ../../index.html">
+                    <img class="logo" src="../../html-template-resources/images/ballerina-logo.png">
+                </a>
+                
+                    
+                        <div class="header capitalize">
+                            
+    Clients
+
+                        </div>
+                        <div class="menu">
+                            
+    
+        <a class="item active" href="Caller.html">Caller</a>
+    
+        <a class="item " href="Client.html">Client</a>
+    
+        <a class="item " href="StreamingClient.html">StreamingClient</a>
+    
+
+                        </div>
+                        <div class="ui divider"></div>
+                    
+                    <div class="header">
+                        <a class="capitalize" href="../../grpc/index.html">
+                            grpc Module
+                        </a>
+                    </div>
+                    <div class="menu">
+    
+        
+            <a class="item" data="records" href="../../grpc/index.html#records">Records</a>
+        
+    
+    
+        
+            <a class="item" data="objects" href="../../grpc/index.html#objects">Objects</a>
+        
+    
+    
+        <a class="item" data="clients" href="../../grpc/index.html#clients">Clients</a>
+    
+    
+        <a class="item" data="listeners" href="../../grpc/index.html#listeners">Listeners</a>
+    
+    
+        <a class="item" data="functions" href="../../grpc/index.html#functions">Functions</a>
+    
+    
+        <a class="item" data="constants" href="../../grpc/index.html#constants">Constants</a>
+    
+    
+        <a class="item" data="annotations" href="../../grpc/index.html#annotations">Annotations</a>
+    
+    
+        <a class="item" ata="types" href="../../grpc/index.html#types">Types</a>
+    
+    
+        <a class="item" data="errors" href="../../grpc/index.html#errors">Errors</a>
+    
+    <div class="ui divider"></div>
+</div>
+
+                    <div class="header capitalize">
+                        Other Modules
+                    </div>
+                    <div id="modules-list" class="menu"></div>
+                    <div class="ui divider"></div>
+                
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="row nav-bar">
+                <div class="ui secondary menu">
+                    <div class="search-bar">
+                        <div class="ui category search item search-bar">
+                            <i class="search link icon"></i>
+                            <div class="ui transparent icon input">
+                                <input class="prompt" id="searchBox" type="text" placeholder="Search API Docs..."/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right menu">
+                        <a class="item active">Learn</a>
+                        <a class="item">Events</a>
+                        <a class="item">Central</a>
+                        <a class="item">Community</a>
+                        <a class="item">Blog</a>
+                        <div class="ui dropdown item ballerina" id="version-picker">
+                            Version
+                            <i class="dropdown icon"></i>
+                            <div class="menu">
+                                <a class="item" value="1.0">1.0</a>
+                                <a class="item" value="1.1">1.1</a>
+                                <a class="item" value="1.2">1.2</a>
+                                <a class="item" value="swan-lake">Swan Lake</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div id="mobMenu" class="mob-menu">
+                    <div class="ui stackable secondary menu">
+                        <div class="item">
+                            <div class="search-bar">
+                                <div class="ui category search item search-bar">
+                                    <i class="search link icon"></i>
+                                    <div class="ui transparent icon input">
+                                        <input class="prompt" id="searchBoxMob" type="text" placeholder="Search API Docs..."/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                            
+                                <div class="ui dropdown item capitalize">
+                                    
+    Clients
+<i class="dropdown icon"></i>
+                                    <div class="menu">
+                                        
+    
+        <a class="item active" href="Caller.html">Caller</a>
+    
+        <a class="item " href="Client.html">Client</a>
+    
+        <a class="item " href="StreamingClient.html">StreamingClient</a>
+    
+
+                                    </div>
+                                </div>
+                            
+                            <div class="ui dropdown item capitalize">
+                                grpc Module <i class="dropdown icon"></i>
+                                <div class="menu">
+    
+        
+            <a class="item" data="records" href="../../grpc/index.html#records">Records</a>
+        
+    
+    
+        
+            <a class="item" data="objects" href="../../grpc/index.html#objects">Objects</a>
+        
+    
+    
+        <a class="item" data="clients" href="../../grpc/index.html#clients">Clients</a>
+    
+    
+        <a class="item" data="listeners" href="../../grpc/index.html#listeners">Listeners</a>
+    
+    
+        <a class="item" data="functions" href="../../grpc/index.html#functions">Functions</a>
+    
+    
+        <a class="item" data="constants" href="../../grpc/index.html#constants">Constants</a>
+    
+    
+        <a class="item" data="annotations" href="../../grpc/index.html#annotations">Annotations</a>
+    
+    
+        <a class="item" ata="types" href="../../grpc/index.html#types">Types</a>
+    
+    
+        <a class="item" data="errors" href="../../grpc/index.html#errors">Errors</a>
+    
+    <div class="ui divider"></div>
+</div>
+
+                            </div>
+                            <div class="ui dropdown item">
+                                Other Modules <i class="dropdown icon"></i>
+                                <div id="modules-list-mob" class="menu"></div>
+                            </div>
+                        
+
+                            <div class="ui dropdown item" id="version-picker-mob">
+                                Version <i class="dropdown icon"></i>
+                                <div class="menu">
+                                    <a class="item" value="1.0">1.0</a>
+                                    <a class="item" value="1.1">1.1</a>
+                                    <a class="item" value="1.2">1.2</a>
+                                    <a class="item" value="swan-lake">Swan Lake</a>
+                                </div>
+                            </div>
+                            <div class="ui dropdown item ballerina">
+                                Ballerina <i class="dropdown icon"></i>
+                                <div class="menu">
+                                    <a class="item active">Learn</a>
+                                    <a class="item">Events</a>
+                                    <a class="item">Central</a>
+                                    <a class="item">Community</a>
+                                </div>
+                            </div>
+
+                    </div>
+                </div>
+                <div id="search-impl"></div>
+                <div id="main">
+                    
+                        <div class="ui breadcrumb">
+                            <a class="section" href="
+                                 ../../index.html">Modules</a>
+                            <i class="right angle icon divider"></i>
+                            <a class="section capitalize " href="../../grpc/index.html">grpc</a>
+                            
+                                <i class="right angle icon divider"></i>
+                                <a class="section " href="../../grpc/index.html#clients">
+    Clients
+</a>
+                                
+                                    <i class="right angle icon divider"></i>
+                                    <a class="section active">
+    <span class="clients">Caller</span>
+</a>
+                                
+                            
+                        </div>
+                    
+
+                    <div class="ui very padded segment module-data">
+                            <h1 class="capitalize">
+    Clients
+
+                            :
+    <span class="clients">Caller</span>
+
+                            </h1>
+                        
+    <p><p>Provides the gRPC remote functions for interacting with caller.</p>
+</p>
+
+    <div class="constants">
+        <div class="method-sum">
+            
+
+            
+                <h2>Remote Methods</h2>
+                <table class="ui very basic table">
+                    
+                        <tr>
+                            <td class="module-title truncate functions" title="send"><a
+                                    class="functions" href="#send">send</a></td>
+                            <td class="module-desc"><p>Sends the outbound response to the caller.</td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate functions" title="complete"><a
+                                    class="functions" href="#complete">complete</a></td>
+                            <td class="module-desc"><p>Informs the caller, when the server has sent all the messages.</td>
+                        </tr>
+                    
+                        <tr>
+                            <td class="module-title truncate functions" title="sendError"><a
+                                    class="functions" href="#sendError">sendError</a></td>
+                            <td class="module-desc"><p>Sends a server error to the caller.</td>
+                        </tr>
+                    
+                </table>
+            
+
+            
+                <h2>Methods</h2>
+                <table class="ui very basic table">
+                    
+                        
+<tr>
+    <td class="module-title " title="getId">
+        <a href="#getId">getId </a>
+    </td>
+    <td class="module-desc">
+        
+        <p>Returns the unique identification of the caller.
+    </td>
+</tr>
+
+                    
+                        
+<tr>
+    <td class="module-title " title="isCancelled">
+        <a href="#isCancelled">isCancelled </a>
+    </td>
+    <td class="module-desc">
+        
+        <p>Checks whether the connection is closed by the caller.
+    </td>
+</tr>
+
+                    
+                </table>
+            
+        
+            
+                <h2>Fields</h2>
+                        
+                        <div class="fields-listing">
+    <ul>
+        
+                <li> <span >remoteDetails</span>
+                    <span class="type">  <a href="../../grpc/records/Remote.html">Remote</a></span>
+                     <span class="default">(default  {})</span> 
+                </li>
+                <p>
+                    
+                    <p>The remote details</p>
+
+                </p>
+        
+                <li> <span >local</span>
+                    <span class="type">  <a href="../../grpc/records/Local.html">Local</a></span>
+                     <span class="default">(default  {})</span> 
+                </li>
+                <p>
+                    
+                    <p>The local details</p>
+
+                </p>
+        
+    </ul>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/components/prism-core.min.js"></script>
+<script src="../../syntax-highlighter/prism-ballerina.js"></script>
+<script>
+    function toggleMenu() {
+        $('#mobMenu').transition('slide down')
+    }
+    $(document).ready(function () {
+        $('.ui.dropdown').dropdown();
+        $('#version-picker').dropdown('set selected', "1.2");
+        $('#version-picker-mob').dropdown('set selected', "1.2");
+
+    });
+
+    let mainNavLinks = document.querySelectorAll(".toc .ui.visible.left.vertical.sidebar.menu .menu a");
+    console.log(mainNavLinks);
+    let contentWrapper = document.querySelector(".content");
+    contentWrapper.addEventListener("scroll", event => {
+      let fromTop = contentWrapper.scrollTop;
+
+      mainNavLinks.forEach(link => {
+        let section = document.querySelector("#" + link.attributes.getNamedItem("data").textContent);
+
+        if (
+          section.offsetTop <= fromTop &&
+          section.offsetTop + section.offsetHeight > fromTop
+        ) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    });
+
+</script>
+<script>
+    var rootPath = "../../";
+</script>
+<script src="../../doc-search/search-data.js"></script>
+<script src="../../doc-search/search.js"></script>
+<script>
+    var str = "";
+    var currentModule = "grpc";
+    searchData.modules.forEach(function(module) {
+        var active = "";
+        if (currentModule==module.id) {
+            active = " active";
+        }
+        str += '<a class="item' + active + '" href="' + rootPath + module.id + '/index.html">' + module.id + '</a>';
+    });
+    document.getElementById("modules-list").innerHTML = str;
+    document.getElementById("modules-list-mob").innerHTML = str;
+</script>
+
+
+                    
+            
+        </div>
+
+        
+            
+                <div class="method-content">
+    <div class="main-method-title" id="send" title="send">
+             <a class="url-link" href="#send">
+                <img class="url-link-img" src="../../html-template-resources/images/link.svg">
+            </a>
+            <h2 > send </h2>
+    </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function send(<span class="builtin-type">anydata</span> res, <a href="../../grpc/objects/Headers.html">Headers</a>? headers) returns <a href="../../grpc/types.html#Error">Error</a>? </code>
+    </pre>
+    <div class="function-desc">
+        
+        <p>Sends the outbound response to the caller.</p>
+<pre><code class="language-ballerina"> grpc:Error? err = caller-&gt;send(message, headers);
+</code></pre>
+
+    </div>
+    
+        <div class="parameters">
+            <h3 class="param-title">Parameters</h3>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >res</span>
+                        <span class="type">  <span class="builtin-type">anydata</span> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <ul>
+<li>The outbound response message</li>
+</ul>
+
+                    </p>
+                </ul>
+            </div>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >headers</span>
+                        <span class="type">  <a href="../../grpc/objects/Headers.html">Headers</a>? </span>
+                        <span class="default"> (default &lt;ballerina/grpc:0.7.0:Headers?&gt; ())</span>
+                    </li>
+                    <p>
+                        
+                        <ul>
+<li>Optional headers parameter. The header values are passed only if needed. The default value is <code>()</code></li>
+</ul>
+
+                    </p>
+                </ul>
+            </div>
+            
+        </div>
+    
+
+    
+        
+        <div class="returns-listing">
+            <h3 class="type">Return Type</h3> (<span class="type"><a href="../../grpc/types.html#Error">Error</a>?</span>)
+            <ul>
+<li>A <code>grpc:Error</code> if an error occurs while sending the response or else <code>()</code></li>
+</ul>
+
+        </div>
+        
+    
+</div>
+            
+                <div class="method-content">
+    <div class="main-method-title" id="complete" title="complete">
+             <a class="url-link" href="#complete">
+                <img class="url-link-img" src="../../html-template-resources/images/link.svg">
+            </a>
+            <h2 > complete </h2>
+    </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function complete() returns <a href="../../grpc/types.html#Error">Error</a>? </code>
+    </pre>
+    <div class="function-desc">
+        
+        <p>Informs the caller, when the server has sent all the messages.</p>
+<pre><code class="language-ballerina"> grpc:Error? result = caller-&gt;complete();
+</code></pre>
+
+    </div>
+    
+
+    
+        
+        <div class="returns-listing">
+            <h3 class="type">Return Type</h3> (<span class="type"><a href="../../grpc/types.html#Error">Error</a>?</span>)
+            <p>A <code>grpc:Error</code> if an error occurs while sending the response or else <code>()</code></p>
+
+        </div>
+        
+    
+</div>
+            
+                <div class="method-content">
+    <div class="main-method-title" id="sendError" title="sendError">
+             <a class="url-link" href="#sendError">
+                <img class="url-link-img" src="../../html-template-resources/images/link.svg">
+            </a>
+            <h2 > sendError </h2>
+    </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function sendError(<span class="builtin-type">int</span> statusCode, <span class="builtin-type">string</span> message, <a href="../../grpc/objects/Headers.html">Headers</a>? headers) returns <a href="../../grpc/types.html#Error">Error</a>? </code>
+    </pre>
+    <div class="function-desc">
+        
+        <p>Sends a server error to the caller.</p>
+<pre><code class="language-ballerina"> grpc:Error? result = caller-&gt;sendError(grpc:ABORTED, &quot;Operation aborted&quot;, headers);
+</code></pre>
+
+    </div>
+    
+        <div class="parameters">
+            <h3 class="param-title">Parameters</h3>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >statusCode</span>
+                        <span class="type">  <span class="builtin-type">int</span> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p>Error status code</p>
+
+                    </p>
+                </ul>
+            </div>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >message</span>
+                        <span class="type">  <span class="builtin-type">string</span> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p>Error message</p>
+
+                    </p>
+                </ul>
+            </div>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >headers</span>
+                        <span class="type">  <a href="../../grpc/objects/Headers.html">Headers</a>? </span>
+                        <span class="default"> (default &lt;ballerina/grpc:0.7.0:Headers?&gt; ())</span>
+                    </li>
+                    <p>
+                        
+                        <p>Optional headers parameter. The header values are passed only if needed. The default value is <code>()</code></p>
+
+                    </p>
+                </ul>
+            </div>
+            
+        </div>
+    
+
+    
+        
+        <div class="returns-listing">
+            <h3 class="type">Return Type</h3> (<span class="type"><a href="../../grpc/types.html#Error">Error</a>?</span>)
+            <p>A <code>grpc:Error</code> if an error occurs while sending the response or else <code>()</code></p>
+
+        </div>
+        
+    
+</div>
+            
+        
+
+        
+            
+                <div class="method-content">
+    <div class="main-method-title" id="getId" title="getId">
+             <a class="url-link" href="#getId">
+                <img class="url-link-img" src="../../html-template-resources/images/link.svg">
+            </a>
+            <h2 > getId </h2>
+    </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function getId() returns <span class="builtin-type">int</span> </code>
+    </pre>
+    <div class="function-desc">
+        
+        <p>Returns the unique identification of the caller.</p>
+<pre><code class="language-ballerina"> int result = caller.getId();
+</code></pre>
+
+    </div>
+    
+
+    
+        
+        <div class="returns-listing">
+            <h3 class="type">Return Type</h3> (<span class="type"><span class="builtin-type">int</span></span>)
+            <p>caller ID</p>
+
+        </div>
+        
+    
+</div>
+            
+                <div class="method-content">
+    <div class="main-method-title" id="isCancelled" title="isCancelled">
+             <a class="url-link" href="#isCancelled">
+                <img class="url-link-img" src="../../html-template-resources/images/link.svg">
+            </a>
+            <h2 > isCancelled </h2>
+    </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function isCancelled() returns <span class="builtin-type">boolean</span> </code>
+    </pre>
+    <div class="function-desc">
+        
+        <p>Checks whether the connection is closed by the caller.</p>
+<pre><code class="language-ballerina"> boolean result = caller.isCancelled();
+</code></pre>
+
+    </div>
+    
+
+    
+        
+        <div class="returns-listing">
+            <h3 class="type">Return Type</h3> (<span class="type"><span class="builtin-type">boolean</span></span>)
+            <p>True if the caller has already closed the connection or else false</p>
+
+        </div>
+        
+    
+</div>
+            
+        
+    </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/components/prism-core.min.js"></script>
+<script src="../../syntax-highlighter/prism-ballerina.js"></script>
+<script>
+    function toggleMenu() {
+        $('#mobMenu').transition('slide down')
+    }
+    $(document).ready(function () {
+        $('.ui.dropdown').dropdown();
+        $('#version-picker').dropdown('set selected', "1.2");
+        $('#version-picker-mob').dropdown('set selected', "1.2");
+
+    });
+
+    let mainNavLinks = document.querySelectorAll(".toc .ui.visible.left.vertical.sidebar.menu .menu a");
+    console.log(mainNavLinks);
+    let contentWrapper = document.querySelector(".content");
+    contentWrapper.addEventListener("scroll", event => {
+      let fromTop = contentWrapper.scrollTop;
+
+      mainNavLinks.forEach(link => {
+        let section = document.querySelector("#" + link.attributes.getNamedItem("data").textContent);
+
+        if (
+          section.offsetTop <= fromTop &&
+          section.offsetTop + section.offsetHeight > fromTop
+        ) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    });
+
+</script>
+<script>
+    var rootPath = "../../";
+</script>
+<script src="../../doc-search/search-data.js"></script>
+<script src="../../doc-search/search.js"></script>
+<script>
+    var str = "";
+    var currentModule = "grpc";
+    searchData.modules.forEach(function(module) {
+        var active = "";
+        if (currentModule==module.id) {
+            active = " active";
+        }
+        str += '<a class="item' + active + '" href="' + rootPath + module.id + '/index.html">' + module.id + '</a>';
+    });
+    document.getElementById("modules-list").innerHTML = str;
+    document.getElementById("modules-list-mob").innerHTML = str;
+</script>
+
+
+
