@@ -1,0 +1,1008 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="This module provides an implementation for connecting and interacting with HTTP, HTTP2, and WebSocket endpoints. The module facilitates two types of network entry points as ‘Client’ and ‘Listener’.
+">
+    <meta name="keywords" content="ballerina,ballerina lang,api docs,http">
+
+    <title>API Docs - Object : PushPromise</title>
+
+    <script src="../../html-template-resources/jquery.min.js"></script>
+    <link rel="stylesheet" href="../../html-template-resources/semantic.min.css">
+    <link rel="stylesheet" href="../../html-template-resources/components/icon.min.css">
+    <link rel="stylesheet" href="../../html-template-resources/styles/css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/themes/prism.min.css" rel="stylesheet" />
+    <script src="../../html-template-resources/semantic.min.js"></script>
+
+</head>
+
+
+<body>
+    <div class="pusher">
+        <div class="mobile-logo-div">
+            <div class="ui secondary menu">
+                <a href="../index.html">
+                    <img class="mobile-logo" src="../../html-template-resources/images/ballerina-logo.png">
+                </a>
+                <div class="right item">
+                    <button class="ui icon button" onclick="toggleMenu()">
+                     <i class="large bars icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="toc">
+            <div class="ui visible left vertical sidebar menu">
+                <a href="
+                    ../../index.html">
+                    <img class="logo" src="../../html-template-resources/images/ballerina-logo.png">
+                </a>
+                
+                    
+                        <div class="header capitalize">
+                            
+    Objects
+
+                        </div>
+                        <div class="menu">
+                            
+    
+        <a class="item " href="AuthnFilter.html">AuthnFilter</a>
+    
+        <a class="item " href="AuthzFilter.html">AuthzFilter</a>
+    
+        <a class="item " href="AuthzHandler.html">AuthzHandler</a>
+    
+        <a class="item " href="BasicAuthHandler.html">BasicAuthHandler</a>
+    
+        <a class="item " href="BearerAuthHandler.html">BearerAuthHandler</a>
+    
+        <a class="item " href="Cookie.html">Cookie</a>
+    
+        <a class="item " href="CookieStore.html">CookieStore</a>
+    
+        <a class="item " href="CsvPersistentCookieHandler.html">CsvPersistentCookieHandler</a>
+    
+        <a class="item " href="FilterContext.html">FilterContext</a>
+    
+        <a class="item " href="HttpCache.html">HttpCache</a>
+    
+        <a class="item " href="HttpFuture.html">HttpFuture</a>
+    
+        <a class="item " href="InboundAuthHandler.html">InboundAuthHandler</a>
+    
+        <a class="item " href="LoadBalancerRoundRobinRule.html">LoadBalancerRoundRobinRule</a>
+    
+        <a class="item " href="LoadBalancerRule.html">LoadBalancerRule</a>
+    
+        <a class="item " href="OutboundAuthHandler.html">OutboundAuthHandler</a>
+    
+        <a class="item " href="PersistentCookieHandler.html">PersistentCookieHandler</a>
+    
+        <a class="item active" href="PushPromise.html">PushPromise</a>
+    
+        <a class="item " href="Request.html">Request</a>
+    
+        <a class="item " href="RequestCacheControl.html">RequestCacheControl</a>
+    
+        <a class="item " href="RequestFilter.html">RequestFilter</a>
+    
+        <a class="item " href="Response.html">Response</a>
+    
+        <a class="item " href="ResponseCacheControl.html">ResponseCacheControl</a>
+    
+        <a class="item " href="ResponseFilter.html">ResponseFilter</a>
+    
+
+                        </div>
+                        <div class="ui divider"></div>
+                    
+                    <div class="header">
+                        <a class="capitalize" href="../../http/index.html">
+                            http Module
+                        </a>
+                    </div>
+                    <div class="menu">
+    
+        
+            <a class="item" data="records" href="../../http/index.html#records">Records</a>
+        
+    
+    
+        
+            <a class="item" data="objects" href="../../http/index.html#objects">Objects</a>
+        
+    
+    
+        <a class="item" data="clients" href="../../http/index.html#clients">Clients</a>
+    
+    
+        <a class="item" data="listeners" href="../../http/index.html#listeners">Listeners</a>
+    
+    
+        <a class="item" data="functions" href="../../http/index.html#functions">Functions</a>
+    
+    
+        <a class="item" data="constants" href="../../http/index.html#constants">Constants</a>
+    
+    
+        <a class="item" data="annotations" href="../../http/index.html#annotations">Annotations</a>
+    
+    
+        <a class="item" ata="types" href="../../http/index.html#types">Types</a>
+    
+    
+        <a class="item" data="errors" href="../../http/index.html#errors">Errors</a>
+    
+    <div class="ui divider"></div>
+</div>
+
+                    <div class="header capitalize">
+                        Other Modules
+                    </div>
+                    <div id="modules-list" class="menu"></div>
+                    <div class="ui divider"></div>
+                
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="row nav-bar">
+                <div class="ui secondary menu">
+                    <div class="search-bar">
+                        <div class="ui category search item search-bar">
+                            <i class="search link icon"></i>
+                            <div class="ui transparent icon input">
+                                <input class="prompt" id="searchBox" type="text" placeholder="Search API Docs..."/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right menu">
+                        <a class="item active">Learn</a>
+                        <a class="item">Events</a>
+                        <a class="item">Central</a>
+                        <a class="item">Community</a>
+                        <a class="item">Blog</a>
+                        <div class="ui dropdown item ballerina" id="version-picker">
+                            Version
+                            <i class="dropdown icon"></i>
+                            <div class="menu">
+                                <a class="item" value="1.0">1.0</a>
+                                <a class="item" value="1.1">1.1</a>
+                                <a class="item" value="1.2">1.2</a>
+                                <a class="item" value="swan-lake">Swan Lake</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div id="mobMenu" class="mob-menu">
+                    <div class="ui stackable secondary menu">
+                        <div class="item">
+                            <div class="search-bar">
+                                <div class="ui category search item search-bar">
+                                    <i class="search link icon"></i>
+                                    <div class="ui transparent icon input">
+                                        <input class="prompt" id="searchBoxMob" type="text" placeholder="Search API Docs..."/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                            
+                                <div class="ui dropdown item capitalize">
+                                    
+    Objects
+<i class="dropdown icon"></i>
+                                    <div class="menu">
+                                        
+    
+        <a class="item " href="AuthnFilter.html">AuthnFilter</a>
+    
+        <a class="item " href="AuthzFilter.html">AuthzFilter</a>
+    
+        <a class="item " href="AuthzHandler.html">AuthzHandler</a>
+    
+        <a class="item " href="BasicAuthHandler.html">BasicAuthHandler</a>
+    
+        <a class="item " href="BearerAuthHandler.html">BearerAuthHandler</a>
+    
+        <a class="item " href="Cookie.html">Cookie</a>
+    
+        <a class="item " href="CookieStore.html">CookieStore</a>
+    
+        <a class="item " href="CsvPersistentCookieHandler.html">CsvPersistentCookieHandler</a>
+    
+        <a class="item " href="FilterContext.html">FilterContext</a>
+    
+        <a class="item " href="HttpCache.html">HttpCache</a>
+    
+        <a class="item " href="HttpFuture.html">HttpFuture</a>
+    
+        <a class="item " href="InboundAuthHandler.html">InboundAuthHandler</a>
+    
+        <a class="item " href="LoadBalancerRoundRobinRule.html">LoadBalancerRoundRobinRule</a>
+    
+        <a class="item " href="LoadBalancerRule.html">LoadBalancerRule</a>
+    
+        <a class="item " href="OutboundAuthHandler.html">OutboundAuthHandler</a>
+    
+        <a class="item " href="PersistentCookieHandler.html">PersistentCookieHandler</a>
+    
+        <a class="item active" href="PushPromise.html">PushPromise</a>
+    
+        <a class="item " href="Request.html">Request</a>
+    
+        <a class="item " href="RequestCacheControl.html">RequestCacheControl</a>
+    
+        <a class="item " href="RequestFilter.html">RequestFilter</a>
+    
+        <a class="item " href="Response.html">Response</a>
+    
+        <a class="item " href="ResponseCacheControl.html">ResponseCacheControl</a>
+    
+        <a class="item " href="ResponseFilter.html">ResponseFilter</a>
+    
+
+                                    </div>
+                                </div>
+                            
+                            <div class="ui dropdown item capitalize">
+                                http Module <i class="dropdown icon"></i>
+                                <div class="menu">
+    
+        
+            <a class="item" data="records" href="../../http/index.html#records">Records</a>
+        
+    
+    
+        
+            <a class="item" data="objects" href="../../http/index.html#objects">Objects</a>
+        
+    
+    
+        <a class="item" data="clients" href="../../http/index.html#clients">Clients</a>
+    
+    
+        <a class="item" data="listeners" href="../../http/index.html#listeners">Listeners</a>
+    
+    
+        <a class="item" data="functions" href="../../http/index.html#functions">Functions</a>
+    
+    
+        <a class="item" data="constants" href="../../http/index.html#constants">Constants</a>
+    
+    
+        <a class="item" data="annotations" href="../../http/index.html#annotations">Annotations</a>
+    
+    
+        <a class="item" ata="types" href="../../http/index.html#types">Types</a>
+    
+    
+        <a class="item" data="errors" href="../../http/index.html#errors">Errors</a>
+    
+    <div class="ui divider"></div>
+</div>
+
+                            </div>
+                            <div class="ui dropdown item">
+                                Other Modules <i class="dropdown icon"></i>
+                                <div id="modules-list-mob" class="menu"></div>
+                            </div>
+                        
+
+                            <div class="ui dropdown item" id="version-picker-mob">
+                                Version <i class="dropdown icon"></i>
+                                <div class="menu">
+                                    <a class="item" value="1.0">1.0</a>
+                                    <a class="item" value="1.1">1.1</a>
+                                    <a class="item" value="1.2">1.2</a>
+                                    <a class="item" value="swan-lake">Swan Lake</a>
+                                </div>
+                            </div>
+                            <div class="ui dropdown item ballerina">
+                                Ballerina <i class="dropdown icon"></i>
+                                <div class="menu">
+                                    <a class="item active">Learn</a>
+                                    <a class="item">Events</a>
+                                    <a class="item">Central</a>
+                                    <a class="item">Community</a>
+                                </div>
+                            </div>
+
+                    </div>
+                </div>
+                <div id="search-impl"></div>
+                <div id="main">
+                    
+                        <div class="ui breadcrumb">
+                            <a class="section" href="
+                                 ../../index.html">Modules</a>
+                            <i class="right angle icon divider"></i>
+                            <a class="section capitalize " href="../../http/index.html">http</a>
+                            
+                                <i class="right angle icon divider"></i>
+                                <a class="section " href="../../http/index.html#objects">
+    Object
+</a>
+                                
+                                    <i class="right angle icon divider"></i>
+                                    <a class="section active">
+    <span class="objects ">PushPromise</span>
+</a>
+                                
+                            
+                        </div>
+                    
+
+                    <div class="ui very padded segment module-data">
+                            <h1 class="capitalize">
+    Object
+
+                            :
+    <span class="objects ">PushPromise</span>
+
+                            </h1>
+                        
+    <p>
+        
+        <p>Represents an HTTP/2 <code>PUSH_PROMISE</code> frame.</p>
+
+    </p>
+
+    <div class="constants">
+        <div class="method-sum">
+            
+                
+                <h2>Constructor</h2>
+
+    <p>Constructs an <code>http:PushPromise</code> from a given path and a method.</p>
+
+
+<div class="main-method-title">
+    <h3>__init</h3><p>(<span class="builtin-type">string</span> path, <span class="builtin-type">string</span> method)</p>
+</div>
+<div class="data-wrapper">
+    
+        <div class="params-listing">
+            <ul>
+                <li> <b>path</b><span class="type">  <span class="builtin-type">string</span></span> /</li>
+                <li>
+                    <p>The resource path</p>
+
+                </li>
+            </ul>
+        </div>
+    
+        <div class="params-listing">
+            <ul>
+                <li> <b>method</b><span class="type">  <span class="builtin-type">string</span></span> GET</li>
+                <li>
+                    <p>The HTTP method</p>
+
+                </li>
+            </ul>
+        </div>
+    
+</div>
+                
+            
+
+        
+            
+                <h2>Methods</h2>
+                <div class="method-list">
+                    <table class="ui very basic table">
+                        
+                            
+<tr>
+    <td class="module-title " title="hasHeader">
+        <a href="#hasHeader">hasHeader </a>
+    </td>
+    <td class="module-desc">
+        
+        <p>Checks whether the requested header exists.
+    </td>
+</tr>
+
+                        
+                            
+<tr>
+    <td class="module-title " title="getHeader">
+        <a href="#getHeader">getHeader </a>
+    </td>
+    <td class="module-desc">
+        
+        <p>Returns the header value with the specified header name.
+    </td>
+</tr>
+
+                        
+                            
+<tr>
+    <td class="module-title " title="getHeaders">
+        <a href="#getHeaders">getHeaders </a>
+    </td>
+    <td class="module-desc">
+        
+        <p>Gets transport headers from the <code>PushPromise</code>.
+    </td>
+</tr>
+
+                        
+                            
+<tr>
+    <td class="module-title " title="addHeader">
+        <a href="#addHeader">addHeader </a>
+    </td>
+    <td class="module-desc">
+        
+        <p>Adds the specified key/value pair as an HTTP header to the <code>http:PushPromise</code>.
+    </td>
+</tr>
+
+                        
+                            
+<tr>
+    <td class="module-title " title="setHeader">
+        <a href="#setHeader">setHeader </a>
+    </td>
+    <td class="module-desc">
+        
+        <p>Sets the value of a transport header in the <code>http:PushPromise</code>.
+    </td>
+</tr>
+
+                        
+                            
+<tr>
+    <td class="module-title " title="removeHeader">
+        <a href="#removeHeader">removeHeader </a>
+    </td>
+    <td class="module-desc">
+        
+        <p>Removes a transport header from the <code>http:PushPromise</code>.
+    </td>
+</tr>
+
+                        
+                            
+<tr>
+    <td class="module-title " title="removeAllHeaders">
+        <a href="#removeAllHeaders">removeAllHeaders </a>
+    </td>
+    <td class="module-desc">
+        
+        <p>Removes all transport headers from the <code>Phttp:ushPromise</code>.
+    </td>
+</tr>
+
+                        
+                            
+<tr>
+    <td class="module-title " title="getHeaderNames">
+        <a href="#getHeaderNames">getHeaderNames </a>
+    </td>
+    <td class="module-desc">
+        
+        <p>Gets all transport header names from the <code>http:PushPromise</code>.
+    </td>
+</tr>
+
+                        
+                    </table>
+                </div>
+            
+
+            
+                
+                    <h2>Fields</h2>
+                        <div class="fields-listing">
+    <ul>
+        
+                <li> <span >path</span>
+                    <span class="type">  <span class="builtin-type">string</span></span>
+                    
+                </li>
+                <p>
+                    
+                    <p>The resource path</p>
+
+                </p>
+        
+                <li> <span >method</span>
+                    <span class="type">  <span class="builtin-type">string</span></span>
+                    
+                </li>
+                <p>
+                    
+                    <p>The HTTP method</p>
+
+                </p>
+        
+    </ul>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/components/prism-core.min.js"></script>
+<script src="../../syntax-highlighter/prism-ballerina.js"></script>
+<script>
+    function toggleMenu() {
+        $('#mobMenu').transition('slide down')
+    }
+    $(document).ready(function () {
+        $('.ui.dropdown').dropdown();
+        $('#version-picker').dropdown('set selected', "1.2");
+        $('#version-picker-mob').dropdown('set selected', "1.2");
+
+    });
+
+    let mainNavLinks = document.querySelectorAll(".toc .ui.visible.left.vertical.sidebar.menu .menu a");
+    console.log(mainNavLinks);
+    let contentWrapper = document.querySelector(".content");
+    contentWrapper.addEventListener("scroll", event => {
+      let fromTop = contentWrapper.scrollTop;
+
+      mainNavLinks.forEach(link => {
+        let section = document.querySelector("#" + link.attributes.getNamedItem("data").textContent);
+
+        if (
+          section.offsetTop <= fromTop &&
+          section.offsetTop + section.offsetHeight > fromTop
+        ) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    });
+
+</script>
+<script>
+    var rootPath = "../../";
+</script>
+<script src="../../doc-search/search-data.js"></script>
+<script src="../../doc-search/search.js"></script>
+<script>
+    var str = "";
+    var currentModule = "http";
+    searchData.modules.forEach(function(module) {
+        var active = "";
+        if (currentModule==module.id) {
+            active = " active";
+        }
+        str += '<a class="item' + active + '" href="' + rootPath + module.id + '/index.html">' + module.id + '</a>';
+    });
+    document.getElementById("modules-list").innerHTML = str;
+    document.getElementById("modules-list-mob").innerHTML = str;
+</script>
+
+
+                
+            
+        </div>
+
+        
+            
+                <div class="method-content">
+    <div class="main-method-title" id="hasHeader" title="hasHeader">
+             <a class="url-link" href="#hasHeader">
+                <img class="url-link-img" src="../../html-template-resources/images/link.svg">
+            </a>
+            <h2 > hasHeader </h2>
+    </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function hasHeader(<span class="builtin-type">string</span> headerName) returns <span class="builtin-type">boolean</span> </code>
+    </pre>
+    <div class="function-desc">
+        
+        <p>Checks whether the requested header exists.</p>
+
+    </div>
+    
+        <div class="parameters">
+            <h3 class="param-title">Parameters</h3>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >headerName</span>
+                        <span class="type">  <span class="builtin-type">string</span> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p>The header name</p>
+
+                    </p>
+                </ul>
+            </div>
+            
+        </div>
+    
+
+    
+        
+        <div class="returns-listing">
+            <h3 class="type">Return Type</h3> (<span class="type"><span class="builtin-type">boolean</span></span>)
+            <p>A <code>boolean</code> representing the existence of a given header</p>
+
+        </div>
+        
+    
+</div>
+            
+                <div class="method-content">
+    <div class="main-method-title" id="getHeader" title="getHeader">
+             <a class="url-link" href="#getHeader">
+                <img class="url-link-img" src="../../html-template-resources/images/link.svg">
+            </a>
+            <h2 > getHeader </h2>
+    </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function getHeader(<span class="builtin-type">string</span> headerName) returns <span class="builtin-type">string</span> </code>
+    </pre>
+    <div class="function-desc">
+        
+        <p>Returns the header value with the specified header name.
+If there are more than one header value for the specified header name, the first value is returned.</p>
+
+    </div>
+    
+        <div class="parameters">
+            <h3 class="param-title">Parameters</h3>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >headerName</span>
+                        <span class="type">  <span class="builtin-type">string</span> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p>The header name</p>
+
+                    </p>
+                </ul>
+            </div>
+            
+        </div>
+    
+
+    
+        
+        <div class="returns-listing">
+            <h3 class="type">Return Type</h3> (<span class="type"><span class="builtin-type">string</span></span>)
+            <p>The header value, or null if there is no such header</p>
+
+        </div>
+        
+    
+</div>
+            
+                <div class="method-content">
+    <div class="main-method-title" id="getHeaders" title="getHeaders">
+             <a class="url-link" href="#getHeaders">
+                <img class="url-link-img" src="../../html-template-resources/images/link.svg">
+            </a>
+            <h2 > getHeaders </h2>
+    </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function getHeaders(<span class="builtin-type">string</span> headerName) returns <span class="array-type"><span class="builtin-type">string</span>[]</span> </code>
+    </pre>
+    <div class="function-desc">
+        
+        <p>Gets transport headers from the <code>PushPromise</code>.</p>
+
+    </div>
+    
+        <div class="parameters">
+            <h3 class="param-title">Parameters</h3>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >headerName</span>
+                        <span class="type">  <span class="builtin-type">string</span> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p>The header name</p>
+
+                    </p>
+                </ul>
+            </div>
+            
+        </div>
+    
+
+    
+        
+        <div class="returns-listing">
+            <h3 class="type">Return Type</h3> (<span class="type"><span class="array-type"><span class="builtin-type">string</span>[]</span></span>)
+            <p>The array of header values</p>
+
+        </div>
+        
+    
+</div>
+            
+                <div class="method-content">
+    <div class="main-method-title" id="addHeader" title="addHeader">
+             <a class="url-link" href="#addHeader">
+                <img class="url-link-img" src="../../html-template-resources/images/link.svg">
+            </a>
+            <h2 > addHeader </h2>
+    </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function addHeader(<span class="builtin-type">string</span> headerName, <span class="builtin-type">string</span> headerValue)</code>
+    </pre>
+    <div class="function-desc">
+        
+        <p>Adds the specified key/value pair as an HTTP header to the <code>http:PushPromise</code>.</p>
+
+    </div>
+    
+        <div class="parameters">
+            <h3 class="param-title">Parameters</h3>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >headerName</span>
+                        <span class="type">  <span class="builtin-type">string</span> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p>The header name</p>
+
+                    </p>
+                </ul>
+            </div>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >headerValue</span>
+                        <span class="type">  <span class="builtin-type">string</span> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p>The header value</p>
+
+                    </p>
+                </ul>
+            </div>
+            
+        </div>
+    
+
+    
+</div>
+            
+                <div class="method-content">
+    <div class="main-method-title" id="setHeader" title="setHeader">
+             <a class="url-link" href="#setHeader">
+                <img class="url-link-img" src="../../html-template-resources/images/link.svg">
+            </a>
+            <h2 > setHeader </h2>
+    </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function setHeader(<span class="builtin-type">string</span> headerName, <span class="builtin-type">string</span> headerValue)</code>
+    </pre>
+    <div class="function-desc">
+        
+        <p>Sets the value of a transport header in the <code>http:PushPromise</code>.</p>
+
+    </div>
+    
+        <div class="parameters">
+            <h3 class="param-title">Parameters</h3>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >headerName</span>
+                        <span class="type">  <span class="builtin-type">string</span> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p>The header name</p>
+
+                    </p>
+                </ul>
+            </div>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >headerValue</span>
+                        <span class="type">  <span class="builtin-type">string</span> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p>The header value</p>
+
+                    </p>
+                </ul>
+            </div>
+            
+        </div>
+    
+
+    
+</div>
+            
+                <div class="method-content">
+    <div class="main-method-title" id="removeHeader" title="removeHeader">
+             <a class="url-link" href="#removeHeader">
+                <img class="url-link-img" src="../../html-template-resources/images/link.svg">
+            </a>
+            <h2 > removeHeader </h2>
+    </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function removeHeader(<span class="builtin-type">string</span> headerName)</code>
+    </pre>
+    <div class="function-desc">
+        
+        <p>Removes a transport header from the <code>http:PushPromise</code>.</p>
+
+    </div>
+    
+        <div class="parameters">
+            <h3 class="param-title">Parameters</h3>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >headerName</span>
+                        <span class="type">  <span class="builtin-type">string</span> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p>The header name</p>
+
+                    </p>
+                </ul>
+            </div>
+            
+        </div>
+    
+
+    
+</div>
+            
+                <div class="method-content">
+    <div class="main-method-title" id="removeAllHeaders" title="removeAllHeaders">
+             <a class="url-link" href="#removeAllHeaders">
+                <img class="url-link-img" src="../../html-template-resources/images/link.svg">
+            </a>
+            <h2 > removeAllHeaders </h2>
+    </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function removeAllHeaders()</code>
+    </pre>
+    <div class="function-desc">
+        
+        <p>Removes all transport headers from the <code>Phttp:ushPromise</code>.</p>
+
+    </div>
+    
+
+    
+</div>
+            
+                <div class="method-content">
+    <div class="main-method-title" id="getHeaderNames" title="getHeaderNames">
+             <a class="url-link" href="#getHeaderNames">
+                <img class="url-link-img" src="../../html-template-resources/images/link.svg">
+            </a>
+            <h2 > getHeaderNames </h2>
+    </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function getHeaderNames() returns <span class="array-type"><span class="builtin-type">string</span>[]</span> </code>
+    </pre>
+    <div class="function-desc">
+        
+        <p>Gets all transport header names from the <code>http:PushPromise</code>.</p>
+
+    </div>
+    
+
+    
+        
+        <div class="returns-listing">
+            <h3 class="type">Return Type</h3> (<span class="type"><span class="array-type"><span class="builtin-type">string</span>[]</span></span>)
+            <p>An array of all transport header names</p>
+
+        </div>
+        
+    
+</div>
+            
+        
+    </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/components/prism-core.min.js"></script>
+<script src="../../syntax-highlighter/prism-ballerina.js"></script>
+<script>
+    function toggleMenu() {
+        $('#mobMenu').transition('slide down')
+    }
+    $(document).ready(function () {
+        $('.ui.dropdown').dropdown();
+        $('#version-picker').dropdown('set selected', "1.2");
+        $('#version-picker-mob').dropdown('set selected', "1.2");
+
+    });
+
+    let mainNavLinks = document.querySelectorAll(".toc .ui.visible.left.vertical.sidebar.menu .menu a");
+    console.log(mainNavLinks);
+    let contentWrapper = document.querySelector(".content");
+    contentWrapper.addEventListener("scroll", event => {
+      let fromTop = contentWrapper.scrollTop;
+
+      mainNavLinks.forEach(link => {
+        let section = document.querySelector("#" + link.attributes.getNamedItem("data").textContent);
+
+        if (
+          section.offsetTop <= fromTop &&
+          section.offsetTop + section.offsetHeight > fromTop
+        ) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    });
+
+</script>
+<script>
+    var rootPath = "../../";
+</script>
+<script src="../../doc-search/search-data.js"></script>
+<script src="../../doc-search/search.js"></script>
+<script>
+    var str = "";
+    var currentModule = "http";
+    searchData.modules.forEach(function(module) {
+        var active = "";
+        if (currentModule==module.id) {
+            active = " active";
+        }
+        str += '<a class="item' + active + '" href="' + rootPath + module.id + '/index.html">' + module.id + '</a>';
+    });
+    document.getElementById("modules-list").innerHTML = str;
+    document.getElementById("modules-list-mob").innerHTML = str;
+</script>
+
+
+

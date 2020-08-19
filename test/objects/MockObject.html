@@ -1,0 +1,516 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="This module facilitates developers to write automation tests for ballerina code in a simple manner. It provides a number of capabilities such as configuring setup and cleanup steps in different levels, ordering and grouping of tests, providing value-sets to tests and independence from external functions and endpoints via mocking capabilities.
+">
+    <meta name="keywords" content="ballerina,ballerina lang,api docs,test">
+
+    <title>API Docs - Object : MockObject</title>
+
+    <script src="../../html-template-resources/jquery.min.js"></script>
+    <link rel="stylesheet" href="../../html-template-resources/semantic.min.css">
+    <link rel="stylesheet" href="../../html-template-resources/components/icon.min.css">
+    <link rel="stylesheet" href="../../html-template-resources/styles/css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/themes/prism.min.css" rel="stylesheet" />
+    <script src="../../html-template-resources/semantic.min.js"></script>
+
+</head>
+
+
+<body>
+    <div class="pusher">
+        <div class="mobile-logo-div">
+            <div class="ui secondary menu">
+                <a href="../index.html">
+                    <img class="mobile-logo" src="../../html-template-resources/images/ballerina-logo.png">
+                </a>
+                <div class="right item">
+                    <button class="ui icon button" onclick="toggleMenu()">
+                     <i class="large bars icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="toc">
+            <div class="ui visible left vertical sidebar menu">
+                <a href="
+                    ../../index.html">
+                    <img class="logo" src="../../html-template-resources/images/ballerina-logo.png">
+                </a>
+                
+                    
+                        <div class="header capitalize">
+                            
+    Objects
+
+                        </div>
+                        <div class="menu">
+                            
+    
+        <a class="item " href="FunctionStub.html">FunctionStub</a>
+    
+        <a class="item " href="MemberFunctionStub.html">MemberFunctionStub</a>
+    
+        <a class="item " href="MemberVariableStub.html">MemberVariableStub</a>
+    
+        <a class="item " href="MockFunction.html">MockFunction</a>
+    
+        <a class="item active" href="MockObject.html">MockObject</a>
+    
+
+                        </div>
+                        <div class="ui divider"></div>
+                    
+                    <div class="header">
+                        <a class="capitalize" href="../../test/index.html">
+                            test Module
+                        </a>
+                    </div>
+                    <div class="menu">
+    
+        
+            <a class="item" data="records" href="../../test/index.html#records">Records</a>
+        
+    
+    
+        
+            <a class="item" data="objects" href="../../test/index.html#objects">Objects</a>
+        
+    
+    
+    
+    
+        <a class="item" data="functions" href="../../test/index.html#functions">Functions</a>
+    
+    
+        <a class="item" data="constants" href="../../test/index.html#constants">Constants</a>
+    
+    
+        <a class="item" data="annotations" href="../../test/index.html#annotations">Annotations</a>
+    
+    
+        <a class="item" ata="types" href="../../test/index.html#types">Types</a>
+    
+    
+        <a class="item" data="errors" href="../../test/index.html#errors">Errors</a>
+    
+    <div class="ui divider"></div>
+</div>
+
+                    <div class="header capitalize">
+                        Other Modules
+                    </div>
+                    <div id="modules-list" class="menu"></div>
+                    <div class="ui divider"></div>
+                
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="row nav-bar">
+                <div class="ui secondary menu">
+                    <div class="search-bar">
+                        <div class="ui category search item search-bar">
+                            <i class="search link icon"></i>
+                            <div class="ui transparent icon input">
+                                <input class="prompt" id="searchBox" type="text" placeholder="Search API Docs..."/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right menu">
+                        <a class="item active">Learn</a>
+                        <a class="item">Events</a>
+                        <a class="item">Central</a>
+                        <a class="item">Community</a>
+                        <a class="item">Blog</a>
+                        <div class="ui dropdown item ballerina" id="version-picker">
+                            Version
+                            <i class="dropdown icon"></i>
+                            <div class="menu">
+                                <a class="item" value="1.0">1.0</a>
+                                <a class="item" value="1.1">1.1</a>
+                                <a class="item" value="1.2">1.2</a>
+                                <a class="item" value="swan-lake">Swan Lake</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div id="mobMenu" class="mob-menu">
+                    <div class="ui stackable secondary menu">
+                        <div class="item">
+                            <div class="search-bar">
+                                <div class="ui category search item search-bar">
+                                    <i class="search link icon"></i>
+                                    <div class="ui transparent icon input">
+                                        <input class="prompt" id="searchBoxMob" type="text" placeholder="Search API Docs..."/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                            
+                                <div class="ui dropdown item capitalize">
+                                    
+    Objects
+<i class="dropdown icon"></i>
+                                    <div class="menu">
+                                        
+    
+        <a class="item " href="FunctionStub.html">FunctionStub</a>
+    
+        <a class="item " href="MemberFunctionStub.html">MemberFunctionStub</a>
+    
+        <a class="item " href="MemberVariableStub.html">MemberVariableStub</a>
+    
+        <a class="item " href="MockFunction.html">MockFunction</a>
+    
+        <a class="item active" href="MockObject.html">MockObject</a>
+    
+
+                                    </div>
+                                </div>
+                            
+                            <div class="ui dropdown item capitalize">
+                                test Module <i class="dropdown icon"></i>
+                                <div class="menu">
+    
+        
+            <a class="item" data="records" href="../../test/index.html#records">Records</a>
+        
+    
+    
+        
+            <a class="item" data="objects" href="../../test/index.html#objects">Objects</a>
+        
+    
+    
+    
+    
+        <a class="item" data="functions" href="../../test/index.html#functions">Functions</a>
+    
+    
+        <a class="item" data="constants" href="../../test/index.html#constants">Constants</a>
+    
+    
+        <a class="item" data="annotations" href="../../test/index.html#annotations">Annotations</a>
+    
+    
+        <a class="item" ata="types" href="../../test/index.html#types">Types</a>
+    
+    
+        <a class="item" data="errors" href="../../test/index.html#errors">Errors</a>
+    
+    <div class="ui divider"></div>
+</div>
+
+                            </div>
+                            <div class="ui dropdown item">
+                                Other Modules <i class="dropdown icon"></i>
+                                <div id="modules-list-mob" class="menu"></div>
+                            </div>
+                        
+
+                            <div class="ui dropdown item" id="version-picker-mob">
+                                Version <i class="dropdown icon"></i>
+                                <div class="menu">
+                                    <a class="item" value="1.0">1.0</a>
+                                    <a class="item" value="1.1">1.1</a>
+                                    <a class="item" value="1.2">1.2</a>
+                                    <a class="item" value="swan-lake">Swan Lake</a>
+                                </div>
+                            </div>
+                            <div class="ui dropdown item ballerina">
+                                Ballerina <i class="dropdown icon"></i>
+                                <div class="menu">
+                                    <a class="item active">Learn</a>
+                                    <a class="item">Events</a>
+                                    <a class="item">Central</a>
+                                    <a class="item">Community</a>
+                                </div>
+                            </div>
+
+                    </div>
+                </div>
+                <div id="search-impl"></div>
+                <div id="main">
+                    
+                        <div class="ui breadcrumb">
+                            <a class="section" href="
+                                 ../../index.html">Modules</a>
+                            <i class="right angle icon divider"></i>
+                            <a class="section capitalize " href="../../test/index.html">test</a>
+                            
+                                <i class="right angle icon divider"></i>
+                                <a class="section " href="../../test/index.html#objects">
+    Object
+</a>
+                                
+                                    <i class="right angle icon divider"></i>
+                                    <a class="section active">
+    <span class="objects ">MockObject</span>
+</a>
+                                
+                            
+                        </div>
+                    
+
+                    <div class="ui very padded segment module-data">
+                            <h1 class="capitalize">
+    Object
+
+                            :
+    <span class="objects ">MockObject</span>
+
+                            </h1>
+                        
+    <p>
+        
+        <p>Represents a Mock object in which to create stubs for member functions and variables</p>
+
+    </p>
+
+    <div class="constants">
+        <div class="method-sum">
+            
+                
+                <h2>Constructor</h2>
+
+    <p>Gets invoked during the mock object preparation.</p>
+
+
+<div class="main-method-title">
+    <h3>__init</h3><p>(<span class="builtin-type">object { }</span> mockObject)</p>
+</div>
+<div class="data-wrapper">
+    
+        <div class="params-listing">
+            <ul>
+                <li> <b>mockObject</b><span class="type">  <span class="builtin-type">object { }</span></span> </li>
+                <li>
+                    <p>object to register stubbing</p>
+
+                </li>
+            </ul>
+        </div>
+    
+</div>
+                
+            
+
+        
+            
+                <h2>Methods</h2>
+                <div class="method-list">
+                    <table class="ui very basic table">
+                        
+                            
+<tr>
+    <td class="module-title " title="when">
+        <a href="#when">when </a>
+    </td>
+    <td class="module-desc">
+        
+        <p>Allows a member function to stub.
+    </td>
+</tr>
+
+                        
+                            
+<tr>
+    <td class="module-title " title="getMember">
+        <a href="#getMember">getMember </a>
+    </td>
+    <td class="module-desc">
+        
+        <p>Allows a member variable to stub</p>
+
+    </td>
+</tr>
+
+                        
+                    </table>
+                </div>
+            
+
+            
+        </div>
+
+        
+            
+                <div class="method-content">
+    <div class="main-method-title" id="when" title="when">
+             <a class="url-link" href="#when">
+                <img class="url-link-img" src="../../html-template-resources/images/link.svg">
+            </a>
+            <h2 > when </h2>
+    </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function when(<span class="builtin-type">string</span> functionName) returns <a href="../../test/objects/MemberFunctionStub.html">MemberFunctionStub</a> </code>
+    </pre>
+    <div class="function-desc">
+        
+        <p>Allows a member function to stub.</p>
+
+    </div>
+    
+        <div class="parameters">
+            <h3 class="param-title">Parameters</h3>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >functionName</span>
+                        <span class="type">  <span class="builtin-type">string</span> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p>function name to allow stubbing</p>
+
+                    </p>
+                </ul>
+            </div>
+            
+        </div>
+    
+
+    
+        
+        <div class="returns-listing">
+            <h3 class="type">Return Type</h3> (<span class="type"><a href="../../test/objects/MemberFunctionStub.html">MemberFunctionStub</a></span>)
+            <p>object that allows stubbing calls to provided member function</p>
+
+        </div>
+        
+    
+</div>
+            
+                <div class="method-content">
+    <div class="main-method-title" id="getMember" title="getMember">
+             <a class="url-link" href="#getMember">
+                <img class="url-link-img" src="../../html-template-resources/images/link.svg">
+            </a>
+            <h2 > getMember </h2>
+    </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function getMember(<span class="builtin-type">string</span> fieldName) returns <a href="../../test/objects/MemberVariableStub.html">MemberVariableStub</a> </code>
+    </pre>
+    <div class="function-desc">
+        
+        <p>Allows a member variable to stub</p>
+
+    </div>
+    
+        <div class="parameters">
+            <h3 class="param-title">Parameters</h3>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >fieldName</span>
+                        <span class="type">  <span class="builtin-type">string</span> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p>field name to allow stubbing</p>
+
+                    </p>
+                </ul>
+            </div>
+            
+        </div>
+    
+
+    
+        
+        <div class="returns-listing">
+            <h3 class="type">Return Type</h3> (<span class="type"><a href="../../test/objects/MemberVariableStub.html">MemberVariableStub</a></span>)
+            <p>object that allows stubbing retrieval of provided member variable</p>
+
+        </div>
+        
+    
+</div>
+            
+        
+    </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/components/prism-core.min.js"></script>
+<script src="../../syntax-highlighter/prism-ballerina.js"></script>
+<script>
+    function toggleMenu() {
+        $('#mobMenu').transition('slide down')
+    }
+    $(document).ready(function () {
+        $('.ui.dropdown').dropdown();
+        $('#version-picker').dropdown('set selected', "1.2");
+        $('#version-picker-mob').dropdown('set selected', "1.2");
+
+    });
+
+    let mainNavLinks = document.querySelectorAll(".toc .ui.visible.left.vertical.sidebar.menu .menu a");
+    console.log(mainNavLinks);
+    let contentWrapper = document.querySelector(".content");
+    contentWrapper.addEventListener("scroll", event => {
+      let fromTop = contentWrapper.scrollTop;
+
+      mainNavLinks.forEach(link => {
+        let section = document.querySelector("#" + link.attributes.getNamedItem("data").textContent);
+
+        if (
+          section.offsetTop <= fromTop &&
+          section.offsetTop + section.offsetHeight > fromTop
+        ) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    });
+
+</script>
+<script>
+    var rootPath = "../../";
+</script>
+<script src="../../doc-search/search-data.js"></script>
+<script src="../../doc-search/search.js"></script>
+<script>
+    var str = "";
+    var currentModule = "test";
+    searchData.modules.forEach(function(module) {
+        var active = "";
+        if (currentModule==module.id) {
+            active = " active";
+        }
+        str += '<a class="item' + active + '" href="' + rootPath + module.id + '/index.html">' + module.id + '</a>';
+    });
+    document.getElementById("modules-list").innerHTML = str;
+    document.getElementById("modules-list-mob").innerHTML = str;
+</script>
+
+
+

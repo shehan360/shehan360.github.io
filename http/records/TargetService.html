@@ -1,0 +1,616 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="This module provides an implementation for connecting and interacting with HTTP, HTTP2, and WebSocket endpoints. The module facilitates two types of network entry points as ‘Client’ and ‘Listener’.
+">
+    <meta name="keywords" content="ballerina,ballerina lang,api docs,http">
+
+    <title>API Docs - Record : TargetService</title>
+
+    <script src="../../html-template-resources/jquery.min.js"></script>
+    <link rel="stylesheet" href="../../html-template-resources/semantic.min.css">
+    <link rel="stylesheet" href="../../html-template-resources/components/icon.min.css">
+    <link rel="stylesheet" href="../../html-template-resources/styles/css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/themes/prism.min.css" rel="stylesheet" />
+    <script src="../../html-template-resources/semantic.min.js"></script>
+
+</head>
+
+
+<body>
+    <div class="pusher">
+        <div class="mobile-logo-div">
+            <div class="ui secondary menu">
+                <a href="../index.html">
+                    <img class="mobile-logo" src="../../html-template-resources/images/ballerina-logo.png">
+                </a>
+                <div class="right item">
+                    <button class="ui icon button" onclick="toggleMenu()">
+                     <i class="large bars icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="toc">
+            <div class="ui visible left vertical sidebar menu">
+                <a href="
+                    ../../index.html">
+                    <img class="logo" src="../../html-template-resources/images/ballerina-logo.png">
+                </a>
+                
+                    
+                        <div class="header capitalize">
+                            
+    Records
+
+                        </div>
+                        <div class="menu">
+                            
+    
+        <a class="item " href="Bucket.html">Bucket</a>
+    
+        <a class="item " href="CacheConfig.html">CacheConfig</a>
+    
+        <a class="item " href="CircuitBreakerConfig.html">CircuitBreakerConfig</a>
+    
+        <a class="item " href="CircuitBreakerInferredConfig.html">CircuitBreakerInferredConfig</a>
+    
+        <a class="item " href="CircuitHealth.html">CircuitHealth</a>
+    
+        <a class="item " href="ClientConfiguration.html">ClientConfiguration</a>
+    
+        <a class="item " href="ClientHttp1Settings.html">ClientHttp1Settings</a>
+    
+        <a class="item " href="ClientHttp2Settings.html">ClientHttp2Settings</a>
+    
+        <a class="item " href="ClientSecureSocket.html">ClientSecureSocket</a>
+    
+        <a class="item " href="CommonClientConfiguration.html">CommonClientConfiguration</a>
+    
+        <a class="item " href="CommonWebSocketClientConfiguration.html">CommonWebSocketClientConfiguration</a>
+    
+        <a class="item " href="CompressionConfig.html">CompressionConfig</a>
+    
+        <a class="item " href="CookieConfig.html">CookieConfig</a>
+    
+        <a class="item " href="CorsConfig.html">CorsConfig</a>
+    
+        <a class="item " href="FailoverClientConfiguration.html">FailoverClientConfiguration</a>
+    
+        <a class="item " href="FailoverConfig.html">FailoverConfig</a>
+    
+        <a class="item " href="FailoverInferredConfig.html">FailoverInferredConfig</a>
+    
+        <a class="item " href="FollowRedirects.html">FollowRedirects</a>
+    
+        <a class="item " href="HttpResourceConfig.html">HttpResourceConfig</a>
+    
+        <a class="item " href="HttpServiceConfig.html">HttpServiceConfig</a>
+    
+        <a class="item " href="HttpTimeoutError.html">HttpTimeoutError</a>
+    
+        <a class="item " href="ListenerAuth.html">ListenerAuth</a>
+    
+        <a class="item " href="ListenerConfiguration.html">ListenerConfiguration</a>
+    
+        <a class="item " href="ListenerHttp1Settings.html">ListenerHttp1Settings</a>
+    
+        <a class="item " href="ListenerOcspStapling.html">ListenerOcspStapling</a>
+    
+        <a class="item " href="ListenerSecureSocket.html">ListenerSecureSocket</a>
+    
+        <a class="item " href="LoadBalanceActionErrorData.html">LoadBalanceActionErrorData</a>
+    
+        <a class="item " href="LoadBalanceClientConfiguration.html">LoadBalanceClientConfiguration</a>
+    
+        <a class="item " href="Local.html">Local</a>
+    
+        <a class="item " href="MutualSslHandshake.html">MutualSslHandshake</a>
+    
+        <a class="item " href="OutboundAuthConfig.html">OutboundAuthConfig</a>
+    
+        <a class="item " href="PoolConfiguration.html">PoolConfiguration</a>
+    
+        <a class="item " href="Protocols.html">Protocols</a>
+    
+        <a class="item " href="ProxyConfig.html">ProxyConfig</a>
+    
+        <a class="item " href="Remote.html">Remote</a>
+    
+        <a class="item " href="ResourceAuth.html">ResourceAuth</a>
+    
+        <a class="item " href="RetryConfig.html">RetryConfig</a>
+    
+        <a class="item " href="RetryInferredConfig.html">RetryInferredConfig</a>
+    
+        <a class="item " href="RollingWindow.html">RollingWindow</a>
+    
+        <a class="item " href="ServiceAuth.html">ServiceAuth</a>
+    
+        <a class="item active" href="TargetService.html">TargetService</a>
+    
+        <a class="item " href="ValidateCert.html">ValidateCert</a>
+    
+        <a class="item " href="Versioning.html">Versioning</a>
+    
+        <a class="item " href="WSServiceConfig.html">WSServiceConfig</a>
+    
+        <a class="item " href="WebSocketClientConfiguration.html">WebSocketClientConfiguration</a>
+    
+        <a class="item " href="WebSocketFailoverClientConfiguration.html">WebSocketFailoverClientConfiguration</a>
+    
+        <a class="item " href="WebSocketRetryConfig.html">WebSocketRetryConfig</a>
+    
+        <a class="item " href="WebSocketUpgradeConfig.html">WebSocketUpgradeConfig</a>
+    
+
+                        </div>
+                        <div class="ui divider"></div>
+                    
+                    <div class="header">
+                        <a class="capitalize" href="../../http/index.html">
+                            http Module
+                        </a>
+                    </div>
+                    <div class="menu">
+    
+        
+            <a class="item" data="records" href="../../http/index.html#records">Records</a>
+        
+    
+    
+        
+            <a class="item" data="objects" href="../../http/index.html#objects">Objects</a>
+        
+    
+    
+        <a class="item" data="clients" href="../../http/index.html#clients">Clients</a>
+    
+    
+        <a class="item" data="listeners" href="../../http/index.html#listeners">Listeners</a>
+    
+    
+        <a class="item" data="functions" href="../../http/index.html#functions">Functions</a>
+    
+    
+        <a class="item" data="constants" href="../../http/index.html#constants">Constants</a>
+    
+    
+        <a class="item" data="annotations" href="../../http/index.html#annotations">Annotations</a>
+    
+    
+        <a class="item" ata="types" href="../../http/index.html#types">Types</a>
+    
+    
+        <a class="item" data="errors" href="../../http/index.html#errors">Errors</a>
+    
+    <div class="ui divider"></div>
+</div>
+
+                    <div class="header capitalize">
+                        Other Modules
+                    </div>
+                    <div id="modules-list" class="menu"></div>
+                    <div class="ui divider"></div>
+                
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="row nav-bar">
+                <div class="ui secondary menu">
+                    <div class="search-bar">
+                        <div class="ui category search item search-bar">
+                            <i class="search link icon"></i>
+                            <div class="ui transparent icon input">
+                                <input class="prompt" id="searchBox" type="text" placeholder="Search API Docs..."/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right menu">
+                        <a class="item active">Learn</a>
+                        <a class="item">Events</a>
+                        <a class="item">Central</a>
+                        <a class="item">Community</a>
+                        <a class="item">Blog</a>
+                        <div class="ui dropdown item ballerina" id="version-picker">
+                            Version
+                            <i class="dropdown icon"></i>
+                            <div class="menu">
+                                <a class="item" value="1.0">1.0</a>
+                                <a class="item" value="1.1">1.1</a>
+                                <a class="item" value="1.2">1.2</a>
+                                <a class="item" value="swan-lake">Swan Lake</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div id="mobMenu" class="mob-menu">
+                    <div class="ui stackable secondary menu">
+                        <div class="item">
+                            <div class="search-bar">
+                                <div class="ui category search item search-bar">
+                                    <i class="search link icon"></i>
+                                    <div class="ui transparent icon input">
+                                        <input class="prompt" id="searchBoxMob" type="text" placeholder="Search API Docs..."/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                            
+                                <div class="ui dropdown item capitalize">
+                                    
+    Records
+<i class="dropdown icon"></i>
+                                    <div class="menu">
+                                        
+    
+        <a class="item " href="Bucket.html">Bucket</a>
+    
+        <a class="item " href="CacheConfig.html">CacheConfig</a>
+    
+        <a class="item " href="CircuitBreakerConfig.html">CircuitBreakerConfig</a>
+    
+        <a class="item " href="CircuitBreakerInferredConfig.html">CircuitBreakerInferredConfig</a>
+    
+        <a class="item " href="CircuitHealth.html">CircuitHealth</a>
+    
+        <a class="item " href="ClientConfiguration.html">ClientConfiguration</a>
+    
+        <a class="item " href="ClientHttp1Settings.html">ClientHttp1Settings</a>
+    
+        <a class="item " href="ClientHttp2Settings.html">ClientHttp2Settings</a>
+    
+        <a class="item " href="ClientSecureSocket.html">ClientSecureSocket</a>
+    
+        <a class="item " href="CommonClientConfiguration.html">CommonClientConfiguration</a>
+    
+        <a class="item " href="CommonWebSocketClientConfiguration.html">CommonWebSocketClientConfiguration</a>
+    
+        <a class="item " href="CompressionConfig.html">CompressionConfig</a>
+    
+        <a class="item " href="CookieConfig.html">CookieConfig</a>
+    
+        <a class="item " href="CorsConfig.html">CorsConfig</a>
+    
+        <a class="item " href="FailoverClientConfiguration.html">FailoverClientConfiguration</a>
+    
+        <a class="item " href="FailoverConfig.html">FailoverConfig</a>
+    
+        <a class="item " href="FailoverInferredConfig.html">FailoverInferredConfig</a>
+    
+        <a class="item " href="FollowRedirects.html">FollowRedirects</a>
+    
+        <a class="item " href="HttpResourceConfig.html">HttpResourceConfig</a>
+    
+        <a class="item " href="HttpServiceConfig.html">HttpServiceConfig</a>
+    
+        <a class="item " href="HttpTimeoutError.html">HttpTimeoutError</a>
+    
+        <a class="item " href="ListenerAuth.html">ListenerAuth</a>
+    
+        <a class="item " href="ListenerConfiguration.html">ListenerConfiguration</a>
+    
+        <a class="item " href="ListenerHttp1Settings.html">ListenerHttp1Settings</a>
+    
+        <a class="item " href="ListenerOcspStapling.html">ListenerOcspStapling</a>
+    
+        <a class="item " href="ListenerSecureSocket.html">ListenerSecureSocket</a>
+    
+        <a class="item " href="LoadBalanceActionErrorData.html">LoadBalanceActionErrorData</a>
+    
+        <a class="item " href="LoadBalanceClientConfiguration.html">LoadBalanceClientConfiguration</a>
+    
+        <a class="item " href="Local.html">Local</a>
+    
+        <a class="item " href="MutualSslHandshake.html">MutualSslHandshake</a>
+    
+        <a class="item " href="OutboundAuthConfig.html">OutboundAuthConfig</a>
+    
+        <a class="item " href="PoolConfiguration.html">PoolConfiguration</a>
+    
+        <a class="item " href="Protocols.html">Protocols</a>
+    
+        <a class="item " href="ProxyConfig.html">ProxyConfig</a>
+    
+        <a class="item " href="Remote.html">Remote</a>
+    
+        <a class="item " href="ResourceAuth.html">ResourceAuth</a>
+    
+        <a class="item " href="RetryConfig.html">RetryConfig</a>
+    
+        <a class="item " href="RetryInferredConfig.html">RetryInferredConfig</a>
+    
+        <a class="item " href="RollingWindow.html">RollingWindow</a>
+    
+        <a class="item " href="ServiceAuth.html">ServiceAuth</a>
+    
+        <a class="item active" href="TargetService.html">TargetService</a>
+    
+        <a class="item " href="ValidateCert.html">ValidateCert</a>
+    
+        <a class="item " href="Versioning.html">Versioning</a>
+    
+        <a class="item " href="WSServiceConfig.html">WSServiceConfig</a>
+    
+        <a class="item " href="WebSocketClientConfiguration.html">WebSocketClientConfiguration</a>
+    
+        <a class="item " href="WebSocketFailoverClientConfiguration.html">WebSocketFailoverClientConfiguration</a>
+    
+        <a class="item " href="WebSocketRetryConfig.html">WebSocketRetryConfig</a>
+    
+        <a class="item " href="WebSocketUpgradeConfig.html">WebSocketUpgradeConfig</a>
+    
+
+                                    </div>
+                                </div>
+                            
+                            <div class="ui dropdown item capitalize">
+                                http Module <i class="dropdown icon"></i>
+                                <div class="menu">
+    
+        
+            <a class="item" data="records" href="../../http/index.html#records">Records</a>
+        
+    
+    
+        
+            <a class="item" data="objects" href="../../http/index.html#objects">Objects</a>
+        
+    
+    
+        <a class="item" data="clients" href="../../http/index.html#clients">Clients</a>
+    
+    
+        <a class="item" data="listeners" href="../../http/index.html#listeners">Listeners</a>
+    
+    
+        <a class="item" data="functions" href="../../http/index.html#functions">Functions</a>
+    
+    
+        <a class="item" data="constants" href="../../http/index.html#constants">Constants</a>
+    
+    
+        <a class="item" data="annotations" href="../../http/index.html#annotations">Annotations</a>
+    
+    
+        <a class="item" ata="types" href="../../http/index.html#types">Types</a>
+    
+    
+        <a class="item" data="errors" href="../../http/index.html#errors">Errors</a>
+    
+    <div class="ui divider"></div>
+</div>
+
+                            </div>
+                            <div class="ui dropdown item">
+                                Other Modules <i class="dropdown icon"></i>
+                                <div id="modules-list-mob" class="menu"></div>
+                            </div>
+                        
+
+                            <div class="ui dropdown item" id="version-picker-mob">
+                                Version <i class="dropdown icon"></i>
+                                <div class="menu">
+                                    <a class="item" value="1.0">1.0</a>
+                                    <a class="item" value="1.1">1.1</a>
+                                    <a class="item" value="1.2">1.2</a>
+                                    <a class="item" value="swan-lake">Swan Lake</a>
+                                </div>
+                            </div>
+                            <div class="ui dropdown item ballerina">
+                                Ballerina <i class="dropdown icon"></i>
+                                <div class="menu">
+                                    <a class="item active">Learn</a>
+                                    <a class="item">Events</a>
+                                    <a class="item">Central</a>
+                                    <a class="item">Community</a>
+                                </div>
+                            </div>
+
+                    </div>
+                </div>
+                <div id="search-impl"></div>
+                <div id="main">
+                    
+                        <div class="ui breadcrumb">
+                            <a class="section" href="
+                                 ../../index.html">Modules</a>
+                            <i class="right angle icon divider"></i>
+                            <a class="section capitalize " href="../../http/index.html">http</a>
+                            
+                                <i class="right angle icon divider"></i>
+                                <a class="section " href="../../http/index.html#records">
+    Record
+</a>
+                                
+                                    <i class="right angle icon divider"></i>
+                                    <a class="section active">
+    <span class="records ">TargetService</span>
+</a>
+                                
+                            
+                        </div>
+                    
+
+                    <div class="ui very padded segment module-data">
+                            <h1 class="capitalize">
+    Record
+
+                            :
+    <span class="records ">TargetService</span>
+
+                            </h1>
+                        
+    <p>
+        
+        <p>Represents a single service and its related configurations.</p>
+
+    </p>
+    <div class="constants">
+        
+        
+        <h2>Fields</h2>
+        <div class="fields-listing">
+    <ul>
+        
+                <li> <span >url</span>
+                    <span class="type">  <span class="builtin-type">string</span></span>
+                     <span class="default">(default "")</span> 
+                </li>
+                <p>
+                    
+                    <p>URL of the target service</p>
+
+                </p>
+        
+                <li> <span >secureSocket</span>
+                    <span class="type">  <a href="../../http/records/ClientSecureSocket.html">ClientSecureSocket</a>?</span>
+                     <span class="default">(default ())</span> 
+                </li>
+                <p>
+                    
+                    <p>Configurations for secure communication with the remote HTTP endpoint</p>
+
+                </p>
+        
+    </ul>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/components/prism-core.min.js"></script>
+<script src="../../syntax-highlighter/prism-ballerina.js"></script>
+<script>
+    function toggleMenu() {
+        $('#mobMenu').transition('slide down')
+    }
+    $(document).ready(function () {
+        $('.ui.dropdown').dropdown();
+        $('#version-picker').dropdown('set selected', "1.2");
+        $('#version-picker-mob').dropdown('set selected', "1.2");
+
+    });
+
+    let mainNavLinks = document.querySelectorAll(".toc .ui.visible.left.vertical.sidebar.menu .menu a");
+    console.log(mainNavLinks);
+    let contentWrapper = document.querySelector(".content");
+    contentWrapper.addEventListener("scroll", event => {
+      let fromTop = contentWrapper.scrollTop;
+
+      mainNavLinks.forEach(link => {
+        let section = document.querySelector("#" + link.attributes.getNamedItem("data").textContent);
+
+        if (
+          section.offsetTop <= fromTop &&
+          section.offsetTop + section.offsetHeight > fromTop
+        ) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    });
+
+</script>
+<script>
+    var rootPath = "../../";
+</script>
+<script src="../../doc-search/search-data.js"></script>
+<script src="../../doc-search/search.js"></script>
+<script>
+    var str = "";
+    var currentModule = "http";
+    searchData.modules.forEach(function(module) {
+        var active = "";
+        if (currentModule==module.id) {
+            active = " active";
+        }
+        str += '<a class="item' + active + '" href="' + rootPath + module.id + '/index.html">' + module.id + '</a>';
+    });
+    document.getElementById("modules-list").innerHTML = str;
+    document.getElementById("modules-list-mob").innerHTML = str;
+</script>
+
+
+        
+        
+    </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/components/prism-core.min.js"></script>
+<script src="../../syntax-highlighter/prism-ballerina.js"></script>
+<script>
+    function toggleMenu() {
+        $('#mobMenu').transition('slide down')
+    }
+    $(document).ready(function () {
+        $('.ui.dropdown').dropdown();
+        $('#version-picker').dropdown('set selected', "1.2");
+        $('#version-picker-mob').dropdown('set selected', "1.2");
+
+    });
+
+    let mainNavLinks = document.querySelectorAll(".toc .ui.visible.left.vertical.sidebar.menu .menu a");
+    console.log(mainNavLinks);
+    let contentWrapper = document.querySelector(".content");
+    contentWrapper.addEventListener("scroll", event => {
+      let fromTop = contentWrapper.scrollTop;
+
+      mainNavLinks.forEach(link => {
+        let section = document.querySelector("#" + link.attributes.getNamedItem("data").textContent);
+
+        if (
+          section.offsetTop <= fromTop &&
+          section.offsetTop + section.offsetHeight > fromTop
+        ) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    });
+
+</script>
+<script>
+    var rootPath = "../../";
+</script>
+<script src="../../doc-search/search-data.js"></script>
+<script src="../../doc-search/search.js"></script>
+<script>
+    var str = "";
+    var currentModule = "http";
+    searchData.modules.forEach(function(module) {
+        var active = "";
+        if (currentModule==module.id) {
+            active = " active";
+        }
+        str += '<a class="item' + active + '" href="' + rootPath + module.id + '/index.html">' + module.id + '</a>';
+    });
+    document.getElementById("modules-list").innerHTML = str;
+    document.getElementById("modules-list-mob").innerHTML = str;
+</script>
+
+
+

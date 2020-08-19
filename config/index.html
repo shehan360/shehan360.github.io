@@ -1,0 +1,459 @@
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="This module provides the Config API to read configurations from environment variables, TOML files, and command-line parameters and build a consolidated set of configurations.
+">
+    <meta name="keywords" content="ballerina,ballerina lang,api docs,config">
+
+    <title>API Docs - ballerina/config</title>
+
+    <script src="../html-template-resources/jquery.min.js"></script>
+    <link rel="stylesheet" href="../html-template-resources/semantic.min.css">
+    <link rel="stylesheet" href="../html-template-resources/components/icon.min.css">
+    <link rel="stylesheet" href="../html-template-resources/styles/css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/themes/prism.min.css" rel="stylesheet" />
+    <script src="../html-template-resources/semantic.min.js"></script>
+
+</head>
+
+
+<body>
+    <div class="pusher">
+        <div class="mobile-logo-div">
+            <div class="ui secondary menu">
+                <a href="../index.html">
+                    <img class="mobile-logo" src="../html-template-resources/images/ballerina-logo.png">
+                </a>
+                <div class="right item">
+                    <button class="ui icon button" onclick="toggleMenu()">
+                     <i class="large bars icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="toc">
+            <div class="ui visible left vertical sidebar menu">
+                <a href="
+                    ../index.html">
+                    <img class="logo" src="../html-template-resources/images/ballerina-logo.png">
+                </a>
+                
+                    
+                    <div class="header">
+                        <a class="capitalize" href="../config/index.html">
+                            config Module
+                        </a>
+                    </div>
+                    <div class="menu">
+    
+    
+    
+    
+    
+        <a class="item" data="functions" href="../config/index.html#functions">Functions</a>
+    
+    
+    
+    
+    
+    <div class="ui divider"></div>
+</div>
+
+                    <div class="header capitalize">
+                        Other Modules
+                    </div>
+                    <div id="modules-list" class="menu"></div>
+                    <div class="ui divider"></div>
+                
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="row nav-bar">
+                <div class="ui secondary menu">
+                    <div class="search-bar">
+                        <div class="ui category search item search-bar">
+                            <i class="search link icon"></i>
+                            <div class="ui transparent icon input">
+                                <input class="prompt" id="searchBox" type="text" placeholder="Search API Docs..."/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right menu">
+                        <a class="item active">Learn</a>
+                        <a class="item">Events</a>
+                        <a class="item">Central</a>
+                        <a class="item">Community</a>
+                        <a class="item">Blog</a>
+                        <div class="ui dropdown item ballerina" id="version-picker">
+                            Version
+                            <i class="dropdown icon"></i>
+                            <div class="menu">
+                                <a class="item" value="1.0">1.0</a>
+                                <a class="item" value="1.1">1.1</a>
+                                <a class="item" value="1.2">1.2</a>
+                                <a class="item" value="swan-lake">Swan Lake</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div id="mobMenu" class="mob-menu">
+                    <div class="ui stackable secondary menu">
+                        <div class="item">
+                            <div class="search-bar">
+                                <div class="ui category search item search-bar">
+                                    <i class="search link icon"></i>
+                                    <div class="ui transparent icon input">
+                                        <input class="prompt" id="searchBoxMob" type="text" placeholder="Search API Docs..."/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                            
+                            <div class="ui dropdown item capitalize">
+                                config Module <i class="dropdown icon"></i>
+                                <div class="menu">
+    
+    
+    
+    
+    
+        <a class="item" data="functions" href="../config/index.html#functions">Functions</a>
+    
+    
+    
+    
+    
+    <div class="ui divider"></div>
+</div>
+
+                            </div>
+                            <div class="ui dropdown item">
+                                Other Modules <i class="dropdown icon"></i>
+                                <div id="modules-list-mob" class="menu"></div>
+                            </div>
+                        
+
+                            <div class="ui dropdown item" id="version-picker-mob">
+                                Version <i class="dropdown icon"></i>
+                                <div class="menu">
+                                    <a class="item" value="1.0">1.0</a>
+                                    <a class="item" value="1.1">1.1</a>
+                                    <a class="item" value="1.2">1.2</a>
+                                    <a class="item" value="swan-lake">Swan Lake</a>
+                                </div>
+                            </div>
+                            <div class="ui dropdown item ballerina">
+                                Ballerina <i class="dropdown icon"></i>
+                                <div class="menu">
+                                    <a class="item active">Learn</a>
+                                    <a class="item">Events</a>
+                                    <a class="item">Central</a>
+                                    <a class="item">Community</a>
+                                </div>
+                            </div>
+
+                    </div>
+                </div>
+                <div id="search-impl"></div>
+                <div id="main">
+                    
+                        <div class="ui breadcrumb">
+                            <a class="section" href="
+                                 ../index.html">Modules</a>
+                            <i class="right angle icon divider"></i>
+                            <a class="section capitalize active" href="../config/index.html">config</a>
+                            
+                        </div>
+                    
+
+                    <div class="ui very padded segment module-data">
+                            <h1 class="capitalize">
+    Module: config
+
+                            
+                            </h1>
+                        
+    <h2>ballerina/config:1.0.0</h2>
+    <h2>Module Overview</h2>
+<p>This module provides the Config API to read configurations from environment variables, TOML files, and command-line parameters and build a consolidated set of configurations.</p>
+<p>The precedence order for configuration lookup is as follows:</p>
+<ol>
+<li>CLI arguments (used with the --)</li>
+<li>Environment variables</li>
+<li>Configuration files in the TOML format</li>
+</ol>
+<p>This configuration resolution happens at the start of the program execution. Configurations can be set programmatically as well.</p>
+<p>The Config API provides the capability to feed sensitive data (e.g., passwords) to Ballerina programs securely by encrypting them.</p>
+<h3>Setting configurations</h3>
+<p>To specify a configuration file explicitly, the <code>--b7a.config.file=&lt;path to configuration file&gt;</code> property can be used. If
+this property is not set when
+running a project, Ballerina looks for a <code>ballerina.conf</code> file in the project root. When running a single file or a
+<code>.jar</code>, it's picked from the same directory in which the <code>.jar</code> or source resides. The path to the configuration
+file can either be an absolute or a relative path.</p>
+<pre><code class="language-sh">ballerina run my-program.bal --b7a.config.file=/path/to/conf/file/custom-config-file-name.conf 
+</code></pre>
+<p>A configuration file should conform to the TOML format. Ballerina only supports the following features of TOML: value types (string, int, float and boolean), tables, and nested tables.
+Given below is a sample:</p>
+<pre><code class="language-toml">[b7a.http.tracelog]
+console=true
+path=&quot;./trace.log&quot;
+
+[b7a.http.accesslog]
+console=true
+path=&quot;./access.log&quot;
+</code></pre>
+<p>A key given inside a bracket forms a namespace. Any configuration that is specified between two such keys belongs to the namespace of the first of these keys. To access a configuration in a namespace, the fully qualified key should be given (e.g., <code>b7a.http.tracelog.path</code>).</p>
+<p>The following types can be given through a configuration file: <code>string</code>, <code>int</code>, <code>float</code>, and <code>boolean</code>. If the configuration value is not an <code>int</code>, <code>float</code>, or a <code>boolean</code>, it is considered a <code>string</code> and should always be quoted.</p>
+<p>The same configs can be set using CLI parameters as follows.</p>
+<pre><code class="language-bash">ballerina run my-program.bal --b7a.http.tracelog.console=true --b7a.http.tracelog.path=./trace.log
+  --b7a.http.accesslog.console=true --b7a.http.accesslog.path=./access.log
+</code></pre>
+<p>Configurations in a file can be overridden by environment variables. To override a particular configuration, an environment variable that matches the configuration key must be set. As periods are not allowed in environment variables, periods in a configuration key should be replaced by underscores.</p>
+<pre><code class="language-bash">// In Linux and Mac.
+$ export b7a_http_tracelog_path=”./trace.log”
+$ export b7a_http_accesslog_path=”./access.log”
+
+// In Windows.
+$ set(x) b7a_http_tracelog_path=”./trace.log”
+$ set(x) b7a_http_accesslog_path=”./access.log”
+</code></pre>
+<p>If the configurations need to be shared during runtime, they can be set using the <code>setConfig()</code> function.</p>
+<pre><code class="language-ballerina">config:setConfig(&quot;john.country&quot;, &quot;USA&quot;);
+</code></pre>
+<h3>Reading configurations</h3>
+<p>The API provides functions to read configurations in their original type. Check function descriptors for example usages.</p>
+<p>A set of configurations belonging to a particular namespace can be retrieved as a <code>map</code> using the <code>getAsMap()</code> function. Here is an example:</p>
+<pre><code class="language-toml">[b7a.http.tracelog]
+console=true
+path=&quot;./trace.log&quot;
+host=&quot;@env:{TRACE_LOG_READER_HOST}&quot;
+port=5757
+
+[b7a.http.accesslog]
+console=true
+path=&quot;./access.log&quot;
+</code></pre>
+<p>The configurations for HTTP trace logs can be retrieved as a <code>map</code> as follows:</p>
+<pre><code class="language-ballerina">// Reads a configuration section as a map.
+// Here, the map’s key-value pairs represent config key-value pairs.
+map&lt;anydata&gt; serverAlphaMap  = config:getAsMap(&quot;b7a.http.tracelog&quot;);
+</code></pre>
+<p>In the above configuration file, the <code>host</code> is specified as <code>@env:{TRACE_LOG_READER_HOST}</code>. When resolving the configurations, Ballerina looks for a variable named <code>TRACE_LOG_READER_HOST</code> in the environment variables and maps <code>b7a.http.tracelog.host</code> to its value.</p>
+<p>If the specified environment variable does not exist, it will will treat <code>@env:{TRACE_LOG_READER_HOST}</code> as a normal string value.</p>
+<h3>Securing configuration values</h3>
+<p>Sensitive values can be encrypted using the <code>encrypt</code> command as follows:</p>
+<pre><code class="language-sh">$ ballerina encrypt
+Enter value: 
+
+Enter secret: 
+
+Re-enter secret to verify: 
+
+Add the following to the runtime config:
+@encrypted:{JqlfWNWKM6gYiaGnS0Hse1J9F/v48gUR0Kxfa5gwjcM=}
+
+Or add the following to the runtime command-line:
+-e&lt;param&gt;=@encrypted:{JqlfWNWKM6gYiaGnS0Hse1J9F/v48gUR0Kxfa5gwjcM=}
+</code></pre>
+<p>This encrypted value can then be placed in a configuration file or provided as a CLI parameter.</p>
+<pre><code class="language-bash">[admin]
+password=”@encrypted:{JqlfWNWKM6gYiaGnS0Hse1J9F/v48gUR0Kxfa5gwjcM=}”
+</code></pre>
+<h3>Reading config files with encrypted values</h3>
+<p>When trying to run a Ballerina program with a configuration file or CLI parameters that contain encrypted values, Ballerina will first check to see if the <code>b7a.config.secret</code> configuration is set. This configuration is used to set the path to a file containing the secret required to decrypt the configurations. If it is set, the secret is read, and the secret file is deleted.</p>
+<p>If a secret file is not provided, the user is prompted to enter the secret. Values are decrypted only on demand when an encrypted value is looked up using the <code>getAsString()</code> function.</p>
+<pre><code class="language-bash">$ ballerina run program.bal 
+ballerina: enter secret for config value decryption:
+</code></pre>
+<p><strong>Note</strong>: <em>The same config file cannot contain values that are encrypted using different secrets.</em></p>
+
+
+    
+
+    
+
+    
+
+    
+
+
+    
+    <section id="functions">
+        <div class="main-method-title here">
+            <a class="url-link" href="#functions">
+                <img class="url-link-img" src="../html-template-resources/images/link.svg">
+            </a>
+            <h2> Functions </h2>
+            <p>[8]</p>
+        </div>
+        <div class="ui divider"></div>
+        <table class="ui very basic table">
+            
+            <tr>
+                <td class="module-title truncate functions" id="contains" title="contains">
+                    <a class="functions " href="functions.html#contains">contains</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Checks whether the given key is in the configuration registry.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate functions" id="getAsArray" title="getAsArray">
+                    <a class="functions " href="functions.html#getAsArray">getAsArray</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Retrieves the specified configuration value as an array.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate functions" id="getAsBoolean" title="getAsBoolean">
+                    <a class="functions " href="functions.html#getAsBoolean">getAsBoolean</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Retrieves the specified configuration value as a boolean.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate functions" id="getAsFloat" title="getAsFloat">
+                    <a class="functions " href="functions.html#getAsFloat">getAsFloat</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Retrieves the specified configuration value as a float.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate functions" id="getAsInt" title="getAsInt">
+                    <a class="functions " href="functions.html#getAsInt">getAsInt</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Retrieves the specified configuration value as an int.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate functions" id="getAsMap" title="getAsMap">
+                    <a class="functions " href="functions.html#getAsMap">getAsMap</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Retrieves the specified configuration value as a map.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate functions" id="getAsString" title="getAsString">
+                    <a class="functions " href="functions.html#getAsString">getAsString</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Retrieves the specified configuration value as a string.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate functions" id="setConfig" title="setConfig">
+                    <a class="functions " href="functions.html#setConfig">setConfig</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Sets the specified key/value pair as a configuration.
+                </td>
+            </tr>
+            
+        </table>
+    </section>
+    
+
+
+    
+
+
+    
+
+    
+
+    
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/components/prism-core.min.js"></script>
+<script src="../syntax-highlighter/prism-ballerina.js"></script>
+<script>
+    function toggleMenu() {
+        $('#mobMenu').transition('slide down')
+    }
+    $(document).ready(function () {
+        $('.ui.dropdown').dropdown();
+        $('#version-picker').dropdown('set selected', "1.2");
+        $('#version-picker-mob').dropdown('set selected', "1.2");
+
+    });
+
+    let mainNavLinks = document.querySelectorAll(".toc .ui.visible.left.vertical.sidebar.menu .menu a");
+    console.log(mainNavLinks);
+    let contentWrapper = document.querySelector(".content");
+    contentWrapper.addEventListener("scroll", event => {
+      let fromTop = contentWrapper.scrollTop;
+
+      mainNavLinks.forEach(link => {
+        let section = document.querySelector("#" + link.attributes.getNamedItem("data").textContent);
+
+        if (
+          section.offsetTop <= fromTop &&
+          section.offsetTop + section.offsetHeight > fromTop
+        ) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    });
+
+</script>
+<script>
+    var rootPath = "../";
+</script>
+<script src="../doc-search/search-data.js"></script>
+<script src="../doc-search/search.js"></script>
+<script>
+    var str = "";
+    var currentModule = "config";
+    searchData.modules.forEach(function(module) {
+        var active = "";
+        if (currentModule==module.id) {
+            active = " active";
+        }
+        str += '<a class="item' + active + '" href="' + rootPath + module.id + '/index.html">' + module.id + '</a>';
+    });
+    document.getElementById("modules-list").innerHTML = str;
+    document.getElementById("modules-list-mob").innerHTML = str;
+</script>
+
+
+
