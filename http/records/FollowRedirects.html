@@ -19,497 +19,527 @@
     <meta name="keywords" content="ballerina,ballerina lang,api docs,http">
 
     <title>API Docs - Record : FollowRedirects</title>
+
     <script src="../../html-template-resources/jquery.min.js"></script>
-
-    <!-- BIO THEME START -->
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<!-- Optional theme -->
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-<!-- Latest compiled and minified JavaScript -->
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;display=swap" rel="stylesheet">
-<link type="text/css" rel="stylesheet" href="https://use.typekit.net/son4ymv.css">
-<link rel="stylesheet" href="https://use.typekit.net/son4ymv.css">
-<link rel="stylesheet" href="/css/theme.css" type="text/css">
-<link rel="stylesheet" href="/css/theme_extra.css" type="text/css">
-
-<script type="text/javascript" src="/js/api-doc-template.js"></script>
-<script type="text/javascript" src="/js/ballerina-common.js"></script>
-
-<link rel="stylesheet" href="/css/ballerina-io.css">
-<link rel="stylesheet" href="/css/ballerina-io-docs.css?200618">
-<link rel="stylesheet" href="/css/ballerina-io-learn-v2.css">
-<link rel="stylesheet" href="/css/ballerina-io-docs.css">
-
-<style>
-    .line-numbers-wrap {
-        display: none;
-    }
-    body .url-link-img {
-        width: 16px;
-    }
-</style>
-<!-- BIO THEME END -->
-
-
-    <script src="../../syntax-highlighter/highlighter.js"></script>
+    <link rel="stylesheet" href="../../html-template-resources/semantic.min.css">
+    <link rel="stylesheet" href="../../html-template-resources/components/icon.min.css">
+    <link rel="stylesheet" href="../../html-template-resources/styles/css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/themes/prism.min.css" rel="stylesheet" />
+    <script src="../../html-template-resources/semantic.min.js"></script>
 
 </head>
 
 
-<body class="cBallerina-io">
-    <div class="row cBallerina-io-Nav" id="iMainNavigation">
-    <div class="container">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <nav class="navbar">
-                <div>
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                            <span class="sr-only">☰</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="cMobileLogo" href="/"><img src="/img/ballerina-logo.svg" alt="Ballerina"></a>
-                    </div>
-                    <div id="navbar" class="collapse navbar-collapse">
-                        <ul class="nav navbar-nav cTopNav">
-                            <li class="active toctree-l1 cActive" id="learnli"><a class="cBioTopLink" href="/learn">Learn</a>
-                            </li>
-                            <li class="active toctree-l1" id="Eventsli"><a class="cBioTopLink" href="/learn/events">Events</a>
-                            </li>
-                            <li class="toctree-l1"><a class="cBioTopLink" href="https://central.ballerina.io/" target="_blank">Central</a></li>
-                            <li class="toctree-l1" id="openli"><a class="cBioTopLink" href="/community">Community</a>
-                            </li>
-                            <li class="toctree-l1" id="helpli"><a class="cBioTopLink" href="https://blog.ballerina.io">Blog</a>
-                            </li>
-                            <li class="cVersionItem">
-                                <div class="cVersionContainer">
-                                    <!-- <lable class="cVlable">Version</lable> -->
-                                    <select name="versions" id="versions" class="select-css">
-                                        <option value="1.2" data-value="latest">v1.2</option>
-                                        <option value="swan-lake" selected="selected">Swan Lake</option>
-                                        <option value="1.1">v1.1</option>
-                                        <option value="1.0">v1.0</option>
-                                   
-                                    </select>
-                                </div>
-                            </li>
-                            <li class="cSearchMenu"><form class="cSearch-form-inline"><input id="searchTxt" class="form-control-field" type="search" placeholder="Search" aria-label="Search"><a id="searchBtn" href="#" class="cSearchButton"><img src="/img/search.svg"></a></form></li>
-                        </ul>
-                    </div>
+<body>
+    <div class="pusher">
+        <div class="mobile-logo-div">
+            <div class="ui secondary menu">
+                <a href="../index.html">
+                    <img class="mobile-logo" src="../../html-template-resources/images/ballerina-logo.png">
+                </a>
+                <div class="right item">
+                    <button class="ui icon button" onclick="toggleMenu()">
+                     <i class="large bars icon"></i>
+                    </button>
                 </div>
-            </nav>
+            </div>
         </div>
-    </div>
-</div>
 
-    <div class="row cBallerina-io-Gray-row">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 cBallerina-io-Home-Middle-col">
-
-                    <nav class="cLeftNavContainer">
-                        <ul class="cMainLeftNav">
+        <div class="toc">
+            <div class="ui visible left vertical sidebar menu">
+                <a href="
+                    ../../index.html">
+                    <img class="logo" src="../../html-template-resources/images/ballerina-logo.png">
+                </a>
+                
+                    
+                        <div class="header capitalize">
                             
-                            <li class="sub-menu cTopicURL OpenUL">
-                                <div class="cLeftMenuLink cTopiAtag">
     Records
-</div>
-                                <ul class="sub-ul Open-submenu" style="display: none;">
-                                    
-    
-        <li >
-            <a href="Bucket.html" onclick="menuLinkClick()">Bucket</a>
-        </li>
-    
-        <li >
-            <a href="CacheConfig.html" onclick="menuLinkClick()">CacheConfig</a>
-        </li>
-    
-        <li >
-            <a href="CircuitBreakerConfig.html" onclick="menuLinkClick()">CircuitBreakerConfig</a>
-        </li>
-    
-        <li >
-            <a href="CircuitBreakerInferredConfig.html" onclick="menuLinkClick()">CircuitBreakerInferredConfig</a>
-        </li>
-    
-        <li >
-            <a href="CircuitHealth.html" onclick="menuLinkClick()">CircuitHealth</a>
-        </li>
-    
-        <li >
-            <a href="ClientConfiguration.html" onclick="menuLinkClick()">ClientConfiguration</a>
-        </li>
-    
-        <li >
-            <a href="ClientHttp1Settings.html" onclick="menuLinkClick()">ClientHttp1Settings</a>
-        </li>
-    
-        <li >
-            <a href="ClientHttp2Settings.html" onclick="menuLinkClick()">ClientHttp2Settings</a>
-        </li>
-    
-        <li >
-            <a href="ClientSecureSocket.html" onclick="menuLinkClick()">ClientSecureSocket</a>
-        </li>
-    
-        <li >
-            <a href="CommonClientConfiguration.html" onclick="menuLinkClick()">CommonClientConfiguration</a>
-        </li>
-    
-        <li >
-            <a href="CompressionConfig.html" onclick="menuLinkClick()">CompressionConfig</a>
-        </li>
-    
-        <li >
-            <a href="CookieConfig.html" onclick="menuLinkClick()">CookieConfig</a>
-        </li>
-    
-        <li >
-            <a href="CorsConfig.html" onclick="menuLinkClick()">CorsConfig</a>
-        </li>
-    
-        <li >
-            <a href="FailoverClientConfiguration.html" onclick="menuLinkClick()">FailoverClientConfiguration</a>
-        </li>
-    
-        <li >
-            <a href="FailoverConfig.html" onclick="menuLinkClick()">FailoverConfig</a>
-        </li>
-    
-        <li >
-            <a href="FailoverInferredConfig.html" onclick="menuLinkClick()">FailoverInferredConfig</a>
-        </li>
-    
-        <li class="active">
-            <a href="FollowRedirects.html" onclick="menuLinkClick()">FollowRedirects</a>
-        </li>
-    
-        <li >
-            <a href="HttpResourceConfig.html" onclick="menuLinkClick()">HttpResourceConfig</a>
-        </li>
-    
-        <li >
-            <a href="HttpServiceConfig.html" onclick="menuLinkClick()">HttpServiceConfig</a>
-        </li>
-    
-        <li >
-            <a href="HttpTimeoutError.html" onclick="menuLinkClick()">HttpTimeoutError</a>
-        </li>
-    
-        <li >
-            <a href="ListenerAuth.html" onclick="menuLinkClick()">ListenerAuth</a>
-        </li>
-    
-        <li >
-            <a href="ListenerConfiguration.html" onclick="menuLinkClick()">ListenerConfiguration</a>
-        </li>
-    
-        <li >
-            <a href="ListenerHttp1Settings.html" onclick="menuLinkClick()">ListenerHttp1Settings</a>
-        </li>
-    
-        <li >
-            <a href="ListenerOcspStapling.html" onclick="menuLinkClick()">ListenerOcspStapling</a>
-        </li>
-    
-        <li >
-            <a href="ListenerSecureSocket.html" onclick="menuLinkClick()">ListenerSecureSocket</a>
-        </li>
-    
-        <li >
-            <a href="LoadBalanceActionErrorData.html" onclick="menuLinkClick()">LoadBalanceActionErrorData</a>
-        </li>
-    
-        <li >
-            <a href="LoadBalanceClientConfiguration.html" onclick="menuLinkClick()">LoadBalanceClientConfiguration</a>
-        </li>
-    
-        <li >
-            <a href="Local.html" onclick="menuLinkClick()">Local</a>
-        </li>
-    
-        <li >
-            <a href="MutualSslHandshake.html" onclick="menuLinkClick()">MutualSslHandshake</a>
-        </li>
-    
-        <li >
-            <a href="OutboundAuthConfig.html" onclick="menuLinkClick()">OutboundAuthConfig</a>
-        </li>
-    
-        <li >
-            <a href="PoolConfiguration.html" onclick="menuLinkClick()">PoolConfiguration</a>
-        </li>
-    
-        <li >
-            <a href="Protocols.html" onclick="menuLinkClick()">Protocols</a>
-        </li>
-    
-        <li >
-            <a href="ProxyConfig.html" onclick="menuLinkClick()">ProxyConfig</a>
-        </li>
-    
-        <li >
-            <a href="Remote.html" onclick="menuLinkClick()">Remote</a>
-        </li>
-    
-        <li >
-            <a href="ResourceAuth.html" onclick="menuLinkClick()">ResourceAuth</a>
-        </li>
-    
-        <li >
-            <a href="RetryConfig.html" onclick="menuLinkClick()">RetryConfig</a>
-        </li>
-    
-        <li >
-            <a href="RetryInferredConfig.html" onclick="menuLinkClick()">RetryInferredConfig</a>
-        </li>
-    
-        <li >
-            <a href="RollingWindow.html" onclick="menuLinkClick()">RollingWindow</a>
-        </li>
-    
-        <li >
-            <a href="ServiceAuth.html" onclick="menuLinkClick()">ServiceAuth</a>
-        </li>
-    
-        <li >
-            <a href="TargetService.html" onclick="menuLinkClick()">TargetService</a>
-        </li>
-    
-        <li >
-            <a href="ValidateCert.html" onclick="menuLinkClick()">ValidateCert</a>
-        </li>
-    
-        <li >
-            <a href="Versioning.html" onclick="menuLinkClick()">Versioning</a>
-        </li>
-    
-        <li >
-            <a href="WSServiceConfig.html" onclick="menuLinkClick()">WSServiceConfig</a>
-        </li>
-    
-        <li >
-            <a href="WebSocketClientConfiguration.html" onclick="menuLinkClick()">WebSocketClientConfiguration</a>
-        </li>
-    
-        <li >
-            <a href="WebSocketFailoverClientConfiguration.html" onclick="menuLinkClick()">WebSocketFailoverClientConfiguration</a>
-        </li>
-    
-        <li >
-            <a href="WebSocketRetryConfig.html" onclick="menuLinkClick()">WebSocketRetryConfig</a>
-        </li>
-    
-        <li >
-            <a href="WebSocketUpgradeConfig.html" onclick="menuLinkClick()">WebSocketUpgradeConfig</a>
-        </li>
-    
 
-                                </ul>
-                            </li>
+                        </div>
+                        <div class="menu">
                             
-                            <li class="sub-menu cTopicURL">
-    <div class="cLeftMenuLink cTopiAtag">http</div>
-    <ul class="sub-ul Open-submenu" style="display: none;">
-        
-        <li>
-            <a data="records" href="../../http/index.html#records">Records</a>
-        </li>
-        
-        
-        <li>
-            <a data="objects" href="../../http/index.html#objects">Objects</a>
-        </li>
-        
-        
-        <li>
-            <a data="clients" href="../../http/index.html#clients">Clients</a>
-        </li>
-        
-        
-        <li>
-            <a data="listeners" href="../../http/index.html#listeners">Listeners</a>
-        </li>
-        
-        
-        <li>
-            <a data="functions" href="../../http/index.html#functions">Functions</a>
-        </li>
-        
-        
-        <li>
-            <a data="constants" href="../../http/index.html#constants">Constants</a>
-        </li>
-        
-        
-        <li>
-            <a data="annotations" href="../../http/index.html#annotations">Annotations</a>
-        </li>
-        
-        
-        <li>
-            <a data="types" href="../../http/index.html#types">Types</a>
-        </li>
-        
-        
-        <li>
-            <a data="errors" href="../../http/index.html#errors">Errors</a>
-        </li>
-        
-    </ul>
-</li>
-                        </ul>
-                    </nav>
-                </div>
+    
+        <a class="item " href="Bucket.html">Bucket</a>
+    
+        <a class="item " href="CacheConfig.html">CacheConfig</a>
+    
+        <a class="item " href="CircuitBreakerConfig.html">CircuitBreakerConfig</a>
+    
+        <a class="item " href="CircuitBreakerInferredConfig.html">CircuitBreakerInferredConfig</a>
+    
+        <a class="item " href="CircuitHealth.html">CircuitHealth</a>
+    
+        <a class="item " href="ClientConfiguration.html">ClientConfiguration</a>
+    
+        <a class="item " href="ClientHttp1Settings.html">ClientHttp1Settings</a>
+    
+        <a class="item " href="ClientHttp2Settings.html">ClientHttp2Settings</a>
+    
+        <a class="item " href="ClientSecureSocket.html">ClientSecureSocket</a>
+    
+        <a class="item " href="CommonClientConfiguration.html">CommonClientConfiguration</a>
+    
+        <a class="item " href="CommonWebSocketClientConfiguration.html">CommonWebSocketClientConfiguration</a>
+    
+        <a class="item " href="CompressionConfig.html">CompressionConfig</a>
+    
+        <a class="item " href="CookieConfig.html">CookieConfig</a>
+    
+        <a class="item " href="CorsConfig.html">CorsConfig</a>
+    
+        <a class="item " href="FailoverClientConfiguration.html">FailoverClientConfiguration</a>
+    
+        <a class="item " href="FailoverConfig.html">FailoverConfig</a>
+    
+        <a class="item " href="FailoverInferredConfig.html">FailoverInferredConfig</a>
+    
+        <a class="item active" href="FollowRedirects.html">FollowRedirects</a>
+    
+        <a class="item " href="HttpResourceConfig.html">HttpResourceConfig</a>
+    
+        <a class="item " href="HttpServiceConfig.html">HttpServiceConfig</a>
+    
+        <a class="item " href="HttpTimeoutError.html">HttpTimeoutError</a>
+    
+        <a class="item " href="ListenerAuth.html">ListenerAuth</a>
+    
+        <a class="item " href="ListenerConfiguration.html">ListenerConfiguration</a>
+    
+        <a class="item " href="ListenerHttp1Settings.html">ListenerHttp1Settings</a>
+    
+        <a class="item " href="ListenerOcspStapling.html">ListenerOcspStapling</a>
+    
+        <a class="item " href="ListenerSecureSocket.html">ListenerSecureSocket</a>
+    
+        <a class="item " href="LoadBalanceActionErrorData.html">LoadBalanceActionErrorData</a>
+    
+        <a class="item " href="LoadBalanceClientConfiguration.html">LoadBalanceClientConfiguration</a>
+    
+        <a class="item " href="Local.html">Local</a>
+    
+        <a class="item " href="MutualSslHandshake.html">MutualSslHandshake</a>
+    
+        <a class="item " href="OutboundAuthConfig.html">OutboundAuthConfig</a>
+    
+        <a class="item " href="PoolConfiguration.html">PoolConfiguration</a>
+    
+        <a class="item " href="Protocols.html">Protocols</a>
+    
+        <a class="item " href="ProxyConfig.html">ProxyConfig</a>
+    
+        <a class="item " href="Remote.html">Remote</a>
+    
+        <a class="item " href="ResourceAuth.html">ResourceAuth</a>
+    
+        <a class="item " href="RetryConfig.html">RetryConfig</a>
+    
+        <a class="item " href="RetryInferredConfig.html">RetryInferredConfig</a>
+    
+        <a class="item " href="RollingWindow.html">RollingWindow</a>
+    
+        <a class="item " href="ServiceAuth.html">ServiceAuth</a>
+    
+        <a class="item " href="TargetService.html">TargetService</a>
+    
+        <a class="item " href="ValidateCert.html">ValidateCert</a>
+    
+        <a class="item " href="Versioning.html">Versioning</a>
+    
+        <a class="item " href="WSServiceConfig.html">WSServiceConfig</a>
+    
+        <a class="item " href="WebSocketClientConfiguration.html">WebSocketClientConfiguration</a>
+    
+        <a class="item " href="WebSocketFailoverClientConfiguration.html">WebSocketFailoverClientConfiguration</a>
+    
+        <a class="item " href="WebSocketRetryConfig.html">WebSocketRetryConfig</a>
+    
+        <a class="item " href="WebSocketUpgradeConfig.html">WebSocketUpgradeConfig</a>
+    
 
+                        </div>
+                        <div class="ui divider"></div>
+                    
+                    <div class="header">
+                        <a class="capitalize" href="../../http/index.html">
+                            http Module
+                        </a>
+                    </div>
+                    <div class="menu">
+    
+        
+            <a class="item" data="records" href="../../http/index.html#records">Records</a>
+        
+    
+    
+        
+            <a class="item" data="objects" href="../../http/index.html#objects">Objects</a>
+        
+    
+    
+        <a class="item" data="clients" href="../../http/index.html#clients">Clients</a>
+    
+    
+        <a class="item" data="listeners" href="../../http/index.html#listeners">Listeners</a>
+    
+    
+        <a class="item" data="functions" href="../../http/index.html#functions">Functions</a>
+    
+    
+        <a class="item" data="constants" href="../../http/index.html#constants">Constants</a>
+    
+    
+        <a class="item" data="annotations" href="../../http/index.html#annotations">Annotations</a>
+    
+    
+        <a class="item" ata="types" href="../../http/index.html#types">Types</a>
+    
+    
+        <a class="item" data="errors" href="../../http/index.html#errors">Errors</a>
+    
+    <div class="ui divider"></div>
+</div>
 
-                <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 cBallerina-io-Home-Middle-col">
-                    <div id="search-impl" class="search-bar"></div>
-                    <div id="main" class="cBlallerina-io-docs-content-container">
-                        <div class="col-xs-12 col-sm-12" style="padding: 0;">
-                            <div class="col-md-12 col-lg-12 cBallerina-io-breadcrumbs">
-                                <nav class="breadcrumbs bootstrap hidden-sm-down">
-                                    <ul id="breadcrumb-list" class=" cBalleinaBreadcrumbs list-unstyled  wy-breadcrumbs"
-                                        vocab="http://schema.org/" typeof="BreadcrumbList">
-                                        <li><a href="/">Home</a></li>
-                                        <li>/</li>
-                                        <li><a href="/swan-lake/">Swan lake</a></li>
-                                        <li>/</li>
-                                        <li><a href="/swan-lake/learn/">Learn</a></li>
-                                        <li>/</li>
-                                        <li><a href="../..//index.html">API Docs</a></li>
-                                        <li>/</li>
-                                        <li><a href="../../http/index.html">http</a></li>
-                                        
-                                        <li>/</li>
-                                        <li><a
-                                                href="../../http/index.html#records">
-    Record
-</a>
-                                        </li>
-                                        
-                                        <li>/</li>
-    <span class="records ">FollowRedirects</span>
+                    <div class="header capitalize">
+                        Other Modules
+                    </div>
+                    <div id="modules-list" class="menu"></div>
+                    <div class="ui divider"></div>
+                
+            </div>
+        </div>
 
-                                        
-                                        
-
-                                    </ul>
-                                </nav>
-                                <style type="text/css">
-                                    .cBalleinaBreadcrumbs li {
-                                        margin-right: 10px;
-                                    }
-                                </style>
-                                <div class="cVersionContainer"></div>
+        <div class="content">
+            <div class="row nav-bar">
+                <div class="ui secondary menu">
+                    <div class="search-bar">
+                        <div class="ui category search item search-bar">
+                            <i class="search link icon"></i>
+                            <div class="ui transparent icon input">
+                                <input class="prompt" id="searchBox" type="text" placeholder="Search API Docs..."/>
                             </div>
                         </div>
-                        <div class="wy-nav-content">
-                            <div class="rst-content">
-                                <div role="main">
-                                    <div class="section">
-                                        <h1>
-                                            
-                                            
+                    </div>
+                    <div class="right menu">
+                        <a class="item active">Learn</a>
+                        <a class="item">Events</a>
+                        <a class="item">Central</a>
+                        <a class="item">Community</a>
+                        <a class="item">Blog</a>
+                        <div class="ui dropdown item ballerina" id="version-picker">
+                            Version
+                            <i class="dropdown icon"></i>
+                            <div class="menu">
+                                <a class="item" value="1.0">1.0</a>
+                                <a class="item" value="1.1">1.1</a>
+                                <a class="item" value="1.2">1.2</a>
+                                <a class="item" value="swan-lake">Swan Lake</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div id="mobMenu" class="mob-menu">
+                    <div class="ui stackable secondary menu">
+                        <div class="item">
+                            <div class="search-bar">
+                                <div class="ui category search item search-bar">
+                                    <i class="search link icon"></i>
+                                    <div class="ui transparent icon input">
+                                        <input class="prompt" id="searchBoxMob" type="text" placeholder="Search API Docs..."/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                            
+                                <div class="ui dropdown item capitalize">
+                                    
+    Records
+<i class="dropdown icon"></i>
+                                    <div class="menu">
+                                        
+    
+        <a class="item " href="Bucket.html">Bucket</a>
+    
+        <a class="item " href="CacheConfig.html">CacheConfig</a>
+    
+        <a class="item " href="CircuitBreakerConfig.html">CircuitBreakerConfig</a>
+    
+        <a class="item " href="CircuitBreakerInferredConfig.html">CircuitBreakerInferredConfig</a>
+    
+        <a class="item " href="CircuitHealth.html">CircuitHealth</a>
+    
+        <a class="item " href="ClientConfiguration.html">ClientConfiguration</a>
+    
+        <a class="item " href="ClientHttp1Settings.html">ClientHttp1Settings</a>
+    
+        <a class="item " href="ClientHttp2Settings.html">ClientHttp2Settings</a>
+    
+        <a class="item " href="ClientSecureSocket.html">ClientSecureSocket</a>
+    
+        <a class="item " href="CommonClientConfiguration.html">CommonClientConfiguration</a>
+    
+        <a class="item " href="CommonWebSocketClientConfiguration.html">CommonWebSocketClientConfiguration</a>
+    
+        <a class="item " href="CompressionConfig.html">CompressionConfig</a>
+    
+        <a class="item " href="CookieConfig.html">CookieConfig</a>
+    
+        <a class="item " href="CorsConfig.html">CorsConfig</a>
+    
+        <a class="item " href="FailoverClientConfiguration.html">FailoverClientConfiguration</a>
+    
+        <a class="item " href="FailoverConfig.html">FailoverConfig</a>
+    
+        <a class="item " href="FailoverInferredConfig.html">FailoverInferredConfig</a>
+    
+        <a class="item active" href="FollowRedirects.html">FollowRedirects</a>
+    
+        <a class="item " href="HttpResourceConfig.html">HttpResourceConfig</a>
+    
+        <a class="item " href="HttpServiceConfig.html">HttpServiceConfig</a>
+    
+        <a class="item " href="HttpTimeoutError.html">HttpTimeoutError</a>
+    
+        <a class="item " href="ListenerAuth.html">ListenerAuth</a>
+    
+        <a class="item " href="ListenerConfiguration.html">ListenerConfiguration</a>
+    
+        <a class="item " href="ListenerHttp1Settings.html">ListenerHttp1Settings</a>
+    
+        <a class="item " href="ListenerOcspStapling.html">ListenerOcspStapling</a>
+    
+        <a class="item " href="ListenerSecureSocket.html">ListenerSecureSocket</a>
+    
+        <a class="item " href="LoadBalanceActionErrorData.html">LoadBalanceActionErrorData</a>
+    
+        <a class="item " href="LoadBalanceClientConfiguration.html">LoadBalanceClientConfiguration</a>
+    
+        <a class="item " href="Local.html">Local</a>
+    
+        <a class="item " href="MutualSslHandshake.html">MutualSslHandshake</a>
+    
+        <a class="item " href="OutboundAuthConfig.html">OutboundAuthConfig</a>
+    
+        <a class="item " href="PoolConfiguration.html">PoolConfiguration</a>
+    
+        <a class="item " href="Protocols.html">Protocols</a>
+    
+        <a class="item " href="ProxyConfig.html">ProxyConfig</a>
+    
+        <a class="item " href="Remote.html">Remote</a>
+    
+        <a class="item " href="ResourceAuth.html">ResourceAuth</a>
+    
+        <a class="item " href="RetryConfig.html">RetryConfig</a>
+    
+        <a class="item " href="RetryInferredConfig.html">RetryInferredConfig</a>
+    
+        <a class="item " href="RollingWindow.html">RollingWindow</a>
+    
+        <a class="item " href="ServiceAuth.html">ServiceAuth</a>
+    
+        <a class="item " href="TargetService.html">TargetService</a>
+    
+        <a class="item " href="ValidateCert.html">ValidateCert</a>
+    
+        <a class="item " href="Versioning.html">Versioning</a>
+    
+        <a class="item " href="WSServiceConfig.html">WSServiceConfig</a>
+    
+        <a class="item " href="WebSocketClientConfiguration.html">WebSocketClientConfiguration</a>
+    
+        <a class="item " href="WebSocketFailoverClientConfiguration.html">WebSocketFailoverClientConfiguration</a>
+    
+        <a class="item " href="WebSocketRetryConfig.html">WebSocketRetryConfig</a>
+    
+        <a class="item " href="WebSocketUpgradeConfig.html">WebSocketUpgradeConfig</a>
+    
+
+                                    </div>
+                                </div>
+                            
+                            <div class="ui dropdown item capitalize">
+                                http Module <i class="dropdown icon"></i>
+                                <div class="menu">
+    
+        
+            <a class="item" data="records" href="../../http/index.html#records">Records</a>
+        
+    
+    
+        
+            <a class="item" data="objects" href="../../http/index.html#objects">Objects</a>
+        
+    
+    
+        <a class="item" data="clients" href="../../http/index.html#clients">Clients</a>
+    
+    
+        <a class="item" data="listeners" href="../../http/index.html#listeners">Listeners</a>
+    
+    
+        <a class="item" data="functions" href="../../http/index.html#functions">Functions</a>
+    
+    
+        <a class="item" data="constants" href="../../http/index.html#constants">Constants</a>
+    
+    
+        <a class="item" data="annotations" href="../../http/index.html#annotations">Annotations</a>
+    
+    
+        <a class="item" ata="types" href="../../http/index.html#types">Types</a>
+    
+    
+        <a class="item" data="errors" href="../../http/index.html#errors">Errors</a>
+    
+    <div class="ui divider"></div>
+</div>
+
+                            </div>
+                            <div class="ui dropdown item">
+                                Other Modules <i class="dropdown icon"></i>
+                                <div id="modules-list-mob" class="menu"></div>
+                            </div>
+                        
+
+                            <div class="ui dropdown item" id="version-picker-mob">
+                                Version <i class="dropdown icon"></i>
+                                <div class="menu">
+                                    <a class="item" value="1.0">1.0</a>
+                                    <a class="item" value="1.1">1.1</a>
+                                    <a class="item" value="1.2">1.2</a>
+                                    <a class="item" value="swan-lake">Swan Lake</a>
+                                </div>
+                            </div>
+                            <div class="ui dropdown item ballerina">
+                                Ballerina <i class="dropdown icon"></i>
+                                <div class="menu">
+                                    <a class="item active">Learn</a>
+                                    <a class="item">Events</a>
+                                    <a class="item">Central</a>
+                                    <a class="item">Community</a>
+                                </div>
+                            </div>
+
+                    </div>
+                </div>
+                <div id="search-impl"></div>
+                <div id="main">
+                    
+                        <div class="ui breadcrumb">
+                            <a class="section" href="
+                                 ../../index.html">Modules</a>
+                            <i class="right angle icon divider"></i>
+                            <a class="section capitalize " href="../../http/index.html">http</a>
+                            
+                                <i class="right angle icon divider"></i>
+                                <a class="section " href="../../http/index.html#records">
+    Record
+</a>
+                                
+                                    <i class="right angle icon divider"></i>
+                                    <a class="section active">
+    <span class="records ">FollowRedirects</span>
+</a>
+                                
+                            
+                        </div>
+                    
+
+                    <div class="ui very padded segment module-data">
+                            <h1 class="capitalize">
     Record
 
-                                             : 
+                            :
     <span class="records ">FollowRedirects</span>
 
-                                        </h1>
-                                        
+                            </h1>
+                        
     <p>
         
-        <p>Provides configurations for controlling the endpoint's behaviour in response to HTTP redirect related responses.</p>
+        <p>Provides configurations for controlling the endpoint's behaviour in response to HTTP redirect related responses.
+The response status codes of 301, 302, and 303 are redirected using a GET request while 300, 305, 307, and 308
+status codes use the original request HTTP method during redirection.</p>
 
     </p>
     <div class="constants">
         
         
         <h2>Fields</h2>
-        <div class="data-wrapper">
+        <div class="fields-listing">
+    <ul>
         
-    <div class="params-listing">
-        <ul>
-            <li> <span >enabled</span>
-                <span class="type">  <span class="builtin-type">boolean</span></span>
-                 <span class="default">(default false)</span> 
-            </li>
-            <li>
+                <li> <span >enabled</span>
+                    <span class="type">  <span class="builtin-type">boolean</span></span>
+                     <span class="default">(default false)</span> 
+                </li>
                 <p>
                     
                     <p>Enable/disable redirection</p>
 
                 </p>
-            </li>
-        </ul>
-    </div>
         
-    <div class="params-listing">
-        <ul>
-            <li> <span >maxCount</span>
-                <span class="type">  <span class="builtin-type">int</span></span>
-                 <span class="default">(default 5)</span> 
-            </li>
-            <li>
+                <li> <span >maxCount</span>
+                    <span class="type">  <span class="builtin-type">int</span></span>
+                     <span class="default">(default 5)</span> 
+                </li>
                 <p>
                     
                     <p>Maximum number of redirects to follow</p>
 
                 </p>
-            </li>
-        </ul>
-    </div>
-    
+        
+                <li> <span >allowAuthHeaders</span>
+                    <span class="type">  <span class="builtin-type">boolean</span></span>
+                     <span class="default">(default false)</span> 
+                </li>
+                <p>
+                    
+                    <p>By default Authorization and Proxy-Authorization headers are removed from the redirect requests.
+Set it to true if Auth headers are needed to be sent during the redirection</p>
+
+                </p>
+        
+    </ul>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/components/prism-core.min.js"></script>
+<script src="../../syntax-highlighter/prism-ballerina.js"></script>
 <script>
-let mainNavLinks = document.querySelectorAll(".primary-list.module ul li a");
-let mainSections = document.querySelectorAll(".main-wrapper section.method-content");
-
-let lastId;
-let cur = [];
-
-let contentWrapper = document.querySelector(".content-wrapper");
-contentWrapper.addEventListener("scroll", event => {
-  let fromTop = contentWrapper.scrollTop;
-
-  mainNavLinks.forEach(link => {
-    let section = document.querySelector("#" + link.attributes.getNamedItem("data").textContent);
-
-    if (
-      section.offsetTop <= fromTop &&
-      section.offsetTop + section.offsetHeight > fromTop
-    ) {
-      link.classList.add("current");
-    } else {
-      link.classList.remove("current");
+    function toggleMenu() {
+        $('#mobMenu').transition('slide down')
     }
-  });
-});
+    $(document).ready(function () {
+        $('.ui.dropdown').dropdown();
+        $('#version-picker').dropdown('set selected', "1.2");
+        $('#version-picker-mob').dropdown('set selected', "1.2");
 
-</script>
-<script>
-function menuLinkClick() {
-  if(window.matchMedia("(max-width: 600px)").matches) {
-    document.getElementsByClassName("navi-wrapper")[0].style.display = "none";
-  }
-}
-function displayMenu() {
-  var nav = document.getElementsByClassName("navi-wrapper")[0];
-  var content = document.getElementsByClassName("content-wrapper")[0];
-  if (nav.style.display === "none" || nav.style.display === "") {
-    nav.style.display = "block";
-    content.style.marginLeft = "210px";
-  } else {
-    nav.style.display = "none";
-    content.style.marginLeft = "0px";
-  }
-}
+    });
+
+    let mainNavLinks = document.querySelectorAll(".toc .ui.visible.left.vertical.sidebar.menu .menu a");
+    console.log(mainNavLinks);
+    let contentWrapper = document.querySelector(".content");
+    contentWrapper.addEventListener("scroll", event => {
+      let fromTop = contentWrapper.scrollTop;
+
+      mainNavLinks.forEach(link => {
+        let section = document.querySelector("#" + link.attributes.getNamedItem("data").textContent);
+
+        if (
+          section.offsetTop <= fromTop &&
+          section.offsetTop + section.offsetHeight > fromTop
+        ) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    });
+
 </script>
 <script>
     var rootPath = "../../";
@@ -517,97 +547,64 @@ function displayMenu() {
 <script src="../../doc-search/search-data.js"></script>
 <script src="../../doc-search/search.js"></script>
 <script>
-    window.onload = (event) => {
-        ballerinaHighlighter.highlightSnippets();
-    };
+    var str = "";
+    var currentModule = "http";
+    searchData.modules.forEach(function(module) {
+        var active = "";
+        if (currentModule==module.id) {
+            active = " active";
+        }
+        str += '<a class="item' + active + '" href="' + rootPath + module.id + '/index.html">' + module.id + '</a>';
+    });
+    document.getElementById("modules-list").innerHTML = str;
+    document.getElementById("modules-list-mob").innerHTML = str;
 </script>
+
 
         
         
     </div>
 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div id="iBallerinaFooter" class="row cBallerina-io-White-row">
-    <div class="container">
-    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 cBallerina-io-left-col cBallerinaFooterLinks">
-        <ul>
-            <li><a class="cBioFooterLink" href="/downloads">Download</a></li>
-            <li><a class="cBioFooterLink" href="https://github.com/ballerina-lang/ballerina/blob/master/LICENSE">Code License</a></li>
-            <li><a class="cBioFooterLink" href="/license-of-site">Site License</a></li>
-            <li><a class="cBioFooterLink" href="/terms-of-service">TERMS OF SERVICE</a></li>
-            <li><a class="cBioFooterLink" href="/privacy-policy">PRIVACY POLICY</a></li>
-            </ul>
-        </div>
-    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 cBallerina-io-middle-col cBallerinaFooterSignUp">
-        <div class="cSocialmedia">
-            <ul>
-                <li>
-                    <a class="cBioFooterLink" href="https://github.com/ballerina-platform" target="_blank"><img src="/img/github.svg"></a>
-                    </li>
-                <li><a class="cBioFooterLink" href="https://stackoverflow.com/questions/tagged/ballerina" target="_blank"><img src="/img/stackoverflow.svg"></a></li>
-                <li><a class="cBioFooterLink" href="https://twitter.com/ballerinalang" target="_blank"><img src="/img/twitter.svg"></a></li>
-                <li><a class="cBioFooterLink" href="/community/slack/"><img src="/img/slack.svg"></a></li>
-                </ul>
-            <div class="pdframe"></div>
-            </div>
-        </div>
-    <div class="col-xs-12 col-sm-10 col-md-6 col-lg-6 cBallerina-io-right-col">
-        <p>In the creation of Ballerina, we were inspired by so many technologies. Thank you to all that have come before us (and forgive us if we missed one): Java, Go, C, C++, D, Rust, Haskell, Kotlin, Dart, TypeScript, JavaScript, Python, Perl, Flow, Swift, Elm, RelaxNG, NPM, Crates, Maven, Gradle, Kubernetes, Docker, Envoy, Markdown, GitHub and WSO2.</p></div>
-    </div>
-</div>
 </body>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/components/prism-core.min.js"></script>
+<script src="../../syntax-highlighter/prism-ballerina.js"></script>
 <script>
-let mainNavLinks = document.querySelectorAll(".primary-list.module ul li a");
-let mainSections = document.querySelectorAll(".main-wrapper section.method-content");
-
-let lastId;
-let cur = [];
-
-let contentWrapper = document.querySelector(".content-wrapper");
-contentWrapper.addEventListener("scroll", event => {
-  let fromTop = contentWrapper.scrollTop;
-
-  mainNavLinks.forEach(link => {
-    let section = document.querySelector("#" + link.attributes.getNamedItem("data").textContent);
-
-    if (
-      section.offsetTop <= fromTop &&
-      section.offsetTop + section.offsetHeight > fromTop
-    ) {
-      link.classList.add("current");
-    } else {
-      link.classList.remove("current");
+    function toggleMenu() {
+        $('#mobMenu').transition('slide down')
     }
-  });
-});
+    $(document).ready(function () {
+        $('.ui.dropdown').dropdown();
+        $('#version-picker').dropdown('set selected', "1.2");
+        $('#version-picker-mob').dropdown('set selected', "1.2");
 
-</script>
-<script>
-function menuLinkClick() {
-  if(window.matchMedia("(max-width: 600px)").matches) {
-    document.getElementsByClassName("navi-wrapper")[0].style.display = "none";
-  }
-}
-function displayMenu() {
-  var nav = document.getElementsByClassName("navi-wrapper")[0];
-  var content = document.getElementsByClassName("content-wrapper")[0];
-  if (nav.style.display === "none" || nav.style.display === "") {
-    nav.style.display = "block";
-    content.style.marginLeft = "210px";
-  } else {
-    nav.style.display = "none";
-    content.style.marginLeft = "0px";
-  }
-}
+    });
+
+    let mainNavLinks = document.querySelectorAll(".toc .ui.visible.left.vertical.sidebar.menu .menu a");
+    console.log(mainNavLinks);
+    let contentWrapper = document.querySelector(".content");
+    contentWrapper.addEventListener("scroll", event => {
+      let fromTop = contentWrapper.scrollTop;
+
+      mainNavLinks.forEach(link => {
+        let section = document.querySelector("#" + link.attributes.getNamedItem("data").textContent);
+
+        if (
+          section.offsetTop <= fromTop &&
+          section.offsetTop + section.offsetHeight > fromTop
+        ) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    });
+
 </script>
 <script>
     var rootPath = "../../";
@@ -615,7 +612,18 @@ function displayMenu() {
 <script src="../../doc-search/search-data.js"></script>
 <script src="../../doc-search/search.js"></script>
 <script>
-    window.onload = (event) => {
-        ballerinaHighlighter.highlightSnippets();
-    };
+    var str = "";
+    var currentModule = "http";
+    searchData.modules.forEach(function(module) {
+        var active = "";
+        if (currentModule==module.id) {
+            active = " active";
+        }
+        str += '<a class="item' + active + '" href="' + rootPath + module.id + '/index.html">' + module.id + '</a>';
+    });
+    document.getElementById("modules-list").innerHTML = str;
+    document.getElementById("modules-list-mob").innerHTML = str;
 </script>
+
+
+

@@ -19,313 +19,346 @@
     <meta name="keywords" content="ballerina,ballerina lang,api docs,http">
 
     <title>API Docs - Object : Response</title>
+
     <script src="../../html-template-resources/jquery.min.js"></script>
-
-    <!-- BIO THEME START -->
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<!-- Optional theme -->
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-<!-- Latest compiled and minified JavaScript -->
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;display=swap" rel="stylesheet">
-<link type="text/css" rel="stylesheet" href="https://use.typekit.net/son4ymv.css">
-<link rel="stylesheet" href="https://use.typekit.net/son4ymv.css">
-<link rel="stylesheet" href="/css/theme.css" type="text/css">
-<link rel="stylesheet" href="/css/theme_extra.css" type="text/css">
-
-<script type="text/javascript" src="/js/api-doc-template.js"></script>
-<script type="text/javascript" src="/js/ballerina-common.js"></script>
-
-<link rel="stylesheet" href="/css/ballerina-io.css">
-<link rel="stylesheet" href="/css/ballerina-io-docs.css?200618">
-<link rel="stylesheet" href="/css/ballerina-io-learn-v2.css">
-<link rel="stylesheet" href="/css/ballerina-io-docs.css">
-
-<style>
-    .line-numbers-wrap {
-        display: none;
-    }
-    body .url-link-img {
-        width: 16px;
-    }
-</style>
-<!-- BIO THEME END -->
-
-
-    <script src="../../syntax-highlighter/highlighter.js"></script>
+    <link rel="stylesheet" href="../../html-template-resources/semantic.min.css">
+    <link rel="stylesheet" href="../../html-template-resources/components/icon.min.css">
+    <link rel="stylesheet" href="../../html-template-resources/styles/css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/themes/prism.min.css" rel="stylesheet" />
+    <script src="../../html-template-resources/semantic.min.js"></script>
 
 </head>
 
 
-<body class="cBallerina-io">
-    <div class="row cBallerina-io-Nav" id="iMainNavigation">
-    <div class="container">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <nav class="navbar">
-                <div>
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                            <span class="sr-only">☰</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="cMobileLogo" href="/"><img src="/img/ballerina-logo.svg" alt="Ballerina"></a>
-                    </div>
-                    <div id="navbar" class="collapse navbar-collapse">
-                        <ul class="nav navbar-nav cTopNav">
-                            <li class="active toctree-l1 cActive" id="learnli"><a class="cBioTopLink" href="/learn">Learn</a>
-                            </li>
-                            <li class="active toctree-l1" id="Eventsli"><a class="cBioTopLink" href="/learn/events">Events</a>
-                            </li>
-                            <li class="toctree-l1"><a class="cBioTopLink" href="https://central.ballerina.io/" target="_blank">Central</a></li>
-                            <li class="toctree-l1" id="openli"><a class="cBioTopLink" href="/community">Community</a>
-                            </li>
-                            <li class="toctree-l1" id="helpli"><a class="cBioTopLink" href="https://blog.ballerina.io">Blog</a>
-                            </li>
-                            <li class="cVersionItem">
-                                <div class="cVersionContainer">
-                                    <!-- <lable class="cVlable">Version</lable> -->
-                                    <select name="versions" id="versions" class="select-css">
-                                        <option value="1.2" data-value="latest">v1.2</option>
-                                        <option value="swan-lake" selected="selected">Swan Lake</option>
-                                        <option value="1.1">v1.1</option>
-                                        <option value="1.0">v1.0</option>
-                                   
-                                    </select>
-                                </div>
-                            </li>
-                            <li class="cSearchMenu"><form class="cSearch-form-inline"><input id="searchTxt" class="form-control-field" type="search" placeholder="Search" aria-label="Search"><a id="searchBtn" href="#" class="cSearchButton"><img src="/img/search.svg"></a></form></li>
-                        </ul>
-                    </div>
+<body>
+    <div class="pusher">
+        <div class="mobile-logo-div">
+            <div class="ui secondary menu">
+                <a href="../index.html">
+                    <img class="mobile-logo" src="../../html-template-resources/images/ballerina-logo.png">
+                </a>
+                <div class="right item">
+                    <button class="ui icon button" onclick="toggleMenu()">
+                     <i class="large bars icon"></i>
+                    </button>
                 </div>
-            </nav>
+            </div>
         </div>
-    </div>
-</div>
 
-    <div class="row cBallerina-io-Gray-row">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 cBallerina-io-Home-Middle-col">
-
-                    <nav class="cLeftNavContainer">
-                        <ul class="cMainLeftNav">
+        <div class="toc">
+            <div class="ui visible left vertical sidebar menu">
+                <a href="
+                    ../../index.html">
+                    <img class="logo" src="../../html-template-resources/images/ballerina-logo.png">
+                </a>
+                
+                    
+                        <div class="header capitalize">
                             
-                            <li class="sub-menu cTopicURL OpenUL">
-                                <div class="cLeftMenuLink cTopiAtag">
     Objects
-</div>
-                                <ul class="sub-ul Open-submenu" style="display: none;">
-                                    
-    
-        <li >
-            <a href="AuthnFilter.html" onclick="menuLinkClick()">AuthnFilter</a>
-        </li>
-    
-        <li >
-            <a href="AuthzFilter.html" onclick="menuLinkClick()">AuthzFilter</a>
-        </li>
-    
-        <li >
-            <a href="AuthzHandler.html" onclick="menuLinkClick()">AuthzHandler</a>
-        </li>
-    
-        <li >
-            <a href="BasicAuthHandler.html" onclick="menuLinkClick()">BasicAuthHandler</a>
-        </li>
-    
-        <li >
-            <a href="BearerAuthHandler.html" onclick="menuLinkClick()">BearerAuthHandler</a>
-        </li>
-    
-        <li >
-            <a href="Cookie.html" onclick="menuLinkClick()">Cookie</a>
-        </li>
-    
-        <li >
-            <a href="CookieStore.html" onclick="menuLinkClick()">CookieStore</a>
-        </li>
-    
-        <li >
-            <a href="CsvPersistentCookieHandler.html" onclick="menuLinkClick()">CsvPersistentCookieHandler</a>
-        </li>
-    
-        <li >
-            <a href="FilterContext.html" onclick="menuLinkClick()">FilterContext</a>
-        </li>
-    
-        <li >
-            <a href="HttpCache.html" onclick="menuLinkClick()">HttpCache</a>
-        </li>
-    
-        <li >
-            <a href="HttpFuture.html" onclick="menuLinkClick()">HttpFuture</a>
-        </li>
-    
-        <li >
-            <a href="InboundAuthHandler.html" onclick="menuLinkClick()">InboundAuthHandler</a>
-        </li>
-    
-        <li >
-            <a href="LoadBalancerRoundRobinRule.html" onclick="menuLinkClick()">LoadBalancerRoundRobinRule</a>
-        </li>
-    
-        <li >
-            <a href="LoadBalancerRule.html" onclick="menuLinkClick()">LoadBalancerRule</a>
-        </li>
-    
-        <li >
-            <a href="OutboundAuthHandler.html" onclick="menuLinkClick()">OutboundAuthHandler</a>
-        </li>
-    
-        <li >
-            <a href="PersistentCookieHandler.html" onclick="menuLinkClick()">PersistentCookieHandler</a>
-        </li>
-    
-        <li >
-            <a href="PushPromise.html" onclick="menuLinkClick()">PushPromise</a>
-        </li>
-    
-        <li >
-            <a href="Request.html" onclick="menuLinkClick()">Request</a>
-        </li>
-    
-        <li >
-            <a href="RequestCacheControl.html" onclick="menuLinkClick()">RequestCacheControl</a>
-        </li>
-    
-        <li >
-            <a href="RequestFilter.html" onclick="menuLinkClick()">RequestFilter</a>
-        </li>
-    
-        <li class="active">
-            <a href="Response.html" onclick="menuLinkClick()">Response</a>
-        </li>
-    
-        <li >
-            <a href="ResponseCacheControl.html" onclick="menuLinkClick()">ResponseCacheControl</a>
-        </li>
-    
-        <li >
-            <a href="ResponseFilter.html" onclick="menuLinkClick()">ResponseFilter</a>
-        </li>
-    
 
-                                </ul>
-                            </li>
+                        </div>
+                        <div class="menu">
                             
-                            <li class="sub-menu cTopicURL">
-    <div class="cLeftMenuLink cTopiAtag">http</div>
-    <ul class="sub-ul Open-submenu" style="display: none;">
-        
-        <li>
-            <a data="records" href="../../http/index.html#records">Records</a>
-        </li>
-        
-        
-        <li>
-            <a data="objects" href="../../http/index.html#objects">Objects</a>
-        </li>
-        
-        
-        <li>
-            <a data="clients" href="../../http/index.html#clients">Clients</a>
-        </li>
-        
-        
-        <li>
-            <a data="listeners" href="../../http/index.html#listeners">Listeners</a>
-        </li>
-        
-        
-        <li>
-            <a data="functions" href="../../http/index.html#functions">Functions</a>
-        </li>
-        
-        
-        <li>
-            <a data="constants" href="../../http/index.html#constants">Constants</a>
-        </li>
-        
-        
-        <li>
-            <a data="annotations" href="../../http/index.html#annotations">Annotations</a>
-        </li>
-        
-        
-        <li>
-            <a data="types" href="../../http/index.html#types">Types</a>
-        </li>
-        
-        
-        <li>
-            <a data="errors" href="../../http/index.html#errors">Errors</a>
-        </li>
-        
-    </ul>
-</li>
-                        </ul>
-                    </nav>
-                </div>
+    
+        <a class="item " href="AuthnFilter.html">AuthnFilter</a>
+    
+        <a class="item " href="AuthzFilter.html">AuthzFilter</a>
+    
+        <a class="item " href="AuthzHandler.html">AuthzHandler</a>
+    
+        <a class="item " href="BasicAuthHandler.html">BasicAuthHandler</a>
+    
+        <a class="item " href="BearerAuthHandler.html">BearerAuthHandler</a>
+    
+        <a class="item " href="Cookie.html">Cookie</a>
+    
+        <a class="item " href="CookieStore.html">CookieStore</a>
+    
+        <a class="item " href="CsvPersistentCookieHandler.html">CsvPersistentCookieHandler</a>
+    
+        <a class="item " href="FilterContext.html">FilterContext</a>
+    
+        <a class="item " href="HttpCache.html">HttpCache</a>
+    
+        <a class="item " href="HttpFuture.html">HttpFuture</a>
+    
+        <a class="item " href="InboundAuthHandler.html">InboundAuthHandler</a>
+    
+        <a class="item " href="LoadBalancerRoundRobinRule.html">LoadBalancerRoundRobinRule</a>
+    
+        <a class="item " href="LoadBalancerRule.html">LoadBalancerRule</a>
+    
+        <a class="item " href="OutboundAuthHandler.html">OutboundAuthHandler</a>
+    
+        <a class="item " href="PersistentCookieHandler.html">PersistentCookieHandler</a>
+    
+        <a class="item " href="PushPromise.html">PushPromise</a>
+    
+        <a class="item " href="Request.html">Request</a>
+    
+        <a class="item " href="RequestCacheControl.html">RequestCacheControl</a>
+    
+        <a class="item " href="RequestFilter.html">RequestFilter</a>
+    
+        <a class="item active" href="Response.html">Response</a>
+    
+        <a class="item " href="ResponseCacheControl.html">ResponseCacheControl</a>
+    
+        <a class="item " href="ResponseFilter.html">ResponseFilter</a>
+    
 
+                        </div>
+                        <div class="ui divider"></div>
+                    
+                    <div class="header">
+                        <a class="capitalize" href="../../http/index.html">
+                            http Module
+                        </a>
+                    </div>
+                    <div class="menu">
+    
+        
+            <a class="item" data="records" href="../../http/index.html#records">Records</a>
+        
+    
+    
+        
+            <a class="item" data="objects" href="../../http/index.html#objects">Objects</a>
+        
+    
+    
+        <a class="item" data="clients" href="../../http/index.html#clients">Clients</a>
+    
+    
+        <a class="item" data="listeners" href="../../http/index.html#listeners">Listeners</a>
+    
+    
+        <a class="item" data="functions" href="../../http/index.html#functions">Functions</a>
+    
+    
+        <a class="item" data="constants" href="../../http/index.html#constants">Constants</a>
+    
+    
+        <a class="item" data="annotations" href="../../http/index.html#annotations">Annotations</a>
+    
+    
+        <a class="item" ata="types" href="../../http/index.html#types">Types</a>
+    
+    
+        <a class="item" data="errors" href="../../http/index.html#errors">Errors</a>
+    
+    <div class="ui divider"></div>
+</div>
 
-                <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 cBallerina-io-Home-Middle-col">
-                    <div id="search-impl" class="search-bar"></div>
-                    <div id="main" class="cBlallerina-io-docs-content-container">
-                        <div class="col-xs-12 col-sm-12" style="padding: 0;">
-                            <div class="col-md-12 col-lg-12 cBallerina-io-breadcrumbs">
-                                <nav class="breadcrumbs bootstrap hidden-sm-down">
-                                    <ul id="breadcrumb-list" class=" cBalleinaBreadcrumbs list-unstyled  wy-breadcrumbs"
-                                        vocab="http://schema.org/" typeof="BreadcrumbList">
-                                        <li><a href="/">Home</a></li>
-                                        <li>/</li>
-                                        <li><a href="/swan-lake/">Swan lake</a></li>
-                                        <li>/</li>
-                                        <li><a href="/swan-lake/learn/">Learn</a></li>
-                                        <li>/</li>
-                                        <li><a href="../..//index.html">API Docs</a></li>
-                                        <li>/</li>
-                                        <li><a href="../../http/index.html">http</a></li>
-                                        
-                                        <li>/</li>
-                                        <li><a
-                                                href="../../http/index.html#objects">
-    Object
-</a>
-                                        </li>
-                                        
-                                        <li>/</li>
-    <span class="objects ">Response</span>
+                    <div class="header capitalize">
+                        Other Modules
+                    </div>
+                    <div id="modules-list" class="menu"></div>
+                    <div class="ui divider"></div>
+                
+            </div>
+        </div>
 
-                                        
-                                        
-
-                                    </ul>
-                                </nav>
-                                <style type="text/css">
-                                    .cBalleinaBreadcrumbs li {
-                                        margin-right: 10px;
-                                    }
-                                </style>
-                                <div class="cVersionContainer"></div>
+        <div class="content">
+            <div class="row nav-bar">
+                <div class="ui secondary menu">
+                    <div class="search-bar">
+                        <div class="ui category search item search-bar">
+                            <i class="search link icon"></i>
+                            <div class="ui transparent icon input">
+                                <input class="prompt" id="searchBox" type="text" placeholder="Search API Docs..."/>
                             </div>
                         </div>
-                        <div class="wy-nav-content">
-                            <div class="rst-content">
-                                <div role="main">
-                                    <div class="section">
-                                        <h1>
-                                            
-                                            
+                    </div>
+                    <div class="right menu">
+                        <a class="item active">Learn</a>
+                        <a class="item">Events</a>
+                        <a class="item">Central</a>
+                        <a class="item">Community</a>
+                        <a class="item">Blog</a>
+                        <div class="ui dropdown item ballerina" id="version-picker">
+                            Version
+                            <i class="dropdown icon"></i>
+                            <div class="menu">
+                                <a class="item" value="1.0">1.0</a>
+                                <a class="item" value="1.1">1.1</a>
+                                <a class="item" value="1.2">1.2</a>
+                                <a class="item" value="swan-lake">Swan Lake</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div id="mobMenu" class="mob-menu">
+                    <div class="ui stackable secondary menu">
+                        <div class="item">
+                            <div class="search-bar">
+                                <div class="ui category search item search-bar">
+                                    <i class="search link icon"></i>
+                                    <div class="ui transparent icon input">
+                                        <input class="prompt" id="searchBoxMob" type="text" placeholder="Search API Docs..."/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                            
+                                <div class="ui dropdown item capitalize">
+                                    
+    Objects
+<i class="dropdown icon"></i>
+                                    <div class="menu">
+                                        
+    
+        <a class="item " href="AuthnFilter.html">AuthnFilter</a>
+    
+        <a class="item " href="AuthzFilter.html">AuthzFilter</a>
+    
+        <a class="item " href="AuthzHandler.html">AuthzHandler</a>
+    
+        <a class="item " href="BasicAuthHandler.html">BasicAuthHandler</a>
+    
+        <a class="item " href="BearerAuthHandler.html">BearerAuthHandler</a>
+    
+        <a class="item " href="Cookie.html">Cookie</a>
+    
+        <a class="item " href="CookieStore.html">CookieStore</a>
+    
+        <a class="item " href="CsvPersistentCookieHandler.html">CsvPersistentCookieHandler</a>
+    
+        <a class="item " href="FilterContext.html">FilterContext</a>
+    
+        <a class="item " href="HttpCache.html">HttpCache</a>
+    
+        <a class="item " href="HttpFuture.html">HttpFuture</a>
+    
+        <a class="item " href="InboundAuthHandler.html">InboundAuthHandler</a>
+    
+        <a class="item " href="LoadBalancerRoundRobinRule.html">LoadBalancerRoundRobinRule</a>
+    
+        <a class="item " href="LoadBalancerRule.html">LoadBalancerRule</a>
+    
+        <a class="item " href="OutboundAuthHandler.html">OutboundAuthHandler</a>
+    
+        <a class="item " href="PersistentCookieHandler.html">PersistentCookieHandler</a>
+    
+        <a class="item " href="PushPromise.html">PushPromise</a>
+    
+        <a class="item " href="Request.html">Request</a>
+    
+        <a class="item " href="RequestCacheControl.html">RequestCacheControl</a>
+    
+        <a class="item " href="RequestFilter.html">RequestFilter</a>
+    
+        <a class="item active" href="Response.html">Response</a>
+    
+        <a class="item " href="ResponseCacheControl.html">ResponseCacheControl</a>
+    
+        <a class="item " href="ResponseFilter.html">ResponseFilter</a>
+    
+
+                                    </div>
+                                </div>
+                            
+                            <div class="ui dropdown item capitalize">
+                                http Module <i class="dropdown icon"></i>
+                                <div class="menu">
+    
+        
+            <a class="item" data="records" href="../../http/index.html#records">Records</a>
+        
+    
+    
+        
+            <a class="item" data="objects" href="../../http/index.html#objects">Objects</a>
+        
+    
+    
+        <a class="item" data="clients" href="../../http/index.html#clients">Clients</a>
+    
+    
+        <a class="item" data="listeners" href="../../http/index.html#listeners">Listeners</a>
+    
+    
+        <a class="item" data="functions" href="../../http/index.html#functions">Functions</a>
+    
+    
+        <a class="item" data="constants" href="../../http/index.html#constants">Constants</a>
+    
+    
+        <a class="item" data="annotations" href="../../http/index.html#annotations">Annotations</a>
+    
+    
+        <a class="item" ata="types" href="../../http/index.html#types">Types</a>
+    
+    
+        <a class="item" data="errors" href="../../http/index.html#errors">Errors</a>
+    
+    <div class="ui divider"></div>
+</div>
+
+                            </div>
+                            <div class="ui dropdown item">
+                                Other Modules <i class="dropdown icon"></i>
+                                <div id="modules-list-mob" class="menu"></div>
+                            </div>
+                        
+
+                            <div class="ui dropdown item" id="version-picker-mob">
+                                Version <i class="dropdown icon"></i>
+                                <div class="menu">
+                                    <a class="item" value="1.0">1.0</a>
+                                    <a class="item" value="1.1">1.1</a>
+                                    <a class="item" value="1.2">1.2</a>
+                                    <a class="item" value="swan-lake">Swan Lake</a>
+                                </div>
+                            </div>
+                            <div class="ui dropdown item ballerina">
+                                Ballerina <i class="dropdown icon"></i>
+                                <div class="menu">
+                                    <a class="item active">Learn</a>
+                                    <a class="item">Events</a>
+                                    <a class="item">Central</a>
+                                    <a class="item">Community</a>
+                                </div>
+                            </div>
+
+                    </div>
+                </div>
+                <div id="search-impl"></div>
+                <div id="main">
+                    
+                        <div class="ui breadcrumb">
+                            <a class="section" href="
+                                 ../../index.html">Modules</a>
+                            <i class="right angle icon divider"></i>
+                            <a class="section capitalize " href="../../http/index.html">http</a>
+                            
+                                <i class="right angle icon divider"></i>
+                                <a class="section " href="../../http/index.html#objects">
+    Object
+</a>
+                                
+                                    <i class="right angle icon divider"></i>
+                                    <a class="section active">
+    <span class="objects ">Response</span>
+</a>
+                                
+                            
+                        </div>
+                    
+
+                    <div class="ui very padded segment module-data">
+                            <h1 class="capitalize">
     Object
 
-                                             : 
+                            :
     <span class="objects ">Response</span>
 
-                                        </h1>
-                                        
+                            </h1>
+                        
     <p>
         
         <p>Represents an HTTP response.</p>
@@ -340,459 +373,435 @@
             
                 <h2>Methods</h2>
                 <div class="method-list">
-                    
+                    <table class="ui very basic table">
                         
-<div class="param-sum">
-    <div class="param-name " title="getEntity">
+                            
+<tr>
+    <td class="module-title " title="getEntity">
         <a href="#getEntity">getEntity </a>
-    </div>
-    <div class="param-details">
+    </td>
+    <td class="module-desc">
         
         <p>Gets the <code>Entity</code> associated with the response.
-    </div>
-</div>
+    </td>
+</tr>
 
-                    
                         
-<div class="param-sum">
-    <div class="param-name " title="setEntity">
+                            
+<tr>
+    <td class="module-title " title="setEntity">
         <a href="#setEntity">setEntity </a>
-    </div>
-    <div class="param-details">
+    </td>
+    <td class="module-desc">
         
         <p>Sets the provided <code>Entity</code> to the response.
-    </div>
-</div>
+    </td>
+</tr>
 
-                    
                         
-<div class="param-sum">
-    <div class="param-name " title="hasHeader">
+                            
+<tr>
+    <td class="module-title " title="hasHeader">
         <a href="#hasHeader">hasHeader </a>
-    </div>
-    <div class="param-details">
+    </td>
+    <td class="module-desc">
         
         <p>Checks whether the requested header key exists in the header map.
-    </div>
-</div>
+    </td>
+</tr>
 
-                    
                         
-<div class="param-sum">
-    <div class="param-name " title="getHeader">
+                            
+<tr>
+    <td class="module-title " title="getHeader">
         <a href="#getHeader">getHeader </a>
-    </div>
-    <div class="param-details">
+    </td>
+    <td class="module-desc">
         
         <p>Returns the value of the specified header.
-    </div>
-</div>
+    </td>
+</tr>
 
-                    
                         
-<div class="param-sum">
-    <div class="param-name " title="addHeader">
+                            
+<tr>
+    <td class="module-title " title="addHeader">
         <a href="#addHeader">addHeader </a>
-    </div>
-    <div class="param-details">
+    </td>
+    <td class="module-desc">
         
         <p>Adds the specified header to the response.
-    </div>
-</div>
+    </td>
+</tr>
 
-                    
                         
-<div class="param-sum">
-    <div class="param-name " title="getHeaders">
+                            
+<tr>
+    <td class="module-title " title="getHeaders">
         <a href="#getHeaders">getHeaders </a>
-    </div>
-    <div class="param-details">
+    </td>
+    <td class="module-desc">
         
         <p>Gets all the header values to which the specified header key maps to.
-    </div>
-</div>
+    </td>
+</tr>
 
-                    
                         
-<div class="param-sum">
-    <div class="param-name " title="setHeader">
+                            
+<tr>
+    <td class="module-title " title="setHeader">
         <a href="#setHeader">setHeader </a>
-    </div>
-    <div class="param-details">
+    </td>
+    <td class="module-desc">
         
         <p>Sets the specified header to the response.
-    </div>
-</div>
+    </td>
+</tr>
 
-                    
                         
-<div class="param-sum">
-    <div class="param-name " title="removeHeader">
+                            
+<tr>
+    <td class="module-title " title="removeHeader">
         <a href="#removeHeader">removeHeader </a>
-    </div>
-    <div class="param-details">
+    </td>
+    <td class="module-desc">
         
         <p>Removes the specified header from the response.
-    </div>
-</div>
+    </td>
+</tr>
 
-                    
                         
-<div class="param-sum">
-    <div class="param-name " title="removeAllHeaders">
+                            
+<tr>
+    <td class="module-title " title="removeAllHeaders">
         <a href="#removeAllHeaders">removeAllHeaders </a>
-    </div>
-    <div class="param-details">
+    </td>
+    <td class="module-desc">
         
         <p>Removes all the headers from the response.
-    </div>
-</div>
+    </td>
+</tr>
 
-                    
                         
-<div class="param-sum">
-    <div class="param-name " title="getHeaderNames">
+                            
+<tr>
+    <td class="module-title " title="getHeaderNames">
         <a href="#getHeaderNames">getHeaderNames </a>
-    </div>
-    <div class="param-details">
+    </td>
+    <td class="module-desc">
         
         <p>Gets all the names of the headers of the response.
-    </div>
-</div>
+    </td>
+</tr>
 
-                    
                         
-<div class="param-sum">
-    <div class="param-name " title="setContentType">
+                            
+<tr>
+    <td class="module-title " title="setContentType">
         <a href="#setContentType">setContentType </a>
-    </div>
-    <div class="param-details">
+    </td>
+    <td class="module-desc">
         
         <p>Sets the <code>content-type</code> header to the response.
-    </div>
-</div>
+    </td>
+</tr>
 
-                    
                         
-<div class="param-sum">
-    <div class="param-name " title="getContentType">
+                            
+<tr>
+    <td class="module-title " title="getContentType">
         <a href="#getContentType">getContentType </a>
-    </div>
-    <div class="param-details">
+    </td>
+    <td class="module-desc">
         
         <p>Gets the type of the payload of the response (i.
-    </div>
-</div>
+    </td>
+</tr>
 
-                    
                         
-<div class="param-sum">
-    <div class="param-name " title="getJsonPayload">
+                            
+<tr>
+    <td class="module-title " title="getJsonPayload">
         <a href="#getJsonPayload">getJsonPayload </a>
-    </div>
-    <div class="param-details">
+    </td>
+    <td class="module-desc">
         
         <p>Extract <code>json</code> payload from the response.
-    </div>
-</div>
+    </td>
+</tr>
 
-                    
                         
-<div class="param-sum">
-    <div class="param-name " title="getXmlPayload">
+                            
+<tr>
+    <td class="module-title " title="getXmlPayload">
         <a href="#getXmlPayload">getXmlPayload </a>
-    </div>
-    <div class="param-details">
+    </td>
+    <td class="module-desc">
         
         <p>Extracts <code>xml</code> payload from the response.
-    </div>
-</div>
+    </td>
+</tr>
 
-                    
                         
-<div class="param-sum">
-    <div class="param-name " title="getTextPayload">
+                            
+<tr>
+    <td class="module-title " title="getTextPayload">
         <a href="#getTextPayload">getTextPayload </a>
-    </div>
-    <div class="param-details">
+    </td>
+    <td class="module-desc">
         
         <p>Extracts <code>text</code> payload from the response.
-    </div>
-</div>
+    </td>
+</tr>
 
-                    
                         
-<div class="param-sum">
-    <div class="param-name " title="getByteChannel">
+                            
+<tr>
+    <td class="module-title " title="getByteChannel">
         <a href="#getByteChannel">getByteChannel </a>
-    </div>
-    <div class="param-details">
+    </td>
+    <td class="module-desc">
         
         <p>Gets the response payload as a <code>ByteChannel</code>, except in the case of multiparts.
-    </div>
-</div>
+    </td>
+</tr>
 
-                    
                         
-<div class="param-sum">
-    <div class="param-name " title="getBinaryPayload">
+                            
+<tr>
+    <td class="module-title " title="getBinaryPayload">
         <a href="#getBinaryPayload">getBinaryPayload </a>
-    </div>
-    <div class="param-details">
+    </td>
+    <td class="module-desc">
         
         <p>Gets the response payload as a <code>byte[]</code>.
-    </div>
-</div>
+    </td>
+</tr>
 
-                    
                         
-<div class="param-sum">
-    <div class="param-name " title="getBodyParts">
+                            
+<tr>
+    <td class="module-title " title="getBodyParts">
         <a href="#getBodyParts">getBodyParts </a>
-    </div>
-    <div class="param-details">
+    </td>
+    <td class="module-desc">
         
         <p>Extracts body parts from the response.
-    </div>
-</div>
+    </td>
+</tr>
 
-                    
                         
-<div class="param-sum">
-    <div class="param-name " title="setETag">
+                            
+<tr>
+    <td class="module-title " title="setETag">
         <a href="#setETag">setETag </a>
-    </div>
-    <div class="param-details">
+    </td>
+    <td class="module-desc">
         
         <p>Sets the <code>etag</code> header for the given payload.
-    </div>
-</div>
+    </td>
+</tr>
 
-                    
                         
-<div class="param-sum">
-    <div class="param-name " title="setLastModified">
+                            
+<tr>
+    <td class="module-title " title="setLastModified">
         <a href="#setLastModified">setLastModified </a>
-    </div>
-    <div class="param-details">
+    </td>
+    <td class="module-desc">
         
         <p>Sets the current time as the <code>last-modified</code> header.
-    </div>
-</div>
+    </td>
+</tr>
 
-                    
                         
-<div class="param-sum">
-    <div class="param-name " title="setJsonPayload">
+                            
+<tr>
+    <td class="module-title " title="setJsonPayload">
         <a href="#setJsonPayload">setJsonPayload </a>
-    </div>
-    <div class="param-details">
+    </td>
+    <td class="module-desc">
         
         <p>Sets a <code>json</code> as the payload.
-    </div>
-</div>
+    </td>
+</tr>
 
-                    
                         
-<div class="param-sum">
-    <div class="param-name " title="setXmlPayload">
+                            
+<tr>
+    <td class="module-title " title="setXmlPayload">
         <a href="#setXmlPayload">setXmlPayload </a>
-    </div>
-    <div class="param-details">
+    </td>
+    <td class="module-desc">
         
         <p>Sets an <code>xml</code> as the payload</p>
 
-    </div>
-</div>
+    </td>
+</tr>
 
-                    
                         
-<div class="param-sum">
-    <div class="param-name " title="setTextPayload">
+                            
+<tr>
+    <td class="module-title " title="setTextPayload">
         <a href="#setTextPayload">setTextPayload </a>
-    </div>
-    <div class="param-details">
+    </td>
+    <td class="module-desc">
         
         <p>Sets a <code>string</code> as the payload.
-    </div>
-</div>
+    </td>
+</tr>
 
-                    
                         
-<div class="param-sum">
-    <div class="param-name " title="setBinaryPayload">
+                            
+<tr>
+    <td class="module-title " title="setBinaryPayload">
         <a href="#setBinaryPayload">setBinaryPayload </a>
-    </div>
-    <div class="param-details">
+    </td>
+    <td class="module-desc">
         
         <p>Sets a <code>byte[]</code> as the payload.
-    </div>
-</div>
+    </td>
+</tr>
 
-                    
                         
-<div class="param-sum">
-    <div class="param-name " title="setBodyParts">
+                            
+<tr>
+    <td class="module-title " title="setBodyParts">
         <a href="#setBodyParts">setBodyParts </a>
-    </div>
-    <div class="param-details">
+    </td>
+    <td class="module-desc">
         
         <p>Set multiparts as the payload.
-    </div>
-</div>
+    </td>
+</tr>
 
-                    
                         
-<div class="param-sum">
-    <div class="param-name " title="setFileAsPayload">
+                            
+<tr>
+    <td class="module-title " title="setFileAsPayload">
         <a href="#setFileAsPayload">setFileAsPayload </a>
-    </div>
-    <div class="param-details">
+    </td>
+    <td class="module-desc">
         
         <p>Sets the content of the specified file as the entity body of the response.
-    </div>
-</div>
+    </td>
+</tr>
 
-                    
                         
-<div class="param-sum">
-    <div class="param-name " title="setByteChannel">
+                            
+<tr>
+    <td class="module-title " title="setByteChannel">
         <a href="#setByteChannel">setByteChannel </a>
-    </div>
-    <div class="param-details">
+    </td>
+    <td class="module-desc">
         
         <p>Sets a <code>ByteChannel</code> as the payload.
-    </div>
-</div>
+    </td>
+</tr>
 
-                    
                         
-<div class="param-sum">
-    <div class="param-name " title="setPayload">
+                            
+<tr>
+    <td class="module-title " title="setPayload">
         <a href="#setPayload">setPayload </a>
-    </div>
-    <div class="param-details">
+    </td>
+    <td class="module-desc">
         
         <p>Sets the response payload.
-    </div>
-</div>
+    </td>
+</tr>
 
-                    
                         
-<div class="param-sum">
-    <div class="param-name " title="addCookie">
+                            
+<tr>
+    <td class="module-title " title="addCookie">
         <a href="#addCookie">addCookie </a>
-    </div>
-    <div class="param-details">
+    </td>
+    <td class="module-desc">
         
         <p>Adds the cookie to response.
-    </div>
-</div>
+    </td>
+</tr>
 
-                    
                         
-<div class="param-sum">
-    <div class="param-name " title="removeCookiesFromRemoteStore">
+                            
+<tr>
+    <td class="module-title " title="removeCookiesFromRemoteStore">
         <a href="#removeCookiesFromRemoteStore">removeCookiesFromRemoteStore </a>
-    </div>
-    <div class="param-details">
+    </td>
+    <td class="module-desc">
         
         <p>Deletes the cookies in the client's cookie store.
-    </div>
-</div>
+    </td>
+</tr>
 
-                    
                         
-<div class="param-sum">
-    <div class="param-name " title="getCookies">
+                            
+<tr>
+    <td class="module-title " title="getCookies">
         <a href="#getCookies">getCookies </a>
-    </div>
-    <div class="param-details">
+    </td>
+    <td class="module-desc">
         
         <p>Gets cookies from the response.
-    </div>
-</div>
+    </td>
+</tr>
 
-                    
+                        
+                    </table>
                 </div>
             
 
             
                 
                     <h2>Fields</h2>
-                        <div class="data-wrapper">
+                        <div class="fields-listing">
+    <ul>
         
-    <div class="params-listing">
-        <ul>
-            <li> <span >statusCode</span>
-                <span class="type">  <span class="builtin-type">int</span></span>
-                 <span class="default">(default 200)</span> 
-            </li>
-            <li>
+                <li> <span >statusCode</span>
+                    <span class="type">  <span class="builtin-type">int</span></span>
+                     <span class="default">(default 200)</span> 
+                </li>
                 <p>
                     
                     <p>The response status code</p>
 
                 </p>
-            </li>
-        </ul>
-    </div>
         
-    <div class="params-listing">
-        <ul>
-            <li> <span >reasonPhrase</span>
-                <span class="type">  <span class="builtin-type">string</span></span>
-                
-            </li>
-            <li>
+                <li> <span >reasonPhrase</span>
+                    <span class="type">  <span class="builtin-type">string</span></span>
+                     <span class="default">(default "")</span> 
+                </li>
                 <p>
                     
                     <p>The status code reason phrase</p>
 
                 </p>
-            </li>
-        </ul>
-    </div>
         
-    <div class="params-listing">
-        <ul>
-            <li> <span >server</span>
-                <span class="type">  <span class="builtin-type">string</span></span>
-                
-            </li>
-            <li>
+                <li> <span >server</span>
+                    <span class="type">  <span class="builtin-type">string</span></span>
+                     <span class="default">(default "")</span> 
+                </li>
                 <p>
                     
                     <p>The server header</p>
 
                 </p>
-            </li>
-        </ul>
-    </div>
         
-    <div class="params-listing">
-        <ul>
-            <li> <span >resolvedRequestedURI</span>
-                <span class="type">  <span class="builtin-type">string</span></span>
-                
-            </li>
-            <li>
+                <li> <span >resolvedRequestedURI</span>
+                    <span class="type">  <span class="builtin-type">string</span></span>
+                     <span class="default">(default "")</span> 
+                </li>
                 <p>
                     
                     <p>The ultimate request URI that was made to receive the response when redirect is on</p>
 
                 </p>
-            </li>
-        </ul>
-    </div>
         
-    <div class="params-listing">
-        <ul>
-            <li> <span >cacheControl</span>
-                <span class="type">  <a href="../../http/objects/ResponseCacheControl.html">ResponseCacheControl</a>?</span>
-                 <span class="default">(default ())</span> 
-            </li>
-            <li>
+                <li> <span >cacheControl</span>
+                    <span class="type">  <a href="../../http/objects/ResponseCacheControl.html">ResponseCacheControl</a>?</span>
+                     <span class="default">(default ())</span> 
+                </li>
                 <p>
                     
                     <p>The cache-control directives for the response. This needs to be explicitly initialized if
@@ -800,55 +809,43 @@ intending on utilizing HTTP caching. For incoming responses, this will already b
 if the response was sent with cache-control directives</p>
 
                 </p>
-            </li>
-        </ul>
-    </div>
-    
+        
+    </ul>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/components/prism-core.min.js"></script>
+<script src="../../syntax-highlighter/prism-ballerina.js"></script>
 <script>
-let mainNavLinks = document.querySelectorAll(".primary-list.module ul li a");
-let mainSections = document.querySelectorAll(".main-wrapper section.method-content");
-
-let lastId;
-let cur = [];
-
-let contentWrapper = document.querySelector(".content-wrapper");
-contentWrapper.addEventListener("scroll", event => {
-  let fromTop = contentWrapper.scrollTop;
-
-  mainNavLinks.forEach(link => {
-    let section = document.querySelector("#" + link.attributes.getNamedItem("data").textContent);
-
-    if (
-      section.offsetTop <= fromTop &&
-      section.offsetTop + section.offsetHeight > fromTop
-    ) {
-      link.classList.add("current");
-    } else {
-      link.classList.remove("current");
+    function toggleMenu() {
+        $('#mobMenu').transition('slide down')
     }
-  });
-});
+    $(document).ready(function () {
+        $('.ui.dropdown').dropdown();
+        $('#version-picker').dropdown('set selected', "1.2");
+        $('#version-picker-mob').dropdown('set selected', "1.2");
 
-</script>
-<script>
-function menuLinkClick() {
-  if(window.matchMedia("(max-width: 600px)").matches) {
-    document.getElementsByClassName("navi-wrapper")[0].style.display = "none";
-  }
-}
-function displayMenu() {
-  var nav = document.getElementsByClassName("navi-wrapper")[0];
-  var content = document.getElementsByClassName("content-wrapper")[0];
-  if (nav.style.display === "none" || nav.style.display === "") {
-    nav.style.display = "block";
-    content.style.marginLeft = "210px";
-  } else {
-    nav.style.display = "none";
-    content.style.marginLeft = "0px";
-  }
-}
+    });
+
+    let mainNavLinks = document.querySelectorAll(".toc .ui.visible.left.vertical.sidebar.menu .menu a");
+    console.log(mainNavLinks);
+    let contentWrapper = document.querySelector(".content");
+    contentWrapper.addEventListener("scroll", event => {
+      let fromTop = contentWrapper.scrollTop;
+
+      mainNavLinks.forEach(link => {
+        let section = document.querySelector("#" + link.attributes.getNamedItem("data").textContent);
+
+        if (
+          section.offsetTop <= fromTop &&
+          section.offsetTop + section.offsetHeight > fromTop
+        ) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    });
+
 </script>
 <script>
     var rootPath = "../../";
@@ -856,10 +853,19 @@ function displayMenu() {
 <script src="../../doc-search/search-data.js"></script>
 <script src="../../doc-search/search.js"></script>
 <script>
-    window.onload = (event) => {
-        ballerinaHighlighter.highlightSnippets();
-    };
+    var str = "";
+    var currentModule = "http";
+    searchData.modules.forEach(function(module) {
+        var active = "";
+        if (currentModule==module.id) {
+            active = " active";
+        }
+        str += '<a class="item' + active + '" href="' + rootPath + module.id + '/index.html">' + module.id + '</a>';
+    });
+    document.getElementById("modules-list").innerHTML = str;
+    document.getElementById("modules-list-mob").innerHTML = str;
 </script>
+
 
                 
             
@@ -868,18 +874,15 @@ function displayMenu() {
         
             
                 <div class="method-content">
-    <div class="main-method-title here" id="getEntity" title="getEntity">
+    <div class="main-method-title" id="getEntity" title="getEntity">
              <a class="url-link" href="#getEntity">
                 <img class="url-link-img" src="../../html-template-resources/images/link.svg">
             </a>
             <h2 > getEntity </h2>
-        
-        <span class="method-types">
-            <p>()</p>
-            <b> returns </b><a href="../../mime/objects/Entity.html">Entity</a> | <a href="../../http/types.html#ClientError">ClientError</a> 
-        </span>
-        
     </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function getEntity() returns <a href="../../mime/objects/Entity.html">Entity</a> | <a href="../../http/types.html#ClientError">ClientError</a> </code>
+    </pre>
     <div class="function-desc">
         
         <p>Gets the <code>Entity</code> associated with the response.</p>
@@ -890,31 +893,31 @@ function displayMenu() {
     
         
         <div class="returns-listing">
-            <ul>
-                <li> <h3 class="type">Return Type</h3> (<span class="type"><a href="../../mime/objects/Entity.html">Entity</a> | <a href="../../http/types.html#ClientError">ClientError</a></span>)</li>
-                <li><p>The <code>Entity</code> of the response. An <code>http:ClientError</code> is returned, if entity construction fails</p>
-</li>
-            </ul>
+            <h3 class="type">Return Type</h3> (<span class="type"><a href="../../mime/objects/Entity.html">Entity</a> | <a href="../../http/types.html#ClientError">ClientError</a></span>)
+            <p>The <code>Entity</code> of the response. An <code>http:ClientError</code> is returned, if entity construction fails</p>
+
         </div>
         
     
 </div>
             
                 <div class="method-content">
-    <div class="main-method-title here" id="setEntity" title="setEntity">
+    <div class="main-method-title" id="setEntity" title="setEntity">
              <a class="url-link" href="#setEntity">
                 <img class="url-link-img" src="../../html-template-resources/images/link.svg">
             </a>
             <h2 > setEntity </h2>
-        
     </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function setEntity(<a href="../../mime/objects/Entity.html">Entity</a> e)</code>
+    </pre>
     <div class="function-desc">
         
         <p>Sets the provided <code>Entity</code> to the response.</p>
 
     </div>
     
-        <div class="data-wrapper">
+        <div class="parameters">
             <h3 class="param-title">Parameters</h3>
                 
             <div class="params-listing">
@@ -924,13 +927,11 @@ function displayMenu() {
                         <span class="type">  <a href="../../mime/objects/Entity.html">Entity</a> </span>
                         
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>The <code>Entity</code> to be set to the response</p>
+                    <p>
+                        
+                        <p>The <code>Entity</code> to be set to the response</p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
             
@@ -941,25 +942,22 @@ function displayMenu() {
 </div>
             
                 <div class="method-content">
-    <div class="main-method-title here" id="hasHeader" title="hasHeader">
+    <div class="main-method-title" id="hasHeader" title="hasHeader">
              <a class="url-link" href="#hasHeader">
                 <img class="url-link-img" src="../../html-template-resources/images/link.svg">
             </a>
             <h2 > hasHeader </h2>
-        
-        <span class="method-types">
-            <p>(<span class="builtin-type">string</span> headerName, <a href="../../mime/types.html#HeaderPosition">HeaderPosition</a> position)</p>
-            <b> returns </b><span class="builtin-type">boolean</span> 
-        </span>
-        
     </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function hasHeader(<span class="builtin-type">string</span> headerName, <a href="../../mime/types.html#HeaderPosition">HeaderPosition</a> position) returns <span class="builtin-type">boolean</span> </code>
+    </pre>
     <div class="function-desc">
         
         <p>Checks whether the requested header key exists in the header map.</p>
 
     </div>
     
-        <div class="data-wrapper">
+        <div class="parameters">
             <h3 class="param-title">Parameters</h3>
                 
             <div class="params-listing">
@@ -969,13 +967,11 @@ function displayMenu() {
                         <span class="type">  <span class="builtin-type">string</span> </span>
                         
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>The header name</p>
+                    <p>
+                        
+                        <p>The header name</p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
                 
@@ -984,15 +980,13 @@ function displayMenu() {
                     <li>
                         <span >position</span>
                         <span class="type">  <a href="../../mime/types.html#HeaderPosition">HeaderPosition</a> </span>
-                        <span class="default"> (default mime:LEADING)</span>
+                        <span class="default"> (default &lt;(leading|trailing)&gt; &lt;leading&gt; leading)</span>
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>Represents the position of the header as an optional parameter</p>
+                    <p>
+                        
+                        <p>Represents the position of the header as an optional parameter</p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
             
@@ -1002,29 +996,24 @@ function displayMenu() {
     
         
         <div class="returns-listing">
-            <ul>
-                <li> <h3 class="type">Return Type</h3> (<span class="type"><span class="builtin-type">boolean</span></span>)</li>
-                <li><p><code>true</code> if the specified header key exists</p>
-</li>
-            </ul>
+            <h3 class="type">Return Type</h3> (<span class="type"><span class="builtin-type">boolean</span></span>)
+            <p><code>true</code> if the specified header key exists</p>
+
         </div>
         
     
 </div>
             
                 <div class="method-content">
-    <div class="main-method-title here" id="getHeader" title="getHeader">
+    <div class="main-method-title" id="getHeader" title="getHeader">
              <a class="url-link" href="#getHeader">
                 <img class="url-link-img" src="../../html-template-resources/images/link.svg">
             </a>
             <h2 > getHeader </h2>
-        
-        <span class="method-types">
-            <p>(<span class="builtin-type">string</span> headerName, <a href="../../mime/types.html#HeaderPosition">HeaderPosition</a> position)</p>
-            <b> returns </b><span class="builtin-type">string</span> 
-        </span>
-        
     </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function getHeader(<span class="builtin-type">string</span> headerName, <a href="../../mime/types.html#HeaderPosition">HeaderPosition</a> position) returns <span class="builtin-type">string</span> </code>
+    </pre>
     <div class="function-desc">
         
         <p>Returns the value of the specified header. If the specified header key maps to multiple values, the first of
@@ -1032,7 +1021,7 @@ these values is returned.</p>
 
     </div>
     
-        <div class="data-wrapper">
+        <div class="parameters">
             <h3 class="param-title">Parameters</h3>
                 
             <div class="params-listing">
@@ -1042,13 +1031,11 @@ these values is returned.</p>
                         <span class="type">  <span class="builtin-type">string</span> </span>
                         
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>The header name</p>
+                    <p>
+                        
+                        <p>The header name</p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
                 
@@ -1057,16 +1044,14 @@ these values is returned.</p>
                     <li>
                         <span >position</span>
                         <span class="type">  <a href="../../mime/types.html#HeaderPosition">HeaderPosition</a> </span>
-                        <span class="default"> (default mime:LEADING)</span>
+                        <span class="default"> (default &lt;(leading|trailing)&gt; &lt;leading&gt; leading)</span>
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>Represents the position of the header as an optional parameter. If the position is <code>mime:TRAILING</code>,
+                    <p>
+                        
+                        <p>Represents the position of the header as an optional parameter. If the position is <code>mime:TRAILING</code>,
 the entity-body of the <code>Response</code> must be accessed initially.</p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
             
@@ -1076,32 +1061,32 @@ the entity-body of the <code>Response</code> must be accessed initially.</p>
     
         
         <div class="returns-listing">
-            <ul>
-                <li> <h3 class="type">Return Type</h3> (<span class="type"><span class="builtin-type">string</span></span>)</li>
-                <li><p>The first header value for the specified header name. Panic if the header is not found. Use the
+            <h3 class="type">Return Type</h3> (<span class="type"><span class="builtin-type">string</span></span>)
+            <p>The first header value for the specified header name. Panic if the header is not found. Use the
 <code>Response.hasHeader()</code> beforehand to check the existence of a header.</p>
-</li>
-            </ul>
+
         </div>
         
     
 </div>
             
                 <div class="method-content">
-    <div class="main-method-title here" id="addHeader" title="addHeader">
+    <div class="main-method-title" id="addHeader" title="addHeader">
              <a class="url-link" href="#addHeader">
                 <img class="url-link-img" src="../../html-template-resources/images/link.svg">
             </a>
             <h2 > addHeader </h2>
-        
     </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function addHeader(<span class="builtin-type">string</span> headerName, <span class="builtin-type">string</span> headerValue, <a href="../../mime/types.html#HeaderPosition">HeaderPosition</a> position)</code>
+    </pre>
     <div class="function-desc">
         
         <p>Adds the specified header to the response. Existing header values are not replaced. Panic if an illegal header is passed.</p>
 
     </div>
     
-        <div class="data-wrapper">
+        <div class="parameters">
             <h3 class="param-title">Parameters</h3>
                 
             <div class="params-listing">
@@ -1111,13 +1096,11 @@ the entity-body of the <code>Response</code> must be accessed initially.</p>
                         <span class="type">  <span class="builtin-type">string</span> </span>
                         
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>The header name</p>
+                    <p>
+                        
+                        <p>The header name</p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
                 
@@ -1128,13 +1111,11 @@ the entity-body of the <code>Response</code> must be accessed initially.</p>
                         <span class="type">  <span class="builtin-type">string</span> </span>
                         
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>The header value</p>
+                    <p>
+                        
+                        <p>The header value</p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
                 
@@ -1143,16 +1124,14 @@ the entity-body of the <code>Response</code> must be accessed initially.</p>
                     <li>
                         <span >position</span>
                         <span class="type">  <a href="../../mime/types.html#HeaderPosition">HeaderPosition</a> </span>
-                        <span class="default"> (default mime:LEADING)</span>
+                        <span class="default"> (default &lt;(leading|trailing)&gt; &lt;leading&gt; leading)</span>
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>Represents the position of the header as an optional parameter. If the position is <code>mime:TRAILING</code>,
+                    <p>
+                        
+                        <p>Represents the position of the header as an optional parameter. If the position is <code>mime:TRAILING</code>,
 the entity-body of the <code>Response</code> must be accessed initially.</p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
             
@@ -1163,25 +1142,22 @@ the entity-body of the <code>Response</code> must be accessed initially.</p>
 </div>
             
                 <div class="method-content">
-    <div class="main-method-title here" id="getHeaders" title="getHeaders">
+    <div class="main-method-title" id="getHeaders" title="getHeaders">
              <a class="url-link" href="#getHeaders">
                 <img class="url-link-img" src="../../html-template-resources/images/link.svg">
             </a>
             <h2 > getHeaders </h2>
-        
-        <span class="method-types">
-            <p>(<span class="builtin-type">string</span> headerName, <a href="../../mime/types.html#HeaderPosition">HeaderPosition</a> position)</p>
-            <b> returns </b><span class="array-type"><span class="builtin-type">string</span>[]</span> 
-        </span>
-        
     </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function getHeaders(<span class="builtin-type">string</span> headerName, <a href="../../mime/types.html#HeaderPosition">HeaderPosition</a> position) returns <span class="array-type"><span class="builtin-type">string</span>[]</span> </code>
+    </pre>
     <div class="function-desc">
         
         <p>Gets all the header values to which the specified header key maps to.</p>
 
     </div>
     
-        <div class="data-wrapper">
+        <div class="parameters">
             <h3 class="param-title">Parameters</h3>
                 
             <div class="params-listing">
@@ -1191,13 +1167,11 @@ the entity-body of the <code>Response</code> must be accessed initially.</p>
                         <span class="type">  <span class="builtin-type">string</span> </span>
                         
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>The header name</p>
+                    <p>
+                        
+                        <p>The header name</p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
                 
@@ -1206,16 +1180,14 @@ the entity-body of the <code>Response</code> must be accessed initially.</p>
                     <li>
                         <span >position</span>
                         <span class="type">  <a href="../../mime/types.html#HeaderPosition">HeaderPosition</a> </span>
-                        <span class="default"> (default mime:LEADING)</span>
+                        <span class="default"> (default &lt;(leading|trailing)&gt; &lt;leading&gt; leading)</span>
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>Represents the position of the header as an optional parameter. If the position is <code>mime:TRAILING</code>,
+                    <p>
+                        
+                        <p>Represents the position of the header as an optional parameter. If the position is <code>mime:TRAILING</code>,
 the entity-body of the <code>Response</code> must be accessed initially.</p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
             
@@ -1225,25 +1197,25 @@ the entity-body of the <code>Response</code> must be accessed initially.</p>
     
         
         <div class="returns-listing">
-            <ul>
-                <li> <h3 class="type">Return Type</h3> (<span class="type"><span class="array-type"><span class="builtin-type">string</span>[]</span></span>)</li>
-                <li><p>The header values the specified header key maps to. Panic if the header is not found. Use the
+            <h3 class="type">Return Type</h3> (<span class="type"><span class="array-type"><span class="builtin-type">string</span>[]</span></span>)
+            <p>The header values the specified header key maps to. Panic if the header is not found. Use the
 <code>Response.hasHeader()</code> beforehand to check the existence of a header.</p>
-</li>
-            </ul>
+
         </div>
         
     
 </div>
             
                 <div class="method-content">
-    <div class="main-method-title here" id="setHeader" title="setHeader">
+    <div class="main-method-title" id="setHeader" title="setHeader">
              <a class="url-link" href="#setHeader">
                 <img class="url-link-img" src="../../html-template-resources/images/link.svg">
             </a>
             <h2 > setHeader </h2>
-        
     </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function setHeader(<span class="builtin-type">string</span> headerName, <span class="builtin-type">string</span> headerValue, <a href="../../mime/types.html#HeaderPosition">HeaderPosition</a> position)</code>
+    </pre>
     <div class="function-desc">
         
         <p>Sets the specified header to the response. If a mapping already exists for the specified header key, the
@@ -1251,7 +1223,7 @@ existing header value is replaced with the specified header value. Panic if an i
 
     </div>
     
-        <div class="data-wrapper">
+        <div class="parameters">
             <h3 class="param-title">Parameters</h3>
                 
             <div class="params-listing">
@@ -1261,13 +1233,11 @@ existing header value is replaced with the specified header value. Panic if an i
                         <span class="type">  <span class="builtin-type">string</span> </span>
                         
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>The header name</p>
+                    <p>
+                        
+                        <p>The header name</p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
                 
@@ -1278,13 +1248,11 @@ existing header value is replaced with the specified header value. Panic if an i
                         <span class="type">  <span class="builtin-type">string</span> </span>
                         
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>The header value</p>
+                    <p>
+                        
+                        <p>The header value</p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
                 
@@ -1293,16 +1261,14 @@ existing header value is replaced with the specified header value. Panic if an i
                     <li>
                         <span >position</span>
                         <span class="type">  <a href="../../mime/types.html#HeaderPosition">HeaderPosition</a> </span>
-                        <span class="default"> (default mime:LEADING)</span>
+                        <span class="default"> (default &lt;(leading|trailing)&gt; &lt;leading&gt; leading)</span>
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>Represents the position of the header as an optional parameter. If the position is <code>mime:TRAILING</code>,
+                    <p>
+                        
+                        <p>Represents the position of the header as an optional parameter. If the position is <code>mime:TRAILING</code>,
 the entity-body of the <code>Response</code> must be accessed initially.</p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
             
@@ -1313,20 +1279,22 @@ the entity-body of the <code>Response</code> must be accessed initially.</p>
 </div>
             
                 <div class="method-content">
-    <div class="main-method-title here" id="removeHeader" title="removeHeader">
+    <div class="main-method-title" id="removeHeader" title="removeHeader">
              <a class="url-link" href="#removeHeader">
                 <img class="url-link-img" src="../../html-template-resources/images/link.svg">
             </a>
             <h2 > removeHeader </h2>
-        
     </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function removeHeader(<span class="builtin-type">string</span> key, <a href="../../mime/types.html#HeaderPosition">HeaderPosition</a> position)</code>
+    </pre>
     <div class="function-desc">
         
         <p>Removes the specified header from the response.</p>
 
     </div>
     
-        <div class="data-wrapper">
+        <div class="parameters">
             <h3 class="param-title">Parameters</h3>
                 
             <div class="params-listing">
@@ -1336,13 +1304,11 @@ the entity-body of the <code>Response</code> must be accessed initially.</p>
                         <span class="type">  <span class="builtin-type">string</span> </span>
                         
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>The header name</p>
+                    <p>
+                        
+                        <p>The header name</p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
                 
@@ -1351,16 +1317,14 @@ the entity-body of the <code>Response</code> must be accessed initially.</p>
                     <li>
                         <span >position</span>
                         <span class="type">  <a href="../../mime/types.html#HeaderPosition">HeaderPosition</a> </span>
-                        <span class="default"> (default mime:LEADING)</span>
+                        <span class="default"> (default &lt;(leading|trailing)&gt; &lt;leading&gt; leading)</span>
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>Represents the position of the header as an optional parameter. If the position is <code>mime:TRAILING</code>,
+                    <p>
+                        
+                        <p>Represents the position of the header as an optional parameter. If the position is <code>mime:TRAILING</code>,
 the entity-body of the <code>Response</code> must be accessed initially.</p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
             
@@ -1371,20 +1335,22 @@ the entity-body of the <code>Response</code> must be accessed initially.</p>
 </div>
             
                 <div class="method-content">
-    <div class="main-method-title here" id="removeAllHeaders" title="removeAllHeaders">
+    <div class="main-method-title" id="removeAllHeaders" title="removeAllHeaders">
              <a class="url-link" href="#removeAllHeaders">
                 <img class="url-link-img" src="../../html-template-resources/images/link.svg">
             </a>
             <h2 > removeAllHeaders </h2>
-        
     </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function removeAllHeaders(<a href="../../mime/types.html#HeaderPosition">HeaderPosition</a> position)</code>
+    </pre>
     <div class="function-desc">
         
         <p>Removes all the headers from the response.</p>
 
     </div>
     
-        <div class="data-wrapper">
+        <div class="parameters">
             <h3 class="param-title">Parameters</h3>
                 
             <div class="params-listing">
@@ -1392,16 +1358,14 @@ the entity-body of the <code>Response</code> must be accessed initially.</p>
                     <li>
                         <span >position</span>
                         <span class="type">  <a href="../../mime/types.html#HeaderPosition">HeaderPosition</a> </span>
-                        <span class="default"> (default mime:LEADING)</span>
+                        <span class="default"> (default &lt;(leading|trailing)&gt; &lt;leading&gt; leading)</span>
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>Represents the position of the header as an optional parameter. If the position is <code>mime:TRAILING</code>,
+                    <p>
+                        
+                        <p>Represents the position of the header as an optional parameter. If the position is <code>mime:TRAILING</code>,
 the entity-body of the <code>Response</code> must be accessed initially.</p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
             
@@ -1412,25 +1376,22 @@ the entity-body of the <code>Response</code> must be accessed initially.</p>
 </div>
             
                 <div class="method-content">
-    <div class="main-method-title here" id="getHeaderNames" title="getHeaderNames">
+    <div class="main-method-title" id="getHeaderNames" title="getHeaderNames">
              <a class="url-link" href="#getHeaderNames">
                 <img class="url-link-img" src="../../html-template-resources/images/link.svg">
             </a>
             <h2 > getHeaderNames </h2>
-        
-        <span class="method-types">
-            <p>(<a href="../../mime/types.html#HeaderPosition">HeaderPosition</a> position)</p>
-            <b> returns </b><span class="array-type"><span class="builtin-type">string</span>[]</span> 
-        </span>
-        
     </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function getHeaderNames(<a href="../../mime/types.html#HeaderPosition">HeaderPosition</a> position) returns <span class="array-type"><span class="builtin-type">string</span>[]</span> </code>
+    </pre>
     <div class="function-desc">
         
         <p>Gets all the names of the headers of the response.</p>
 
     </div>
     
-        <div class="data-wrapper">
+        <div class="parameters">
             <h3 class="param-title">Parameters</h3>
                 
             <div class="params-listing">
@@ -1438,16 +1399,14 @@ the entity-body of the <code>Response</code> must be accessed initially.</p>
                     <li>
                         <span >position</span>
                         <span class="type">  <a href="../../mime/types.html#HeaderPosition">HeaderPosition</a> </span>
-                        <span class="default"> (default mime:LEADING)</span>
+                        <span class="default"> (default &lt;(leading|trailing)&gt; &lt;leading&gt; leading)</span>
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>Represents the position of the header as an optional parameter. If the position is <code>mime:TRAILING</code>,
+                    <p>
+                        
+                        <p>Represents the position of the header as an optional parameter. If the position is <code>mime:TRAILING</code>,
 the entity-body of the <code>Response</code> must be accessed initially.</p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
             
@@ -1457,31 +1416,31 @@ the entity-body of the <code>Response</code> must be accessed initially.</p>
     
         
         <div class="returns-listing">
-            <ul>
-                <li> <h3 class="type">Return Type</h3> (<span class="type"><span class="array-type"><span class="builtin-type">string</span>[]</span></span>)</li>
-                <li><p>An array of all the header names</p>
-</li>
-            </ul>
+            <h3 class="type">Return Type</h3> (<span class="type"><span class="array-type"><span class="builtin-type">string</span>[]</span></span>)
+            <p>An array of all the header names</p>
+
         </div>
         
     
 </div>
             
                 <div class="method-content">
-    <div class="main-method-title here" id="setContentType" title="setContentType">
+    <div class="main-method-title" id="setContentType" title="setContentType">
              <a class="url-link" href="#setContentType">
                 <img class="url-link-img" src="../../html-template-resources/images/link.svg">
             </a>
             <h2 > setContentType </h2>
-        
     </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function setContentType(<span class="builtin-type">string</span> contentType)</code>
+    </pre>
     <div class="function-desc">
         
         <p>Sets the <code>content-type</code> header to the response.</p>
 
     </div>
     
-        <div class="data-wrapper">
+        <div class="parameters">
             <h3 class="param-title">Parameters</h3>
                 
             <div class="params-listing">
@@ -1491,13 +1450,11 @@ the entity-body of the <code>Response</code> must be accessed initially.</p>
                         <span class="type">  <span class="builtin-type">string</span> </span>
                         
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>Content type value to be set as the <code>content-type</code> header</p>
+                    <p>
+                        
+                        <p>Content type value to be set as the <code>content-type</code> header</p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
             
@@ -1508,18 +1465,15 @@ the entity-body of the <code>Response</code> must be accessed initially.</p>
 </div>
             
                 <div class="method-content">
-    <div class="main-method-title here" id="getContentType" title="getContentType">
+    <div class="main-method-title" id="getContentType" title="getContentType">
              <a class="url-link" href="#getContentType">
                 <img class="url-link-img" src="../../html-template-resources/images/link.svg">
             </a>
             <h2 > getContentType </h2>
-        
-        <span class="method-types">
-            <p>()</p>
-            <b> returns </b><span class="builtin-type">string</span> 
-        </span>
-        
     </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function getContentType() returns <span class="builtin-type">string</span> </code>
+    </pre>
     <div class="function-desc">
         
         <p>Gets the type of the payload of the response (i.e: the <code>content-type</code> header value).</p>
@@ -1530,29 +1484,24 @@ the entity-body of the <code>Response</code> must be accessed initially.</p>
     
         
         <div class="returns-listing">
-            <ul>
-                <li> <h3 class="type">Return Type</h3> (<span class="type"><span class="builtin-type">string</span></span>)</li>
-                <li><p>Returns the <code>content-type</code> header value as a string</p>
-</li>
-            </ul>
+            <h3 class="type">Return Type</h3> (<span class="type"><span class="builtin-type">string</span></span>)
+            <p>Returns the <code>content-type</code> header value as a string</p>
+
         </div>
         
     
 </div>
             
                 <div class="method-content">
-    <div class="main-method-title here" id="getJsonPayload" title="getJsonPayload">
+    <div class="main-method-title" id="getJsonPayload" title="getJsonPayload">
              <a class="url-link" href="#getJsonPayload">
                 <img class="url-link-img" src="../../html-template-resources/images/link.svg">
             </a>
             <h2 > getJsonPayload </h2>
-        
-        <span class="method-types">
-            <p>()</p>
-            <b> returns </b><span class="builtin-type">json</span> | <a href="../../http/types.html#ClientError">ClientError</a> 
-        </span>
-        
     </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function getJsonPayload() returns <span class="builtin-type">json</span> | <a href="../../http/types.html#ClientError">ClientError</a> </code>
+    </pre>
     <div class="function-desc">
         
         <p>Extract <code>json</code> payload from the response. If the content type is not JSON, an <code>http:ClientError</code> is returned.</p>
@@ -1563,29 +1512,24 @@ the entity-body of the <code>Response</code> must be accessed initially.</p>
     
         
         <div class="returns-listing">
-            <ul>
-                <li> <h3 class="type">Return Type</h3> (<span class="type"><span class="builtin-type">json</span> | <a href="../../http/types.html#ClientError">ClientError</a></span>)</li>
-                <li><p>The <code>json</code> payload or <code>http:ClientError</code> in case of errors</p>
-</li>
-            </ul>
+            <h3 class="type">Return Type</h3> (<span class="type"><span class="builtin-type">json</span> | <a href="../../http/types.html#ClientError">ClientError</a></span>)
+            <p>The <code>json</code> payload or <code>http:ClientError</code> in case of errors</p>
+
         </div>
         
     
 </div>
             
                 <div class="method-content">
-    <div class="main-method-title here" id="getXmlPayload" title="getXmlPayload">
+    <div class="main-method-title" id="getXmlPayload" title="getXmlPayload">
              <a class="url-link" href="#getXmlPayload">
                 <img class="url-link-img" src="../../html-template-resources/images/link.svg">
             </a>
             <h2 > getXmlPayload </h2>
-        
-        <span class="method-types">
-            <p>()</p>
-            <b> returns </b><span class="builtin-type">xml</span> | <a href="../../http/types.html#ClientError">ClientError</a> 
-        </span>
-        
     </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function getXmlPayload() returns <span class="builtin-type">xml</span> | <a href="../../http/types.html#ClientError">ClientError</a> </code>
+    </pre>
     <div class="function-desc">
         
         <p>Extracts <code>xml</code> payload from the response.</p>
@@ -1596,29 +1540,24 @@ the entity-body of the <code>Response</code> must be accessed initially.</p>
     
         
         <div class="returns-listing">
-            <ul>
-                <li> <h3 class="type">Return Type</h3> (<span class="type"><span class="builtin-type">xml</span> | <a href="../../http/types.html#ClientError">ClientError</a></span>)</li>
-                <li><p>The <code>xml</code> payload or <code>http:ClientError</code> in case of errors</p>
-</li>
-            </ul>
+            <h3 class="type">Return Type</h3> (<span class="type"><span class="builtin-type">xml</span> | <a href="../../http/types.html#ClientError">ClientError</a></span>)
+            <p>The <code>xml</code> payload or <code>http:ClientError</code> in case of errors</p>
+
         </div>
         
     
 </div>
             
                 <div class="method-content">
-    <div class="main-method-title here" id="getTextPayload" title="getTextPayload">
+    <div class="main-method-title" id="getTextPayload" title="getTextPayload">
              <a class="url-link" href="#getTextPayload">
                 <img class="url-link-img" src="../../html-template-resources/images/link.svg">
             </a>
             <h2 > getTextPayload </h2>
-        
-        <span class="method-types">
-            <p>()</p>
-            <b> returns </b><span class="builtin-type">string</span> | <a href="../../http/types.html#ClientError">ClientError</a> 
-        </span>
-        
     </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function getTextPayload() returns <span class="builtin-type">string</span> | <a href="../../http/types.html#ClientError">ClientError</a> </code>
+    </pre>
     <div class="function-desc">
         
         <p>Extracts <code>text</code> payload from the response.</p>
@@ -1629,29 +1568,24 @@ the entity-body of the <code>Response</code> must be accessed initially.</p>
     
         
         <div class="returns-listing">
-            <ul>
-                <li> <h3 class="type">Return Type</h3> (<span class="type"><span class="builtin-type">string</span> | <a href="../../http/types.html#ClientError">ClientError</a></span>)</li>
-                <li><p>The string representation of the message payload or <code>http:ClientError</code> in case of errors</p>
-</li>
-            </ul>
+            <h3 class="type">Return Type</h3> (<span class="type"><span class="builtin-type">string</span> | <a href="../../http/types.html#ClientError">ClientError</a></span>)
+            <p>The string representation of the message payload or <code>http:ClientError</code> in case of errors</p>
+
         </div>
         
     
 </div>
             
                 <div class="method-content">
-    <div class="main-method-title here" id="getByteChannel" title="getByteChannel">
+    <div class="main-method-title" id="getByteChannel" title="getByteChannel">
              <a class="url-link" href="#getByteChannel">
                 <img class="url-link-img" src="../../html-template-resources/images/link.svg">
             </a>
             <h2 > getByteChannel </h2>
-        
-        <span class="method-types">
-            <p>()</p>
-            <b> returns </b><a href="../../io/objects/ReadableByteChannel.html">ReadableByteChannel</a> | <a href="../../http/types.html#ClientError">ClientError</a> 
-        </span>
-        
     </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function getByteChannel() returns <a href="../../io/objects/ReadableByteChannel.html">ReadableByteChannel</a> | <a href="../../http/types.html#ClientError">ClientError</a> </code>
+    </pre>
     <div class="function-desc">
         
         <p>Gets the response payload as a <code>ByteChannel</code>, except in the case of multiparts. To retrieve multiparts, use
@@ -1663,29 +1597,24 @@ the entity-body of the <code>Response</code> must be accessed initially.</p>
     
         
         <div class="returns-listing">
-            <ul>
-                <li> <h3 class="type">Return Type</h3> (<span class="type"><a href="../../io/objects/ReadableByteChannel.html">ReadableByteChannel</a> | <a href="../../http/types.html#ClientError">ClientError</a></span>)</li>
-                <li><p>A byte channel from which the message payload can be read or <code>http:ClientError</code> in case of errors</p>
-</li>
-            </ul>
+            <h3 class="type">Return Type</h3> (<span class="type"><a href="../../io/objects/ReadableByteChannel.html">ReadableByteChannel</a> | <a href="../../http/types.html#ClientError">ClientError</a></span>)
+            <p>A byte channel from which the message payload can be read or <code>http:ClientError</code> in case of errors</p>
+
         </div>
         
     
 </div>
             
                 <div class="method-content">
-    <div class="main-method-title here" id="getBinaryPayload" title="getBinaryPayload">
+    <div class="main-method-title" id="getBinaryPayload" title="getBinaryPayload">
              <a class="url-link" href="#getBinaryPayload">
                 <img class="url-link-img" src="../../html-template-resources/images/link.svg">
             </a>
             <h2 > getBinaryPayload </h2>
-        
-        <span class="method-types">
-            <p>()</p>
-            <b> returns </b><span class="array-type"><span class="builtin-type">byte</span>[]</span> | <a href="../../http/types.html#ClientError">ClientError</a> 
-        </span>
-        
     </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function getBinaryPayload() returns <span class="array-type"><span class="builtin-type">byte</span>[]</span> | <a href="../../http/types.html#ClientError">ClientError</a> </code>
+    </pre>
     <div class="function-desc">
         
         <p>Gets the response payload as a <code>byte[]</code>.</p>
@@ -1696,29 +1625,24 @@ the entity-body of the <code>Response</code> must be accessed initially.</p>
     
         
         <div class="returns-listing">
-            <ul>
-                <li> <h3 class="type">Return Type</h3> (<span class="type"><span class="array-type"><span class="builtin-type">byte</span>[]</span> | <a href="../../http/types.html#ClientError">ClientError</a></span>)</li>
-                <li><p>The byte[] representation of the message payload or <code>http:ClientError</code> in case of errors</p>
-</li>
-            </ul>
+            <h3 class="type">Return Type</h3> (<span class="type"><span class="array-type"><span class="builtin-type">byte</span>[]</span> | <a href="../../http/types.html#ClientError">ClientError</a></span>)
+            <p>The byte[] representation of the message payload or <code>http:ClientError</code> in case of errors</p>
+
         </div>
         
     
 </div>
             
                 <div class="method-content">
-    <div class="main-method-title here" id="getBodyParts" title="getBodyParts">
+    <div class="main-method-title" id="getBodyParts" title="getBodyParts">
              <a class="url-link" href="#getBodyParts">
                 <img class="url-link-img" src="../../html-template-resources/images/link.svg">
             </a>
             <h2 > getBodyParts </h2>
-        
-        <span class="method-types">
-            <p>()</p>
-            <b> returns </b><span class="array-type"><a href="../../mime/objects/Entity.html">Entity</a>[]</span> | <a href="../../http/types.html#ClientError">ClientError</a> 
-        </span>
-        
     </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function getBodyParts() returns <span class="array-type"><a href="../../mime/objects/Entity.html">Entity</a>[]</span> | <a href="../../http/types.html#ClientError">ClientError</a> </code>
+    </pre>
     <div class="function-desc">
         
         <p>Extracts body parts from the response. If the content type is not a composite media type, an error is returned.</p>
@@ -1729,32 +1653,32 @@ the entity-body of the <code>Response</code> must be accessed initially.</p>
     
         
         <div class="returns-listing">
-            <ul>
-                <li> <h3 class="type">Return Type</h3> (<span class="type"><span class="array-type"><a href="../../mime/objects/Entity.html">Entity</a>[]</span> | <a href="../../http/types.html#ClientError">ClientError</a></span>)</li>
-                <li><p>The body parts as an array of entities or else an <code>http:ClientError</code> if there were any errors in
+            <h3 class="type">Return Type</h3> (<span class="type"><span class="array-type"><a href="../../mime/objects/Entity.html">Entity</a>[]</span> | <a href="../../http/types.html#ClientError">ClientError</a></span>)
+            <p>The body parts as an array of entities or else an <code>http:ClientError</code> if there were any errors in
 constructing the body parts from the response</p>
-</li>
-            </ul>
+
         </div>
         
     
 </div>
             
                 <div class="method-content">
-    <div class="main-method-title here" id="setETag" title="setETag">
+    <div class="main-method-title" id="setETag" title="setETag">
              <a class="url-link" href="#setETag">
                 <img class="url-link-img" src="../../html-template-resources/images/link.svg">
             </a>
             <h2 > setETag </h2>
-        
     </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function setETag(<span class="builtin-type">json</span> | <span class="builtin-type">xml</span> | <span class="builtin-type">string</span> | <span class="array-type"><span class="builtin-type">byte</span>[]</span> payload)</code>
+    </pre>
     <div class="function-desc">
         
         <p>Sets the <code>etag</code> header for the given payload. The ETag is generated using a CRC32 hash function.</p>
 
     </div>
     
-        <div class="data-wrapper">
+        <div class="parameters">
             <h3 class="param-title">Parameters</h3>
                 
             <div class="params-listing">
@@ -1764,13 +1688,11 @@ constructing the body parts from the response</p>
                         <span class="type">  <span class="builtin-type">json</span> | <span class="builtin-type">xml</span> | <span class="builtin-type">string</span> | <span class="array-type"><span class="builtin-type">byte</span>[]</span> </span>
                         
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>The payload for which the ETag should be set</p>
+                    <p>
+                        
+                        <p>The payload for which the ETag should be set</p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
             
@@ -1781,13 +1703,15 @@ constructing the body parts from the response</p>
 </div>
             
                 <div class="method-content">
-    <div class="main-method-title here" id="setLastModified" title="setLastModified">
+    <div class="main-method-title" id="setLastModified" title="setLastModified">
              <a class="url-link" href="#setLastModified">
                 <img class="url-link-img" src="../../html-template-resources/images/link.svg">
             </a>
             <h2 > setLastModified </h2>
-        
     </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function setLastModified()</code>
+    </pre>
     <div class="function-desc">
         
         <p>Sets the current time as the <code>last-modified</code> header.</p>
@@ -1799,20 +1723,22 @@ constructing the body parts from the response</p>
 </div>
             
                 <div class="method-content">
-    <div class="main-method-title here" id="setJsonPayload" title="setJsonPayload">
+    <div class="main-method-title" id="setJsonPayload" title="setJsonPayload">
              <a class="url-link" href="#setJsonPayload">
                 <img class="url-link-img" src="../../html-template-resources/images/link.svg">
             </a>
             <h2 > setJsonPayload </h2>
-        
     </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function setJsonPayload(<span class="builtin-type">json</span> payload, <span class="builtin-type">string</span> contentType)</code>
+    </pre>
     <div class="function-desc">
         
         <p>Sets a <code>json</code> as the payload.</p>
 
     </div>
     
-        <div class="data-wrapper">
+        <div class="parameters">
             <h3 class="param-title">Parameters</h3>
                 
             <div class="params-listing">
@@ -1822,13 +1748,11 @@ constructing the body parts from the response</p>
                         <span class="type">  <span class="builtin-type">json</span> </span>
                         
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>The <code>json</code> payload</p>
+                    <p>
+                        
+                        <p>The <code>json</code> payload</p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
                 
@@ -1839,14 +1763,12 @@ constructing the body parts from the response</p>
                         <span class="type">  <span class="builtin-type">string</span> </span>
                         <span class="default"> (default application/json)</span>
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>The content type of the payload. Set this to override the default <code>content-type</code> header value
+                    <p>
+                        
+                        <p>The content type of the payload. Set this to override the default <code>content-type</code> header value
 for <code>json</code></p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
             
@@ -1857,20 +1779,22 @@ for <code>json</code></p>
 </div>
             
                 <div class="method-content">
-    <div class="main-method-title here" id="setXmlPayload" title="setXmlPayload">
+    <div class="main-method-title" id="setXmlPayload" title="setXmlPayload">
              <a class="url-link" href="#setXmlPayload">
                 <img class="url-link-img" src="../../html-template-resources/images/link.svg">
             </a>
             <h2 > setXmlPayload </h2>
-        
     </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function setXmlPayload(<span class="builtin-type">xml</span> payload, <span class="builtin-type">string</span> contentType)</code>
+    </pre>
     <div class="function-desc">
         
         <p>Sets an <code>xml</code> as the payload</p>
 
     </div>
     
-        <div class="data-wrapper">
+        <div class="parameters">
             <h3 class="param-title">Parameters</h3>
                 
             <div class="params-listing">
@@ -1880,13 +1804,11 @@ for <code>json</code></p>
                         <span class="type">  <span class="builtin-type">xml</span> </span>
                         
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>The <code>xml</code> payload</p>
+                    <p>
+                        
+                        <p>The <code>xml</code> payload</p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
                 
@@ -1897,14 +1819,12 @@ for <code>json</code></p>
                         <span class="type">  <span class="builtin-type">string</span> </span>
                         <span class="default"> (default application/xml)</span>
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>The content type of the payload. Set this to override the default <code>content-type</code> header value
+                    <p>
+                        
+                        <p>The content type of the payload. Set this to override the default <code>content-type</code> header value
 for <code>xml</code></p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
             
@@ -1915,20 +1835,22 @@ for <code>xml</code></p>
 </div>
             
                 <div class="method-content">
-    <div class="main-method-title here" id="setTextPayload" title="setTextPayload">
+    <div class="main-method-title" id="setTextPayload" title="setTextPayload">
              <a class="url-link" href="#setTextPayload">
                 <img class="url-link-img" src="../../html-template-resources/images/link.svg">
             </a>
             <h2 > setTextPayload </h2>
-        
     </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function setTextPayload(<span class="builtin-type">string</span> payload, <span class="builtin-type">string</span> contentType)</code>
+    </pre>
     <div class="function-desc">
         
         <p>Sets a <code>string</code> as the payload.</p>
 
     </div>
     
-        <div class="data-wrapper">
+        <div class="parameters">
             <h3 class="param-title">Parameters</h3>
                 
             <div class="params-listing">
@@ -1938,13 +1860,11 @@ for <code>xml</code></p>
                         <span class="type">  <span class="builtin-type">string</span> </span>
                         
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>The <code>string</code> payload</p>
+                    <p>
+                        
+                        <p>The <code>string</code> payload</p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
                 
@@ -1955,14 +1875,12 @@ for <code>xml</code></p>
                         <span class="type">  <span class="builtin-type">string</span> </span>
                         <span class="default"> (default text/plain)</span>
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>The content type of the payload. Set this to override the default <code>content-type</code> header value
+                    <p>
+                        
+                        <p>The content type of the payload. Set this to override the default <code>content-type</code> header value
 for <code>string</code></p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
             
@@ -1973,20 +1891,22 @@ for <code>string</code></p>
 </div>
             
                 <div class="method-content">
-    <div class="main-method-title here" id="setBinaryPayload" title="setBinaryPayload">
+    <div class="main-method-title" id="setBinaryPayload" title="setBinaryPayload">
              <a class="url-link" href="#setBinaryPayload">
                 <img class="url-link-img" src="../../html-template-resources/images/link.svg">
             </a>
             <h2 > setBinaryPayload </h2>
-        
     </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function setBinaryPayload(<span class="array-type"><span class="builtin-type">byte</span>[]</span> payload, <span class="builtin-type">string</span> contentType)</code>
+    </pre>
     <div class="function-desc">
         
         <p>Sets a <code>byte[]</code> as the payload.</p>
 
     </div>
     
-        <div class="data-wrapper">
+        <div class="parameters">
             <h3 class="param-title">Parameters</h3>
                 
             <div class="params-listing">
@@ -1996,13 +1916,11 @@ for <code>string</code></p>
                         <span class="type">  <span class="array-type"><span class="builtin-type">byte</span>[]</span> </span>
                         
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>The <code>byte[]</code> payload</p>
+                    <p>
+                        
+                        <p>The <code>byte[]</code> payload</p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
                 
@@ -2013,14 +1931,12 @@ for <code>string</code></p>
                         <span class="type">  <span class="builtin-type">string</span> </span>
                         <span class="default"> (default application/octet-stream)</span>
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>The content type of the payload. Set this to override the default <code>content-type</code> header value
+                    <p>
+                        
+                        <p>The content type of the payload. Set this to override the default <code>content-type</code> header value
 for <code>byte[]</code></p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
             
@@ -2031,20 +1947,22 @@ for <code>byte[]</code></p>
 </div>
             
                 <div class="method-content">
-    <div class="main-method-title here" id="setBodyParts" title="setBodyParts">
+    <div class="main-method-title" id="setBodyParts" title="setBodyParts">
              <a class="url-link" href="#setBodyParts">
                 <img class="url-link-img" src="../../html-template-resources/images/link.svg">
             </a>
             <h2 > setBodyParts </h2>
-        
     </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function setBodyParts(<span class="array-type"><a href="../../mime/objects/Entity.html">Entity</a>[]</span> bodyParts, <span class="builtin-type">string</span> contentType)</code>
+    </pre>
     <div class="function-desc">
         
         <p>Set multiparts as the payload.</p>
 
     </div>
     
-        <div class="data-wrapper">
+        <div class="parameters">
             <h3 class="param-title">Parameters</h3>
                 
             <div class="params-listing">
@@ -2054,13 +1972,11 @@ for <code>byte[]</code></p>
                         <span class="type">  <span class="array-type"><a href="../../mime/objects/Entity.html">Entity</a>[]</span> </span>
                         
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>The entities which make up the message body</p>
+                    <p>
+                        
+                        <p>The entities which make up the message body</p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
                 
@@ -2071,14 +1987,12 @@ for <code>byte[]</code></p>
                         <span class="type">  <span class="builtin-type">string</span> </span>
                         <span class="default"> (default multipart/form-data)</span>
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>The content type of the top level message. Set this to override the default
+                    <p>
+                        
+                        <p>The content type of the top level message. Set this to override the default
 <code>content-type</code> header value</p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
             
@@ -2089,20 +2003,22 @@ for <code>byte[]</code></p>
 </div>
             
                 <div class="method-content">
-    <div class="main-method-title here" id="setFileAsPayload" title="setFileAsPayload">
+    <div class="main-method-title" id="setFileAsPayload" title="setFileAsPayload">
              <a class="url-link" href="#setFileAsPayload">
                 <img class="url-link-img" src="../../html-template-resources/images/link.svg">
             </a>
             <h2 > setFileAsPayload </h2>
-        
     </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function setFileAsPayload(<span class="builtin-type">string</span> filePath, <span class="builtin-type">string</span> contentType)</code>
+    </pre>
     <div class="function-desc">
         
         <p>Sets the content of the specified file as the entity body of the response.</p>
 
     </div>
     
-        <div class="data-wrapper">
+        <div class="parameters">
             <h3 class="param-title">Parameters</h3>
                 
             <div class="params-listing">
@@ -2112,13 +2028,11 @@ for <code>byte[]</code></p>
                         <span class="type">  <span class="builtin-type">string</span> </span>
                         
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>Path to the file to be set as the payload</p>
+                    <p>
+                        
+                        <p>Path to the file to be set as the payload</p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
                 
@@ -2129,14 +2043,12 @@ for <code>byte[]</code></p>
                         <span class="type">  <span class="builtin-type">string</span> </span>
                         <span class="default"> (default application/octet-stream)</span>
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>The content type of the specified file. Set this to override the default <code>content-type</code>
+                    <p>
+                        
+                        <p>The content type of the specified file. Set this to override the default <code>content-type</code>
 header value</p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
             
@@ -2147,20 +2059,22 @@ header value</p>
 </div>
             
                 <div class="method-content">
-    <div class="main-method-title here" id="setByteChannel" title="setByteChannel">
+    <div class="main-method-title" id="setByteChannel" title="setByteChannel">
              <a class="url-link" href="#setByteChannel">
                 <img class="url-link-img" src="../../html-template-resources/images/link.svg">
             </a>
             <h2 > setByteChannel </h2>
-        
     </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function setByteChannel(<a href="../../io/objects/ReadableByteChannel.html">ReadableByteChannel</a> payload, <span class="builtin-type">string</span> contentType)</code>
+    </pre>
     <div class="function-desc">
         
         <p>Sets a <code>ByteChannel</code> as the payload.</p>
 
     </div>
     
-        <div class="data-wrapper">
+        <div class="parameters">
             <h3 class="param-title">Parameters</h3>
                 
             <div class="params-listing">
@@ -2170,13 +2084,11 @@ header value</p>
                         <span class="type">  <a href="../../io/objects/ReadableByteChannel.html">ReadableByteChannel</a> </span>
                         
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>A <code>ByteChannel</code> through which the message payload can be read</p>
+                    <p>
+                        
+                        <p>A <code>ByteChannel</code> through which the message payload can be read</p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
                 
@@ -2187,14 +2099,12 @@ header value</p>
                         <span class="type">  <span class="builtin-type">string</span> </span>
                         <span class="default"> (default application/octet-stream)</span>
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>The content type of the payload. Set this to override the default <code>content-type</code>
+                    <p>
+                        
+                        <p>The content type of the payload. Set this to override the default <code>content-type</code>
 header value</p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
             
@@ -2205,20 +2115,22 @@ header value</p>
 </div>
             
                 <div class="method-content">
-    <div class="main-method-title here" id="setPayload" title="setPayload">
+    <div class="main-method-title" id="setPayload" title="setPayload">
              <a class="url-link" href="#setPayload">
                 <img class="url-link-img" src="../../html-template-resources/images/link.svg">
             </a>
             <h2 > setPayload </h2>
-        
     </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function setPayload(<span class="builtin-type">string</span> | <span class="builtin-type">xml</span> | <span class="builtin-type">json</span> | <span class="array-type"><span class="builtin-type">byte</span>[]</span> | <a href="../../io/objects/ReadableByteChannel.html">ReadableByteChannel</a> | <span class="array-type"><a href="../../mime/objects/Entity.html">Entity</a>[]</span> payload)</code>
+    </pre>
     <div class="function-desc">
         
         <p>Sets the response payload.</p>
 
     </div>
     
-        <div class="data-wrapper">
+        <div class="parameters">
             <h3 class="param-title">Parameters</h3>
                 
             <div class="params-listing">
@@ -2228,14 +2140,12 @@ header value</p>
                         <span class="type">  <span class="builtin-type">string</span> | <span class="builtin-type">xml</span> | <span class="builtin-type">json</span> | <span class="array-type"><span class="builtin-type">byte</span>[]</span> | <a href="../../io/objects/ReadableByteChannel.html">ReadableByteChannel</a> | <span class="array-type"><a href="../../mime/objects/Entity.html">Entity</a>[]</span> </span>
                         
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>Payload can be of type <code>string</code>, <code>xml</code>, <code>json</code>, <code>byte[]</code>, <code>ByteChannel</code> or <code>Entity[]</code> (i.e: a set
+                    <p>
+                        
+                        <p>Payload can be of type <code>string</code>, <code>xml</code>, <code>json</code>, <code>byte[]</code>, <code>ByteChannel</code> or <code>Entity[]</code> (i.e: a set
 of body parts)</p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
             
@@ -2246,20 +2156,22 @@ of body parts)</p>
 </div>
             
                 <div class="method-content">
-    <div class="main-method-title here" id="addCookie" title="addCookie">
+    <div class="main-method-title" id="addCookie" title="addCookie">
              <a class="url-link" href="#addCookie">
                 <img class="url-link-img" src="../../html-template-resources/images/link.svg">
             </a>
             <h2 > addCookie </h2>
-        
     </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function addCookie(<a href="../../http/objects/Cookie.html">Cookie</a> cookie)</code>
+    </pre>
     <div class="function-desc">
         
         <p>Adds the cookie to response.</p>
 
     </div>
     
-        <div class="data-wrapper">
+        <div class="parameters">
             <h3 class="param-title">Parameters</h3>
                 
             <div class="params-listing">
@@ -2269,13 +2181,11 @@ of body parts)</p>
                         <span class="type">  <a href="../../http/objects/Cookie.html">Cookie</a> </span>
                         
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>The cookie, which is added to response</p>
+                    <p>
+                        
+                        <p>The cookie, which is added to response</p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
             
@@ -2286,36 +2196,36 @@ of body parts)</p>
 </div>
             
                 <div class="method-content">
-    <div class="main-method-title here" id="removeCookiesFromRemoteStore" title="removeCookiesFromRemoteStore">
+    <div class="main-method-title" id="removeCookiesFromRemoteStore" title="removeCookiesFromRemoteStore">
              <a class="url-link" href="#removeCookiesFromRemoteStore">
                 <img class="url-link-img" src="../../html-template-resources/images/link.svg">
             </a>
             <h2 > removeCookiesFromRemoteStore </h2>
-        
     </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function removeCookiesFromRemoteStore(<span class="array-type"><a href="../../http/objects/Cookie.html">Cookie</a>...</span> cookiesToRemove)</code>
+    </pre>
     <div class="function-desc">
         
         <p>Deletes the cookies in the client's cookie store.</p>
 
     </div>
     
-        <div class="data-wrapper">
+        <div class="parameters">
             <h3 class="param-title">Parameters</h3>
                 
             <div class="params-listing">
                 <ul>
                     <li>
                         <span >cookiesToRemove</span>
-                        <span class="type">  <span class="array-type"><a href="../../http/objects/Cookie.html">Cookie</a>[]</span> </span>
+                        <span class="type">  <span class="array-type"><a href="../../http/objects/Cookie.html">Cookie</a>...</span> </span>
                         
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>Cookies to be deleted</p>
+                    <p>
+                        
+                        <p>Cookies to be deleted</p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
             
@@ -2326,18 +2236,15 @@ of body parts)</p>
 </div>
             
                 <div class="method-content">
-    <div class="main-method-title here" id="getCookies" title="getCookies">
+    <div class="main-method-title" id="getCookies" title="getCookies">
              <a class="url-link" href="#getCookies">
                 <img class="url-link-img" src="../../html-template-resources/images/link.svg">
             </a>
             <h2 > getCookies </h2>
-        
-        <span class="method-types">
-            <p>()</p>
-            <b> returns </b><span class="array-type"><a href="../../http/objects/Cookie.html">Cookie</a>[]</span> 
-        </span>
-        
     </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function getCookies() returns <span class="array-type"><a href="../../http/objects/Cookie.html">Cookie</a>[]</span> </code>
+    </pre>
     <div class="function-desc">
         
         <p>Gets cookies from the response.</p>
@@ -2348,11 +2255,9 @@ of body parts)</p>
     
         
         <div class="returns-listing">
-            <ul>
-                <li> <h3 class="type">Return Type</h3> (<span class="type"><span class="array-type"><a href="../../http/objects/Cookie.html">Cookie</a>[]</span></span>)</li>
-                <li><p>An array of cookie objects, which are included in the response</p>
-</li>
-            </ul>
+            <h3 class="type">Return Type</h3> (<span class="type"><span class="array-type"><a href="../../http/objects/Cookie.html">Cookie</a>[]</span></span>)
+            <p>An array of cookie objects, which are included in the response</p>
+
         </div>
         
     
@@ -2361,88 +2266,46 @@ of body parts)</p>
         
     </div>
 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div id="iBallerinaFooter" class="row cBallerina-io-White-row">
-    <div class="container">
-    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 cBallerina-io-left-col cBallerinaFooterLinks">
-        <ul>
-            <li><a class="cBioFooterLink" href="/downloads">Download</a></li>
-            <li><a class="cBioFooterLink" href="https://github.com/ballerina-lang/ballerina/blob/master/LICENSE">Code License</a></li>
-            <li><a class="cBioFooterLink" href="/license-of-site">Site License</a></li>
-            <li><a class="cBioFooterLink" href="/terms-of-service">TERMS OF SERVICE</a></li>
-            <li><a class="cBioFooterLink" href="/privacy-policy">PRIVACY POLICY</a></li>
-            </ul>
-        </div>
-    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 cBallerina-io-middle-col cBallerinaFooterSignUp">
-        <div class="cSocialmedia">
-            <ul>
-                <li>
-                    <a class="cBioFooterLink" href="https://github.com/ballerina-platform" target="_blank"><img src="/img/github.svg"></a>
-                    </li>
-                <li><a class="cBioFooterLink" href="https://stackoverflow.com/questions/tagged/ballerina" target="_blank"><img src="/img/stackoverflow.svg"></a></li>
-                <li><a class="cBioFooterLink" href="https://twitter.com/ballerinalang" target="_blank"><img src="/img/twitter.svg"></a></li>
-                <li><a class="cBioFooterLink" href="/community/slack/"><img src="/img/slack.svg"></a></li>
-                </ul>
-            <div class="pdframe"></div>
-            </div>
-        </div>
-    <div class="col-xs-12 col-sm-10 col-md-6 col-lg-6 cBallerina-io-right-col">
-        <p>In the creation of Ballerina, we were inspired by so many technologies. Thank you to all that have come before us (and forgive us if we missed one): Java, Go, C, C++, D, Rust, Haskell, Kotlin, Dart, TypeScript, JavaScript, Python, Perl, Flow, Swift, Elm, RelaxNG, NPM, Crates, Maven, Gradle, Kubernetes, Docker, Envoy, Markdown, GitHub and WSO2.</p></div>
-    </div>
-</div>
 </body>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/components/prism-core.min.js"></script>
+<script src="../../syntax-highlighter/prism-ballerina.js"></script>
 <script>
-let mainNavLinks = document.querySelectorAll(".primary-list.module ul li a");
-let mainSections = document.querySelectorAll(".main-wrapper section.method-content");
-
-let lastId;
-let cur = [];
-
-let contentWrapper = document.querySelector(".content-wrapper");
-contentWrapper.addEventListener("scroll", event => {
-  let fromTop = contentWrapper.scrollTop;
-
-  mainNavLinks.forEach(link => {
-    let section = document.querySelector("#" + link.attributes.getNamedItem("data").textContent);
-
-    if (
-      section.offsetTop <= fromTop &&
-      section.offsetTop + section.offsetHeight > fromTop
-    ) {
-      link.classList.add("current");
-    } else {
-      link.classList.remove("current");
+    function toggleMenu() {
+        $('#mobMenu').transition('slide down')
     }
-  });
-});
+    $(document).ready(function () {
+        $('.ui.dropdown').dropdown();
+        $('#version-picker').dropdown('set selected', "1.2");
+        $('#version-picker-mob').dropdown('set selected', "1.2");
 
-</script>
-<script>
-function menuLinkClick() {
-  if(window.matchMedia("(max-width: 600px)").matches) {
-    document.getElementsByClassName("navi-wrapper")[0].style.display = "none";
-  }
-}
-function displayMenu() {
-  var nav = document.getElementsByClassName("navi-wrapper")[0];
-  var content = document.getElementsByClassName("content-wrapper")[0];
-  if (nav.style.display === "none" || nav.style.display === "") {
-    nav.style.display = "block";
-    content.style.marginLeft = "210px";
-  } else {
-    nav.style.display = "none";
-    content.style.marginLeft = "0px";
-  }
-}
+    });
+
+    let mainNavLinks = document.querySelectorAll(".toc .ui.visible.left.vertical.sidebar.menu .menu a");
+    console.log(mainNavLinks);
+    let contentWrapper = document.querySelector(".content");
+    contentWrapper.addEventListener("scroll", event => {
+      let fromTop = contentWrapper.scrollTop;
+
+      mainNavLinks.forEach(link => {
+        let section = document.querySelector("#" + link.attributes.getNamedItem("data").textContent);
+
+        if (
+          section.offsetTop <= fromTop &&
+          section.offsetTop + section.offsetHeight > fromTop
+        ) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    });
+
 </script>
 <script>
     var rootPath = "../../";
@@ -2450,8 +2313,18 @@ function displayMenu() {
 <script src="../../doc-search/search-data.js"></script>
 <script src="../../doc-search/search.js"></script>
 <script>
-    window.onload = (event) => {
-        ballerinaHighlighter.highlightSnippets();
-    };
+    var str = "";
+    var currentModule = "http";
+    searchData.modules.forEach(function(module) {
+        var active = "";
+        if (currentModule==module.id) {
+            active = " active";
+        }
+        str += '<a class="item' + active + '" href="' + rootPath + module.id + '/index.html">' + module.id + '</a>';
+    });
+    document.getElementById("modules-list").innerHTML = str;
+    document.getElementById("modules-list-mob").innerHTML = str;
 </script>
+
+
 

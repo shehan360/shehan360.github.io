@@ -19,277 +19,310 @@
     <meta name="keywords" content="ballerina,ballerina lang,api docs,http">
 
     <title>API Docs - Client : Client</title>
+
     <script src="../../html-template-resources/jquery.min.js"></script>
-
-    <!-- BIO THEME START -->
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<!-- Optional theme -->
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-<!-- Latest compiled and minified JavaScript -->
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;display=swap" rel="stylesheet">
-<link type="text/css" rel="stylesheet" href="https://use.typekit.net/son4ymv.css">
-<link rel="stylesheet" href="https://use.typekit.net/son4ymv.css">
-<link rel="stylesheet" href="/css/theme.css" type="text/css">
-<link rel="stylesheet" href="/css/theme_extra.css" type="text/css">
-
-<script type="text/javascript" src="/js/api-doc-template.js"></script>
-<script type="text/javascript" src="/js/ballerina-common.js"></script>
-
-<link rel="stylesheet" href="/css/ballerina-io.css">
-<link rel="stylesheet" href="/css/ballerina-io-docs.css?200618">
-<link rel="stylesheet" href="/css/ballerina-io-learn-v2.css">
-<link rel="stylesheet" href="/css/ballerina-io-docs.css">
-
-<style>
-    .line-numbers-wrap {
-        display: none;
-    }
-    body .url-link-img {
-        width: 16px;
-    }
-</style>
-<!-- BIO THEME END -->
-
-
-    <script src="../../syntax-highlighter/highlighter.js"></script>
+    <link rel="stylesheet" href="../../html-template-resources/semantic.min.css">
+    <link rel="stylesheet" href="../../html-template-resources/components/icon.min.css">
+    <link rel="stylesheet" href="../../html-template-resources/styles/css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/themes/prism.min.css" rel="stylesheet" />
+    <script src="../../html-template-resources/semantic.min.js"></script>
 
 </head>
 
 
-<body class="cBallerina-io">
-    <div class="row cBallerina-io-Nav" id="iMainNavigation">
-    <div class="container">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <nav class="navbar">
-                <div>
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                            <span class="sr-only">☰</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="cMobileLogo" href="/"><img src="/img/ballerina-logo.svg" alt="Ballerina"></a>
-                    </div>
-                    <div id="navbar" class="collapse navbar-collapse">
-                        <ul class="nav navbar-nav cTopNav">
-                            <li class="active toctree-l1 cActive" id="learnli"><a class="cBioTopLink" href="/learn">Learn</a>
-                            </li>
-                            <li class="active toctree-l1" id="Eventsli"><a class="cBioTopLink" href="/learn/events">Events</a>
-                            </li>
-                            <li class="toctree-l1"><a class="cBioTopLink" href="https://central.ballerina.io/" target="_blank">Central</a></li>
-                            <li class="toctree-l1" id="openli"><a class="cBioTopLink" href="/community">Community</a>
-                            </li>
-                            <li class="toctree-l1" id="helpli"><a class="cBioTopLink" href="https://blog.ballerina.io">Blog</a>
-                            </li>
-                            <li class="cVersionItem">
-                                <div class="cVersionContainer">
-                                    <!-- <lable class="cVlable">Version</lable> -->
-                                    <select name="versions" id="versions" class="select-css">
-                                        <option value="1.2" data-value="latest">v1.2</option>
-                                        <option value="swan-lake" selected="selected">Swan Lake</option>
-                                        <option value="1.1">v1.1</option>
-                                        <option value="1.0">v1.0</option>
-                                   
-                                    </select>
-                                </div>
-                            </li>
-                            <li class="cSearchMenu"><form class="cSearch-form-inline"><input id="searchTxt" class="form-control-field" type="search" placeholder="Search" aria-label="Search"><a id="searchBtn" href="#" class="cSearchButton"><img src="/img/search.svg"></a></form></li>
-                        </ul>
-                    </div>
+<body>
+    <div class="pusher">
+        <div class="mobile-logo-div">
+            <div class="ui secondary menu">
+                <a href="../index.html">
+                    <img class="mobile-logo" src="../../html-template-resources/images/ballerina-logo.png">
+                </a>
+                <div class="right item">
+                    <button class="ui icon button" onclick="toggleMenu()">
+                     <i class="large bars icon"></i>
+                    </button>
                 </div>
-            </nav>
+            </div>
         </div>
-    </div>
+
+        <div class="toc">
+            <div class="ui visible left vertical sidebar menu">
+                <a href="
+                    ../../index.html">
+                    <img class="logo" src="../../html-template-resources/images/ballerina-logo.png">
+                </a>
+                
+                    
+                        <div class="header capitalize">
+                            
+    Clients
+
+                        </div>
+                        <div class="menu">
+                            
+    
+        <a class="item " href="Caller.html">Caller</a>
+    
+        <a class="item " href="CircuitBreakerClient.html">CircuitBreakerClient</a>
+    
+        <a class="item active" href="Client.html">Client</a>
+    
+        <a class="item " href="CookieClient.html">CookieClient</a>
+    
+        <a class="item " href="FailoverClient.html">FailoverClient</a>
+    
+        <a class="item " href="HttpCachingClient.html">HttpCachingClient</a>
+    
+        <a class="item " href="HttpClient.html">HttpClient</a>
+    
+        <a class="item " href="HttpSecureClient.html">HttpSecureClient</a>
+    
+        <a class="item " href="LoadBalanceClient.html">LoadBalanceClient</a>
+    
+        <a class="item " href="RedirectClient.html">RedirectClient</a>
+    
+        <a class="item " href="RetryClient.html">RetryClient</a>
+    
+        <a class="item " href="WebSocketCaller.html">WebSocketCaller</a>
+    
+        <a class="item " href="WebSocketClient.html">WebSocketClient</a>
+    
+        <a class="item " href="WebSocketFailoverClient.html">WebSocketFailoverClient</a>
+    
+
+                        </div>
+                        <div class="ui divider"></div>
+                    
+                    <div class="header">
+                        <a class="capitalize" href="../../http/index.html">
+                            http Module
+                        </a>
+                    </div>
+                    <div class="menu">
+    
+        
+            <a class="item" data="records" href="../../http/index.html#records">Records</a>
+        
+    
+    
+        
+            <a class="item" data="objects" href="../../http/index.html#objects">Objects</a>
+        
+    
+    
+        <a class="item" data="clients" href="../../http/index.html#clients">Clients</a>
+    
+    
+        <a class="item" data="listeners" href="../../http/index.html#listeners">Listeners</a>
+    
+    
+        <a class="item" data="functions" href="../../http/index.html#functions">Functions</a>
+    
+    
+        <a class="item" data="constants" href="../../http/index.html#constants">Constants</a>
+    
+    
+        <a class="item" data="annotations" href="../../http/index.html#annotations">Annotations</a>
+    
+    
+        <a class="item" ata="types" href="../../http/index.html#types">Types</a>
+    
+    
+        <a class="item" data="errors" href="../../http/index.html#errors">Errors</a>
+    
+    <div class="ui divider"></div>
 </div>
 
-    <div class="row cBallerina-io-Gray-row">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 cBallerina-io-Home-Middle-col">
+                    <div class="header capitalize">
+                        Other Modules
+                    </div>
+                    <div id="modules-list" class="menu"></div>
+                    <div class="ui divider"></div>
+                
+            </div>
+        </div>
 
-                    <nav class="cLeftNavContainer">
-                        <ul class="cMainLeftNav">
-                            
-                            <li class="sub-menu cTopicURL OpenUL">
-                                <div class="cLeftMenuLink cTopiAtag">
-    Clients
-</div>
-                                <ul class="sub-ul Open-submenu" style="display: none;">
-                                    
-    
-        <li >
-            <a href="Caller.html" onclick="menuLinkClick()">Caller</a>
-        </li>
-    
-        <li >
-            <a href="CircuitBreakerClient.html" onclick="menuLinkClick()">CircuitBreakerClient</a>
-        </li>
-    
-        <li class="active active-item">
-            <a href="Client.html" onclick="menuLinkClick()">Client</a>
-        </li>
-    
-        <li >
-            <a href="CookieClient.html" onclick="menuLinkClick()">CookieClient</a>
-        </li>
-    
-        <li >
-            <a href="FailoverClient.html" onclick="menuLinkClick()">FailoverClient</a>
-        </li>
-    
-        <li >
-            <a href="HttpCachingClient.html" onclick="menuLinkClick()">HttpCachingClient</a>
-        </li>
-    
-        <li >
-            <a href="HttpClient.html" onclick="menuLinkClick()">HttpClient</a>
-        </li>
-    
-        <li >
-            <a href="HttpSecureClient.html" onclick="menuLinkClick()">HttpSecureClient</a>
-        </li>
-    
-        <li >
-            <a href="LoadBalanceClient.html" onclick="menuLinkClick()">LoadBalanceClient</a>
-        </li>
-    
-        <li >
-            <a href="RedirectClient.html" onclick="menuLinkClick()">RedirectClient</a>
-        </li>
-    
-        <li >
-            <a href="RetryClient.html" onclick="menuLinkClick()">RetryClient</a>
-        </li>
-    
-        <li >
-            <a href="WebSocketCaller.html" onclick="menuLinkClick()">WebSocketCaller</a>
-        </li>
-    
-        <li >
-            <a href="WebSocketClient.html" onclick="menuLinkClick()">WebSocketClient</a>
-        </li>
-    
-        <li >
-            <a href="WebSocketFailoverClient.html" onclick="menuLinkClick()">WebSocketFailoverClient</a>
-        </li>
-    
-
-                                </ul>
-                            </li>
-                            
-                            <li class="sub-menu cTopicURL">
-    <div class="cLeftMenuLink cTopiAtag">http</div>
-    <ul class="sub-ul Open-submenu" style="display: none;">
-        
-        <li>
-            <a data="records" href="../../http/index.html#records">Records</a>
-        </li>
-        
-        
-        <li>
-            <a data="objects" href="../../http/index.html#objects">Objects</a>
-        </li>
-        
-        
-        <li>
-            <a data="clients" href="../../http/index.html#clients">Clients</a>
-        </li>
-        
-        
-        <li>
-            <a data="listeners" href="../../http/index.html#listeners">Listeners</a>
-        </li>
-        
-        
-        <li>
-            <a data="functions" href="../../http/index.html#functions">Functions</a>
-        </li>
-        
-        
-        <li>
-            <a data="constants" href="../../http/index.html#constants">Constants</a>
-        </li>
-        
-        
-        <li>
-            <a data="annotations" href="../../http/index.html#annotations">Annotations</a>
-        </li>
-        
-        
-        <li>
-            <a data="types" href="../../http/index.html#types">Types</a>
-        </li>
-        
-        
-        <li>
-            <a data="errors" href="../../http/index.html#errors">Errors</a>
-        </li>
-        
-    </ul>
-</li>
-                        </ul>
-                    </nav>
-                </div>
-
-
-                <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 cBallerina-io-Home-Middle-col">
-                    <div id="search-impl" class="search-bar"></div>
-                    <div id="main" class="cBlallerina-io-docs-content-container">
-                        <div class="col-xs-12 col-sm-12" style="padding: 0;">
-                            <div class="col-md-12 col-lg-12 cBallerina-io-breadcrumbs">
-                                <nav class="breadcrumbs bootstrap hidden-sm-down">
-                                    <ul id="breadcrumb-list" class=" cBalleinaBreadcrumbs list-unstyled  wy-breadcrumbs"
-                                        vocab="http://schema.org/" typeof="BreadcrumbList">
-                                        <li><a href="/">Home</a></li>
-                                        <li>/</li>
-                                        <li><a href="/swan-lake/">Swan lake</a></li>
-                                        <li>/</li>
-                                        <li><a href="/swan-lake/learn/">Learn</a></li>
-                                        <li>/</li>
-                                        <li><a href="../..//index.html">API Docs</a></li>
-                                        <li>/</li>
-                                        <li><a href="../../http/index.html">http</a></li>
-                                        
-                                        <li>/</li>
-                                        <li><a
-                                                href="../../http/index.html#clients">
-    Clients
-</a>
-                                        </li>
-                                        
-                                        <li>/</li>
-    <span class="clients">Client</span>
-
-                                        
-                                        
-
-                                    </ul>
-                                </nav>
-                                <style type="text/css">
-                                    .cBalleinaBreadcrumbs li {
-                                        margin-right: 10px;
-                                    }
-                                </style>
-                                <div class="cVersionContainer"></div>
+        <div class="content">
+            <div class="row nav-bar">
+                <div class="ui secondary menu">
+                    <div class="search-bar">
+                        <div class="ui category search item search-bar">
+                            <i class="search link icon"></i>
+                            <div class="ui transparent icon input">
+                                <input class="prompt" id="searchBox" type="text" placeholder="Search API Docs..."/>
                             </div>
                         </div>
-                        <div class="wy-nav-content">
-                            <div class="rst-content">
-                                <div role="main">
-                                    <div class="section">
-                                        <h1>
-                                            
-                                            
+                    </div>
+                    <div class="right menu">
+                        <a class="item active">Learn</a>
+                        <a class="item">Events</a>
+                        <a class="item">Central</a>
+                        <a class="item">Community</a>
+                        <a class="item">Blog</a>
+                        <div class="ui dropdown item ballerina" id="version-picker">
+                            Version
+                            <i class="dropdown icon"></i>
+                            <div class="menu">
+                                <a class="item" value="1.0">1.0</a>
+                                <a class="item" value="1.1">1.1</a>
+                                <a class="item" value="1.2">1.2</a>
+                                <a class="item" value="swan-lake">Swan Lake</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div id="mobMenu" class="mob-menu">
+                    <div class="ui stackable secondary menu">
+                        <div class="item">
+                            <div class="search-bar">
+                                <div class="ui category search item search-bar">
+                                    <i class="search link icon"></i>
+                                    <div class="ui transparent icon input">
+                                        <input class="prompt" id="searchBoxMob" type="text" placeholder="Search API Docs..."/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                            
+                                <div class="ui dropdown item capitalize">
+                                    
+    Clients
+<i class="dropdown icon"></i>
+                                    <div class="menu">
+                                        
+    
+        <a class="item " href="Caller.html">Caller</a>
+    
+        <a class="item " href="CircuitBreakerClient.html">CircuitBreakerClient</a>
+    
+        <a class="item active" href="Client.html">Client</a>
+    
+        <a class="item " href="CookieClient.html">CookieClient</a>
+    
+        <a class="item " href="FailoverClient.html">FailoverClient</a>
+    
+        <a class="item " href="HttpCachingClient.html">HttpCachingClient</a>
+    
+        <a class="item " href="HttpClient.html">HttpClient</a>
+    
+        <a class="item " href="HttpSecureClient.html">HttpSecureClient</a>
+    
+        <a class="item " href="LoadBalanceClient.html">LoadBalanceClient</a>
+    
+        <a class="item " href="RedirectClient.html">RedirectClient</a>
+    
+        <a class="item " href="RetryClient.html">RetryClient</a>
+    
+        <a class="item " href="WebSocketCaller.html">WebSocketCaller</a>
+    
+        <a class="item " href="WebSocketClient.html">WebSocketClient</a>
+    
+        <a class="item " href="WebSocketFailoverClient.html">WebSocketFailoverClient</a>
+    
+
+                                    </div>
+                                </div>
+                            
+                            <div class="ui dropdown item capitalize">
+                                http Module <i class="dropdown icon"></i>
+                                <div class="menu">
+    
+        
+            <a class="item" data="records" href="../../http/index.html#records">Records</a>
+        
+    
+    
+        
+            <a class="item" data="objects" href="../../http/index.html#objects">Objects</a>
+        
+    
+    
+        <a class="item" data="clients" href="../../http/index.html#clients">Clients</a>
+    
+    
+        <a class="item" data="listeners" href="../../http/index.html#listeners">Listeners</a>
+    
+    
+        <a class="item" data="functions" href="../../http/index.html#functions">Functions</a>
+    
+    
+        <a class="item" data="constants" href="../../http/index.html#constants">Constants</a>
+    
+    
+        <a class="item" data="annotations" href="../../http/index.html#annotations">Annotations</a>
+    
+    
+        <a class="item" ata="types" href="../../http/index.html#types">Types</a>
+    
+    
+        <a class="item" data="errors" href="../../http/index.html#errors">Errors</a>
+    
+    <div class="ui divider"></div>
+</div>
+
+                            </div>
+                            <div class="ui dropdown item">
+                                Other Modules <i class="dropdown icon"></i>
+                                <div id="modules-list-mob" class="menu"></div>
+                            </div>
+                        
+
+                            <div class="ui dropdown item" id="version-picker-mob">
+                                Version <i class="dropdown icon"></i>
+                                <div class="menu">
+                                    <a class="item" value="1.0">1.0</a>
+                                    <a class="item" value="1.1">1.1</a>
+                                    <a class="item" value="1.2">1.2</a>
+                                    <a class="item" value="swan-lake">Swan Lake</a>
+                                </div>
+                            </div>
+                            <div class="ui dropdown item ballerina">
+                                Ballerina <i class="dropdown icon"></i>
+                                <div class="menu">
+                                    <a class="item active">Learn</a>
+                                    <a class="item">Events</a>
+                                    <a class="item">Central</a>
+                                    <a class="item">Community</a>
+                                </div>
+                            </div>
+
+                    </div>
+                </div>
+                <div id="search-impl"></div>
+                <div id="main">
+                    
+                        <div class="ui breadcrumb">
+                            <a class="section" href="
+                                 ../../index.html">Modules</a>
+                            <i class="right angle icon divider"></i>
+                            <a class="section capitalize " href="../../http/index.html">http</a>
+                            
+                                <i class="right angle icon divider"></i>
+                                <a class="section " href="../../http/index.html#clients">
+    Clients
+</a>
+                                
+                                    <i class="right angle icon divider"></i>
+                                    <a class="section active">
+    <span class="clients">Client</span>
+</a>
+                                
+                            
+                        </div>
+                    
+
+                    <div class="ui very padded segment module-data">
+                            <h1 class="capitalize">
     Clients
 
-                                             : 
+                            :
     <span class="clients">Client</span>
 
-                                        </h1>
-                                        
+                            </h1>
+                        
     <p><p>The HTTP client provides the capability for initiating contact with a remote HTTP service. The API it
 provides includes functions for the standard HTTP methods, forwarding a received request and sending requests
 using custom HTTP verbs.</p>
@@ -300,7 +333,15 @@ using custom HTTP verbs.</p>
             
                 
                     <h2>Constructor</h2>
-<h3 >__init</h3><p>(<span class="builtin-type">string</span> url, <a href="../../http/records/ClientConfiguration.html">ClientConfiguration</a>? config)</p>
+
+    <p>Gets invoked to initialize the <code>client</code>. During initialization, the configurations provided through the <code>config</code>
+record is used to determine which type of additional behaviours are added to the endpoint (e.g., caching,
+security, circuit breaking).</p>
+
+
+<div class="main-method-title">
+    <h3>__init</h3><p>(<span class="builtin-type">string</span> url, <a href="../../http/records/ClientConfiguration.html">ClientConfiguration</a>? config)</p>
+</div>
 <div class="data-wrapper">
     
         <div class="params-listing">
@@ -315,7 +356,7 @@ using custom HTTP verbs.</p>
     
         <div class="params-listing">
             <ul>
-                <li> <b>config</b><span class="type">  <a href="../../http/records/ClientConfiguration.html">ClientConfiguration</a>?</span> ()</li>
+                <li> <b>config</b><span class="type">  <a href="../../http/records/ClientConfiguration.html">ClientConfiguration</a>?</span> &lt;ballerina/http:1.0.0:ClientConfiguration?&gt; ()</li>
                 <li>
                     <p>The configurations to be used when initializing the <code>client</code></p>
 
@@ -329,7 +370,7 @@ using custom HTTP verbs.</p>
 
             
                 <h2>Remote Methods</h2>
-                <table>
+                <table class="ui very basic table">
                     
                         <tr>
                             <td class="module-title truncate functions" title="post"><a
@@ -426,138 +467,106 @@ using custom HTTP verbs.</p>
 
             
                 <h2>Methods</h2>
-                <div class="method-list">
+                <table class="ui very basic table">
                     
                         
-<div class="param-sum">
-    <div class="param-name " title="getCookieStore">
+<tr>
+    <td class="module-title " title="getCookieStore">
         <a href="#getCookieStore">getCookieStore </a>
-    </div>
-    <div class="param-details">
+    </td>
+    <td class="module-desc">
         
         <p>Retrieves the cookie store of the client.
-    </div>
-</div>
+    </td>
+</tr>
 
                     
-                </div>
+                </table>
             
         
             
                 <h2>Fields</h2>
                         
-                        <div class="data-wrapper">
+                        <div class="fields-listing">
+    <ul>
         
-    <div class="params-listing">
-        <ul>
-            <li> <span >url</span>
-                <span class="type">  <span class="builtin-type">string</span></span>
-                
-            </li>
-            <li>
+                <li> <span >url</span>
+                    <span class="type">  <span class="builtin-type">string</span></span>
+                    
+                </li>
                 <p>
                     
                     <p>Target service url</p>
 
                 </p>
-            </li>
-        </ul>
-    </div>
         
-    <div class="params-listing">
-        <ul>
-            <li> <span >config</span>
-                <span class="type">  <a href="../../http/records/ClientConfiguration.html">ClientConfiguration</a></span>
-                 <span class="default">(default  {})</span> 
-            </li>
-            <li>
+                <li> <span >config</span>
+                    <span class="type">  <a href="../../http/records/ClientConfiguration.html">ClientConfiguration</a></span>
+                     <span class="default">(default  {})</span> 
+                </li>
                 <p>
                     
                     <p>The configurations associated with the client</p>
 
                 </p>
-            </li>
-        </ul>
-    </div>
         
-    <div class="params-listing">
-        <ul>
-            <li> <span >httpClient</span>
-                <span class="type">  <a href="../../http/clients/HttpClient.html">HttpClient</a></span>
-                
-            </li>
-            <li>
+                <li> <span >httpClient</span>
+                    <span class="type">  <a href="../../http/clients/HttpClient.html">HttpClient</a></span>
+                    
+                </li>
                 <p>
                     
                     <p>Chain of different HTTP clients which provides the capability for initiating contact with a remote
 HTTP service in resilient manner</p>
 
                 </p>
-            </li>
-        </ul>
-    </div>
         
-    <div class="params-listing">
-        <ul>
-            <li> <span >cookieStore</span>
-                <span class="type">  <a href="../../http/objects/CookieStore.html">CookieStore</a>?</span>
-                 <span class="default">(default ())</span> 
-            </li>
-            <li>
+                <li> <span >cookieStore</span>
+                    <span class="type">  <a href="../../http/objects/CookieStore.html">CookieStore</a>?</span>
+                     <span class="default">(default ())</span> 
+                </li>
                 <p>
                     
                     <p>Stores the cookies of the client</p>
 
                 </p>
-            </li>
-        </ul>
-    </div>
-    
+        
+    </ul>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/components/prism-core.min.js"></script>
+<script src="../../syntax-highlighter/prism-ballerina.js"></script>
 <script>
-let mainNavLinks = document.querySelectorAll(".primary-list.module ul li a");
-let mainSections = document.querySelectorAll(".main-wrapper section.method-content");
-
-let lastId;
-let cur = [];
-
-let contentWrapper = document.querySelector(".content-wrapper");
-contentWrapper.addEventListener("scroll", event => {
-  let fromTop = contentWrapper.scrollTop;
-
-  mainNavLinks.forEach(link => {
-    let section = document.querySelector("#" + link.attributes.getNamedItem("data").textContent);
-
-    if (
-      section.offsetTop <= fromTop &&
-      section.offsetTop + section.offsetHeight > fromTop
-    ) {
-      link.classList.add("current");
-    } else {
-      link.classList.remove("current");
+    function toggleMenu() {
+        $('#mobMenu').transition('slide down')
     }
-  });
-});
+    $(document).ready(function () {
+        $('.ui.dropdown').dropdown();
+        $('#version-picker').dropdown('set selected', "1.2");
+        $('#version-picker-mob').dropdown('set selected', "1.2");
 
-</script>
-<script>
-function menuLinkClick() {
-  if(window.matchMedia("(max-width: 600px)").matches) {
-    document.getElementsByClassName("navi-wrapper")[0].style.display = "none";
-  }
-}
-function displayMenu() {
-  var nav = document.getElementsByClassName("navi-wrapper")[0];
-  var content = document.getElementsByClassName("content-wrapper")[0];
-  if (nav.style.display === "none" || nav.style.display === "") {
-    nav.style.display = "block";
-    content.style.marginLeft = "210px";
-  } else {
-    nav.style.display = "none";
-    content.style.marginLeft = "0px";
-  }
-}
+    });
+
+    let mainNavLinks = document.querySelectorAll(".toc .ui.visible.left.vertical.sidebar.menu .menu a");
+    console.log(mainNavLinks);
+    let contentWrapper = document.querySelector(".content");
+    contentWrapper.addEventListener("scroll", event => {
+      let fromTop = contentWrapper.scrollTop;
+
+      mainNavLinks.forEach(link => {
+        let section = document.querySelector("#" + link.attributes.getNamedItem("data").textContent);
+
+        if (
+          section.offsetTop <= fromTop &&
+          section.offsetTop + section.offsetHeight > fromTop
+        ) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    });
+
 </script>
 <script>
     var rootPath = "../../";
@@ -565,10 +574,19 @@ function displayMenu() {
 <script src="../../doc-search/search-data.js"></script>
 <script src="../../doc-search/search.js"></script>
 <script>
-    window.onload = (event) => {
-        ballerinaHighlighter.highlightSnippets();
-    };
+    var str = "";
+    var currentModule = "http";
+    searchData.modules.forEach(function(module) {
+        var active = "";
+        if (currentModule==module.id) {
+            active = " active";
+        }
+        str += '<a class="item' + active + '" href="' + rootPath + module.id + '/index.html">' + module.id + '</a>';
+    });
+    document.getElementById("modules-list").innerHTML = str;
+    document.getElementById("modules-list-mob").innerHTML = str;
 </script>
+
 
                     
             
@@ -577,25 +595,22 @@ function displayMenu() {
         
             
                 <div class="method-content">
-    <div class="main-method-title here" id="post" title="post">
+    <div class="main-method-title" id="post" title="post">
              <a class="url-link" href="#post">
                 <img class="url-link-img" src="../../html-template-resources/images/link.svg">
             </a>
             <h2 > post </h2>
-        
-        <span class="method-types">
-            <p>(<span class="builtin-type">string</span> path, <a href="../../http/types.html#RequestMessage">RequestMessage</a> message)</p>
-            <b> returns </b><a href="../../http/objects/Response.html">Response</a> | <a href="../../http/types.html#ClientError">ClientError</a> 
-        </span>
-        
     </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function post(<span class="builtin-type">string</span> path, <a href="../../http/types.html#RequestMessage">RequestMessage</a> message) returns <a href="../../http/objects/Response.html">Response</a> | <a href="../../http/types.html#ClientError">ClientError</a> </code>
+    </pre>
     <div class="function-desc">
         
         <p>The <code>Client.post()</code> function can be used to send HTTP POST requests to HTTP endpoints.</p>
 
     </div>
     
-        <div class="data-wrapper">
+        <div class="parameters">
             <h3 class="param-title">Parameters</h3>
                 
             <div class="params-listing">
@@ -605,13 +620,11 @@ function displayMenu() {
                         <span class="type">  <span class="builtin-type">string</span> </span>
                         
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>Resource path</p>
+                    <p>
+                        
+                        <p>Resource path</p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
                 
@@ -622,14 +635,12 @@ function displayMenu() {
                         <span class="type">  <a href="../../http/types.html#RequestMessage">RequestMessage</a> </span>
                         
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>An HTTP outbound request message or any payload of type <code>string</code>, <code>xml</code>, <code>json</code>, <code>byte[]</code>,
+                    <p>
+                        
+                        <p>An HTTP outbound request message or any payload of type <code>string</code>, <code>xml</code>, <code>json</code>, <code>byte[]</code>,
 <code>io:ReadableByteChannel</code> or <code>mime:Entity[]</code></p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
             
@@ -639,36 +650,31 @@ function displayMenu() {
     
         
         <div class="returns-listing">
-            <ul>
-                <li> <h3 class="type">Return Type</h3> (<span class="type"><a href="../../http/objects/Response.html">Response</a> | <a href="../../http/types.html#ClientError">ClientError</a></span>)</li>
-                <li><p>The response for the request or an <code>http:ClientError</code> if failed to establish communication with the upstream server</p>
-</li>
-            </ul>
+            <h3 class="type">Return Type</h3> (<span class="type"><a href="../../http/objects/Response.html">Response</a> | <a href="../../http/types.html#ClientError">ClientError</a></span>)
+            <p>The response for the request or an <code>http:ClientError</code> if failed to establish communication with the upstream server</p>
+
         </div>
         
     
 </div>
             
                 <div class="method-content">
-    <div class="main-method-title here" id="head" title="head">
+    <div class="main-method-title" id="head" title="head">
              <a class="url-link" href="#head">
                 <img class="url-link-img" src="../../html-template-resources/images/link.svg">
             </a>
             <h2 > head </h2>
-        
-        <span class="method-types">
-            <p>(<span class="builtin-type">string</span> path, <a href="../../http/types.html#RequestMessage">RequestMessage</a> message)</p>
-            <b> returns </b><a href="../../http/objects/Response.html">Response</a> | <a href="../../http/types.html#ClientError">ClientError</a> 
-        </span>
-        
     </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function head(<span class="builtin-type">string</span> path, <a href="../../http/types.html#RequestMessage">RequestMessage</a> message) returns <a href="../../http/objects/Response.html">Response</a> | <a href="../../http/types.html#ClientError">ClientError</a> </code>
+    </pre>
     <div class="function-desc">
         
         <p>The <code>Client.head()</code> function can be used to send HTTP HEAD requests to HTTP endpoints.</p>
 
     </div>
     
-        <div class="data-wrapper">
+        <div class="parameters">
             <h3 class="param-title">Parameters</h3>
                 
             <div class="params-listing">
@@ -678,13 +684,11 @@ function displayMenu() {
                         <span class="type">  <span class="builtin-type">string</span> </span>
                         
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>Resource path</p>
+                    <p>
+                        
+                        <p>Resource path</p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
                 
@@ -693,16 +697,14 @@ function displayMenu() {
                     <li>
                         <span >message</span>
                         <span class="type">  <a href="../../http/types.html#RequestMessage">RequestMessage</a> </span>
-                        <span class="default"> (default ())</span>
+                        <span class="default"> (default &lt;(ballerina/http:1.0.0:Request|string|xml|json|byte[]|ballerina/io:0.5.0:ReadableByteChannel|ballerina/mime:1.0.0:Entity[])&gt; ())</span>
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>An HTTP outbound request message or any payload of type <code>string</code>, <code>xml</code>, <code>json</code>, <code>byte[]</code>,
+                    <p>
+                        
+                        <p>An HTTP outbound request message or any payload of type <code>string</code>, <code>xml</code>, <code>json</code>, <code>byte[]</code>,
 <code>io:ReadableByteChannel</code> or <code>mime:Entity[]</code></p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
             
@@ -712,36 +714,31 @@ function displayMenu() {
     
         
         <div class="returns-listing">
-            <ul>
-                <li> <h3 class="type">Return Type</h3> (<span class="type"><a href="../../http/objects/Response.html">Response</a> | <a href="../../http/types.html#ClientError">ClientError</a></span>)</li>
-                <li><p>The response for the request or an <code>http:ClientError</code> if failed to establish communication with the upstream server</p>
-</li>
-            </ul>
+            <h3 class="type">Return Type</h3> (<span class="type"><a href="../../http/objects/Response.html">Response</a> | <a href="../../http/types.html#ClientError">ClientError</a></span>)
+            <p>The response for the request or an <code>http:ClientError</code> if failed to establish communication with the upstream server</p>
+
         </div>
         
     
 </div>
             
                 <div class="method-content">
-    <div class="main-method-title here" id="put" title="put">
+    <div class="main-method-title" id="put" title="put">
              <a class="url-link" href="#put">
                 <img class="url-link-img" src="../../html-template-resources/images/link.svg">
             </a>
             <h2 > put </h2>
-        
-        <span class="method-types">
-            <p>(<span class="builtin-type">string</span> path, <a href="../../http/types.html#RequestMessage">RequestMessage</a> message)</p>
-            <b> returns </b><a href="../../http/objects/Response.html">Response</a> | <a href="../../http/types.html#ClientError">ClientError</a> 
-        </span>
-        
     </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function put(<span class="builtin-type">string</span> path, <a href="../../http/types.html#RequestMessage">RequestMessage</a> message) returns <a href="../../http/objects/Response.html">Response</a> | <a href="../../http/types.html#ClientError">ClientError</a> </code>
+    </pre>
     <div class="function-desc">
         
         <p>The <code>Client.put()</code> function can be used to send HTTP PUT requests to HTTP endpoints.</p>
 
     </div>
     
-        <div class="data-wrapper">
+        <div class="parameters">
             <h3 class="param-title">Parameters</h3>
                 
             <div class="params-listing">
@@ -751,13 +748,11 @@ function displayMenu() {
                         <span class="type">  <span class="builtin-type">string</span> </span>
                         
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>Resource path</p>
+                    <p>
+                        
+                        <p>Resource path</p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
                 
@@ -768,14 +763,12 @@ function displayMenu() {
                         <span class="type">  <a href="../../http/types.html#RequestMessage">RequestMessage</a> </span>
                         
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>An HTTP outbound request message or any payload of type <code>string</code>, <code>xml</code>, <code>json</code>, <code>byte[]</code>,
+                    <p>
+                        
+                        <p>An HTTP outbound request message or any payload of type <code>string</code>, <code>xml</code>, <code>json</code>, <code>byte[]</code>,
 <code>io:ReadableByteChannel</code> or <code>mime:Entity[]</code></p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
             
@@ -785,36 +778,31 @@ function displayMenu() {
     
         
         <div class="returns-listing">
-            <ul>
-                <li> <h3 class="type">Return Type</h3> (<span class="type"><a href="../../http/objects/Response.html">Response</a> | <a href="../../http/types.html#ClientError">ClientError</a></span>)</li>
-                <li><p>The response for the request or an <code>http:ClientError</code> if failed to establish communication with the upstream server</p>
-</li>
-            </ul>
+            <h3 class="type">Return Type</h3> (<span class="type"><a href="../../http/objects/Response.html">Response</a> | <a href="../../http/types.html#ClientError">ClientError</a></span>)
+            <p>The response for the request or an <code>http:ClientError</code> if failed to establish communication with the upstream server</p>
+
         </div>
         
     
 </div>
             
                 <div class="method-content">
-    <div class="main-method-title here" id="execute" title="execute">
+    <div class="main-method-title" id="execute" title="execute">
              <a class="url-link" href="#execute">
                 <img class="url-link-img" src="../../html-template-resources/images/link.svg">
             </a>
             <h2 > execute </h2>
-        
-        <span class="method-types">
-            <p>(<span class="builtin-type">string</span> httpVerb, <span class="builtin-type">string</span> path, <a href="../../http/types.html#RequestMessage">RequestMessage</a> message)</p>
-            <b> returns </b><a href="../../http/objects/Response.html">Response</a> | <a href="../../http/types.html#ClientError">ClientError</a> 
-        </span>
-        
     </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function execute(<span class="builtin-type">string</span> httpVerb, <span class="builtin-type">string</span> path, <a href="../../http/types.html#RequestMessage">RequestMessage</a> message) returns <a href="../../http/objects/Response.html">Response</a> | <a href="../../http/types.html#ClientError">ClientError</a> </code>
+    </pre>
     <div class="function-desc">
         
         <p>Invokes an HTTP call with the specified HTTP verb.</p>
 
     </div>
     
-        <div class="data-wrapper">
+        <div class="parameters">
             <h3 class="param-title">Parameters</h3>
                 
             <div class="params-listing">
@@ -824,13 +812,11 @@ function displayMenu() {
                         <span class="type">  <span class="builtin-type">string</span> </span>
                         
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>HTTP verb value</p>
+                    <p>
+                        
+                        <p>HTTP verb value</p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
                 
@@ -841,13 +827,11 @@ function displayMenu() {
                         <span class="type">  <span class="builtin-type">string</span> </span>
                         
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>Resource path</p>
+                    <p>
+                        
+                        <p>Resource path</p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
                 
@@ -858,14 +842,12 @@ function displayMenu() {
                         <span class="type">  <a href="../../http/types.html#RequestMessage">RequestMessage</a> </span>
                         
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>An HTTP outbound request message or any payload of type <code>string</code>, <code>xml</code>, <code>json</code>, <code>byte[]</code>,
+                    <p>
+                        
+                        <p>An HTTP outbound request message or any payload of type <code>string</code>, <code>xml</code>, <code>json</code>, <code>byte[]</code>,
 <code>io:ReadableByteChannel</code> or <code>mime:Entity[]</code></p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
             
@@ -875,36 +857,31 @@ function displayMenu() {
     
         
         <div class="returns-listing">
-            <ul>
-                <li> <h3 class="type">Return Type</h3> (<span class="type"><a href="../../http/objects/Response.html">Response</a> | <a href="../../http/types.html#ClientError">ClientError</a></span>)</li>
-                <li><p>The response for the request or an <code>http:ClientError</code> if failed to establish communication with the upstream server</p>
-</li>
-            </ul>
+            <h3 class="type">Return Type</h3> (<span class="type"><a href="../../http/objects/Response.html">Response</a> | <a href="../../http/types.html#ClientError">ClientError</a></span>)
+            <p>The response for the request or an <code>http:ClientError</code> if failed to establish communication with the upstream server</p>
+
         </div>
         
     
 </div>
             
                 <div class="method-content">
-    <div class="main-method-title here" id="patch" title="patch">
+    <div class="main-method-title" id="patch" title="patch">
              <a class="url-link" href="#patch">
                 <img class="url-link-img" src="../../html-template-resources/images/link.svg">
             </a>
             <h2 > patch </h2>
-        
-        <span class="method-types">
-            <p>(<span class="builtin-type">string</span> path, <a href="../../http/types.html#RequestMessage">RequestMessage</a> message)</p>
-            <b> returns </b><a href="../../http/objects/Response.html">Response</a> | <a href="../../http/types.html#ClientError">ClientError</a> 
-        </span>
-        
     </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function patch(<span class="builtin-type">string</span> path, <a href="../../http/types.html#RequestMessage">RequestMessage</a> message) returns <a href="../../http/objects/Response.html">Response</a> | <a href="../../http/types.html#ClientError">ClientError</a> </code>
+    </pre>
     <div class="function-desc">
         
         <p>The <code>Client.patch()</code> function can be used to send HTTP PATCH requests to HTTP endpoints.</p>
 
     </div>
     
-        <div class="data-wrapper">
+        <div class="parameters">
             <h3 class="param-title">Parameters</h3>
                 
             <div class="params-listing">
@@ -914,13 +891,11 @@ function displayMenu() {
                         <span class="type">  <span class="builtin-type">string</span> </span>
                         
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>Resource path</p>
+                    <p>
+                        
+                        <p>Resource path</p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
                 
@@ -931,14 +906,12 @@ function displayMenu() {
                         <span class="type">  <a href="../../http/types.html#RequestMessage">RequestMessage</a> </span>
                         
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>An HTTP outbound request message or any payload of type <code>string</code>, <code>xml</code>, <code>json</code>, <code>byte[]</code>,
+                    <p>
+                        
+                        <p>An HTTP outbound request message or any payload of type <code>string</code>, <code>xml</code>, <code>json</code>, <code>byte[]</code>,
 <code>io:ReadableByteChannel</code> or <code>mime:Entity[]</code></p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
             
@@ -948,36 +921,31 @@ function displayMenu() {
     
         
         <div class="returns-listing">
-            <ul>
-                <li> <h3 class="type">Return Type</h3> (<span class="type"><a href="../../http/objects/Response.html">Response</a> | <a href="../../http/types.html#ClientError">ClientError</a></span>)</li>
-                <li><p>The response for the request or an <code>http:ClientError</code> if failed to establish communication with the upstream server</p>
-</li>
-            </ul>
+            <h3 class="type">Return Type</h3> (<span class="type"><a href="../../http/objects/Response.html">Response</a> | <a href="../../http/types.html#ClientError">ClientError</a></span>)
+            <p>The response for the request or an <code>http:ClientError</code> if failed to establish communication with the upstream server</p>
+
         </div>
         
     
 </div>
             
                 <div class="method-content">
-    <div class="main-method-title here" id="delete" title="delete">
+    <div class="main-method-title" id="delete" title="delete">
              <a class="url-link" href="#delete">
                 <img class="url-link-img" src="../../html-template-resources/images/link.svg">
             </a>
             <h2 > delete </h2>
-        
-        <span class="method-types">
-            <p>(<span class="builtin-type">string</span> path, <a href="../../http/types.html#RequestMessage">RequestMessage</a> message)</p>
-            <b> returns </b><a href="../../http/objects/Response.html">Response</a> | <a href="../../http/types.html#ClientError">ClientError</a> 
-        </span>
-        
     </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function delete(<span class="builtin-type">string</span> path, <a href="../../http/types.html#RequestMessage">RequestMessage</a> message) returns <a href="../../http/objects/Response.html">Response</a> | <a href="../../http/types.html#ClientError">ClientError</a> </code>
+    </pre>
     <div class="function-desc">
         
         <p>The <code>Client.delete()</code> function can be used to send HTTP DELETE requests to HTTP endpoints.</p>
 
     </div>
     
-        <div class="data-wrapper">
+        <div class="parameters">
             <h3 class="param-title">Parameters</h3>
                 
             <div class="params-listing">
@@ -987,13 +955,11 @@ function displayMenu() {
                         <span class="type">  <span class="builtin-type">string</span> </span>
                         
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>Resource path</p>
+                    <p>
+                        
+                        <p>Resource path</p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
                 
@@ -1002,16 +968,14 @@ function displayMenu() {
                     <li>
                         <span >message</span>
                         <span class="type">  <a href="../../http/types.html#RequestMessage">RequestMessage</a> </span>
-                        <span class="default"> (default ())</span>
+                        <span class="default"> (default &lt;(ballerina/http:1.0.0:Request|string|xml|json|byte[]|ballerina/io:0.5.0:ReadableByteChannel|ballerina/mime:1.0.0:Entity[])&gt; ())</span>
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>An optional HTTP outbound request message or any payload of type <code>string</code>, <code>xml</code>, <code>json</code>, <code>byte[]</code>,
+                    <p>
+                        
+                        <p>An optional HTTP outbound request message or any payload of type <code>string</code>, <code>xml</code>, <code>json</code>, <code>byte[]</code>,
 <code>io:ReadableByteChannel</code> or <code>mime:Entity[]</code></p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
             
@@ -1021,36 +985,31 @@ function displayMenu() {
     
         
         <div class="returns-listing">
-            <ul>
-                <li> <h3 class="type">Return Type</h3> (<span class="type"><a href="../../http/objects/Response.html">Response</a> | <a href="../../http/types.html#ClientError">ClientError</a></span>)</li>
-                <li><p>The response for the request or an <code>http:ClientError</code> if failed to establish communication with the upstream server</p>
-</li>
-            </ul>
+            <h3 class="type">Return Type</h3> (<span class="type"><a href="../../http/objects/Response.html">Response</a> | <a href="../../http/types.html#ClientError">ClientError</a></span>)
+            <p>The response for the request or an <code>http:ClientError</code> if failed to establish communication with the upstream server</p>
+
         </div>
         
     
 </div>
             
                 <div class="method-content">
-    <div class="main-method-title here" id="get" title="get">
+    <div class="main-method-title" id="get" title="get">
              <a class="url-link" href="#get">
                 <img class="url-link-img" src="../../html-template-resources/images/link.svg">
             </a>
             <h2 > get </h2>
-        
-        <span class="method-types">
-            <p>(<span class="builtin-type">string</span> path, <a href="../../http/types.html#RequestMessage">RequestMessage</a> message)</p>
-            <b> returns </b><a href="../../http/objects/Response.html">Response</a> | <a href="../../http/types.html#ClientError">ClientError</a> 
-        </span>
-        
     </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function get(<span class="builtin-type">string</span> path, <a href="../../http/types.html#RequestMessage">RequestMessage</a> message) returns <a href="../../http/objects/Response.html">Response</a> | <a href="../../http/types.html#ClientError">ClientError</a> </code>
+    </pre>
     <div class="function-desc">
         
         <p>The <code>Client.get()</code> function can be used to send HTTP GET requests to HTTP endpoints.</p>
 
     </div>
     
-        <div class="data-wrapper">
+        <div class="parameters">
             <h3 class="param-title">Parameters</h3>
                 
             <div class="params-listing">
@@ -1060,13 +1019,11 @@ function displayMenu() {
                         <span class="type">  <span class="builtin-type">string</span> </span>
                         
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>Request path</p>
+                    <p>
+                        
+                        <p>Request path</p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
                 
@@ -1075,16 +1032,14 @@ function displayMenu() {
                     <li>
                         <span >message</span>
                         <span class="type">  <a href="../../http/types.html#RequestMessage">RequestMessage</a> </span>
-                        <span class="default"> (default ())</span>
+                        <span class="default"> (default &lt;(ballerina/http:1.0.0:Request|string|xml|json|byte[]|ballerina/io:0.5.0:ReadableByteChannel|ballerina/mime:1.0.0:Entity[])&gt; ())</span>
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>An optional HTTP outbound request message or any payload of type <code>string</code>, <code>xml</code>, <code>json</code>, <code>byte[]</code>,
+                    <p>
+                        
+                        <p>An optional HTTP outbound request message or any payload of type <code>string</code>, <code>xml</code>, <code>json</code>, <code>byte[]</code>,
 <code>io:ReadableByteChannel</code> or <code>mime:Entity[]</code></p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
             
@@ -1094,36 +1049,31 @@ function displayMenu() {
     
         
         <div class="returns-listing">
-            <ul>
-                <li> <h3 class="type">Return Type</h3> (<span class="type"><a href="../../http/objects/Response.html">Response</a> | <a href="../../http/types.html#ClientError">ClientError</a></span>)</li>
-                <li><p>The response for the request or an <code>http:ClientError</code> if failed to establish communication with the upstream server</p>
-</li>
-            </ul>
+            <h3 class="type">Return Type</h3> (<span class="type"><a href="../../http/objects/Response.html">Response</a> | <a href="../../http/types.html#ClientError">ClientError</a></span>)
+            <p>The response for the request or an <code>http:ClientError</code> if failed to establish communication with the upstream server</p>
+
         </div>
         
     
 </div>
             
                 <div class="method-content">
-    <div class="main-method-title here" id="options" title="options">
+    <div class="main-method-title" id="options" title="options">
              <a class="url-link" href="#options">
                 <img class="url-link-img" src="../../html-template-resources/images/link.svg">
             </a>
             <h2 > options </h2>
-        
-        <span class="method-types">
-            <p>(<span class="builtin-type">string</span> path, <a href="../../http/types.html#RequestMessage">RequestMessage</a> message)</p>
-            <b> returns </b><a href="../../http/objects/Response.html">Response</a> | <a href="../../http/types.html#ClientError">ClientError</a> 
-        </span>
-        
     </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function options(<span class="builtin-type">string</span> path, <a href="../../http/types.html#RequestMessage">RequestMessage</a> message) returns <a href="../../http/objects/Response.html">Response</a> | <a href="../../http/types.html#ClientError">ClientError</a> </code>
+    </pre>
     <div class="function-desc">
         
         <p>The <code>Client.options()</code> function can be used to send HTTP OPTIONS requests to HTTP endpoints.</p>
 
     </div>
     
-        <div class="data-wrapper">
+        <div class="parameters">
             <h3 class="param-title">Parameters</h3>
                 
             <div class="params-listing">
@@ -1133,13 +1083,11 @@ function displayMenu() {
                         <span class="type">  <span class="builtin-type">string</span> </span>
                         
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>Request path</p>
+                    <p>
+                        
+                        <p>Request path</p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
                 
@@ -1148,16 +1096,14 @@ function displayMenu() {
                     <li>
                         <span >message</span>
                         <span class="type">  <a href="../../http/types.html#RequestMessage">RequestMessage</a> </span>
-                        <span class="default"> (default ())</span>
+                        <span class="default"> (default &lt;(ballerina/http:1.0.0:Request|string|xml|json|byte[]|ballerina/io:0.5.0:ReadableByteChannel|ballerina/mime:1.0.0:Entity[])&gt; ())</span>
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>An optional HTTP outbound request message or any payload of type <code>string</code>, <code>xml</code>, <code>json</code>, <code>byte[]</code>,
+                    <p>
+                        
+                        <p>An optional HTTP outbound request message or any payload of type <code>string</code>, <code>xml</code>, <code>json</code>, <code>byte[]</code>,
 <code>io:ReadableByteChannel</code> or <code>mime:Entity[]</code></p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
             
@@ -1167,36 +1113,31 @@ function displayMenu() {
     
         
         <div class="returns-listing">
-            <ul>
-                <li> <h3 class="type">Return Type</h3> (<span class="type"><a href="../../http/objects/Response.html">Response</a> | <a href="../../http/types.html#ClientError">ClientError</a></span>)</li>
-                <li><p>The response for the request or an <code>http:ClientError</code> if failed to establish communication with the upstream server</p>
-</li>
-            </ul>
+            <h3 class="type">Return Type</h3> (<span class="type"><a href="../../http/objects/Response.html">Response</a> | <a href="../../http/types.html#ClientError">ClientError</a></span>)
+            <p>The response for the request or an <code>http:ClientError</code> if failed to establish communication with the upstream server</p>
+
         </div>
         
     
 </div>
             
                 <div class="method-content">
-    <div class="main-method-title here" id="forward" title="forward">
+    <div class="main-method-title" id="forward" title="forward">
              <a class="url-link" href="#forward">
                 <img class="url-link-img" src="../../html-template-resources/images/link.svg">
             </a>
             <h2 > forward </h2>
-        
-        <span class="method-types">
-            <p>(<span class="builtin-type">string</span> path, <a href="../../http/objects/Request.html">Request</a> request)</p>
-            <b> returns </b><a href="../../http/objects/Response.html">Response</a> | <a href="../../http/types.html#ClientError">ClientError</a> 
-        </span>
-        
     </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function forward(<span class="builtin-type">string</span> path, <a href="../../http/objects/Request.html">Request</a> request) returns <a href="../../http/objects/Response.html">Response</a> | <a href="../../http/types.html#ClientError">ClientError</a> </code>
+    </pre>
     <div class="function-desc">
         
         <p>The <code>Client.forward()</code> function can be used to invoke an HTTP call with inbound request's HTTP verb</p>
 
     </div>
     
-        <div class="data-wrapper">
+        <div class="parameters">
             <h3 class="param-title">Parameters</h3>
                 
             <div class="params-listing">
@@ -1206,13 +1147,11 @@ function displayMenu() {
                         <span class="type">  <span class="builtin-type">string</span> </span>
                         
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>Request path</p>
+                    <p>
+                        
+                        <p>Request path</p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
                 
@@ -1223,13 +1162,11 @@ function displayMenu() {
                         <span class="type">  <a href="../../http/objects/Request.html">Request</a> </span>
                         
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>An HTTP inbound request message</p>
+                    <p>
+                        
+                        <p>An HTTP inbound request message</p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
             
@@ -1239,29 +1176,24 @@ function displayMenu() {
     
         
         <div class="returns-listing">
-            <ul>
-                <li> <h3 class="type">Return Type</h3> (<span class="type"><a href="../../http/objects/Response.html">Response</a> | <a href="../../http/types.html#ClientError">ClientError</a></span>)</li>
-                <li><p>The response for the request or an <code>http:ClientError</code> if failed to establish communication with the upstream server</p>
-</li>
-            </ul>
+            <h3 class="type">Return Type</h3> (<span class="type"><a href="../../http/objects/Response.html">Response</a> | <a href="../../http/types.html#ClientError">ClientError</a></span>)
+            <p>The response for the request or an <code>http:ClientError</code> if failed to establish communication with the upstream server</p>
+
         </div>
         
     
 </div>
             
                 <div class="method-content">
-    <div class="main-method-title here" id="submit" title="submit">
+    <div class="main-method-title" id="submit" title="submit">
              <a class="url-link" href="#submit">
                 <img class="url-link-img" src="../../html-template-resources/images/link.svg">
             </a>
             <h2 > submit </h2>
-        
-        <span class="method-types">
-            <p>(<span class="builtin-type">string</span> httpVerb, <span class="builtin-type">string</span> path, <a href="../../http/types.html#RequestMessage">RequestMessage</a> message)</p>
-            <b> returns </b><a href="../../http/objects/HttpFuture.html">HttpFuture</a> | <a href="../../http/types.html#ClientError">ClientError</a> 
-        </span>
-        
     </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function submit(<span class="builtin-type">string</span> httpVerb, <span class="builtin-type">string</span> path, <a href="../../http/types.html#RequestMessage">RequestMessage</a> message) returns <a href="../../http/objects/HttpFuture.html">HttpFuture</a> | <a href="../../http/types.html#ClientError">ClientError</a> </code>
+    </pre>
     <div class="function-desc">
         
         <p>Submits an HTTP request to a service with the specified HTTP verb.
@@ -1270,7 +1202,7 @@ Rather it returns an <code>http:HttpFuture</code> which can be used to do furthe
 
     </div>
     
-        <div class="data-wrapper">
+        <div class="parameters">
             <h3 class="param-title">Parameters</h3>
                 
             <div class="params-listing">
@@ -1280,13 +1212,11 @@ Rather it returns an <code>http:HttpFuture</code> which can be used to do furthe
                         <span class="type">  <span class="builtin-type">string</span> </span>
                         
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>The HTTP verb value</p>
+                    <p>
+                        
+                        <p>The HTTP verb value</p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
                 
@@ -1297,13 +1227,11 @@ Rather it returns an <code>http:HttpFuture</code> which can be used to do furthe
                         <span class="type">  <span class="builtin-type">string</span> </span>
                         
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>The resource path</p>
+                    <p>
+                        
+                        <p>The resource path</p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
                 
@@ -1314,14 +1242,12 @@ Rather it returns an <code>http:HttpFuture</code> which can be used to do furthe
                         <span class="type">  <a href="../../http/types.html#RequestMessage">RequestMessage</a> </span>
                         
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>An HTTP outbound request message or any payload of type <code>string</code>, <code>xml</code>, <code>json</code>, <code>byte[]</code>,
+                    <p>
+                        
+                        <p>An HTTP outbound request message or any payload of type <code>string</code>, <code>xml</code>, <code>json</code>, <code>byte[]</code>,
 <code>io:ReadableByteChannel</code> or <code>mime:Entity[]</code></p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
             
@@ -1331,36 +1257,31 @@ Rather it returns an <code>http:HttpFuture</code> which can be used to do furthe
     
         
         <div class="returns-listing">
-            <ul>
-                <li> <h3 class="type">Return Type</h3> (<span class="type"><a href="../../http/objects/HttpFuture.html">HttpFuture</a> | <a href="../../http/types.html#ClientError">ClientError</a></span>)</li>
-                <li><p>An <code>http:HttpFuture</code> that represents an asynchronous service invocation or else an <code>http:ClientError</code> if the submission fails</p>
-</li>
-            </ul>
+            <h3 class="type">Return Type</h3> (<span class="type"><a href="../../http/objects/HttpFuture.html">HttpFuture</a> | <a href="../../http/types.html#ClientError">ClientError</a></span>)
+            <p>An <code>http:HttpFuture</code> that represents an asynchronous service invocation or else an <code>http:ClientError</code> if the submission fails</p>
+
         </div>
         
     
 </div>
             
                 <div class="method-content">
-    <div class="main-method-title here" id="getResponse" title="getResponse">
+    <div class="main-method-title" id="getResponse" title="getResponse">
              <a class="url-link" href="#getResponse">
                 <img class="url-link-img" src="../../html-template-resources/images/link.svg">
             </a>
             <h2 > getResponse </h2>
-        
-        <span class="method-types">
-            <p>(<a href="../../http/objects/HttpFuture.html">HttpFuture</a> httpFuture)</p>
-            <b> returns </b><a href="../../http/objects/Response.html">Response</a> | <a href="../../http/types.html#ClientError">ClientError</a> 
-        </span>
-        
     </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function getResponse(<a href="../../http/objects/HttpFuture.html">HttpFuture</a> httpFuture) returns <a href="../../http/objects/Response.html">Response</a> | <a href="../../http/types.html#ClientError">ClientError</a> </code>
+    </pre>
     <div class="function-desc">
         
         <p>This just pass the request to actual network call.</p>
 
     </div>
     
-        <div class="data-wrapper">
+        <div class="parameters">
             <h3 class="param-title">Parameters</h3>
                 
             <div class="params-listing">
@@ -1370,13 +1291,11 @@ Rather it returns an <code>http:HttpFuture</code> which can be used to do furthe
                         <span class="type">  <a href="../../http/objects/HttpFuture.html">HttpFuture</a> </span>
                         
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>The <code>http:HttpFuture</code> related to a previous asynchronous invocation</p>
+                    <p>
+                        
+                        <p>The <code>http:HttpFuture</code> related to a previous asynchronous invocation</p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
             
@@ -1386,36 +1305,31 @@ Rather it returns an <code>http:HttpFuture</code> which can be used to do furthe
     
         
         <div class="returns-listing">
-            <ul>
-                <li> <h3 class="type">Return Type</h3> (<span class="type"><a href="../../http/objects/Response.html">Response</a> | <a href="../../http/types.html#ClientError">ClientError</a></span>)</li>
-                <li><p>An <code>http:Response</code> message or else an <code>http: ClientError</code> if the invocation fails</p>
-</li>
-            </ul>
+            <h3 class="type">Return Type</h3> (<span class="type"><a href="../../http/objects/Response.html">Response</a> | <a href="../../http/types.html#ClientError">ClientError</a></span>)
+            <p>An <code>http:Response</code> message or else an <code>http: ClientError</code> if the invocation fails</p>
+
         </div>
         
     
 </div>
             
                 <div class="method-content">
-    <div class="main-method-title here" id="hasPromise" title="hasPromise">
+    <div class="main-method-title" id="hasPromise" title="hasPromise">
              <a class="url-link" href="#hasPromise">
                 <img class="url-link-img" src="../../html-template-resources/images/link.svg">
             </a>
             <h2 > hasPromise </h2>
-        
-        <span class="method-types">
-            <p>(<a href="../../http/objects/HttpFuture.html">HttpFuture</a> httpFuture)</p>
-            <b> returns </b><span class="builtin-type">boolean</span> 
-        </span>
-        
     </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function hasPromise(<a href="../../http/objects/HttpFuture.html">HttpFuture</a> httpFuture) returns <span class="builtin-type">boolean</span> </code>
+    </pre>
     <div class="function-desc">
         
         <p>This just pass the request to actual network call.</p>
 
     </div>
     
-        <div class="data-wrapper">
+        <div class="parameters">
             <h3 class="param-title">Parameters</h3>
                 
             <div class="params-listing">
@@ -1425,13 +1339,11 @@ Rather it returns an <code>http:HttpFuture</code> which can be used to do furthe
                         <span class="type">  <a href="../../http/objects/HttpFuture.html">HttpFuture</a> </span>
                         
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>The <code>http:HttpFuture</code> relates to a previous asynchronous invocation</p>
+                    <p>
+                        
+                        <p>The <code>http:HttpFuture</code> relates to a previous asynchronous invocation</p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
             
@@ -1441,36 +1353,31 @@ Rather it returns an <code>http:HttpFuture</code> which can be used to do furthe
     
         
         <div class="returns-listing">
-            <ul>
-                <li> <h3 class="type">Return Type</h3> (<span class="type"><span class="builtin-type">boolean</span></span>)</li>
-                <li><p>A <code>boolean</code>, which represents whether an <code>http:PushPromise</code> exists</p>
-</li>
-            </ul>
+            <h3 class="type">Return Type</h3> (<span class="type"><span class="builtin-type">boolean</span></span>)
+            <p>A <code>boolean</code>, which represents whether an <code>http:PushPromise</code> exists</p>
+
         </div>
         
     
 </div>
             
                 <div class="method-content">
-    <div class="main-method-title here" id="getNextPromise" title="getNextPromise">
+    <div class="main-method-title" id="getNextPromise" title="getNextPromise">
              <a class="url-link" href="#getNextPromise">
                 <img class="url-link-img" src="../../html-template-resources/images/link.svg">
             </a>
             <h2 > getNextPromise </h2>
-        
-        <span class="method-types">
-            <p>(<a href="../../http/objects/HttpFuture.html">HttpFuture</a> httpFuture)</p>
-            <b> returns </b><a href="../../http/objects/PushPromise.html">PushPromise</a> | <a href="../../http/types.html#ClientError">ClientError</a> 
-        </span>
-        
     </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function getNextPromise(<a href="../../http/objects/HttpFuture.html">HttpFuture</a> httpFuture) returns <a href="../../http/objects/PushPromise.html">PushPromise</a> | <a href="../../http/types.html#ClientError">ClientError</a> </code>
+    </pre>
     <div class="function-desc">
         
         <p>This just pass the request to actual network call.</p>
 
     </div>
     
-        <div class="data-wrapper">
+        <div class="parameters">
             <h3 class="param-title">Parameters</h3>
                 
             <div class="params-listing">
@@ -1480,13 +1387,11 @@ Rather it returns an <code>http:HttpFuture</code> which can be used to do furthe
                         <span class="type">  <a href="../../http/objects/HttpFuture.html">HttpFuture</a> </span>
                         
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>The <code>http:HttpFuture</code> related to a previous asynchronous invocation</p>
+                    <p>
+                        
+                        <p>The <code>http:HttpFuture</code> related to a previous asynchronous invocation</p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
             
@@ -1496,36 +1401,31 @@ Rather it returns an <code>http:HttpFuture</code> which can be used to do furthe
     
         
         <div class="returns-listing">
-            <ul>
-                <li> <h3 class="type">Return Type</h3> (<span class="type"><a href="../../http/objects/PushPromise.html">PushPromise</a> | <a href="../../http/types.html#ClientError">ClientError</a></span>)</li>
-                <li><p>An <code>http:PushPromise</code> message or else an <code>http:ClientError</code> if the invocation fails</p>
-</li>
-            </ul>
+            <h3 class="type">Return Type</h3> (<span class="type"><a href="../../http/objects/PushPromise.html">PushPromise</a> | <a href="../../http/types.html#ClientError">ClientError</a></span>)
+            <p>An <code>http:PushPromise</code> message or else an <code>http:ClientError</code> if the invocation fails</p>
+
         </div>
         
     
 </div>
             
                 <div class="method-content">
-    <div class="main-method-title here" id="getPromisedResponse" title="getPromisedResponse">
+    <div class="main-method-title" id="getPromisedResponse" title="getPromisedResponse">
              <a class="url-link" href="#getPromisedResponse">
                 <img class="url-link-img" src="../../html-template-resources/images/link.svg">
             </a>
             <h2 > getPromisedResponse </h2>
-        
-        <span class="method-types">
-            <p>(<a href="../../http/objects/PushPromise.html">PushPromise</a> promise)</p>
-            <b> returns </b><a href="../../http/objects/Response.html">Response</a> | <a href="../../http/types.html#ClientError">ClientError</a> 
-        </span>
-        
     </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function getPromisedResponse(<a href="../../http/objects/PushPromise.html">PushPromise</a> promise) returns <a href="../../http/objects/Response.html">Response</a> | <a href="../../http/types.html#ClientError">ClientError</a> </code>
+    </pre>
     <div class="function-desc">
         
         <p>Passes the request to an actual network call.</p>
 
     </div>
     
-        <div class="data-wrapper">
+        <div class="parameters">
             <h3 class="param-title">Parameters</h3>
                 
             <div class="params-listing">
@@ -1535,13 +1435,11 @@ Rather it returns an <code>http:HttpFuture</code> which can be used to do furthe
                         <span class="type">  <a href="../../http/objects/PushPromise.html">PushPromise</a> </span>
                         
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>The related <code>http:PushPromise</code></p>
+                    <p>
+                        
+                        <p>The related <code>http:PushPromise</code></p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
             
@@ -1551,31 +1449,31 @@ Rather it returns an <code>http:HttpFuture</code> which can be used to do furthe
     
         
         <div class="returns-listing">
-            <ul>
-                <li> <h3 class="type">Return Type</h3> (<span class="type"><a href="../../http/objects/Response.html">Response</a> | <a href="../../http/types.html#ClientError">ClientError</a></span>)</li>
-                <li><p>A promised <code>http:Response</code> message or else an <code>http:ClientError</code> if the invocation fails</p>
-</li>
-            </ul>
+            <h3 class="type">Return Type</h3> (<span class="type"><a href="../../http/objects/Response.html">Response</a> | <a href="../../http/types.html#ClientError">ClientError</a></span>)
+            <p>A promised <code>http:Response</code> message or else an <code>http:ClientError</code> if the invocation fails</p>
+
         </div>
         
     
 </div>
             
                 <div class="method-content">
-    <div class="main-method-title here" id="rejectPromise" title="rejectPromise">
+    <div class="main-method-title" id="rejectPromise" title="rejectPromise">
              <a class="url-link" href="#rejectPromise">
                 <img class="url-link-img" src="../../html-template-resources/images/link.svg">
             </a>
             <h2 > rejectPromise </h2>
-        
     </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function rejectPromise(<a href="../../http/objects/PushPromise.html">PushPromise</a> promise)</code>
+    </pre>
     <div class="function-desc">
         
         <p>This just pass the request to actual network call.</p>
 
     </div>
     
-        <div class="data-wrapper">
+        <div class="parameters">
             <h3 class="param-title">Parameters</h3>
                 
             <div class="params-listing">
@@ -1585,13 +1483,11 @@ Rather it returns an <code>http:HttpFuture</code> which can be used to do furthe
                         <span class="type">  <a href="../../http/objects/PushPromise.html">PushPromise</a> </span>
                         
                     </li>
-                    <li>
-                        <p>
-                            
-                            <p>The Push Promise to be rejected</p>
+                    <p>
+                        
+                        <p>The Push Promise to be rejected</p>
 
-                        </p>
-                    </li>
+                    </p>
                 </ul>
             </div>
             
@@ -1606,18 +1502,15 @@ Rather it returns an <code>http:HttpFuture</code> which can be used to do furthe
         
             
                 <div class="method-content">
-    <div class="main-method-title here" id="getCookieStore" title="getCookieStore">
+    <div class="main-method-title" id="getCookieStore" title="getCookieStore">
              <a class="url-link" href="#getCookieStore">
                 <img class="url-link-img" src="../../html-template-resources/images/link.svg">
             </a>
             <h2 > getCookieStore </h2>
-        
-        <span class="method-types">
-            <p>()</p>
-            <b> returns </b><a href="../../http/objects/CookieStore.html">CookieStore</a>? 
-        </span>
-        
     </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function getCookieStore() returns <a href="../../http/objects/CookieStore.html">CookieStore</a>? </code>
+    </pre>
     <div class="function-desc">
         
         <p>Retrieves the cookie store of the client.</p>
@@ -1628,11 +1521,9 @@ Rather it returns an <code>http:HttpFuture</code> which can be used to do furthe
     
         
         <div class="returns-listing">
-            <ul>
-                <li> <h3 class="type">Return Type</h3> (<span class="type"><a href="../../http/objects/CookieStore.html">CookieStore</a>?</span>)</li>
-                <li><p>The cookie store related to the client</p>
-</li>
-            </ul>
+            <h3 class="type">Return Type</h3> (<span class="type"><a href="../../http/objects/CookieStore.html">CookieStore</a>?</span>)
+            <p>The cookie store related to the client</p>
+
         </div>
         
     
@@ -1641,88 +1532,46 @@ Rather it returns an <code>http:HttpFuture</code> which can be used to do furthe
         
     </div>
 
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div id="iBallerinaFooter" class="row cBallerina-io-White-row">
-    <div class="container">
-    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 cBallerina-io-left-col cBallerinaFooterLinks">
-        <ul>
-            <li><a class="cBioFooterLink" href="/downloads">Download</a></li>
-            <li><a class="cBioFooterLink" href="https://github.com/ballerina-lang/ballerina/blob/master/LICENSE">Code License</a></li>
-            <li><a class="cBioFooterLink" href="/license-of-site">Site License</a></li>
-            <li><a class="cBioFooterLink" href="/terms-of-service">TERMS OF SERVICE</a></li>
-            <li><a class="cBioFooterLink" href="/privacy-policy">PRIVACY POLICY</a></li>
-            </ul>
-        </div>
-    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 cBallerina-io-middle-col cBallerinaFooterSignUp">
-        <div class="cSocialmedia">
-            <ul>
-                <li>
-                    <a class="cBioFooterLink" href="https://github.com/ballerina-platform" target="_blank"><img src="/img/github.svg"></a>
-                    </li>
-                <li><a class="cBioFooterLink" href="https://stackoverflow.com/questions/tagged/ballerina" target="_blank"><img src="/img/stackoverflow.svg"></a></li>
-                <li><a class="cBioFooterLink" href="https://twitter.com/ballerinalang" target="_blank"><img src="/img/twitter.svg"></a></li>
-                <li><a class="cBioFooterLink" href="/community/slack/"><img src="/img/slack.svg"></a></li>
-                </ul>
-            <div class="pdframe"></div>
-            </div>
-        </div>
-    <div class="col-xs-12 col-sm-10 col-md-6 col-lg-6 cBallerina-io-right-col">
-        <p>In the creation of Ballerina, we were inspired by so many technologies. Thank you to all that have come before us (and forgive us if we missed one): Java, Go, C, C++, D, Rust, Haskell, Kotlin, Dart, TypeScript, JavaScript, Python, Perl, Flow, Swift, Elm, RelaxNG, NPM, Crates, Maven, Gradle, Kubernetes, Docker, Envoy, Markdown, GitHub and WSO2.</p></div>
-    </div>
-</div>
 </body>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/components/prism-core.min.js"></script>
+<script src="../../syntax-highlighter/prism-ballerina.js"></script>
 <script>
-let mainNavLinks = document.querySelectorAll(".primary-list.module ul li a");
-let mainSections = document.querySelectorAll(".main-wrapper section.method-content");
-
-let lastId;
-let cur = [];
-
-let contentWrapper = document.querySelector(".content-wrapper");
-contentWrapper.addEventListener("scroll", event => {
-  let fromTop = contentWrapper.scrollTop;
-
-  mainNavLinks.forEach(link => {
-    let section = document.querySelector("#" + link.attributes.getNamedItem("data").textContent);
-
-    if (
-      section.offsetTop <= fromTop &&
-      section.offsetTop + section.offsetHeight > fromTop
-    ) {
-      link.classList.add("current");
-    } else {
-      link.classList.remove("current");
+    function toggleMenu() {
+        $('#mobMenu').transition('slide down')
     }
-  });
-});
+    $(document).ready(function () {
+        $('.ui.dropdown').dropdown();
+        $('#version-picker').dropdown('set selected', "1.2");
+        $('#version-picker-mob').dropdown('set selected', "1.2");
 
-</script>
-<script>
-function menuLinkClick() {
-  if(window.matchMedia("(max-width: 600px)").matches) {
-    document.getElementsByClassName("navi-wrapper")[0].style.display = "none";
-  }
-}
-function displayMenu() {
-  var nav = document.getElementsByClassName("navi-wrapper")[0];
-  var content = document.getElementsByClassName("content-wrapper")[0];
-  if (nav.style.display === "none" || nav.style.display === "") {
-    nav.style.display = "block";
-    content.style.marginLeft = "210px";
-  } else {
-    nav.style.display = "none";
-    content.style.marginLeft = "0px";
-  }
-}
+    });
+
+    let mainNavLinks = document.querySelectorAll(".toc .ui.visible.left.vertical.sidebar.menu .menu a");
+    console.log(mainNavLinks);
+    let contentWrapper = document.querySelector(".content");
+    contentWrapper.addEventListener("scroll", event => {
+      let fromTop = contentWrapper.scrollTop;
+
+      mainNavLinks.forEach(link => {
+        let section = document.querySelector("#" + link.attributes.getNamedItem("data").textContent);
+
+        if (
+          section.offsetTop <= fromTop &&
+          section.offsetTop + section.offsetHeight > fromTop
+        ) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    });
+
 </script>
 <script>
     var rootPath = "../../";
@@ -1730,8 +1579,18 @@ function displayMenu() {
 <script src="../../doc-search/search-data.js"></script>
 <script src="../../doc-search/search.js"></script>
 <script>
-    window.onload = (event) => {
-        ballerinaHighlighter.highlightSnippets();
-    };
+    var str = "";
+    var currentModule = "http";
+    searchData.modules.forEach(function(module) {
+        var active = "";
+        if (currentModule==module.id) {
+            active = " active";
+        }
+        str += '<a class="item' + active + '" href="' + rootPath + module.id + '/index.html">' + module.id + '</a>';
+    });
+    document.getElementById("modules-list").innerHTML = str;
+    document.getElementById("modules-list-mob").innerHTML = str;
 </script>
+
+
 

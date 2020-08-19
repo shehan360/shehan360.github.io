@@ -18,1044 +18,789 @@
     <meta name="keywords" content="ballerina,ballerina lang,api docs,http">
 
     <title>API Docs - Errors : http</title>
+
     <script src="../html-template-resources/jquery.min.js"></script>
-
-    <!-- BIO THEME START -->
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<!-- Optional theme -->
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-<!-- Latest compiled and minified JavaScript -->
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;display=swap" rel="stylesheet">
-<link type="text/css" rel="stylesheet" href="https://use.typekit.net/son4ymv.css">
-<link rel="stylesheet" href="https://use.typekit.net/son4ymv.css">
-<link rel="stylesheet" href="/css/theme.css" type="text/css">
-<link rel="stylesheet" href="/css/theme_extra.css" type="text/css">
-
-<script type="text/javascript" src="/js/api-doc-template.js"></script>
-<script type="text/javascript" src="/js/ballerina-common.js"></script>
-
-<link rel="stylesheet" href="/css/ballerina-io.css">
-<link rel="stylesheet" href="/css/ballerina-io-docs.css?200618">
-<link rel="stylesheet" href="/css/ballerina-io-learn-v2.css">
-<link rel="stylesheet" href="/css/ballerina-io-docs.css">
-
-<style>
-    .line-numbers-wrap {
-        display: none;
-    }
-    body .url-link-img {
-        width: 16px;
-    }
-</style>
-<!-- BIO THEME END -->
-
-
-    <script src="../syntax-highlighter/highlighter.js"></script>
+    <link rel="stylesheet" href="../html-template-resources/semantic.min.css">
+    <link rel="stylesheet" href="../html-template-resources/components/icon.min.css">
+    <link rel="stylesheet" href="../html-template-resources/styles/css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/themes/prism.min.css" rel="stylesheet" />
+    <script src="../html-template-resources/semantic.min.js"></script>
 
 </head>
 
 
-<body class="cBallerina-io">
-    <div class="row cBallerina-io-Nav" id="iMainNavigation">
-    <div class="container">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <nav class="navbar">
-                <div>
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                            <span class="sr-only">☰</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="cMobileLogo" href="/"><img src="/img/ballerina-logo.svg" alt="Ballerina"></a>
-                    </div>
-                    <div id="navbar" class="collapse navbar-collapse">
-                        <ul class="nav navbar-nav cTopNav">
-                            <li class="active toctree-l1 cActive" id="learnli"><a class="cBioTopLink" href="/learn">Learn</a>
-                            </li>
-                            <li class="active toctree-l1" id="Eventsli"><a class="cBioTopLink" href="/learn/events">Events</a>
-                            </li>
-                            <li class="toctree-l1"><a class="cBioTopLink" href="https://central.ballerina.io/" target="_blank">Central</a></li>
-                            <li class="toctree-l1" id="openli"><a class="cBioTopLink" href="/community">Community</a>
-                            </li>
-                            <li class="toctree-l1" id="helpli"><a class="cBioTopLink" href="https://blog.ballerina.io">Blog</a>
-                            </li>
-                            <li class="cVersionItem">
-                                <div class="cVersionContainer">
-                                    <!-- <lable class="cVlable">Version</lable> -->
-                                    <select name="versions" id="versions" class="select-css">
-                                        <option value="1.2" data-value="latest">v1.2</option>
-                                        <option value="swan-lake" selected="selected">Swan Lake</option>
-                                        <option value="1.1">v1.1</option>
-                                        <option value="1.0">v1.0</option>
-                                   
-                                    </select>
-                                </div>
-                            </li>
-                            <li class="cSearchMenu"><form class="cSearch-form-inline"><input id="searchTxt" class="form-control-field" type="search" placeholder="Search" aria-label="Search"><a id="searchBtn" href="#" class="cSearchButton"><img src="/img/search.svg"></a></form></li>
-                        </ul>
-                    </div>
+<body>
+    <div class="pusher">
+        <div class="mobile-logo-div">
+            <div class="ui secondary menu">
+                <a href="../index.html">
+                    <img class="mobile-logo" src="../html-template-resources/images/ballerina-logo.png">
+                </a>
+                <div class="right item">
+                    <button class="ui icon button" onclick="toggleMenu()">
+                     <i class="large bars icon"></i>
+                    </button>
                 </div>
-            </nav>
+            </div>
         </div>
-    </div>
+
+        <div class="toc">
+            <div class="ui visible left vertical sidebar menu">
+                <a href="
+                    ../index.html">
+                    <img class="logo" src="../html-template-resources/images/ballerina-logo.png">
+                </a>
+                
+                    
+                        <div class="header capitalize">
+                            
+    Errors
+
+                        </div>
+                        <div class="menu">
+                            
+    
+        <a class="item " href="#AllLoadBalanceEndpointsFailedError">AllLoadBalanceEndpointsFailedError</a>
+    
+        <a class="item " href="#AllRetryAttemptsFailed">AllRetryAttemptsFailed</a>
+    
+        <a class="item " href="#AuthenticationError">AuthenticationError</a>
+    
+        <a class="item " href="#AuthorizationError">AuthorizationError</a>
+    
+        <a class="item " href="#CircuitBreakerConfigError">CircuitBreakerConfigError</a>
+    
+        <a class="item " href="#CookieHandlingError">CookieHandlingError</a>
+    
+        <a class="item " href="#FailoverActionFailedError">FailoverActionFailedError</a>
+    
+        <a class="item " href="#FailoverAllEndpointsFailedError">FailoverAllEndpointsFailedError</a>
+    
+        <a class="item " href="#GenericClientError">GenericClientError</a>
+    
+        <a class="item " href="#GenericListenerError">GenericListenerError</a>
+    
+        <a class="item " href="#Http2ClientError">Http2ClientError</a>
+    
+        <a class="item " href="#IdleTimeoutError">IdleTimeoutError</a>
+    
+        <a class="item " href="#InitializingInboundRequestError">InitializingInboundRequestError</a>
+    
+        <a class="item " href="#InitializingInboundResponseError">InitializingInboundResponseError</a>
+    
+        <a class="item " href="#InitializingOutboundRequestError">InitializingOutboundRequestError</a>
+    
+        <a class="item " href="#InitializingOutboundResponseError">InitializingOutboundResponseError</a>
+    
+        <a class="item " href="#Initiating100ContinueResponseError">Initiating100ContinueResponseError</a>
+    
+        <a class="item " href="#InvalidCookieError">InvalidCookieError</a>
+    
+        <a class="item " href="#MaximumWaitTimeExceededError">MaximumWaitTimeExceededError</a>
+    
+        <a class="item " href="#ReadingInboundRequestBodyError">ReadingInboundRequestBodyError</a>
+    
+        <a class="item " href="#ReadingInboundRequestHeadersError">ReadingInboundRequestHeadersError</a>
+    
+        <a class="item " href="#ReadingInboundResponseBodyError">ReadingInboundResponseBodyError</a>
+    
+        <a class="item " href="#ReadingInboundResponseHeadersError">ReadingInboundResponseHeadersError</a>
+    
+        <a class="item " href="#SslError">SslError</a>
+    
+        <a class="item " href="#UnsupportedActionError">UnsupportedActionError</a>
+    
+        <a class="item " href="#UpstreamServiceUnavailableError">UpstreamServiceUnavailableError</a>
+    
+        <a class="item " href="#Writing100ContinueResponseError">Writing100ContinueResponseError</a>
+    
+        <a class="item " href="#WritingOutboundRequestBodyError">WritingOutboundRequestBodyError</a>
+    
+        <a class="item " href="#WritingOutboundRequestHeadersError">WritingOutboundRequestHeadersError</a>
+    
+        <a class="item " href="#WritingOutboundResponseBodyError">WritingOutboundResponseBodyError</a>
+    
+        <a class="item " href="#WritingOutboundResponseHeadersError">WritingOutboundResponseHeadersError</a>
+    
+        <a class="item " href="#WsConnectionClosureError">WsConnectionClosureError</a>
+    
+        <a class="item " href="#WsConnectionError">WsConnectionError</a>
+    
+        <a class="item " href="#WsGenericError">WsGenericError</a>
+    
+        <a class="item " href="#WsInvalidContinuationFrameError">WsInvalidContinuationFrameError</a>
+    
+        <a class="item " href="#WsInvalidHandshakeError">WsInvalidHandshakeError</a>
+    
+        <a class="item " href="#WsPayloadTooBigError">WsPayloadTooBigError</a>
+    
+        <a class="item " href="#WsProtocolError">WsProtocolError</a>
+    
+
+                        </div>
+                        <div class="ui divider"></div>
+                    
+                    <div class="header">
+                        <a class="capitalize" href="../http/index.html">
+                            http Module
+                        </a>
+                    </div>
+                    <div class="menu">
+    
+        
+            <a class="item" data="records" href="../http/index.html#records">Records</a>
+        
+    
+    
+        
+            <a class="item" data="objects" href="../http/index.html#objects">Objects</a>
+        
+    
+    
+        <a class="item" data="clients" href="../http/index.html#clients">Clients</a>
+    
+    
+        <a class="item" data="listeners" href="../http/index.html#listeners">Listeners</a>
+    
+    
+        <a class="item" data="functions" href="../http/index.html#functions">Functions</a>
+    
+    
+        <a class="item" data="constants" href="../http/index.html#constants">Constants</a>
+    
+    
+        <a class="item" data="annotations" href="../http/index.html#annotations">Annotations</a>
+    
+    
+        <a class="item" ata="types" href="../http/index.html#types">Types</a>
+    
+    
+        <a class="item" data="errors" href="../http/index.html#errors">Errors</a>
+    
+    <div class="ui divider"></div>
 </div>
 
-    <div class="row cBallerina-io-Gray-row">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 cBallerina-io-Home-Middle-col">
+                    <div class="header capitalize">
+                        Other Modules
+                    </div>
+                    <div id="modules-list" class="menu"></div>
+                    <div class="ui divider"></div>
+                
+            </div>
+        </div>
 
-                    <nav class="cLeftNavContainer">
-                        <ul class="cMainLeftNav">
-                            
-                            <li class="sub-menu cTopicURL OpenUL">
-                                <div class="cLeftMenuLink cTopiAtag">
-    Errors
-</div>
-                                <ul class="sub-ul Open-submenu" style="display: none;">
-                                    
-    
-        <li  onclick="menuLinkClick()"></li>
-            <a href="#AllLoadBalanceEndpointsFailedError">AllLoadBalanceEndpointsFailedError</a>
-        </li>
-    
-        <li  onclick="menuLinkClick()"></li>
-            <a href="#AllRetryAttemptsFailed">AllRetryAttemptsFailed</a>
-        </li>
-    
-        <li  onclick="menuLinkClick()"></li>
-            <a href="#AuthenticationError">AuthenticationError</a>
-        </li>
-    
-        <li  onclick="menuLinkClick()"></li>
-            <a href="#AuthorizationError">AuthorizationError</a>
-        </li>
-    
-        <li  onclick="menuLinkClick()"></li>
-            <a href="#CircuitBreakerConfigError">CircuitBreakerConfigError</a>
-        </li>
-    
-        <li  onclick="menuLinkClick()"></li>
-            <a href="#CookieHandlingError">CookieHandlingError</a>
-        </li>
-    
-        <li  onclick="menuLinkClick()"></li>
-            <a href="#FailoverActionFailedError">FailoverActionFailedError</a>
-        </li>
-    
-        <li  onclick="menuLinkClick()"></li>
-            <a href="#FailoverAllEndpointsFailedError">FailoverAllEndpointsFailedError</a>
-        </li>
-    
-        <li  onclick="menuLinkClick()"></li>
-            <a href="#GenericClientError">GenericClientError</a>
-        </li>
-    
-        <li  onclick="menuLinkClick()"></li>
-            <a href="#GenericListenerError">GenericListenerError</a>
-        </li>
-    
-        <li  onclick="menuLinkClick()"></li>
-            <a href="#Http2ClientError">Http2ClientError</a>
-        </li>
-    
-        <li  onclick="menuLinkClick()"></li>
-            <a href="#IdleTimeoutError">IdleTimeoutError</a>
-        </li>
-    
-        <li  onclick="menuLinkClick()"></li>
-            <a href="#InitializingInboundRequestError">InitializingInboundRequestError</a>
-        </li>
-    
-        <li  onclick="menuLinkClick()"></li>
-            <a href="#InitializingInboundResponseError">InitializingInboundResponseError</a>
-        </li>
-    
-        <li  onclick="menuLinkClick()"></li>
-            <a href="#InitializingOutboundRequestError">InitializingOutboundRequestError</a>
-        </li>
-    
-        <li  onclick="menuLinkClick()"></li>
-            <a href="#InitializingOutboundResponseError">InitializingOutboundResponseError</a>
-        </li>
-    
-        <li  onclick="menuLinkClick()"></li>
-            <a href="#Initiating100ContinueResponseError">Initiating100ContinueResponseError</a>
-        </li>
-    
-        <li  onclick="menuLinkClick()"></li>
-            <a href="#InvalidCookieError">InvalidCookieError</a>
-        </li>
-    
-        <li  onclick="menuLinkClick()"></li>
-            <a href="#LoadBalanceActionError">LoadBalanceActionError</a>
-        </li>
-    
-        <li  onclick="menuLinkClick()"></li>
-            <a href="#MaximumWaitTimeExceededError">MaximumWaitTimeExceededError</a>
-        </li>
-    
-        <li  onclick="menuLinkClick()"></li>
-            <a href="#ReadingInboundRequestBodyError">ReadingInboundRequestBodyError</a>
-        </li>
-    
-        <li  onclick="menuLinkClick()"></li>
-            <a href="#ReadingInboundRequestHeadersError">ReadingInboundRequestHeadersError</a>
-        </li>
-    
-        <li  onclick="menuLinkClick()"></li>
-            <a href="#ReadingInboundResponseBodyError">ReadingInboundResponseBodyError</a>
-        </li>
-    
-        <li  onclick="menuLinkClick()"></li>
-            <a href="#ReadingInboundResponseHeadersError">ReadingInboundResponseHeadersError</a>
-        </li>
-    
-        <li  onclick="menuLinkClick()"></li>
-            <a href="#SslError">SslError</a>
-        </li>
-    
-        <li  onclick="menuLinkClick()"></li>
-            <a href="#UnsupportedActionError">UnsupportedActionError</a>
-        </li>
-    
-        <li  onclick="menuLinkClick()"></li>
-            <a href="#UpstreamServiceUnavailableError">UpstreamServiceUnavailableError</a>
-        </li>
-    
-        <li  onclick="menuLinkClick()"></li>
-            <a href="#Writing100ContinueResponseError">Writing100ContinueResponseError</a>
-        </li>
-    
-        <li  onclick="menuLinkClick()"></li>
-            <a href="#WritingOutboundRequestBodyError">WritingOutboundRequestBodyError</a>
-        </li>
-    
-        <li  onclick="menuLinkClick()"></li>
-            <a href="#WritingOutboundRequestHeadersError">WritingOutboundRequestHeadersError</a>
-        </li>
-    
-        <li  onclick="menuLinkClick()"></li>
-            <a href="#WritingOutboundResponseBodyError">WritingOutboundResponseBodyError</a>
-        </li>
-    
-        <li  onclick="menuLinkClick()"></li>
-            <a href="#WritingOutboundResponseHeadersError">WritingOutboundResponseHeadersError</a>
-        </li>
-    
-        <li  onclick="menuLinkClick()"></li>
-            <a href="#WsConnectionClosureError">WsConnectionClosureError</a>
-        </li>
-    
-        <li  onclick="menuLinkClick()"></li>
-            <a href="#WsConnectionError">WsConnectionError</a>
-        </li>
-    
-        <li  onclick="menuLinkClick()"></li>
-            <a href="#WsGenericError">WsGenericError</a>
-        </li>
-    
-        <li  onclick="menuLinkClick()"></li>
-            <a href="#WsInvalidContinuationFrameError">WsInvalidContinuationFrameError</a>
-        </li>
-    
-        <li  onclick="menuLinkClick()"></li>
-            <a href="#WsInvalidHandshakeError">WsInvalidHandshakeError</a>
-        </li>
-    
-        <li  onclick="menuLinkClick()"></li>
-            <a href="#WsPayloadTooBigError">WsPayloadTooBigError</a>
-        </li>
-    
-        <li  onclick="menuLinkClick()"></li>
-            <a href="#WsProtocolError">WsProtocolError</a>
-        </li>
-    
-
-                                </ul>
-                            </li>
-                            
-                            <li class="sub-menu cTopicURL">
-    <div class="cLeftMenuLink cTopiAtag">http</div>
-    <ul class="sub-ul Open-submenu" style="display: none;">
-        
-        <li>
-            <a data="records" href="../http/index.html#records">Records</a>
-        </li>
-        
-        
-        <li>
-            <a data="objects" href="../http/index.html#objects">Objects</a>
-        </li>
-        
-        
-        <li>
-            <a data="clients" href="../http/index.html#clients">Clients</a>
-        </li>
-        
-        
-        <li>
-            <a data="listeners" href="../http/index.html#listeners">Listeners</a>
-        </li>
-        
-        
-        <li>
-            <a data="functions" href="../http/index.html#functions">Functions</a>
-        </li>
-        
-        
-        <li>
-            <a data="constants" href="../http/index.html#constants">Constants</a>
-        </li>
-        
-        
-        <li>
-            <a data="annotations" href="../http/index.html#annotations">Annotations</a>
-        </li>
-        
-        
-        <li>
-            <a data="types" href="../http/index.html#types">Types</a>
-        </li>
-        
-        
-        <li>
-            <a data="errors" href="../http/index.html#errors">Errors</a>
-        </li>
-        
-    </ul>
-</li>
-                        </ul>
-                    </nav>
-                </div>
-
-
-                <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 cBallerina-io-Home-Middle-col">
-                    <div id="search-impl" class="search-bar"></div>
-                    <div id="main" class="cBlallerina-io-docs-content-container">
-                        <div class="col-xs-12 col-sm-12" style="padding: 0;">
-                            <div class="col-md-12 col-lg-12 cBallerina-io-breadcrumbs">
-                                <nav class="breadcrumbs bootstrap hidden-sm-down">
-                                    <ul id="breadcrumb-list" class=" cBalleinaBreadcrumbs list-unstyled  wy-breadcrumbs"
-                                        vocab="http://schema.org/" typeof="BreadcrumbList">
-                                        <li><a href="/">Home</a></li>
-                                        <li>/</li>
-                                        <li><a href="/swan-lake/">Swan lake</a></li>
-                                        <li>/</li>
-                                        <li><a href="/swan-lake/learn/">Learn</a></li>
-                                        <li>/</li>
-                                        <li><a href="..//index.html">API Docs</a></li>
-                                        <li>/</li>
-                                        <li><a href="../http/index.html">http</a></li>
-                                        
-                                        <li>/</li>
-                                        <li><a
-                                                href="../http/index.html#errors">
-    Errors
-</a>
-                                        </li>
-                                        
-                                        
-
-                                    </ul>
-                                </nav>
-                                <style type="text/css">
-                                    .cBalleinaBreadcrumbs li {
-                                        margin-right: 10px;
-                                    }
-                                </style>
-                                <div class="cVersionContainer"></div>
+        <div class="content">
+            <div class="row nav-bar">
+                <div class="ui secondary menu">
+                    <div class="search-bar">
+                        <div class="ui category search item search-bar">
+                            <i class="search link icon"></i>
+                            <div class="ui transparent icon input">
+                                <input class="prompt" id="searchBox" type="text" placeholder="Search API Docs..."/>
                             </div>
                         </div>
-                        <div class="wy-nav-content">
-                            <div class="rst-content">
-                                <div role="main">
-                                    <div class="section">
-                                        <h1>
-                                            
-                                            
-    Errors
-
-                                            
-                                        </h1>
-                                        
-    <div class="errors">
-        <div class="data-wrapper">
-            
-                <div class="params-listing">
-                    <ul>
-                        <li>
-                            <b >AllLoadBalanceEndpointsFailedError </b>
-                            <span class="type"></span>
-                            
-                        </li>
-                        <li>
-                            
-                            <p>Represents a client error that occurred due to all the load balance endpoint failure</p>
-
-                        </li>
-                    </ul>
+                    </div>
+                    <div class="right menu">
+                        <a class="item active">Learn</a>
+                        <a class="item">Events</a>
+                        <a class="item">Central</a>
+                        <a class="item">Community</a>
+                        <a class="item">Blog</a>
+                        <div class="ui dropdown item ballerina" id="version-picker">
+                            Version
+                            <i class="dropdown icon"></i>
+                            <div class="menu">
+                                <a class="item" value="1.0">1.0</a>
+                                <a class="item" value="1.1">1.1</a>
+                                <a class="item" value="1.2">1.2</a>
+                                <a class="item" value="swan-lake">Swan Lake</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            
-                <div class="params-listing">
-                    <ul>
-                        <li>
-                            <b >AllRetryAttemptsFailed </b>
-                            <span class="type"></span>
-                            
-                        </li>
-                        <li>
-                            
-                            <p>Represents a client error that occurred due to all the the retry attempts failure</p>
-
-                        </li>
-                    </ul>
-                </div>
-            
-                <div class="params-listing">
-                    <ul>
-                        <li>
-                            <b >AuthenticationError </b>
-                            <span class="type"></span>
-                            
-                        </li>
-                        <li>
-                            
-                            <p>Represents a listener error that occurred due to inbound request authentication failure</p>
-
-                        </li>
-                    </ul>
-                </div>
-            
-                <div class="params-listing">
-                    <ul>
-                        <li>
-                            <b >AuthorizationError </b>
-                            <span class="type"></span>
-                            
-                        </li>
-                        <li>
-                            
-                            <p>Represents a listener error that occurred due to inbound request authorization failure</p>
-
-                        </li>
-                    </ul>
-                </div>
-            
-                <div class="params-listing">
-                    <ul>
-                        <li>
-                            <b >CircuitBreakerConfigError </b>
-                            <span class="type"></span>
-                            
-                        </li>
-                        <li>
-                            
-                            <p>Represents a client error that occurred due to circuit breaker configuration error.</p>
-
-                        </li>
-                    </ul>
-                </div>
-            
-                <div class="params-listing">
-                    <ul>
-                        <li>
-                            <b >CookieHandlingError </b>
-                            <span class="type"></span>
-                            
-                        </li>
-                        <li>
-                            
-                            <p>Represents a cookie error that occurred when using the cookies</p>
-
-                        </li>
-                    </ul>
-                </div>
-            
-                <div class="params-listing">
-                    <ul>
-                        <li>
-                            <b >FailoverActionFailedError </b>
-                            <span class="type"></span>
-                            
-                        </li>
-                        <li>
-                            
-                            <p>Represents a client error that occurred due to failover action failure</p>
-
-                        </li>
-                    </ul>
-                </div>
-            
-                <div class="params-listing">
-                    <ul>
-                        <li>
-                            <b >FailoverAllEndpointsFailedError </b>
-                            <span class="type"></span>
-                            
-                        </li>
-                        <li>
-                            
-                            <p>Represents a client error that occurred due to all the failover endpoint failure</p>
-
-                        </li>
-                    </ul>
-                </div>
-            
-                <div class="params-listing">
-                    <ul>
-                        <li>
-                            <b >GenericClientError </b>
-                            <span class="type"></span>
-                            
-                        </li>
-                        <li>
-                            
-                            <p>Represents a generic client error</p>
-
-                        </li>
-                    </ul>
-                </div>
-            
-                <div class="params-listing">
-                    <ul>
-                        <li>
-                            <b >GenericListenerError </b>
-                            <span class="type"></span>
-                            
-                        </li>
-                        <li>
-                            
-                            <p>Represents a generic listener error</p>
-
-                        </li>
-                    </ul>
-                </div>
-            
-                <div class="params-listing">
-                    <ul>
-                        <li>
-                            <b >Http2ClientError </b>
-                            <span class="type"></span>
-                            
-                        </li>
-                        <li>
-                            
-                            <p>Represents an HTTP/2 client generic error</p>
-
-                        </li>
-                    </ul>
-                </div>
-            
-                <div class="params-listing">
-                    <ul>
-                        <li>
-                            <b >IdleTimeoutError </b>
-                            <span class="type"></span>
-                            
-                        </li>
-                        <li>
-                            
-                            <p>Represents the error that triggered upon a request/response idle timeout</p>
-
-                        </li>
-                    </ul>
-                </div>
-            
-                <div class="params-listing">
-                    <ul>
-                        <li>
-                            <b >InitializingInboundRequestError </b>
-                            <span class="type"></span>
-                            
-                        </li>
-                        <li>
-                            
-                            <p>Represents a listener error that occurred due to inbound request initialization failure</p>
-
-                        </li>
-                    </ul>
-                </div>
-            
-                <div class="params-listing">
-                    <ul>
-                        <li>
-                            <b >InitializingInboundResponseError </b>
-                            <span class="type"></span>
-                            
-                        </li>
-                        <li>
-                            
-                            <p>Represents a client error that occurred due to inbound response initialization failure</p>
-
-                        </li>
-                    </ul>
-                </div>
-            
-                <div class="params-listing">
-                    <ul>
-                        <li>
-                            <b >InitializingOutboundRequestError </b>
-                            <span class="type"></span>
-                            
-                        </li>
-                        <li>
-                            
-                            <p>Represents a client error that occurred due to outbound request initialization failure</p>
-
-                        </li>
-                    </ul>
-                </div>
-            
-                <div class="params-listing">
-                    <ul>
-                        <li>
-                            <b >InitializingOutboundResponseError </b>
-                            <span class="type"></span>
-                            
-                        </li>
-                        <li>
-                            
-                            <p>Represents a listener error that occurred due to outbound response initialization failure</p>
-
-                        </li>
-                    </ul>
-                </div>
-            
-                <div class="params-listing">
-                    <ul>
-                        <li>
-                            <b >Initiating100ContinueResponseError </b>
-                            <span class="type"></span>
-                            
-                        </li>
-                        <li>
-                            
-                            <p>Represents an error that occurred due to 100 continue response initialization failure</p>
-
-                        </li>
-                    </ul>
-                </div>
-            
-                <div class="params-listing">
-                    <ul>
-                        <li>
-                            <b >InvalidCookieError </b>
-                            <span class="type"></span>
-                            
-                        </li>
-                        <li>
-                            
-                            <p>Represents a cookie error that occurred when sending cookies in the response</p>
-
-                        </li>
-                    </ul>
-                </div>
-            
-                <div class="params-listing">
-                    <ul>
-                        <li>
-                            <b >LoadBalanceActionError </b>
-                            <span class="type"><a href="../http/records/LoadBalanceActionErrorData.html">LoadBalanceActionErrorData</a></span>
-                            
-                        </li>
-                        <li>
-                            
-                            <p>Represents an error occurred in an remote function of the Load Balance connector.</p>
-
-                        </li>
-                    </ul>
-                </div>
-            
-                <div class="params-listing">
-                    <ul>
-                        <li>
-                            <b >MaximumWaitTimeExceededError </b>
-                            <span class="type"></span>
-                            
-                        </li>
-                        <li>
-                            
-                            <p>Represents a client error that occurred exceeding maximum wait time</p>
-
-                        </li>
-                    </ul>
-                </div>
-            
-                <div class="params-listing">
-                    <ul>
-                        <li>
-                            <b >ReadingInboundRequestBodyError </b>
-                            <span class="type"></span>
-                            
-                        </li>
-                        <li>
-                            
-                            <p>Represents a listener error that occurred while writing the inbound request entity body</p>
-
-                        </li>
-                    </ul>
-                </div>
-            
-                <div class="params-listing">
-                    <ul>
-                        <li>
-                            <b >ReadingInboundRequestHeadersError </b>
-                            <span class="type"></span>
-                            
-                        </li>
-                        <li>
-                            
-                            <p>Represents a listener error that occurred while reading inbound request headers</p>
-
-                        </li>
-                    </ul>
-                </div>
-            
-                <div class="params-listing">
-                    <ul>
-                        <li>
-                            <b >ReadingInboundResponseBodyError </b>
-                            <span class="type"></span>
-                            
-                        </li>
-                        <li>
-                            
-                            <p>Represents a client error that occurred while reading inbound response entity body</p>
-
-                        </li>
-                    </ul>
-                </div>
-            
-                <div class="params-listing">
-                    <ul>
-                        <li>
-                            <b >ReadingInboundResponseHeadersError </b>
-                            <span class="type"></span>
-                            
-                        </li>
-                        <li>
-                            
-                            <p>Represents a client error that occurred while reading inbound response headers</p>
-
-                        </li>
-                    </ul>
-                </div>
-            
-                <div class="params-listing">
-                    <ul>
-                        <li>
-                            <b >SslError </b>
-                            <span class="type"></span>
-                            
-                        </li>
-                        <li>
-                            
-                            <p>Represents a client error that occurred due to SSL failure</p>
-
-                        </li>
-                    </ul>
-                </div>
-            
-                <div class="params-listing">
-                    <ul>
-                        <li>
-                            <b >UnsupportedActionError </b>
-                            <span class="type"></span>
-                            
-                        </li>
-                        <li>
-                            
-                            <p>Represents a client error that occurred due to unsupported action invocation</p>
-
-                        </li>
-                    </ul>
-                </div>
-            
-                <div class="params-listing">
-                    <ul>
-                        <li>
-                            <b >UpstreamServiceUnavailableError </b>
-                            <span class="type"></span>
-                            
-                        </li>
-                        <li>
-                            
-                            <p>Represents a client error that occurred due to upstream service unavailability</p>
-
-                        </li>
-                    </ul>
-                </div>
-            
-                <div class="params-listing">
-                    <ul>
-                        <li>
-                            <b >Writing100ContinueResponseError </b>
-                            <span class="type"></span>
-                            
-                        </li>
-                        <li>
-                            
-                            <p>Represents an error that occurred while writing 100 continue response</p>
-
-                        </li>
-                    </ul>
-                </div>
-            
-                <div class="params-listing">
-                    <ul>
-                        <li>
-                            <b >WritingOutboundRequestBodyError </b>
-                            <span class="type"></span>
-                            
-                        </li>
-                        <li>
-                            
-                            <p>Represents a client error that occurred while writing outbound request entity body</p>
-
-                        </li>
-                    </ul>
-                </div>
-            
-                <div class="params-listing">
-                    <ul>
-                        <li>
-                            <b >WritingOutboundRequestHeadersError </b>
-                            <span class="type"></span>
-                            
-                        </li>
-                        <li>
-                            
-                            <p>Represents a client error that occurred while writing outbound request headers</p>
-
-                        </li>
-                    </ul>
-                </div>
-            
-                <div class="params-listing">
-                    <ul>
-                        <li>
-                            <b >WritingOutboundResponseBodyError </b>
-                            <span class="type"></span>
-                            
-                        </li>
-                        <li>
-                            
-                            <p>Represents a listener error that occurred while writing outbound response entity body</p>
-
-                        </li>
-                    </ul>
-                </div>
-            
-                <div class="params-listing">
-                    <ul>
-                        <li>
-                            <b >WritingOutboundResponseHeadersError </b>
-                            <span class="type"></span>
-                            
-                        </li>
-                        <li>
-                            
-                            <p>Represents a listener error that occurred while writing outbound response headers</p>
-
-                        </li>
-                    </ul>
-                </div>
-            
-                <div class="params-listing">
-                    <ul>
-                        <li>
-                            <b >WsConnectionClosureError </b>
-                            <span class="type"></span>
-                            
-                        </li>
-                        <li>
-                            
-                            <p>Raised during failures in connection closure</p>
-
-                        </li>
-                    </ul>
-                </div>
-            
-                <div class="params-listing">
-                    <ul>
-                        <li>
-                            <b >WsConnectionError </b>
-                            <span class="type"></span>
-                            
-                        </li>
-                        <li>
-                            
-                            <p>Raised during connection failures</p>
-
-                        </li>
-                    </ul>
-                </div>
-            
-                <div class="params-listing">
-                    <ul>
-                        <li>
-                            <b >WsGenericError </b>
-                            <span class="type"></span>
-                            
-                        </li>
-                        <li>
-                            
-                            <p>Raised for errors not captured by the specific errors</p>
-
-                        </li>
-                    </ul>
-                </div>
-            
-                <div class="params-listing">
-                    <ul>
-                        <li>
-                            <b >WsInvalidContinuationFrameError </b>
-                            <span class="type"></span>
-                            
-                        </li>
-                        <li>
-                            
-                            <p>Raised when an out of order/invalid continuation frame is received</p>
-
-                        </li>
-                    </ul>
-                </div>
-            
-                <div class="params-listing">
-                    <ul>
-                        <li>
-                            <b >WsInvalidHandshakeError </b>
-                            <span class="type"></span>
-                            
-                        </li>
-                        <li>
-                            
-                            <p>Raised during the handshake when the WebSocket upgrade fails</p>
-
-                        </li>
-                    </ul>
-                </div>
-            
-                <div class="params-listing">
-                    <ul>
-                        <li>
-                            <b >WsPayloadTooBigError </b>
-                            <span class="type"></span>
-                            
-                        </li>
-                        <li>
-                            
-                            <p>Raised when receiving a frame with a payload exceeding the maximum size</p>
-
-                        </li>
-                    </ul>
-                </div>
-            
-                <div class="params-listing">
-                    <ul>
-                        <li>
-                            <b >WsProtocolError </b>
-                            <span class="type"></span>
-                            
-                        </li>
-                        <li>
-                            
-                            <p>Raised when the other side breaks the protocol</p>
-
-                        </li>
-                    </ul>
-                </div>
-            
-        </div>
-    </div>
-
+            </div>
+            <div class="main-content">
+                <div id="mobMenu" class="mob-menu">
+                    <div class="ui stackable secondary menu">
+                        <div class="item">
+                            <div class="search-bar">
+                                <div class="ui category search item search-bar">
+                                    <i class="search link icon"></i>
+                                    <div class="ui transparent icon input">
+                                        <input class="prompt" id="searchBoxMob" type="text" placeholder="Search API Docs..."/>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        
+                            
+                                <div class="ui dropdown item capitalize">
+                                    
+    Errors
+<i class="dropdown icon"></i>
+                                    <div class="menu">
+                                        
+    
+        <a class="item " href="#AllLoadBalanceEndpointsFailedError">AllLoadBalanceEndpointsFailedError</a>
+    
+        <a class="item " href="#AllRetryAttemptsFailed">AllRetryAttemptsFailed</a>
+    
+        <a class="item " href="#AuthenticationError">AuthenticationError</a>
+    
+        <a class="item " href="#AuthorizationError">AuthorizationError</a>
+    
+        <a class="item " href="#CircuitBreakerConfigError">CircuitBreakerConfigError</a>
+    
+        <a class="item " href="#CookieHandlingError">CookieHandlingError</a>
+    
+        <a class="item " href="#FailoverActionFailedError">FailoverActionFailedError</a>
+    
+        <a class="item " href="#FailoverAllEndpointsFailedError">FailoverAllEndpointsFailedError</a>
+    
+        <a class="item " href="#GenericClientError">GenericClientError</a>
+    
+        <a class="item " href="#GenericListenerError">GenericListenerError</a>
+    
+        <a class="item " href="#Http2ClientError">Http2ClientError</a>
+    
+        <a class="item " href="#IdleTimeoutError">IdleTimeoutError</a>
+    
+        <a class="item " href="#InitializingInboundRequestError">InitializingInboundRequestError</a>
+    
+        <a class="item " href="#InitializingInboundResponseError">InitializingInboundResponseError</a>
+    
+        <a class="item " href="#InitializingOutboundRequestError">InitializingOutboundRequestError</a>
+    
+        <a class="item " href="#InitializingOutboundResponseError">InitializingOutboundResponseError</a>
+    
+        <a class="item " href="#Initiating100ContinueResponseError">Initiating100ContinueResponseError</a>
+    
+        <a class="item " href="#InvalidCookieError">InvalidCookieError</a>
+    
+        <a class="item " href="#MaximumWaitTimeExceededError">MaximumWaitTimeExceededError</a>
+    
+        <a class="item " href="#ReadingInboundRequestBodyError">ReadingInboundRequestBodyError</a>
+    
+        <a class="item " href="#ReadingInboundRequestHeadersError">ReadingInboundRequestHeadersError</a>
+    
+        <a class="item " href="#ReadingInboundResponseBodyError">ReadingInboundResponseBodyError</a>
+    
+        <a class="item " href="#ReadingInboundResponseHeadersError">ReadingInboundResponseHeadersError</a>
+    
+        <a class="item " href="#SslError">SslError</a>
+    
+        <a class="item " href="#UnsupportedActionError">UnsupportedActionError</a>
+    
+        <a class="item " href="#UpstreamServiceUnavailableError">UpstreamServiceUnavailableError</a>
+    
+        <a class="item " href="#Writing100ContinueResponseError">Writing100ContinueResponseError</a>
+    
+        <a class="item " href="#WritingOutboundRequestBodyError">WritingOutboundRequestBodyError</a>
+    
+        <a class="item " href="#WritingOutboundRequestHeadersError">WritingOutboundRequestHeadersError</a>
+    
+        <a class="item " href="#WritingOutboundResponseBodyError">WritingOutboundResponseBodyError</a>
+    
+        <a class="item " href="#WritingOutboundResponseHeadersError">WritingOutboundResponseHeadersError</a>
+    
+        <a class="item " href="#WsConnectionClosureError">WsConnectionClosureError</a>
+    
+        <a class="item " href="#WsConnectionError">WsConnectionError</a>
+    
+        <a class="item " href="#WsGenericError">WsGenericError</a>
+    
+        <a class="item " href="#WsInvalidContinuationFrameError">WsInvalidContinuationFrameError</a>
+    
+        <a class="item " href="#WsInvalidHandshakeError">WsInvalidHandshakeError</a>
+    
+        <a class="item " href="#WsPayloadTooBigError">WsPayloadTooBigError</a>
+    
+        <a class="item " href="#WsProtocolError">WsProtocolError</a>
+    
+
+                                    </div>
+                                </div>
+                            
+                            <div class="ui dropdown item capitalize">
+                                http Module <i class="dropdown icon"></i>
+                                <div class="menu">
+    
+        
+            <a class="item" data="records" href="../http/index.html#records">Records</a>
+        
+    
+    
+        
+            <a class="item" data="objects" href="../http/index.html#objects">Objects</a>
+        
+    
+    
+        <a class="item" data="clients" href="../http/index.html#clients">Clients</a>
+    
+    
+        <a class="item" data="listeners" href="../http/index.html#listeners">Listeners</a>
+    
+    
+        <a class="item" data="functions" href="../http/index.html#functions">Functions</a>
+    
+    
+        <a class="item" data="constants" href="../http/index.html#constants">Constants</a>
+    
+    
+        <a class="item" data="annotations" href="../http/index.html#annotations">Annotations</a>
+    
+    
+        <a class="item" ata="types" href="../http/index.html#types">Types</a>
+    
+    
+        <a class="item" data="errors" href="../http/index.html#errors">Errors</a>
+    
+    <div class="ui divider"></div>
+</div>
+
+                            </div>
+                            <div class="ui dropdown item">
+                                Other Modules <i class="dropdown icon"></i>
+                                <div id="modules-list-mob" class="menu"></div>
+                            </div>
+                        
+
+                            <div class="ui dropdown item" id="version-picker-mob">
+                                Version <i class="dropdown icon"></i>
+                                <div class="menu">
+                                    <a class="item" value="1.0">1.0</a>
+                                    <a class="item" value="1.1">1.1</a>
+                                    <a class="item" value="1.2">1.2</a>
+                                    <a class="item" value="swan-lake">Swan Lake</a>
+                                </div>
+                            </div>
+                            <div class="ui dropdown item ballerina">
+                                Ballerina <i class="dropdown icon"></i>
+                                <div class="menu">
+                                    <a class="item active">Learn</a>
+                                    <a class="item">Events</a>
+                                    <a class="item">Central</a>
+                                    <a class="item">Community</a>
+                                </div>
+                            </div>
+
+                    </div>
+                </div>
+                <div id="search-impl"></div>
+                <div id="main">
+                    
+                        <div class="ui breadcrumb">
+                            <a class="section" href="
+                                 ../index.html">Modules</a>
+                            <i class="right angle icon divider"></i>
+                            <a class="section capitalize " href="../http/index.html">http</a>
+                            
+                                <i class="right angle icon divider"></i>
+                                <a class="section active" href="../http/index.html#errors">
+    Errors
+</a>
+                                
+                            
+                        </div>
+                    
+
+                    <div class="ui very padded segment module-data">
+                            <h1 class="capitalize">
+    Errors
+
+                            
+                            </h1>
+                        
+    <div class="errors">
+        <div class="fields-listing">
+            <ul>
+                
+                    <li id="AllLoadBalanceEndpointsFailedError">
+                        <b >AllLoadBalanceEndpointsFailedError </b>
+                        <span class="type"></span>
+                        
+                    </li>
+                    
+                    <p>Represents a client error that occurred due to all the load balance endpoint failure</p>
+
+                
+                    <li id="AllRetryAttemptsFailed">
+                        <b >AllRetryAttemptsFailed </b>
+                        <span class="type"></span>
+                        
+                    </li>
+                    
+                    <p>Represents a client error that occurred due to all the the retry attempts failure</p>
+
+                
+                    <li id="AuthenticationError">
+                        <b >AuthenticationError </b>
+                        <span class="type"></span>
+                        
+                    </li>
+                    
+                    <p>Represents a listener error that occurred due to inbound request authentication failure</p>
+
+                
+                    <li id="AuthorizationError">
+                        <b >AuthorizationError </b>
+                        <span class="type"></span>
+                        
+                    </li>
+                    
+                    <p>Represents a listener error that occurred due to inbound request authorization failure</p>
+
+                
+                    <li id="CircuitBreakerConfigError">
+                        <b >CircuitBreakerConfigError </b>
+                        <span class="type"></span>
+                        
+                    </li>
+                    
+                    <p>Represents a client error that occurred due to circuit breaker configuration error.</p>
+
+                
+                    <li id="CookieHandlingError">
+                        <b >CookieHandlingError </b>
+                        <span class="type"></span>
+                        
+                    </li>
+                    
+                    <p>Represents a cookie error that occurred when using the cookies</p>
+
+                
+                    <li id="FailoverActionFailedError">
+                        <b >FailoverActionFailedError </b>
+                        <span class="type"></span>
+                        
+                    </li>
+                    
+                    <p>Represents a client error that occurred due to failover action failure</p>
+
+                
+                    <li id="FailoverAllEndpointsFailedError">
+                        <b >FailoverAllEndpointsFailedError </b>
+                        <span class="type"></span>
+                        
+                    </li>
+                    
+                    <p>Represents a client error that occurred due to all the failover endpoint failure</p>
+
+                
+                    <li id="GenericClientError">
+                        <b >GenericClientError </b>
+                        <span class="type"></span>
+                        
+                    </li>
+                    
+                    <p>Represents a generic client error</p>
+
+                
+                    <li id="GenericListenerError">
+                        <b >GenericListenerError </b>
+                        <span class="type"></span>
+                        
+                    </li>
+                    
+                    <p>Represents a generic listener error</p>
+
+                
+                    <li id="Http2ClientError">
+                        <b >Http2ClientError </b>
+                        <span class="type"></span>
+                        
+                    </li>
+                    
+                    <p>Represents an HTTP/2 client generic error</p>
+
+                
+                    <li id="IdleTimeoutError">
+                        <b >IdleTimeoutError </b>
+                        <span class="type"></span>
+                        
+                    </li>
+                    
+                    <p>Represents the error that triggered upon a request/response idle timeout</p>
+
+                
+                    <li id="InitializingInboundRequestError">
+                        <b >InitializingInboundRequestError </b>
+                        <span class="type"></span>
+                        
+                    </li>
+                    
+                    <p>Represents a listener error that occurred due to inbound request initialization failure</p>
+
+                
+                    <li id="InitializingInboundResponseError">
+                        <b >InitializingInboundResponseError </b>
+                        <span class="type"></span>
+                        
+                    </li>
+                    
+                    <p>Represents a client error that occurred due to inbound response initialization failure</p>
+
+                
+                    <li id="InitializingOutboundRequestError">
+                        <b >InitializingOutboundRequestError </b>
+                        <span class="type"></span>
+                        
+                    </li>
+                    
+                    <p>Represents a client error that occurred due to outbound request initialization failure</p>
+
+                
+                    <li id="InitializingOutboundResponseError">
+                        <b >InitializingOutboundResponseError </b>
+                        <span class="type"></span>
+                        
+                    </li>
+                    
+                    <p>Represents a listener error that occurred due to outbound response initialization failure</p>
+
+                
+                    <li id="Initiating100ContinueResponseError">
+                        <b >Initiating100ContinueResponseError </b>
+                        <span class="type"></span>
+                        
+                    </li>
+                    
+                    <p>Represents an error that occurred due to 100 continue response initialization failure</p>
+
+                
+                    <li id="InvalidCookieError">
+                        <b >InvalidCookieError </b>
+                        <span class="type"></span>
+                        
+                    </li>
+                    
+                    <p>Represents a cookie error that occurred when sending cookies in the response</p>
+
+                
+                    <li id="MaximumWaitTimeExceededError">
+                        <b >MaximumWaitTimeExceededError </b>
+                        <span class="type"></span>
+                        
+                    </li>
+                    
+                    <p>Represents a client error that occurred exceeding maximum wait time</p>
+
+                
+                    <li id="ReadingInboundRequestBodyError">
+                        <b >ReadingInboundRequestBodyError </b>
+                        <span class="type"></span>
+                        
+                    </li>
+                    
+                    <p>Represents a listener error that occurred while writing the inbound request entity body</p>
+
+                
+                    <li id="ReadingInboundRequestHeadersError">
+                        <b >ReadingInboundRequestHeadersError </b>
+                        <span class="type"></span>
+                        
+                    </li>
+                    
+                    <p>Represents a listener error that occurred while reading inbound request headers</p>
+
+                
+                    <li id="ReadingInboundResponseBodyError">
+                        <b >ReadingInboundResponseBodyError </b>
+                        <span class="type"></span>
+                        
+                    </li>
+                    
+                    <p>Represents a client error that occurred while reading inbound response entity body</p>
+
+                
+                    <li id="ReadingInboundResponseHeadersError">
+                        <b >ReadingInboundResponseHeadersError </b>
+                        <span class="type"></span>
+                        
+                    </li>
+                    
+                    <p>Represents a client error that occurred while reading inbound response headers</p>
+
+                
+                    <li id="SslError">
+                        <b >SslError </b>
+                        <span class="type"></span>
+                        
+                    </li>
+                    
+                    <p>Represents a client error that occurred due to SSL failure</p>
+
+                
+                    <li id="UnsupportedActionError">
+                        <b >UnsupportedActionError </b>
+                        <span class="type"></span>
+                        
+                    </li>
+                    
+                    <p>Represents a client error that occurred due to unsupported action invocation</p>
+
+                
+                    <li id="UpstreamServiceUnavailableError">
+                        <b >UpstreamServiceUnavailableError </b>
+                        <span class="type"></span>
+                        
+                    </li>
+                    
+                    <p>Represents a client error that occurred due to upstream service unavailability</p>
+
+                
+                    <li id="Writing100ContinueResponseError">
+                        <b >Writing100ContinueResponseError </b>
+                        <span class="type"></span>
+                        
+                    </li>
+                    
+                    <p>Represents an error that occurred while writing 100 continue response</p>
+
+                
+                    <li id="WritingOutboundRequestBodyError">
+                        <b >WritingOutboundRequestBodyError </b>
+                        <span class="type"></span>
+                        
+                    </li>
+                    
+                    <p>Represents a client error that occurred while writing outbound request entity body</p>
+
+                
+                    <li id="WritingOutboundRequestHeadersError">
+                        <b >WritingOutboundRequestHeadersError </b>
+                        <span class="type"></span>
+                        
+                    </li>
+                    
+                    <p>Represents a client error that occurred while writing outbound request headers</p>
+
+                
+                    <li id="WritingOutboundResponseBodyError">
+                        <b >WritingOutboundResponseBodyError </b>
+                        <span class="type"></span>
+                        
+                    </li>
+                    
+                    <p>Represents a listener error that occurred while writing outbound response entity body</p>
+
+                
+                    <li id="WritingOutboundResponseHeadersError">
+                        <b >WritingOutboundResponseHeadersError </b>
+                        <span class="type"></span>
+                        
+                    </li>
+                    
+                    <p>Represents a listener error that occurred while writing outbound response headers</p>
+
+                
+                    <li id="WsConnectionClosureError">
+                        <b >WsConnectionClosureError </b>
+                        <span class="type"></span>
+                        
+                    </li>
+                    
+                    <p>Raised during failures in connection closure</p>
+
+                
+                    <li id="WsConnectionError">
+                        <b >WsConnectionError </b>
+                        <span class="type"></span>
+                        
+                    </li>
+                    
+                    <p>Raised during connection failures</p>
+
+                
+                    <li id="WsGenericError">
+                        <b >WsGenericError </b>
+                        <span class="type"></span>
+                        
+                    </li>
+                    
+                    <p>Raised for errors not captured by the specific errors</p>
+
+                
+                    <li id="WsInvalidContinuationFrameError">
+                        <b >WsInvalidContinuationFrameError </b>
+                        <span class="type"></span>
+                        
+                    </li>
+                    
+                    <p>Raised when an out of order/invalid continuation frame is received</p>
+
+                
+                    <li id="WsInvalidHandshakeError">
+                        <b >WsInvalidHandshakeError </b>
+                        <span class="type"></span>
+                        
+                    </li>
+                    
+                    <p>Raised during the handshake when the WebSocket upgrade fails</p>
+
+                
+                    <li id="WsPayloadTooBigError">
+                        <b >WsPayloadTooBigError </b>
+                        <span class="type"></span>
+                        
+                    </li>
+                    
+                    <p>Raised when receiving a frame with a payload exceeding the maximum size</p>
+
+                
+                    <li id="WsProtocolError">
+                        <b >WsProtocolError </b>
+                        <span class="type"></span>
+                        
+                    </li>
+                    
+                    <p>Raised when the other side breaks the protocol</p>
+
+                
+            </ul>
+        </div>
+    </div>
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <div id="iBallerinaFooter" class="row cBallerina-io-White-row">
-    <div class="container">
-    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 cBallerina-io-left-col cBallerinaFooterLinks">
-        <ul>
-            <li><a class="cBioFooterLink" href="/downloads">Download</a></li>
-            <li><a class="cBioFooterLink" href="https://github.com/ballerina-lang/ballerina/blob/master/LICENSE">Code License</a></li>
-            <li><a class="cBioFooterLink" href="/license-of-site">Site License</a></li>
-            <li><a class="cBioFooterLink" href="/terms-of-service">TERMS OF SERVICE</a></li>
-            <li><a class="cBioFooterLink" href="/privacy-policy">PRIVACY POLICY</a></li>
-            </ul>
-        </div>
-    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 cBallerina-io-middle-col cBallerinaFooterSignUp">
-        <div class="cSocialmedia">
-            <ul>
-                <li>
-                    <a class="cBioFooterLink" href="https://github.com/ballerina-platform" target="_blank"><img src="/img/github.svg"></a>
-                    </li>
-                <li><a class="cBioFooterLink" href="https://stackoverflow.com/questions/tagged/ballerina" target="_blank"><img src="/img/stackoverflow.svg"></a></li>
-                <li><a class="cBioFooterLink" href="https://twitter.com/ballerinalang" target="_blank"><img src="/img/twitter.svg"></a></li>
-                <li><a class="cBioFooterLink" href="/community/slack/"><img src="/img/slack.svg"></a></li>
-                </ul>
-            <div class="pdframe"></div>
-            </div>
-        </div>
-    <div class="col-xs-12 col-sm-10 col-md-6 col-lg-6 cBallerina-io-right-col">
-        <p>In the creation of Ballerina, we were inspired by so many technologies. Thank you to all that have come before us (and forgive us if we missed one): Java, Go, C, C++, D, Rust, Haskell, Kotlin, Dart, TypeScript, JavaScript, Python, Perl, Flow, Swift, Elm, RelaxNG, NPM, Crates, Maven, Gradle, Kubernetes, Docker, Envoy, Markdown, GitHub and WSO2.</p></div>
-    </div>
-</div>
 </body>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/components/prism-core.min.js"></script>
+<script src="../syntax-highlighter/prism-ballerina.js"></script>
 <script>
-let mainNavLinks = document.querySelectorAll(".primary-list.module ul li a");
-let mainSections = document.querySelectorAll(".main-wrapper section.method-content");
-
-let lastId;
-let cur = [];
-
-let contentWrapper = document.querySelector(".content-wrapper");
-contentWrapper.addEventListener("scroll", event => {
-  let fromTop = contentWrapper.scrollTop;
-
-  mainNavLinks.forEach(link => {
-    let section = document.querySelector("#" + link.attributes.getNamedItem("data").textContent);
-
-    if (
-      section.offsetTop <= fromTop &&
-      section.offsetTop + section.offsetHeight > fromTop
-    ) {
-      link.classList.add("current");
-    } else {
-      link.classList.remove("current");
+    function toggleMenu() {
+        $('#mobMenu').transition('slide down')
     }
-  });
-});
+    $(document).ready(function () {
+        $('.ui.dropdown').dropdown();
+        $('#version-picker').dropdown('set selected', "1.2");
+        $('#version-picker-mob').dropdown('set selected', "1.2");
 
-</script>
-<script>
-function menuLinkClick() {
-  if(window.matchMedia("(max-width: 600px)").matches) {
-    document.getElementsByClassName("navi-wrapper")[0].style.display = "none";
-  }
-}
-function displayMenu() {
-  var nav = document.getElementsByClassName("navi-wrapper")[0];
-  var content = document.getElementsByClassName("content-wrapper")[0];
-  if (nav.style.display === "none" || nav.style.display === "") {
-    nav.style.display = "block";
-    content.style.marginLeft = "210px";
-  } else {
-    nav.style.display = "none";
-    content.style.marginLeft = "0px";
-  }
-}
+    });
+
+    let mainNavLinks = document.querySelectorAll(".toc .ui.visible.left.vertical.sidebar.menu .menu a");
+    console.log(mainNavLinks);
+    let contentWrapper = document.querySelector(".content");
+    contentWrapper.addEventListener("scroll", event => {
+      let fromTop = contentWrapper.scrollTop;
+
+      mainNavLinks.forEach(link => {
+        let section = document.querySelector("#" + link.attributes.getNamedItem("data").textContent);
+
+        if (
+          section.offsetTop <= fromTop &&
+          section.offsetTop + section.offsetHeight > fromTop
+        ) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    });
+
 </script>
 <script>
     var rootPath = "../";
@@ -1063,8 +808,18 @@ function displayMenu() {
 <script src="../doc-search/search-data.js"></script>
 <script src="../doc-search/search.js"></script>
 <script>
-    window.onload = (event) => {
-        ballerinaHighlighter.highlightSnippets();
-    };
+    var str = "";
+    var currentModule = "http";
+    searchData.modules.forEach(function(module) {
+        var active = "";
+        if (currentModule==module.id) {
+            active = " active";
+        }
+        str += '<a class="item' + active + '" href="' + rootPath + module.id + '/index.html">' + module.id + '</a>';
+    });
+    document.getElementById("modules-list").innerHTML = str;
+    document.getElementById("modules-list-mob").innerHTML = str;
 </script>
+
+
 
