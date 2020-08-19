@@ -1,0 +1,1146 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="This module provides lang library operations common to all values defined by the language specification 2020R1.
+">
+    <meta name="keywords" content="ballerina,ballerina lang,api docs,lang.value">
+
+    <title>API Docs - Functions : lang.value</title>
+
+    <script src="../html-template-resources/jquery.min.js"></script>
+    <link rel="stylesheet" href="../html-template-resources/semantic.min.css">
+    <link rel="stylesheet" href="../html-template-resources/components/icon.min.css">
+    <link rel="stylesheet" href="../html-template-resources/styles/css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/themes/prism.min.css" rel="stylesheet" />
+    <script src="../html-template-resources/semantic.min.js"></script>
+
+</head>
+
+
+<body>
+    <div class="pusher">
+        <div class="mobile-logo-div">
+            <div class="ui secondary menu">
+                <a href="../index.html">
+                    <img class="mobile-logo" src="../html-template-resources/images/ballerina-logo.png">
+                </a>
+                <div class="right item">
+                    <button class="ui icon button" onclick="toggleMenu()">
+                     <i class="large bars icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="toc">
+            <div class="ui visible left vertical sidebar menu">
+                <a href="
+                    ../index.html">
+                    <img class="logo" src="../html-template-resources/images/ballerina-logo.png">
+                </a>
+                
+                    
+                        <div class="header capitalize">
+                            
+    Functions
+
+                        </div>
+                        <div class="menu">
+                            
+    
+        <a class="item" href="#clone">clone</a>
+    
+        <a class="item" href="#cloneReadOnly">cloneReadOnly</a>
+    
+        <a class="item" href="#cloneWithType">cloneWithType</a>
+    
+        <a class="item" href="#fromJsonString">fromJsonString</a>
+    
+        <a class="item" href="#fromJsonStringWithType">fromJsonStringWithType</a>
+    
+        <a class="item" href="#fromJsonWithType">fromJsonWithType</a>
+    
+        <a class="item" href="#isReadOnly">isReadOnly</a>
+    
+        <a class="item" href="#mergeJson">mergeJson</a>
+    
+        <a class="item" href="#toJson">toJson</a>
+    
+        <a class="item" href="#toJsonString">toJsonString</a>
+    
+        <a class="item" href="#toString">toString</a>
+    
+
+                        </div>
+                        <div class="ui divider"></div>
+                    
+                    <div class="header">
+                        <a class="capitalize" href="../lang.value/index.html">
+                            lang.value Module
+                        </a>
+                    </div>
+                    <div class="menu">
+    
+    
+    
+    
+    
+        <a class="item" data="functions" href="../lang.value/index.html#functions">Functions</a>
+    
+    
+    
+    
+    
+    <div class="ui divider"></div>
+</div>
+
+                    <div class="header capitalize">
+                        Other Modules
+                    </div>
+                    <div id="modules-list" class="menu"></div>
+                    <div class="ui divider"></div>
+                
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="row nav-bar">
+                <div class="ui secondary menu">
+                    <div class="search-bar">
+                        <div class="ui category search item search-bar">
+                            <i class="search link icon"></i>
+                            <div class="ui transparent icon input">
+                                <input class="prompt" id="searchBox" type="text" placeholder="Search API Docs..."/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right menu">
+                        <a class="item active">Learn</a>
+                        <a class="item">Events</a>
+                        <a class="item">Central</a>
+                        <a class="item">Community</a>
+                        <a class="item">Blog</a>
+                        <div class="ui dropdown item ballerina" id="version-picker">
+                            Version
+                            <i class="dropdown icon"></i>
+                            <div class="menu">
+                                <a class="item" value="1.0">1.0</a>
+                                <a class="item" value="1.1">1.1</a>
+                                <a class="item" value="1.2">1.2</a>
+                                <a class="item" value="swan-lake">Swan Lake</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div id="mobMenu" class="mob-menu">
+                    <div class="ui stackable secondary menu">
+                        <div class="item">
+                            <div class="search-bar">
+                                <div class="ui category search item search-bar">
+                                    <i class="search link icon"></i>
+                                    <div class="ui transparent icon input">
+                                        <input class="prompt" id="searchBoxMob" type="text" placeholder="Search API Docs..."/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                            
+                                <div class="ui dropdown item capitalize">
+                                    
+    Functions
+<i class="dropdown icon"></i>
+                                    <div class="menu">
+                                        
+    
+        <a class="item" href="#clone">clone</a>
+    
+        <a class="item" href="#cloneReadOnly">cloneReadOnly</a>
+    
+        <a class="item" href="#cloneWithType">cloneWithType</a>
+    
+        <a class="item" href="#fromJsonString">fromJsonString</a>
+    
+        <a class="item" href="#fromJsonStringWithType">fromJsonStringWithType</a>
+    
+        <a class="item" href="#fromJsonWithType">fromJsonWithType</a>
+    
+        <a class="item" href="#isReadOnly">isReadOnly</a>
+    
+        <a class="item" href="#mergeJson">mergeJson</a>
+    
+        <a class="item" href="#toJson">toJson</a>
+    
+        <a class="item" href="#toJsonString">toJsonString</a>
+    
+        <a class="item" href="#toString">toString</a>
+    
+
+                                    </div>
+                                </div>
+                            
+                            <div class="ui dropdown item capitalize">
+                                lang.value Module <i class="dropdown icon"></i>
+                                <div class="menu">
+    
+    
+    
+    
+    
+        <a class="item" data="functions" href="../lang.value/index.html#functions">Functions</a>
+    
+    
+    
+    
+    
+    <div class="ui divider"></div>
+</div>
+
+                            </div>
+                            <div class="ui dropdown item">
+                                Other Modules <i class="dropdown icon"></i>
+                                <div id="modules-list-mob" class="menu"></div>
+                            </div>
+                        
+
+                            <div class="ui dropdown item" id="version-picker-mob">
+                                Version <i class="dropdown icon"></i>
+                                <div class="menu">
+                                    <a class="item" value="1.0">1.0</a>
+                                    <a class="item" value="1.1">1.1</a>
+                                    <a class="item" value="1.2">1.2</a>
+                                    <a class="item" value="swan-lake">Swan Lake</a>
+                                </div>
+                            </div>
+                            <div class="ui dropdown item ballerina">
+                                Ballerina <i class="dropdown icon"></i>
+                                <div class="menu">
+                                    <a class="item active">Learn</a>
+                                    <a class="item">Events</a>
+                                    <a class="item">Central</a>
+                                    <a class="item">Community</a>
+                                </div>
+                            </div>
+
+                    </div>
+                </div>
+                <div id="search-impl"></div>
+                <div id="main">
+                    
+                        <div class="ui breadcrumb">
+                            <a class="section" href="
+                                 ../index.html">Modules</a>
+                            <i class="right angle icon divider"></i>
+                            <a class="section capitalize " href="../lang.value/index.html">lang.value</a>
+                            
+                                <i class="right angle icon divider"></i>
+                                <a class="section active" href="../lang.value/index.html#functions">
+    Functions
+</a>
+                                
+                            
+                        </div>
+                    
+
+                    <div class="ui very padded segment module-data">
+                            <h1 class="capitalize">
+    Functions
+
+                            
+                            </h1>
+                        
+    <div class="constants">
+        <table class="ui very basic table">
+            <tbody>
+                
+                    <tr>
+                        <td width="30%"><a class="functions " href="#clone">clone</a></td>
+                        <td width="70%">
+                            <div class="function-desc">
+                                
+                                <p>Returns a clone of <code>v</code>.
+                            </div>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td width="30%"><a class="functions " href="#cloneReadOnly">cloneReadOnly</a></td>
+                        <td width="70%">
+                            <div class="function-desc">
+                                
+                                <p>Returns a clone of <code>v</code> that is read-only, i.
+                            </div>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td width="30%"><a class="functions " href="#cloneWithType">cloneWithType</a></td>
+                        <td width="70%">
+                            <div class="function-desc">
+                                
+                                <p>Constructs a value with a specified type by cloning another value.
+                            </div>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td width="30%"><a class="functions " href="#fromJsonString">fromJsonString</a></td>
+                        <td width="70%">
+                            <div class="function-desc">
+                                
+                                <p>Parses a string in JSON format and returns the the value that it represents.
+                            </div>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td width="30%"><a class="functions " href="#fromJsonStringWithType">fromJsonStringWithType</a></td>
+                        <td width="70%">
+                            <div class="function-desc">
+                                
+                                <p>Converts a string in JSON format to a user-specified type.
+                            </div>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td width="30%"><a class="functions " href="#fromJsonWithType">fromJsonWithType</a></td>
+                        <td width="70%">
+                            <div class="function-desc">
+                                
+                                <p>Converts a value of type json to a user-specified type.
+                            </div>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td width="30%"><a class="functions " href="#isReadOnly">isReadOnly</a></td>
+                        <td width="70%">
+                            <div class="function-desc">
+                                
+                                <p>Tests whether <code>v</code> is read-only, i.
+                            </div>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td width="30%"><a class="functions " href="#mergeJson">mergeJson</a></td>
+                        <td width="70%">
+                            <div class="function-desc">
+                                
+                                <p>Merges two json values.
+                            </div>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td width="30%"><a class="functions " href="#toJson">toJson</a></td>
+                        <td width="70%">
+                            <div class="function-desc">
+                                
+                                <p>Converts a value of type <code>anydata</code> to <code>json</code>.
+                            </div>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td width="30%"><a class="functions " href="#toJsonString">toJsonString</a></td>
+                        <td width="70%">
+                            <div class="function-desc">
+                                
+                                <p>Returns the string that represents <code>v</code> in JSON format.
+                            </div>
+                        </td>
+                    </tr>
+                
+                    <tr>
+                        <td width="30%"><a class="functions " href="#toString">toString</a></td>
+                        <td width="70%">
+                            <div class="function-desc">
+                                
+                                <p>Performs a minimal conversion of a value to a string.
+                            </div>
+                        </td>
+                    </tr>
+                
+            </tbody>
+        </table>
+        <div>
+            
+                <div>
+                    
+                        <div class="method-content">
+    <div class="main-method-title" id="clone" title="clone">
+             <a class="url-link" href="#clone">
+                <img class="url-link-img" src="../html-template-resources/images/link.svg">
+            </a>
+            <h2 > clone </h2>
+    </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function clone(<span class="builtin-type">null</span> v) returns <span class="builtin-type">null</span> </code>
+    </pre>
+    <div class="function-desc">
+        
+        <p>Returns a clone of <code>v</code>.
+A clone is a deep copy that does not copy immutable subtrees.
+A clone can therefore safely be used concurrently with the original.
+It corresponds to the Clone(v) abstract operation,
+defined in the Ballerina Language Specification.</p>
+
+    </div>
+    
+        <div class="parameters">
+            <h3 class="param-title">Parameters</h3>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >v</span>
+                        <span class="type">  <span class="builtin-type">null</span> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p>source value</p>
+
+                    </p>
+                </ul>
+            </div>
+            
+        </div>
+    
+
+    
+        
+        <div class="returns-listing">
+            <h3 class="type">Return Type</h3> (<span class="type"><span class="builtin-type">null</span></span>)
+            <p>clone of <code>v</code></p>
+
+        </div>
+        
+    
+</div>
+                    
+                        <div class="method-content">
+    <div class="main-method-title" id="cloneReadOnly" title="cloneReadOnly">
+             <a class="url-link" href="#cloneReadOnly">
+                <img class="url-link-img" src="../html-template-resources/images/link.svg">
+            </a>
+            <h2 > cloneReadOnly </h2>
+    </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function cloneReadOnly(<span class="builtin-type">null</span> v) returns <span class="builtin-type">null</span> </code>
+    </pre>
+    <div class="function-desc">
+        
+        <p>Returns a clone of <code>v</code> that is read-only, i.e. immutable.
+It corresponds to the ImmutableClone(v) abstract operation,
+defined in the Ballerina Language Specification.</p>
+
+    </div>
+    
+        <div class="parameters">
+            <h3 class="param-title">Parameters</h3>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >v</span>
+                        <span class="type">  <span class="builtin-type">null</span> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p>source value</p>
+
+                    </p>
+                </ul>
+            </div>
+            
+        </div>
+    
+
+    
+        
+        <div class="returns-listing">
+            <h3 class="type">Return Type</h3> (<span class="type"><span class="builtin-type">null</span></span>)
+            <p>immutable clone of <code>v</code></p>
+
+        </div>
+        
+    
+</div>
+                    
+                        <div class="method-content">
+    <div class="main-method-title" id="cloneWithType" title="cloneWithType">
+             <a class="url-link" href="#cloneWithType">
+                <img class="url-link-img" src="../html-template-resources/images/link.svg">
+            </a>
+            <h2 > cloneWithType </h2>
+    </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function cloneWithType(<span class="builtin-type">anydata</span> v, <span class="builtin-type">typedesc</span> t) returns <span class="builtin-type">null</span> | <span class="builtin-type">error</span> </code>
+    </pre>
+    <div class="function-desc">
+        
+        <p>Constructs a value with a specified type by cloning another value.</p>
+
+    </div>
+    
+        <div class="parameters">
+            <h3 class="param-title">Parameters</h3>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >v</span>
+                        <span class="type">  <span class="builtin-type">anydata</span> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p>the value to be cloned</p>
+
+                    </p>
+                </ul>
+            </div>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >t</span>
+                        <span class="type">  <span class="builtin-type">typedesc</span> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p>the type for the cloned to be constructed</p>
+
+                    </p>
+                </ul>
+            </div>
+            
+        </div>
+    
+
+    
+        
+        <div class="returns-listing">
+            <h3 class="type">Return Type</h3> (<span class="type"><span class="builtin-type">null</span> | <span class="builtin-type">error</span></span>)
+            <p>a new value that belongs to <code>t</code>, or an error if this cannot be done</p>
+<p>When <code>v</code> is a structural value, the inherent type of the value to be constructed
+comes from <code>t</code>. When <code>t</code> is a union, it must be possible to determine which
+member of the union to use for the inherent type by following the same rules
+that are used by list constructor expressions and mapping constructor expressions
+with the contextually expected type. If not, then an error is returned.
+The <code>constructFrom</code> operation is recursively applied to each member of <code>v</code> using
+the type descriptor that the inherent type requires for that member.</p>
+<p>Like the Clone abstract operation, this does a deep copy, but differs in
+the following respects:</p>
+<ul>
+<li>the inherent type of any structural values constructed comes from the specified
+type descriptor rather than the value being constructed</li>
+<li>the read-only bit of values and fields comes from the specified type descriptor</li>
+<li>the graph structure of <code>v</code> is not preserved; the result will always be a tree;
+an error will be returned if <code>v</code> has cycles</li>
+<li>immutable structural values are copied rather being returned as is; all
+structural values in the result will be mutable, except for error values
+(which are always immutable)</li>
+<li>numeric values can be converted using the NumericConvert abstract operation</li>
+<li>if a record type descriptor specifies default values, these will be used
+to supply any missing members</li>
+</ul>
+
+        </div>
+        
+    
+</div>
+                    
+                        <div class="method-content">
+    <div class="main-method-title" id="fromJsonString" title="fromJsonString">
+             <a class="url-link" href="#fromJsonString">
+                <img class="url-link-img" src="../html-template-resources/images/link.svg">
+            </a>
+            <h2 > fromJsonString </h2>
+    </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function fromJsonString(<span class="builtin-type">string</span> str) returns <span class="builtin-type">json</span> | <span class="builtin-type">error</span> </code>
+    </pre>
+    <div class="function-desc">
+        
+        <p>Parses a string in JSON format and returns the the value that it represents.
+All numbers in the JSON will be represented as float values.
+Returns an error if the string cannot be parsed.</p>
+
+    </div>
+    
+        <div class="parameters">
+            <h3 class="param-title">Parameters</h3>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >str</span>
+                        <span class="type">  <span class="builtin-type">string</span> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p>string representation of json</p>
+
+                    </p>
+                </ul>
+            </div>
+            
+        </div>
+    
+
+    
+        
+        <div class="returns-listing">
+            <h3 class="type">Return Type</h3> (<span class="type"><span class="builtin-type">json</span> | <span class="builtin-type">error</span></span>)
+            <p><code>str</code> parsed to json or error</p>
+
+        </div>
+        
+    
+</div>
+                    
+                        <div class="method-content">
+    <div class="main-method-title" id="fromJsonStringWithType" title="fromJsonStringWithType">
+             <a class="url-link" href="#fromJsonStringWithType">
+                <img class="url-link-img" src="../html-template-resources/images/link.svg">
+            </a>
+            <h2 > fromJsonStringWithType </h2>
+    </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function fromJsonStringWithType(<span class="builtin-type">string</span> str, <span class="builtin-type">typedesc</span> t) returns <span class="builtin-type">t</span> | <span class="builtin-type">error</span> </code>
+    </pre>
+    <div class="function-desc">
+        
+        <p>Converts a string in JSON format to a user-specified type.
+This is a combination of <code>fromJsonString</code> followed by
+<code>fromJsonWithType</code>.</p>
+
+    </div>
+    
+        <div class="parameters">
+            <h3 class="param-title">Parameters</h3>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >str</span>
+                        <span class="type">  <span class="builtin-type">string</span> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p>string in JSON format</p>
+
+                    </p>
+                </ul>
+            </div>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >t</span>
+                        <span class="type">  <span class="builtin-type">typedesc</span> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p>type to convert to</p>
+
+                    </p>
+                </ul>
+            </div>
+            
+        </div>
+    
+
+    
+        
+        <div class="returns-listing">
+            <h3 class="type">Return Type</h3> (<span class="type"><span class="builtin-type">t</span> | <span class="builtin-type">error</span></span>)
+            <p>value belonging to <code>t</code>, or error if this cannot be done</p>
+
+        </div>
+        
+    
+</div>
+                    
+                        <div class="method-content">
+    <div class="main-method-title" id="fromJsonWithType" title="fromJsonWithType">
+             <a class="url-link" href="#fromJsonWithType">
+                <img class="url-link-img" src="../html-template-resources/images/link.svg">
+            </a>
+            <h2 > fromJsonWithType </h2>
+    </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function fromJsonWithType(<span class="builtin-type">json</span> v, <span class="builtin-type">typedesc</span> t) returns <span class="builtin-type">t</span> | <span class="builtin-type">error</span> </code>
+    </pre>
+    <div class="function-desc">
+        
+        <p>Converts a value of type json to a user-specified type.
+This works the same as <code>cloneWithType</code>,
+except that it also does the inverse of the conversions done by <code>toJson</code>.</p>
+
+    </div>
+    
+        <div class="parameters">
+            <h3 class="param-title">Parameters</h3>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >v</span>
+                        <span class="type">  <span class="builtin-type">json</span> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p>json value</p>
+
+                    </p>
+                </ul>
+            </div>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >t</span>
+                        <span class="type">  <span class="builtin-type">typedesc</span> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p>type to convert to</p>
+
+                    </p>
+                </ul>
+            </div>
+            
+        </div>
+    
+
+    
+        
+        <div class="returns-listing">
+            <h3 class="type">Return Type</h3> (<span class="type"><span class="builtin-type">t</span> | <span class="builtin-type">error</span></span>)
+            <p>value belonging to <code>t</code>, or error if this cannot be done</p>
+
+        </div>
+        
+    
+</div>
+                    
+                        <div class="method-content">
+    <div class="main-method-title" id="isReadOnly" title="isReadOnly">
+             <a class="url-link" href="#isReadOnly">
+                <img class="url-link-img" src="../html-template-resources/images/link.svg">
+            </a>
+            <h2 > isReadOnly </h2>
+    </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function isReadOnly(<span class="builtin-type">anydata</span> v) returns <span class="builtin-type">boolean</span> </code>
+    </pre>
+    <div class="function-desc">
+        
+        <p>Tests whether <code>v</code> is read-only, i.e. immutable
+Returns true if read-only, false otherwise.</p>
+
+    </div>
+    
+        <div class="parameters">
+            <h3 class="param-title">Parameters</h3>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >v</span>
+                        <span class="type">  <span class="builtin-type">anydata</span> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p>source value</p>
+
+                    </p>
+                </ul>
+            </div>
+            
+        </div>
+    
+
+    
+        
+        <div class="returns-listing">
+            <h3 class="type">Return Type</h3> (<span class="type"><span class="builtin-type">boolean</span></span>)
+            <p>true if read-only, false otherwise</p>
+
+        </div>
+        
+    
+</div>
+                    
+                        <div class="method-content">
+    <div class="main-method-title" id="mergeJson" title="mergeJson">
+             <a class="url-link" href="#mergeJson">
+                <img class="url-link-img" src="../html-template-resources/images/link.svg">
+            </a>
+            <h2 > mergeJson </h2>
+    </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function mergeJson(<span class="builtin-type">json</span> j1, <span class="builtin-type">json</span> j2) returns <span class="builtin-type">json</span> | <span class="builtin-type">error</span> </code>
+    </pre>
+    <div class="function-desc">
+        
+        <p>Merges two json values.</p>
+
+    </div>
+    
+        <div class="parameters">
+            <h3 class="param-title">Parameters</h3>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >j1</span>
+                        <span class="type">  <span class="builtin-type">json</span> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p>json value</p>
+
+                    </p>
+                </ul>
+            </div>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >j2</span>
+                        <span class="type">  <span class="builtin-type">json</span> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p>json value</p>
+
+                    </p>
+                </ul>
+            </div>
+            
+        </div>
+    
+
+    
+        
+        <div class="returns-listing">
+            <h3 class="type">Return Type</h3> (<span class="type"><span class="builtin-type">json</span> | <span class="builtin-type">error</span></span>)
+            <p>the merge of <code>j1</code> with <code>j2</code> or an error if the merge fails</p>
+<p>The merge of <code>j1</code> with <code>j2</code> is defined as follows:</p>
+<ul>
+<li>if <code>j1</code> is <code>()</code>, then the result is <code>j2</code></li>
+<li>if <code>j2</code> is <code>()</code>, then the result is <code>j1</code></li>
+<li>if <code>j1</code> is a mapping and <code>j2</code> is a mapping, then for each entry [k, j] in j2,
+set <code>j1[k]</code> to the merge of <code>j1[k]</code> with <code>j</code>
+<ul>
+<li>if <code>j1[k]</code> is undefined, then set <code>j1[k]</code> to <code>j</code></li>
+<li>if any merge fails, then the merge of <code>j1</code> with <code>j2</code> fails</li>
+<li>otherwise, the result is <code>j1</code>.</li>
+</ul>
+</li>
+<li>otherwise, the merge fails
+If the merge fails, then <code>j1</code> is unchanged.</li>
+</ul>
+
+        </div>
+        
+    
+</div>
+                    
+                        <div class="method-content">
+    <div class="main-method-title" id="toJson" title="toJson">
+             <a class="url-link" href="#toJson">
+                <img class="url-link-img" src="../html-template-resources/images/link.svg">
+            </a>
+            <h2 > toJson </h2>
+    </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function toJson(<span class="builtin-type">anydata</span> v) returns <span class="builtin-type">json</span> </code>
+    </pre>
+    <div class="function-desc">
+        
+        <p>Converts a value of type <code>anydata</code> to <code>json</code>.
+This does a deep copy of <code>v</code> converting values that do
+not belong to json into values that do.
+A value of type <code>xml</code> is converted into a string as if
+by the <code>toString</code> function.
+A value of type <code>table</code> is converted into a list of
+mappings one for each row.
+The inherent type of arrays in the return value will be
+<code>json[]</code> and of mappings will be <code>map&lt;json&gt;</code>.
+A new copy is made of all structural values, including
+immutable values.</p>
+
+    </div>
+    
+        <div class="parameters">
+            <h3 class="param-title">Parameters</h3>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >v</span>
+                        <span class="type">  <span class="builtin-type">anydata</span> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p>anydata value</p>
+
+                    </p>
+                </ul>
+            </div>
+            
+        </div>
+    
+
+    
+        
+        <div class="returns-listing">
+            <h3 class="type">Return Type</h3> (<span class="type"><span class="builtin-type">json</span></span>)
+            <p>representation of <code>v</code> as value of type json
+This panics if <code>v</code> has cycles.</p>
+
+        </div>
+        
+    
+</div>
+                    
+                        <div class="method-content">
+    <div class="main-method-title" id="toJsonString" title="toJsonString">
+             <a class="url-link" href="#toJsonString">
+                <img class="url-link-img" src="../html-template-resources/images/link.svg">
+            </a>
+            <h2 > toJsonString </h2>
+    </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function toJsonString(<span class="builtin-type">anydata</span> v) returns <span class="builtin-type">string</span> </code>
+    </pre>
+    <div class="function-desc">
+        
+        <p>Returns the string that represents <code>v</code> in JSON format.
+<code>v</code> is first converted to <code>json</code> as if by the <code>toJson</code> function.</p>
+
+    </div>
+    
+        <div class="parameters">
+            <h3 class="param-title">Parameters</h3>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >v</span>
+                        <span class="type">  <span class="builtin-type">anydata</span> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p>anydata value</p>
+
+                    </p>
+                </ul>
+            </div>
+            
+        </div>
+    
+
+    
+        
+        <div class="returns-listing">
+            <h3 class="type">Return Type</h3> (<span class="type"><span class="builtin-type">string</span></span>)
+            <p>string representation of json</p>
+
+        </div>
+        
+    
+</div>
+                    
+                        <div class="method-content">
+    <div class="main-method-title" id="toString" title="toString">
+             <a class="url-link" href="#toString">
+                <img class="url-link-img" src="../html-template-resources/images/link.svg">
+            </a>
+            <h2 > toString </h2>
+    </div>
+    <pre class="method-signature">
+        <code class="language-ballerina break-spaces">function toString(<span class="builtin-type">any</span> | <span class="builtin-type">error</span> v) returns <span class="builtin-type">string</span> </code>
+    </pre>
+    <div class="function-desc">
+        
+        <p>Performs a minimal conversion of a value to a string.
+The conversion is minimal in particular in the sense
+that the conversion applied to a value that is already
+a string does nothing.</p>
+
+    </div>
+    
+        <div class="parameters">
+            <h3 class="param-title">Parameters</h3>
+                
+            <div class="params-listing">
+                <ul>
+                    <li>
+                        <span >v</span>
+                        <span class="type">  <span class="builtin-type">any</span> | <span class="builtin-type">error</span> </span>
+                        
+                    </li>
+                    <p>
+                        
+                        <p>the value to be converted to a string</p>
+
+                    </p>
+                </ul>
+            </div>
+            
+        </div>
+    
+
+    
+        
+        <div class="returns-listing">
+            <h3 class="type">Return Type</h3> (<span class="type"><span class="builtin-type">string</span></span>)
+            <p>a string resulting from the conversion</p>
+<p>The result of <code>toString(v)</code> is as follows:</p>
+<ul>
+<li>if <code>v</code> is a string, then returns <code>v</code></li>
+<li>if <code>v</code> is <code>()</code>, then returns an empty string</li>
+<li>if <code>v</code> is boolean, then the string <code>true</code> or <code>false</code></li>
+<li>if <code>v</code> is an int, then return <code>v</code> represented as a decimal string</li>
+<li>if <code>v</code> is a float or decimal, then return <code>v</code> represented as a decimal string,
+with a decimal point only if necessary, but without any suffix indicating the type of <code>v</code>;
+return <code>NaN</code>, <code>Infinity</code> for positive infinity, and <code>-Infinity</code> for negative infinity</li>
+<li>if <code>v</code> is a list, then returns the results toString on each member of the list
+separated by a space character</li>
+<li>if <code>v</code> is a map, then returns key=value for each member separated by a space character</li>
+<li>if <code>v</code> is xml, then returns <code>v</code> in XML format (as if it occurred within an XML element)</li>
+<li>if <code>v</code> is table, TBD</li>
+<li>if <code>v</code> is an error, then a string consisting of the following in order
+<ol>
+<li>the string <code>error</code></li>
+<li>a space character</li>
+<li>the reason string</li>
+<li>if the detail record is non-empty
+<ol>
+<li>a space character</li>
+<li>the result of calling toString on the detail record</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>if <code>v</code> is an object, then
+<ul>
+<li>if <code>v</code> provides a <code>toString</code> method with a string return type and no required methods,
+then the result of calling that method on <code>v</code></li>
+<li>otherwise, <code>object</code> followed by some implementation-dependent string</li>
+</ul>
+</li>
+<li>if <code>v</code> is any other behavioral type, then the identifier for the behavioral type
+(<code>function</code>, <code>future</code>, <code>service</code>, <code>typedesc</code> or <code>handle</code>)
+followed by some implementation-dependent string</li>
+</ul>
+<p>Note that <code>toString</code> may produce the same string for two Ballerina values
+that are not equal (in the sense of the <code>==</code> operator).</p>
+
+        </div>
+        
+    
+</div>
+                    
+                </div>
+            
+        </div>
+    </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/components/prism-core.min.js"></script>
+<script src="../syntax-highlighter/prism-ballerina.js"></script>
+<script>
+    function toggleMenu() {
+        $('#mobMenu').transition('slide down')
+    }
+    $(document).ready(function () {
+        $('.ui.dropdown').dropdown();
+        $('#version-picker').dropdown('set selected', "1.2");
+        $('#version-picker-mob').dropdown('set selected', "1.2");
+
+    });
+
+    let mainNavLinks = document.querySelectorAll(".toc .ui.visible.left.vertical.sidebar.menu .menu a");
+    console.log(mainNavLinks);
+    let contentWrapper = document.querySelector(".content");
+    contentWrapper.addEventListener("scroll", event => {
+      let fromTop = contentWrapper.scrollTop;
+
+      mainNavLinks.forEach(link => {
+        let section = document.querySelector("#" + link.attributes.getNamedItem("data").textContent);
+
+        if (
+          section.offsetTop <= fromTop &&
+          section.offsetTop + section.offsetHeight > fromTop
+        ) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    });
+
+</script>
+<script>
+    var rootPath = "../";
+</script>
+<script src="../doc-search/search-data.js"></script>
+<script src="../doc-search/search.js"></script>
+<script>
+    var str = "";
+    var currentModule = "lang.value";
+    searchData.modules.forEach(function(module) {
+        var active = "";
+        if (currentModule==module.id) {
+            active = " active";
+        }
+        str += '<a class="item' + active + '" href="' + rootPath + module.id + '/index.html">' + module.id + '</a>';
+    });
+    document.getElementById("modules-list").innerHTML = str;
+    document.getElementById("modules-list-mob").innerHTML = str;
+</script>
+
+
+

@@ -1,0 +1,804 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="This module is used to interact with Kafka Brokers via Kafka Consumer and Kafka Producer clients.
+This module supports Kafka 1.x.x and 2.0.0 versions.
+">
+    <meta name="keywords" content="ballerina,ballerina lang,api docs,kafka">
+
+    <title>API Docs - Record : ProducerConfiguration</title>
+
+    <script src="../../html-template-resources/jquery.min.js"></script>
+    <link rel="stylesheet" href="../../html-template-resources/semantic.min.css">
+    <link rel="stylesheet" href="../../html-template-resources/components/icon.min.css">
+    <link rel="stylesheet" href="../../html-template-resources/styles/css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/themes/prism.min.css" rel="stylesheet" />
+    <script src="../../html-template-resources/semantic.min.js"></script>
+
+</head>
+
+
+<body>
+    <div class="pusher">
+        <div class="mobile-logo-div">
+            <div class="ui secondary menu">
+                <a href="../index.html">
+                    <img class="mobile-logo" src="../../html-template-resources/images/ballerina-logo.png">
+                </a>
+                <div class="right item">
+                    <button class="ui icon button" onclick="toggleMenu()">
+                     <i class="large bars icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="toc">
+            <div class="ui visible left vertical sidebar menu">
+                <a href="
+                    ../../index.html">
+                    <img class="logo" src="../../html-template-resources/images/ballerina-logo.png">
+                </a>
+                
+                    
+                        <div class="header capitalize">
+                            
+    Records
+
+                        </div>
+                        <div class="menu">
+                            
+    
+        <a class="item " href="AuthenticationConfiguration.html">AuthenticationConfiguration</a>
+    
+        <a class="item " href="AvroRecord.html">AvroRecord</a>
+    
+        <a class="item " href="ConsumerConfiguration.html">ConsumerConfiguration</a>
+    
+        <a class="item " href="ConsumerRecord.html">ConsumerRecord</a>
+    
+        <a class="item " href="KeyStore.html">KeyStore</a>
+    
+        <a class="item " href="PartitionOffset.html">PartitionOffset</a>
+    
+        <a class="item active" href="ProducerConfiguration.html">ProducerConfiguration</a>
+    
+        <a class="item " href="Protocols.html">Protocols</a>
+    
+        <a class="item " href="SecureSocket.html">SecureSocket</a>
+    
+        <a class="item " href="TopicPartition.html">TopicPartition</a>
+    
+        <a class="item " href="TrustStore.html">TrustStore</a>
+    
+
+                        </div>
+                        <div class="ui divider"></div>
+                    
+                    <div class="header">
+                        <a class="capitalize" href="../../kafka/index.html">
+                            kafka Module
+                        </a>
+                    </div>
+                    <div class="menu">
+    
+        
+            <a class="item" data="records" href="../../kafka/index.html#records">Records</a>
+        
+    
+    
+        
+            <a class="item" data="objects" href="../../kafka/index.html#objects">Objects</a>
+        
+    
+    
+        <a class="item" data="clients" href="../../kafka/index.html#clients">Clients</a>
+    
+    
+    
+    
+        <a class="item" data="constants" href="../../kafka/index.html#constants">Constants</a>
+    
+    
+    
+        <a class="item" ata="types" href="../../kafka/index.html#types">Types</a>
+    
+    
+        <a class="item" data="errors" href="../../kafka/index.html#errors">Errors</a>
+    
+    <div class="ui divider"></div>
+</div>
+
+                    <div class="header capitalize">
+                        Other Modules
+                    </div>
+                    <div id="modules-list" class="menu"></div>
+                    <div class="ui divider"></div>
+                
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="row nav-bar">
+                <div class="ui secondary menu">
+                    <div class="search-bar">
+                        <div class="ui category search item search-bar">
+                            <i class="search link icon"></i>
+                            <div class="ui transparent icon input">
+                                <input class="prompt" id="searchBox" type="text" placeholder="Search API Docs..."/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right menu">
+                        <a class="item active">Learn</a>
+                        <a class="item">Events</a>
+                        <a class="item">Central</a>
+                        <a class="item">Community</a>
+                        <a class="item">Blog</a>
+                        <div class="ui dropdown item ballerina" id="version-picker">
+                            Version
+                            <i class="dropdown icon"></i>
+                            <div class="menu">
+                                <a class="item" value="1.0">1.0</a>
+                                <a class="item" value="1.1">1.1</a>
+                                <a class="item" value="1.2">1.2</a>
+                                <a class="item" value="swan-lake">Swan Lake</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div id="mobMenu" class="mob-menu">
+                    <div class="ui stackable secondary menu">
+                        <div class="item">
+                            <div class="search-bar">
+                                <div class="ui category search item search-bar">
+                                    <i class="search link icon"></i>
+                                    <div class="ui transparent icon input">
+                                        <input class="prompt" id="searchBoxMob" type="text" placeholder="Search API Docs..."/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                            
+                                <div class="ui dropdown item capitalize">
+                                    
+    Records
+<i class="dropdown icon"></i>
+                                    <div class="menu">
+                                        
+    
+        <a class="item " href="AuthenticationConfiguration.html">AuthenticationConfiguration</a>
+    
+        <a class="item " href="AvroRecord.html">AvroRecord</a>
+    
+        <a class="item " href="ConsumerConfiguration.html">ConsumerConfiguration</a>
+    
+        <a class="item " href="ConsumerRecord.html">ConsumerRecord</a>
+    
+        <a class="item " href="KeyStore.html">KeyStore</a>
+    
+        <a class="item " href="PartitionOffset.html">PartitionOffset</a>
+    
+        <a class="item active" href="ProducerConfiguration.html">ProducerConfiguration</a>
+    
+        <a class="item " href="Protocols.html">Protocols</a>
+    
+        <a class="item " href="SecureSocket.html">SecureSocket</a>
+    
+        <a class="item " href="TopicPartition.html">TopicPartition</a>
+    
+        <a class="item " href="TrustStore.html">TrustStore</a>
+    
+
+                                    </div>
+                                </div>
+                            
+                            <div class="ui dropdown item capitalize">
+                                kafka Module <i class="dropdown icon"></i>
+                                <div class="menu">
+    
+        
+            <a class="item" data="records" href="../../kafka/index.html#records">Records</a>
+        
+    
+    
+        
+            <a class="item" data="objects" href="../../kafka/index.html#objects">Objects</a>
+        
+    
+    
+        <a class="item" data="clients" href="../../kafka/index.html#clients">Clients</a>
+    
+    
+    
+    
+        <a class="item" data="constants" href="../../kafka/index.html#constants">Constants</a>
+    
+    
+    
+        <a class="item" ata="types" href="../../kafka/index.html#types">Types</a>
+    
+    
+        <a class="item" data="errors" href="../../kafka/index.html#errors">Errors</a>
+    
+    <div class="ui divider"></div>
+</div>
+
+                            </div>
+                            <div class="ui dropdown item">
+                                Other Modules <i class="dropdown icon"></i>
+                                <div id="modules-list-mob" class="menu"></div>
+                            </div>
+                        
+
+                            <div class="ui dropdown item" id="version-picker-mob">
+                                Version <i class="dropdown icon"></i>
+                                <div class="menu">
+                                    <a class="item" value="1.0">1.0</a>
+                                    <a class="item" value="1.1">1.1</a>
+                                    <a class="item" value="1.2">1.2</a>
+                                    <a class="item" value="swan-lake">Swan Lake</a>
+                                </div>
+                            </div>
+                            <div class="ui dropdown item ballerina">
+                                Ballerina <i class="dropdown icon"></i>
+                                <div class="menu">
+                                    <a class="item active">Learn</a>
+                                    <a class="item">Events</a>
+                                    <a class="item">Central</a>
+                                    <a class="item">Community</a>
+                                </div>
+                            </div>
+
+                    </div>
+                </div>
+                <div id="search-impl"></div>
+                <div id="main">
+                    
+                        <div class="ui breadcrumb">
+                            <a class="section" href="
+                                 ../../index.html">Modules</a>
+                            <i class="right angle icon divider"></i>
+                            <a class="section capitalize " href="../../kafka/index.html">kafka</a>
+                            
+                                <i class="right angle icon divider"></i>
+                                <a class="section " href="../../kafka/index.html#records">
+    Record
+</a>
+                                
+                                    <i class="right angle icon divider"></i>
+                                    <a class="section active">
+    <span class="records ">ProducerConfiguration</span>
+</a>
+                                
+                            
+                        </div>
+                    
+
+                    <div class="ui very padded segment module-data">
+                            <h1 class="capitalize">
+    Record
+
+                            :
+    <span class="records ">ProducerConfiguration</span>
+
+                            </h1>
+                        
+    <p>
+        
+        <p>Represents the Kafka Producer configuration.</p>
+
+    </p>
+    <div class="constants">
+        
+        
+        <h2>Fields</h2>
+        <div class="fields-listing">
+    <ul>
+        
+                <li> <span >bootstrapServers</span>
+                    <span class="type">  <span class="builtin-type">string</span></span>
+                    
+                </li>
+                <p>
+                    
+                    <p>List of remote server endpoints of Kafka brokers</p>
+
+                </p>
+        
+                <li> <span >acks</span>
+                    <span class="type">  <a href="../../kafka/types.html#ProducerAcks">ProducerAcks</a></span>
+                     <span class="default">(default ACKS_SINGLE)</span> 
+                </li>
+                <p>
+                    
+                    <p>Number of acknowledgments</p>
+
+                </p>
+        
+                <li> <span >compressionType</span>
+                    <span class="type">  <a href="../../kafka/types.html#CompressionType">CompressionType</a></span>
+                     <span class="default">(default COMPRESSION_NONE)</span> 
+                </li>
+                <p>
+                    
+                    <p>Compression type to be used for messages</p>
+
+                </p>
+        
+                <li> <span >clientId</span>
+                    <span class="type">  <span class="builtin-type">string?</span></span>
+                    
+                </li>
+                <p>
+                    
+                    <p>Identifier to be used for server side logging</p>
+
+                </p>
+        
+                <li> <span >metricsRecordingLevel</span>
+                    <span class="type">  <span class="builtin-type">string?</span></span>
+                    
+                </li>
+                <p>
+                    
+                    <p>Metrics recording level</p>
+
+                </p>
+        
+                <li> <span >metricReporterClasses</span>
+                    <span class="type">  <span class="builtin-type">string?</span></span>
+                    
+                </li>
+                <p>
+                    
+                    <p>Metrics reporter classes</p>
+
+                </p>
+        
+                <li> <span >partitionerClass</span>
+                    <span class="type">  <span class="builtin-type">string?</span></span>
+                    
+                </li>
+                <p>
+                    
+                    <p>Partitioner class to be used to select the partition to which the message is sent</p>
+
+                </p>
+        
+                <li> <span >interceptorClasses</span>
+                    <span class="type">  <span class="builtin-type">string?</span></span>
+                    
+                </li>
+                <p>
+                    
+                    <p>Interceptor classes to be used before sending records</p>
+
+                </p>
+        
+                <li> <span >transactionalId</span>
+                    <span class="type">  <span class="builtin-type">string?</span></span>
+                    
+                </li>
+                <p>
+                    
+                    <p>Transactional ID to be used in transactional delivery</p>
+
+                </p>
+        
+                <li> <span >valueSerializerType</span>
+                    <span class="type">  <a href="../../kafka/types.html#SerializerType">SerializerType</a></span>
+                     <span class="default">(default SER_BYTE_ARRAY)</span> 
+                </li>
+                <p>
+                    
+                    <p>Serializer used for the Kafka record value. This can be either <code>kafka:SerializerType</code> or a
+user-defined serializer</p>
+
+                </p>
+        
+                <li> <span >keySerializerType</span>
+                    <span class="type">  <a href="../../kafka/types.html#SerializerType">SerializerType</a></span>
+                     <span class="default">(default SER_BYTE_ARRAY)</span> 
+                </li>
+                <p>
+                    
+                    <p>Serializer used for the Kafka record key. This can be either <code>kafka:SerializerType</code> or a
+user-defined serializer</p>
+
+                </p>
+        
+                <li> <span >valueSerializer</span>
+                    <span class="type">  <a href="../../kafka/objects/Serializer.html">Serializer</a>?</span>
+                    
+                </li>
+                <p>
+                    
+                    <p>Custom serializer object to serialize Kafka values. This should implement the
+<code>kafka:Serializer</code> object</p>
+
+                </p>
+        
+                <li> <span >keySerializer</span>
+                    <span class="type">  <a href="../../kafka/objects/Serializer.html">Serializer</a>?</span>
+                    
+                </li>
+                <p>
+                    
+                    <p>Custom serializer object to serialize Kafka keys. This should implement the <code>kafka:Serializer</code>
+object</p>
+
+                </p>
+        
+                <li> <span >schemaRegistryUrl</span>
+                    <span class="type">  <span class="builtin-type">string?</span></span>
+                    
+                </li>
+                <p>
+                    
+                    <p>Avro schema registry URL. Use this field to specify the schema registry URL if the Avro
+serializer is used</p>
+
+                </p>
+        
+                <li> <span >properties</span>
+                    <span class="type">  <span class="builtin-type">map</span><<span class="builtin-type">string</span>></span>
+                    
+                </li>
+                <p>
+                    
+                    <p>Additional properties for the property fields not provided by Ballerina Kafka module. Use this with
+caution since this can override any of the fields. It is not recomendded to use this field except
+in an extreme situation</p>
+
+                </p>
+        
+                <li> <span >bufferMemory</span>
+                    <span class="type">  <span class="builtin-type">int?</span></span>
+                    
+                </li>
+                <p>
+                    
+                    <p>Total bytes of memory the producer can use to buffer records</p>
+
+                </p>
+        
+                <li> <span >retryCount</span>
+                    <span class="type">  <span class="builtin-type">int?</span></span>
+                    
+                </li>
+                <p>
+                    
+                    <p>Number of retries to resend a record</p>
+
+                </p>
+        
+                <li> <span >batchSize</span>
+                    <span class="type">  <span class="builtin-type">int?</span></span>
+                    
+                </li>
+                <p>
+                    
+                    <p>Number of records to be batched for a single request. Use 0 for no batching</p>
+
+                </p>
+        
+                <li> <span >linger</span>
+                    <span class="type">  <span class="builtin-type">int?</span></span>
+                    
+                </li>
+                <p>
+                    
+                    <p>Delay to allow other records to be batched</p>
+
+                </p>
+        
+                <li> <span >sendBuffer</span>
+                    <span class="type">  <span class="builtin-type">int?</span></span>
+                    
+                </li>
+                <p>
+                    
+                    <p>Size of the TCP send buffer (SO_SNDBUF)</p>
+
+                </p>
+        
+                <li> <span >receiveBuffer</span>
+                    <span class="type">  <span class="builtin-type">int?</span></span>
+                    
+                </li>
+                <p>
+                    
+                    <p>Size of the TCP receive buffer (SO_RCVBUF)</p>
+
+                </p>
+        
+                <li> <span >maxRequestSize</span>
+                    <span class="type">  <span class="builtin-type">int?</span></span>
+                    
+                </li>
+                <p>
+                    
+                    <p>The maximum size of a request in bytes</p>
+
+                </p>
+        
+                <li> <span >reconnectBackoffTimeInMillis</span>
+                    <span class="type">  <span class="builtin-type">int?</span></span>
+                    
+                </li>
+                <p>
+                    
+                    <p>Time to wait before attempting to reconnect</p>
+
+                </p>
+        
+                <li> <span >reconnectBackoffMaxTimeInMillis</span>
+                    <span class="type">  <span class="builtin-type">int?</span></span>
+                    
+                </li>
+                <p>
+                    
+                    <p>Maximum amount of time in milliseconds to wait when reconnecting</p>
+
+                </p>
+        
+                <li> <span >retryBackoffTimeInMillis</span>
+                    <span class="type">  <span class="builtin-type">int?</span></span>
+                    
+                </li>
+                <p>
+                    
+                    <p>Time to wait before attempting to retry a failed request</p>
+
+                </p>
+        
+                <li> <span >maxBlock</span>
+                    <span class="type">  <span class="builtin-type">int?</span></span>
+                    
+                </li>
+                <p>
+                    
+                    <p>Maximum block time during which the sending is blocked when the buffer is full</p>
+
+                </p>
+        
+                <li> <span >requestTimeoutInMillis</span>
+                    <span class="type">  <span class="builtin-type">int?</span></span>
+                    
+                </li>
+                <p>
+                    
+                    <p>Wait time for the response of a request</p>
+
+                </p>
+        
+                <li> <span >metadataMaxAgeInMillis</span>
+                    <span class="type">  <span class="builtin-type">int?</span></span>
+                    
+                </li>
+                <p>
+                    
+                    <p>Maximum time to force a refresh of metadata</p>
+
+                </p>
+        
+                <li> <span >metricsSampleWindowInMillis</span>
+                    <span class="type">  <span class="builtin-type">int?</span></span>
+                    
+                </li>
+                <p>
+                    
+                    <p>Time window for a metrics sample to compute over</p>
+
+                </p>
+        
+                <li> <span >metricsNumSamples</span>
+                    <span class="type">  <span class="builtin-type">int?</span></span>
+                    
+                </li>
+                <p>
+                    
+                    <p>Number of samples maintained to compute the metrics</p>
+
+                </p>
+        
+                <li> <span >maxInFlightRequestsPerConnection</span>
+                    <span class="type">  <span class="builtin-type">int?</span></span>
+                    
+                </li>
+                <p>
+                    
+                    <p>Maximum number of unacknowledged requests on a single connection</p>
+
+                </p>
+        
+                <li> <span >connectionsMaxIdleTimeInMillis</span>
+                    <span class="type">  <span class="builtin-type">int?</span></span>
+                    
+                </li>
+                <p>
+                    
+                    <p>Close the idle connections after this number of milliseconds</p>
+
+                </p>
+        
+                <li> <span >transactionTimeoutInMillis</span>
+                    <span class="type">  <span class="builtin-type">int?</span></span>
+                    
+                </li>
+                <p>
+                    
+                    <p>Timeout for transaction status update from the producer</p>
+
+                </p>
+        
+                <li> <span >enableIdempotence</span>
+                    <span class="type">  <span class="builtin-type">boolean</span></span>
+                     <span class="default">(default false)</span> 
+                </li>
+                <p>
+                    
+                    <p>Exactly one copy of each message is written to the stream when enabled</p>
+
+                </p>
+        
+                <li> <span >secureSocket</span>
+                    <span class="type">  <a href="../../kafka/records/SecureSocket.html">SecureSocket</a>?</span>
+                    
+                </li>
+                <p>
+                    
+                    <p>Configurations related to SSL/TLS encryption</p>
+
+                </p>
+        
+                <li> <span >authenticationConfiguration</span>
+                    <span class="type">  <a href="../../kafka/records/AuthenticationConfiguration.html">AuthenticationConfiguration</a>?</span>
+                    
+                </li>
+                <p>
+                    
+                    <p>Authentication-related configurations for the Kafka producer</p>
+
+                </p>
+        
+    </ul>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/components/prism-core.min.js"></script>
+<script src="../../syntax-highlighter/prism-ballerina.js"></script>
+<script>
+    function toggleMenu() {
+        $('#mobMenu').transition('slide down')
+    }
+    $(document).ready(function () {
+        $('.ui.dropdown').dropdown();
+        $('#version-picker').dropdown('set selected', "1.2");
+        $('#version-picker-mob').dropdown('set selected', "1.2");
+
+    });
+
+    let mainNavLinks = document.querySelectorAll(".toc .ui.visible.left.vertical.sidebar.menu .menu a");
+    console.log(mainNavLinks);
+    let contentWrapper = document.querySelector(".content");
+    contentWrapper.addEventListener("scroll", event => {
+      let fromTop = contentWrapper.scrollTop;
+
+      mainNavLinks.forEach(link => {
+        let section = document.querySelector("#" + link.attributes.getNamedItem("data").textContent);
+
+        if (
+          section.offsetTop <= fromTop &&
+          section.offsetTop + section.offsetHeight > fromTop
+        ) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    });
+
+</script>
+<script>
+    var rootPath = "../../";
+</script>
+<script src="../../doc-search/search-data.js"></script>
+<script src="../../doc-search/search.js"></script>
+<script>
+    var str = "";
+    var currentModule = "kafka";
+    searchData.modules.forEach(function(module) {
+        var active = "";
+        if (currentModule==module.id) {
+            active = " active";
+        }
+        str += '<a class="item' + active + '" href="' + rootPath + module.id + '/index.html">' + module.id + '</a>';
+    });
+    document.getElementById("modules-list").innerHTML = str;
+    document.getElementById("modules-list-mob").innerHTML = str;
+</script>
+
+
+        
+        
+    </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/components/prism-core.min.js"></script>
+<script src="../../syntax-highlighter/prism-ballerina.js"></script>
+<script>
+    function toggleMenu() {
+        $('#mobMenu').transition('slide down')
+    }
+    $(document).ready(function () {
+        $('.ui.dropdown').dropdown();
+        $('#version-picker').dropdown('set selected', "1.2");
+        $('#version-picker-mob').dropdown('set selected', "1.2");
+
+    });
+
+    let mainNavLinks = document.querySelectorAll(".toc .ui.visible.left.vertical.sidebar.menu .menu a");
+    console.log(mainNavLinks);
+    let contentWrapper = document.querySelector(".content");
+    contentWrapper.addEventListener("scroll", event => {
+      let fromTop = contentWrapper.scrollTop;
+
+      mainNavLinks.forEach(link => {
+        let section = document.querySelector("#" + link.attributes.getNamedItem("data").textContent);
+
+        if (
+          section.offsetTop <= fromTop &&
+          section.offsetTop + section.offsetHeight > fromTop
+        ) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    });
+
+</script>
+<script>
+    var rootPath = "../../";
+</script>
+<script src="../../doc-search/search-data.js"></script>
+<script src="../../doc-search/search.js"></script>
+<script>
+    var str = "";
+    var currentModule = "kafka";
+    searchData.modules.forEach(function(module) {
+        var active = "";
+        if (currentModule==module.id) {
+            active = " active";
+        }
+        str += '<a class="item' + active + '" href="' + rootPath + module.id + '/index.html">' + module.id + '</a>';
+    });
+    document.getElementById("modules-list").innerHTML = str;
+    document.getElementById("modules-list-mob").innerHTML = str;
+</script>
+
+
+

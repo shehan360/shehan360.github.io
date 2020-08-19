@@ -1,0 +1,473 @@
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="This module provides an inbound LDAP authentication provider, which is used to authenticate using LDAP credentials.
+">
+    <meta name="keywords" content="ballerina,ballerina lang,api docs,ldap">
+
+    <title>API Docs - ballerina/ldap</title>
+
+    <script src="../html-template-resources/jquery.min.js"></script>
+    <link rel="stylesheet" href="../html-template-resources/semantic.min.css">
+    <link rel="stylesheet" href="../html-template-resources/components/icon.min.css">
+    <link rel="stylesheet" href="../html-template-resources/styles/css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/themes/prism.min.css" rel="stylesheet" />
+    <script src="../html-template-resources/semantic.min.js"></script>
+
+</head>
+
+
+<body>
+    <div class="pusher">
+        <div class="mobile-logo-div">
+            <div class="ui secondary menu">
+                <a href="../index.html">
+                    <img class="mobile-logo" src="../html-template-resources/images/ballerina-logo.png">
+                </a>
+                <div class="right item">
+                    <button class="ui icon button" onclick="toggleMenu()">
+                     <i class="large bars icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="toc">
+            <div class="ui visible left vertical sidebar menu">
+                <a href="
+                    ../index.html">
+                    <img class="logo" src="../html-template-resources/images/ballerina-logo.png">
+                </a>
+                
+                    
+                    <div class="header">
+                        <a class="capitalize" href="../ldap/index.html">
+                            ldap Module
+                        </a>
+                    </div>
+                    <div class="menu">
+    
+        
+            <a class="item" data="records" href="../ldap/index.html#records">Records</a>
+        
+    
+    
+        
+            <a class="item" data="objects" href="../ldap/index.html#objects">Objects</a>
+        
+    
+    
+    
+    
+        <a class="item" data="functions" href="../ldap/index.html#functions">Functions</a>
+    
+    
+    
+    
+        <a class="item" ata="types" href="../ldap/index.html#types">Types</a>
+    
+    
+        <a class="item" data="errors" href="../ldap/index.html#errors">Errors</a>
+    
+    <div class="ui divider"></div>
+</div>
+
+                    <div class="header capitalize">
+                        Other Modules
+                    </div>
+                    <div id="modules-list" class="menu"></div>
+                    <div class="ui divider"></div>
+                
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="row nav-bar">
+                <div class="ui secondary menu">
+                    <div class="search-bar">
+                        <div class="ui category search item search-bar">
+                            <i class="search link icon"></i>
+                            <div class="ui transparent icon input">
+                                <input class="prompt" id="searchBox" type="text" placeholder="Search API Docs..."/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right menu">
+                        <a class="item active">Learn</a>
+                        <a class="item">Events</a>
+                        <a class="item">Central</a>
+                        <a class="item">Community</a>
+                        <a class="item">Blog</a>
+                        <div class="ui dropdown item ballerina" id="version-picker">
+                            Version
+                            <i class="dropdown icon"></i>
+                            <div class="menu">
+                                <a class="item" value="1.0">1.0</a>
+                                <a class="item" value="1.1">1.1</a>
+                                <a class="item" value="1.2">1.2</a>
+                                <a class="item" value="swan-lake">Swan Lake</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div id="mobMenu" class="mob-menu">
+                    <div class="ui stackable secondary menu">
+                        <div class="item">
+                            <div class="search-bar">
+                                <div class="ui category search item search-bar">
+                                    <i class="search link icon"></i>
+                                    <div class="ui transparent icon input">
+                                        <input class="prompt" id="searchBoxMob" type="text" placeholder="Search API Docs..."/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                            
+                            <div class="ui dropdown item capitalize">
+                                ldap Module <i class="dropdown icon"></i>
+                                <div class="menu">
+    
+        
+            <a class="item" data="records" href="../ldap/index.html#records">Records</a>
+        
+    
+    
+        
+            <a class="item" data="objects" href="../ldap/index.html#objects">Objects</a>
+        
+    
+    
+    
+    
+        <a class="item" data="functions" href="../ldap/index.html#functions">Functions</a>
+    
+    
+    
+    
+        <a class="item" ata="types" href="../ldap/index.html#types">Types</a>
+    
+    
+        <a class="item" data="errors" href="../ldap/index.html#errors">Errors</a>
+    
+    <div class="ui divider"></div>
+</div>
+
+                            </div>
+                            <div class="ui dropdown item">
+                                Other Modules <i class="dropdown icon"></i>
+                                <div id="modules-list-mob" class="menu"></div>
+                            </div>
+                        
+
+                            <div class="ui dropdown item" id="version-picker-mob">
+                                Version <i class="dropdown icon"></i>
+                                <div class="menu">
+                                    <a class="item" value="1.0">1.0</a>
+                                    <a class="item" value="1.1">1.1</a>
+                                    <a class="item" value="1.2">1.2</a>
+                                    <a class="item" value="swan-lake">Swan Lake</a>
+                                </div>
+                            </div>
+                            <div class="ui dropdown item ballerina">
+                                Ballerina <i class="dropdown icon"></i>
+                                <div class="menu">
+                                    <a class="item active">Learn</a>
+                                    <a class="item">Events</a>
+                                    <a class="item">Central</a>
+                                    <a class="item">Community</a>
+                                </div>
+                            </div>
+
+                    </div>
+                </div>
+                <div id="search-impl"></div>
+                <div id="main">
+                    
+                        <div class="ui breadcrumb">
+                            <a class="section" href="
+                                 ../index.html">Modules</a>
+                            <i class="right angle icon divider"></i>
+                            <a class="section capitalize active" href="../ldap/index.html">ldap</a>
+                            
+                        </div>
+                    
+
+                    <div class="ui very padded segment module-data">
+                            <h1 class="capitalize">
+    Module: ldap
+
+                            
+                            </h1>
+                        
+    <h2>ballerina/ldap:1.0.0</h2>
+    <h2>Module Overview</h2>
+<p>This module provides an inbound LDAP authentication provider, which is used to authenticate using LDAP credentials.</p>
+<p>For information on the operations, which you can perform with this module, see the below <strong>Functions</strong>. For an example on the usage of the operations, see the <a href="https://ballerina.io/swan-lake/learn/by-example/secured-service-with-ldap.html">Secured Service with LDAP Example</a>.</p>
+
+
+    
+        
+            <section id="records">
+                <div class="main-method-title here">
+                    <a class="url-link" href="#records">
+                        <img class="url-link-img" src="../html-template-resources/images/link.svg">
+                    </a>
+                    <h2> Records </h2>
+                    <p>[3]</p>
+                </div>
+                <div class="ui divider"></div>
+                <table class="ui very basic table">
+                    
+                    
+                    <tr>
+                        <td class="module-title truncate records" id="LdapConnection" title="LdapConnection">
+                            <a class="records " href="records/LdapConnection.html">LdapConnection</a>
+                        </td>
+                        <td class="module-desc">
+                            
+                            <p>Represets the LDAP connection.
+                        </td>
+                    </tr>
+                    
+                    
+                    
+                    <tr>
+                        <td class="module-title truncate records" id="LdapConnectionConfig" title="LdapConnectionConfig">
+                            <a class="records " href="records/LdapConnectionConfig.html">LdapConnectionConfig</a>
+                        </td>
+                        <td class="module-desc">
+                            
+                            <p>Represents the configurations that are required for an LDAP auth store.
+                        </td>
+                    </tr>
+                    
+                    
+                    
+                    <tr>
+                        <td class="module-title truncate records" id="SecureSocket" title="SecureSocket">
+                            <a class="records " href="records/SecureSocket.html">SecureSocket</a>
+                        </td>
+                        <td class="module-desc">
+                            
+                            <p>Configures the SSL/TLS options to be used for LDAP communication.
+                        </td>
+                    </tr>
+                    
+                    
+                </table>
+            </section>
+        
+    
+
+    
+        
+            <section id="objects">
+                <div class="main-method-title here">
+                    <a class="url-link" href="#objects">
+                        <img class="url-link-img" src="../html-template-resources/images/link.svg">
+                    </a>
+                    <h2> Objects </h2>
+                    <p>[1]</p>
+                </div>
+                <div class="ui divider"></div>
+                <table class="ui very basic table">
+                    
+                    
+                    <tr>
+                        <td class="module-title truncate objects" id="InboundLdapAuthProvider" title="InboundLdapAuthProvider">
+                            <a class="objects " href="objects/InboundLdapAuthProvider.html">InboundLdapAuthProvider</a>
+                        </td>
+                        <td class="module-desc">
+                            
+                            <p>Represents the inbound LDAP auth provider.
+                        </td>
+                    </tr>
+                    
+                    
+                </table>
+            </section>
+        
+    
+
+    
+
+    
+
+
+    
+    <section id="functions">
+        <div class="main-method-title here">
+            <a class="url-link" href="#functions">
+                <img class="url-link-img" src="../html-template-resources/images/link.svg">
+            </a>
+            <h2> Functions </h2>
+            <p>[3]</p>
+        </div>
+        <div class="ui divider"></div>
+        <table class="ui very basic table">
+            
+            <tr>
+                <td class="module-title truncate functions" id="doAuthenticate" title="doAuthenticate">
+                    <a class="functions " href="functions.html#doAuthenticate">doAuthenticate</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Authenticates with the username and password.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate functions" id="getGroups" title="getGroups">
+                    <a class="functions " href="functions.html#getGroups">getGroups</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Retrieves the group(s) of the user related to the provided username.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate functions" id="initLdapConnectionContext" title="initLdapConnectionContext">
+                    <a class="functions " href="functions.html#initLdapConnectionContext">initLdapConnectionContext</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Initailizes the LDAP connection context.
+                </td>
+            </tr>
+            
+        </table>
+    </section>
+    
+
+
+    
+
+
+    
+
+    
+    <section id="types">
+        <div class="main-method-title here">
+            <a class="url-link" href="#types">
+                <img class="url-link-img" src="../html-template-resources/images/link.svg">
+            </a>
+            <h2> Types </h2>
+            <p>[1]</p>
+        </div>
+        <div class="ui divider"></div>
+        <table class="ui very basic table">
+            
+                <tr>
+                    <td class="module-title truncate types" id="Error" title="Error">
+                        <a class="types " href="types.html#Error">Error</a>
+                    </td>
+                    <td class="module-desc">
+                        
+                        <p>Represents LDAP module related errors.
+                    </td>
+                </tr>
+            
+            
+        </table>
+    </section>
+    
+
+    
+    <section id="errors">
+        <div class="main-method-title here">
+            <a class="url-link" href="#errors">
+                <img class="url-link-img" src="../html-template-resources/images/link.svg">
+            </a>
+            <h2> Errors </h2>
+            <p>[1]</p>
+        </div>
+        <div class="ui divider"></div>
+        <table class="ui very basic table">
+            
+            <tr>
+                <td class="module-title truncate errors" id="LdapError" title="LdapError">
+                    <a class="errors " href="errors.html#LdapError">LdapError</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Represents the LDAP error type with the message and the cause.
+                </td>
+            </tr>
+            
+        </table>
+    </section>
+    
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/components/prism-core.min.js"></script>
+<script src="../syntax-highlighter/prism-ballerina.js"></script>
+<script>
+    function toggleMenu() {
+        $('#mobMenu').transition('slide down')
+    }
+    $(document).ready(function () {
+        $('.ui.dropdown').dropdown();
+        $('#version-picker').dropdown('set selected', "1.2");
+        $('#version-picker-mob').dropdown('set selected', "1.2");
+
+    });
+
+    let mainNavLinks = document.querySelectorAll(".toc .ui.visible.left.vertical.sidebar.menu .menu a");
+    console.log(mainNavLinks);
+    let contentWrapper = document.querySelector(".content");
+    contentWrapper.addEventListener("scroll", event => {
+      let fromTop = contentWrapper.scrollTop;
+
+      mainNavLinks.forEach(link => {
+        let section = document.querySelector("#" + link.attributes.getNamedItem("data").textContent);
+
+        if (
+          section.offsetTop <= fromTop &&
+          section.offsetTop + section.offsetHeight > fromTop
+        ) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    });
+
+</script>
+<script>
+    var rootPath = "../";
+</script>
+<script src="../doc-search/search-data.js"></script>
+<script src="../doc-search/search.js"></script>
+<script>
+    var str = "";
+    var currentModule = "ldap";
+    searchData.modules.forEach(function(module) {
+        var active = "";
+        if (currentModule==module.id) {
+            active = " active";
+        }
+        str += '<a class="item' + active + '" href="' + rootPath + module.id + '/index.html">' + module.id + '</a>';
+    });
+    document.getElementById("modules-list").innerHTML = str;
+    document.getElementById("modules-list-mob").innerHTML = str;
+</script>
+
+
+

@@ -1,0 +1,662 @@
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="This module provides lang library operations on float values defined by the language specification 2020R1.
+">
+    <meta name="keywords" content="ballerina,ballerina lang,api docs,lang.float">
+
+    <title>API Docs - ballerina/lang.float</title>
+
+    <script src="../html-template-resources/jquery.min.js"></script>
+    <link rel="stylesheet" href="../html-template-resources/semantic.min.css">
+    <link rel="stylesheet" href="../html-template-resources/components/icon.min.css">
+    <link rel="stylesheet" href="../html-template-resources/styles/css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/themes/prism.min.css" rel="stylesheet" />
+    <script src="../html-template-resources/semantic.min.js"></script>
+
+</head>
+
+
+<body>
+    <div class="pusher">
+        <div class="mobile-logo-div">
+            <div class="ui secondary menu">
+                <a href="../index.html">
+                    <img class="mobile-logo" src="../html-template-resources/images/ballerina-logo.png">
+                </a>
+                <div class="right item">
+                    <button class="ui icon button" onclick="toggleMenu()">
+                     <i class="large bars icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="toc">
+            <div class="ui visible left vertical sidebar menu">
+                <a href="
+                    ../index.html">
+                    <img class="logo" src="../html-template-resources/images/ballerina-logo.png">
+                </a>
+                
+                    
+                    <div class="header">
+                        <a class="capitalize" href="../lang.float/index.html">
+                            lang.float Module
+                        </a>
+                    </div>
+                    <div class="menu">
+    
+    
+    
+    
+    
+        <a class="item" data="functions" href="../lang.float/index.html#functions">Functions</a>
+    
+    
+        <a class="item" data="constants" href="../lang.float/index.html#constants">Constants</a>
+    
+    
+    
+    
+    <div class="ui divider"></div>
+</div>
+
+                    <div class="header capitalize">
+                        Other Modules
+                    </div>
+                    <div id="modules-list" class="menu"></div>
+                    <div class="ui divider"></div>
+                
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="row nav-bar">
+                <div class="ui secondary menu">
+                    <div class="search-bar">
+                        <div class="ui category search item search-bar">
+                            <i class="search link icon"></i>
+                            <div class="ui transparent icon input">
+                                <input class="prompt" id="searchBox" type="text" placeholder="Search API Docs..."/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right menu">
+                        <a class="item active">Learn</a>
+                        <a class="item">Events</a>
+                        <a class="item">Central</a>
+                        <a class="item">Community</a>
+                        <a class="item">Blog</a>
+                        <div class="ui dropdown item ballerina" id="version-picker">
+                            Version
+                            <i class="dropdown icon"></i>
+                            <div class="menu">
+                                <a class="item" value="1.0">1.0</a>
+                                <a class="item" value="1.1">1.1</a>
+                                <a class="item" value="1.2">1.2</a>
+                                <a class="item" value="swan-lake">Swan Lake</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div id="mobMenu" class="mob-menu">
+                    <div class="ui stackable secondary menu">
+                        <div class="item">
+                            <div class="search-bar">
+                                <div class="ui category search item search-bar">
+                                    <i class="search link icon"></i>
+                                    <div class="ui transparent icon input">
+                                        <input class="prompt" id="searchBoxMob" type="text" placeholder="Search API Docs..."/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                            
+                            <div class="ui dropdown item capitalize">
+                                lang.float Module <i class="dropdown icon"></i>
+                                <div class="menu">
+    
+    
+    
+    
+    
+        <a class="item" data="functions" href="../lang.float/index.html#functions">Functions</a>
+    
+    
+        <a class="item" data="constants" href="../lang.float/index.html#constants">Constants</a>
+    
+    
+    
+    
+    <div class="ui divider"></div>
+</div>
+
+                            </div>
+                            <div class="ui dropdown item">
+                                Other Modules <i class="dropdown icon"></i>
+                                <div id="modules-list-mob" class="menu"></div>
+                            </div>
+                        
+
+                            <div class="ui dropdown item" id="version-picker-mob">
+                                Version <i class="dropdown icon"></i>
+                                <div class="menu">
+                                    <a class="item" value="1.0">1.0</a>
+                                    <a class="item" value="1.1">1.1</a>
+                                    <a class="item" value="1.2">1.2</a>
+                                    <a class="item" value="swan-lake">Swan Lake</a>
+                                </div>
+                            </div>
+                            <div class="ui dropdown item ballerina">
+                                Ballerina <i class="dropdown icon"></i>
+                                <div class="menu">
+                                    <a class="item active">Learn</a>
+                                    <a class="item">Events</a>
+                                    <a class="item">Central</a>
+                                    <a class="item">Community</a>
+                                </div>
+                            </div>
+
+                    </div>
+                </div>
+                <div id="search-impl"></div>
+                <div id="main">
+                    
+                        <div class="ui breadcrumb">
+                            <a class="section" href="
+                                 ../index.html">Modules</a>
+                            <i class="right angle icon divider"></i>
+                            <a class="section capitalize active" href="../lang.float/index.html">lang.float</a>
+                            
+                        </div>
+                    
+
+                    <div class="ui very padded segment module-data">
+                            <h1 class="capitalize">
+    Module: lang.float
+
+                            
+                            </h1>
+                        
+    <h2>ballerina/lang.float:1.0.0</h2>
+    <h2>Module Overview</h2>
+<p>This module provides lang library operations on <code>float</code> values defined by the language specification 2020R1.</p>
+
+
+    
+
+    
+
+    
+
+    
+
+
+    
+    <section id="functions">
+        <div class="main-method-title here">
+            <a class="url-link" href="#functions">
+                <img class="url-link-img" src="../html-template-resources/images/link.svg">
+            </a>
+            <h2> Functions </h2>
+            <p>[31]</p>
+        </div>
+        <div class="ui divider"></div>
+        <table class="ui very basic table">
+            
+            <tr>
+                <td class="module-title truncate functions" id="abs" title="abs">
+                    <a class="functions " href="functions.html#abs">abs</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>IEEE abs operation.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate functions" id="acos" title="acos">
+                    <a class="functions " href="functions.html#acos">acos</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Returns the arccosine of a float value.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate functions" id="asin" title="asin">
+                    <a class="functions " href="functions.html#asin">asin</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Returns the arcsine of a float value.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate functions" id="atan" title="atan">
+                    <a class="functions " href="functions.html#atan">atan</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Returns the arctangent of a float value.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate functions" id="atan2" title="atan2">
+                    <a class="functions " href="functions.html#atan2">atan2</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Performs the 2-argument arctangent operation.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate functions" id="cbrt" title="cbrt">
+                    <a class="functions " href="functions.html#cbrt">cbrt</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Returns the cube root of a float value.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate functions" id="ceiling" title="ceiling">
+                    <a class="functions " href="functions.html#ceiling">ceiling</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Rounds a float up to the closest integral value.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate functions" id="cos" title="cos">
+                    <a class="functions " href="functions.html#cos">cos</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Returns the cosine of a float value.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate functions" id="cosh" title="cosh">
+                    <a class="functions " href="functions.html#cosh">cosh</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Returns the hyperbolic cosine of a float value.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate functions" id="exp" title="exp">
+                    <a class="functions " href="functions.html#exp">exp</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Raises Euler's number to a power.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate functions" id="floor" title="floor">
+                    <a class="functions " href="functions.html#floor">floor</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Rounds a float down to the closest integral value.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate functions" id="fromBitsInt" title="fromBitsInt">
+                    <a class="functions " href="functions.html#fromBitsInt">fromBitsInt</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Returns the float that is represented in IEEE 64-bit floating point by <code>x</code>.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate functions" id="fromHexString" title="fromHexString">
+                    <a class="functions " href="functions.html#fromHexString">fromHexString</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Return the float value represented by <code>s</code>.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate functions" id="fromString" title="fromString">
+                    <a class="functions " href="functions.html#fromString">fromString</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Return the float value represented by <code>s</code>.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate functions" id="isFinite" title="isFinite">
+                    <a class="functions " href="functions.html#isFinite">isFinite</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Tests whether a float is finite.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate functions" id="isInfinite" title="isInfinite">
+                    <a class="functions " href="functions.html#isInfinite">isInfinite</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Tests whether a float is infinite.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate functions" id="isNaN" title="isNaN">
+                    <a class="functions " href="functions.html#isNaN">isNaN</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Tests whether a float is NaN.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate functions" id="log" title="log">
+                    <a class="functions " href="functions.html#log">log</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Returns the natural logarithm of a float value
+Corresponds to IEEE log operation.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate functions" id="log10" title="log10">
+                    <a class="functions " href="functions.html#log10">log10</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Returns the base 10 logarithm of a float value.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate functions" id="max" title="max">
+                    <a class="functions " href="functions.html#max">max</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Maximum of zero or more float values.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate functions" id="min" title="min">
+                    <a class="functions " href="functions.html#min">min</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Minimum of zero or more float values.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate functions" id="pow" title="pow">
+                    <a class="functions " href="functions.html#pow">pow</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Raises one float value to the power of another float values.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate functions" id="round" title="round">
+                    <a class="functions " href="functions.html#round">round</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Round a float value to the closest integral value.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate functions" id="sin" title="sin">
+                    <a class="functions " href="functions.html#sin">sin</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Returns the sine of a float value.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate functions" id="sinh" title="sinh">
+                    <a class="functions " href="functions.html#sinh">sinh</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Returns the hyperbolic sine of a float value.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate functions" id="sqrt" title="sqrt">
+                    <a class="functions " href="functions.html#sqrt">sqrt</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Returns the square root of a float value.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate functions" id="sum" title="sum">
+                    <a class="functions " href="functions.html#sum">sum</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Sum of zero or more float values.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate functions" id="tan" title="tan">
+                    <a class="functions " href="functions.html#tan">tan</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Returns the tangent of a float value.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate functions" id="tanh" title="tanh">
+                    <a class="functions " href="functions.html#tanh">tanh</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Returns the hyperbolic tangent of a float value.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate functions" id="toBitsInt" title="toBitsInt">
+                    <a class="functions " href="functions.html#toBitsInt">toBitsInt</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Returns IEEE 64-bit binary floating point format representation of <code>x</code> as an int.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate functions" id="toHexString" title="toHexString">
+                    <a class="functions " href="functions.html#toHexString">toHexString</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Returns a string that represents <code>x</code> as a hexadecimal floating point number.
+                </td>
+            </tr>
+            
+        </table>
+    </section>
+    
+
+
+    
+    <section id="constants">
+        <div class="main-method-title here">
+            <a class="url-link" href="#constants">
+                <img class="url-link-img" src="../html-template-resources/images/link.svg">
+            </a>
+            <h2> Constants </h2>
+            <p>[4]</p>
+        </div>
+        <div class="ui divider"></div>
+        <table class="ui very basic table">
+            
+            <tr>
+                <td class="module-title truncate constant" id="PI" title="PI">
+                    <a class="constant " href="constants.html#PI">PI</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>The number π</p>
+
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate constant" id="E" title="E">
+                    <a class="constant " href="constants.html#E">E</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Euler's number</p>
+
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate constant" id="NaN" title="NaN">
+                    <a class="constant " href="constants.html#NaN">NaN</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>IEEE not-a-number value</p>
+
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate constant" id="Infinity" title="Infinity">
+                    <a class="constant " href="constants.html#Infinity">Infinity</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>IEEE positive infinity</p>
+
+                </td>
+            </tr>
+            
+        </table>
+    </section>
+    
+
+
+    
+
+    
+
+    
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/components/prism-core.min.js"></script>
+<script src="../syntax-highlighter/prism-ballerina.js"></script>
+<script>
+    function toggleMenu() {
+        $('#mobMenu').transition('slide down')
+    }
+    $(document).ready(function () {
+        $('.ui.dropdown').dropdown();
+        $('#version-picker').dropdown('set selected', "1.2");
+        $('#version-picker-mob').dropdown('set selected', "1.2");
+
+    });
+
+    let mainNavLinks = document.querySelectorAll(".toc .ui.visible.left.vertical.sidebar.menu .menu a");
+    console.log(mainNavLinks);
+    let contentWrapper = document.querySelector(".content");
+    contentWrapper.addEventListener("scroll", event => {
+      let fromTop = contentWrapper.scrollTop;
+
+      mainNavLinks.forEach(link => {
+        let section = document.querySelector("#" + link.attributes.getNamedItem("data").textContent);
+
+        if (
+          section.offsetTop <= fromTop &&
+          section.offsetTop + section.offsetHeight > fromTop
+        ) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    });
+
+</script>
+<script>
+    var rootPath = "../";
+</script>
+<script src="../doc-search/search-data.js"></script>
+<script src="../doc-search/search.js"></script>
+<script>
+    var str = "";
+    var currentModule = "lang.float";
+    searchData.modules.forEach(function(module) {
+        var active = "";
+        if (currentModule==module.id) {
+            active = " active";
+        }
+        str += '<a class="item' + active + '" href="' + rootPath + module.id + '/index.html">' + module.id + '</a>';
+    });
+    document.getElementById("modules-list").innerHTML = str;
+    document.getElementById("modules-list-mob").innerHTML = str;
+</script>
+
+
+

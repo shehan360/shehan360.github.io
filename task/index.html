@@ -1,0 +1,541 @@
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="This module provides the functionality to configure and manage Task Listeners and Task Schedulers.
+Task Listeners and Task Schedulers can be used to perform tasks periodically.
+">
+    <meta name="keywords" content="ballerina,ballerina lang,api docs,task">
+
+    <title>API Docs - ballerina/task</title>
+
+    <script src="../html-template-resources/jquery.min.js"></script>
+    <link rel="stylesheet" href="../html-template-resources/semantic.min.css">
+    <link rel="stylesheet" href="../html-template-resources/components/icon.min.css">
+    <link rel="stylesheet" href="../html-template-resources/styles/css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/themes/prism.min.css" rel="stylesheet" />
+    <script src="../html-template-resources/semantic.min.js"></script>
+
+</head>
+
+
+<body>
+    <div class="pusher">
+        <div class="mobile-logo-div">
+            <div class="ui secondary menu">
+                <a href="../index.html">
+                    <img class="mobile-logo" src="../html-template-resources/images/ballerina-logo.png">
+                </a>
+                <div class="right item">
+                    <button class="ui icon button" onclick="toggleMenu()">
+                     <i class="large bars icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="toc">
+            <div class="ui visible left vertical sidebar menu">
+                <a href="
+                    ../index.html">
+                    <img class="logo" src="../html-template-resources/images/ballerina-logo.png">
+                </a>
+                
+                    
+                    <div class="header">
+                        <a class="capitalize" href="../task/index.html">
+                            task Module
+                        </a>
+                    </div>
+                    <div class="menu">
+    
+        
+            <a class="item" data="records" href="../task/index.html#records">Records</a>
+        
+    
+    
+        
+            <a class="item" data="objects" href="../task/index.html#objects">Objects</a>
+        
+    
+    
+    
+        <a class="item" data="listeners" href="../task/index.html#listeners">Listeners</a>
+    
+    
+    
+    
+    
+        <a class="item" ata="types" href="../task/index.html#types">Types</a>
+    
+    
+        <a class="item" data="errors" href="../task/index.html#errors">Errors</a>
+    
+    <div class="ui divider"></div>
+</div>
+
+                    <div class="header capitalize">
+                        Other Modules
+                    </div>
+                    <div id="modules-list" class="menu"></div>
+                    <div class="ui divider"></div>
+                
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="row nav-bar">
+                <div class="ui secondary menu">
+                    <div class="search-bar">
+                        <div class="ui category search item search-bar">
+                            <i class="search link icon"></i>
+                            <div class="ui transparent icon input">
+                                <input class="prompt" id="searchBox" type="text" placeholder="Search API Docs..."/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right menu">
+                        <a class="item active">Learn</a>
+                        <a class="item">Events</a>
+                        <a class="item">Central</a>
+                        <a class="item">Community</a>
+                        <a class="item">Blog</a>
+                        <div class="ui dropdown item ballerina" id="version-picker">
+                            Version
+                            <i class="dropdown icon"></i>
+                            <div class="menu">
+                                <a class="item" value="1.0">1.0</a>
+                                <a class="item" value="1.1">1.1</a>
+                                <a class="item" value="1.2">1.2</a>
+                                <a class="item" value="swan-lake">Swan Lake</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div id="mobMenu" class="mob-menu">
+                    <div class="ui stackable secondary menu">
+                        <div class="item">
+                            <div class="search-bar">
+                                <div class="ui category search item search-bar">
+                                    <i class="search link icon"></i>
+                                    <div class="ui transparent icon input">
+                                        <input class="prompt" id="searchBoxMob" type="text" placeholder="Search API Docs..."/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                            
+                            <div class="ui dropdown item capitalize">
+                                task Module <i class="dropdown icon"></i>
+                                <div class="menu">
+    
+        
+            <a class="item" data="records" href="../task/index.html#records">Records</a>
+        
+    
+    
+        
+            <a class="item" data="objects" href="../task/index.html#objects">Objects</a>
+        
+    
+    
+    
+        <a class="item" data="listeners" href="../task/index.html#listeners">Listeners</a>
+    
+    
+    
+    
+    
+        <a class="item" ata="types" href="../task/index.html#types">Types</a>
+    
+    
+        <a class="item" data="errors" href="../task/index.html#errors">Errors</a>
+    
+    <div class="ui divider"></div>
+</div>
+
+                            </div>
+                            <div class="ui dropdown item">
+                                Other Modules <i class="dropdown icon"></i>
+                                <div id="modules-list-mob" class="menu"></div>
+                            </div>
+                        
+
+                            <div class="ui dropdown item" id="version-picker-mob">
+                                Version <i class="dropdown icon"></i>
+                                <div class="menu">
+                                    <a class="item" value="1.0">1.0</a>
+                                    <a class="item" value="1.1">1.1</a>
+                                    <a class="item" value="1.2">1.2</a>
+                                    <a class="item" value="swan-lake">Swan Lake</a>
+                                </div>
+                            </div>
+                            <div class="ui dropdown item ballerina">
+                                Ballerina <i class="dropdown icon"></i>
+                                <div class="menu">
+                                    <a class="item active">Learn</a>
+                                    <a class="item">Events</a>
+                                    <a class="item">Central</a>
+                                    <a class="item">Community</a>
+                                </div>
+                            </div>
+
+                    </div>
+                </div>
+                <div id="search-impl"></div>
+                <div id="main">
+                    
+                        <div class="ui breadcrumb">
+                            <a class="section" href="
+                                 ../index.html">Modules</a>
+                            <i class="right angle icon divider"></i>
+                            <a class="section capitalize active" href="../task/index.html">task</a>
+                            
+                        </div>
+                    
+
+                    <div class="ui very padded segment module-data">
+                            <h1 class="capitalize">
+    Module: task
+
+                            
+                            </h1>
+                        
+    <h2>ballerina/task:1.1.0</h2>
+    <h2>Module Overview</h2>
+<p>This module provides the functionality to configure and manage Task Listeners and Task Schedulers.
+Task Listeners and Task Schedulers can be used to perform tasks periodically.</p>
+<h4>Task Listeners</h4>
+<p>A Task <code>Listener</code> can be used to create a service listener, which will be triggered at specified times.</p>
+<p>Below are the two types of configurations that can be used to configure a Task Listener, either as a timer or as an appointment.</p>
+<ul>
+<li><code>TimerConfiguration</code></li>
+<li><code>AppointmentConfiguration</code></li>
+</ul>
+<h5>Task Listener as a Timer</h5>
+<p>The <code>TimerConfiguration</code> can be used to configure a task that needs to be executed periodically.</p>
+<p>The following code snippet shows how to create a listener, which registers a task with an initial delay of 3000 milliseconds and is executed every 1000 milliseconds for 10 times.</p>
+<pre><code class="language-ballerina">task:TimerConfiguration timerConfiguration = {
+    intervalInMillis: 1000,
+    initialDelayInMillis: 3000,
+    // Number of recurrences will limit the number of times the timer runs.
+    noOfRecurrences: 10
+};
+
+listener task:Listener timer = new(timerConfiguration);
+
+// Creating a service on the `timer` task Listener.
+service timerService on timer {
+    // This resource triggers when the timer goes off.
+    resource function onTrigger() {
+    }
+}
+</code></pre>
+<p>For an example on the usage of the <code>task:Listener</code> as a timer, see the <a href="https://ballerina.io/swan-lake/learn/by-example/task-service-timer.html">Task Service Timer Example</a>.</p>
+<h5>Task Listener as an Appointment</h5>
+<p>The <code>AppointmentConfiguration</code> can be used to schedule an appointment.</p>
+<p>The following code snippet shows how to create a task appointment, which registers a service using a CRON expression to execute the task every second for 10 times.</p>
+<pre><code class="language-ballerina">task:AppointmentConfiguration appointmentConfiguration = {
+    // This cron expression will schedule the appointment once every second.
+    appointmentDetails: &quot;* * * * * ?&quot;,
+    // Number of recurrences will limit the number of times the timer runs.
+    noOfRecurrences: 10
+};
+
+listener task:Listener appointment = new(appointmentConfiguration);
+
+// Creating a service on the `appointment` task Listener.
+service appointmentService on appointment {
+    // This resource triggers when the appointment is due.
+    resource function onTrigger() {
+    }
+}
+</code></pre>
+<p>For an example on the usage of the <code>task:Listener</code> as an appointment, see the <a href="https://ballerina.io/swan-lake/learn/by-example/task-service-appointment.html">Task Service Appointment Example</a>.</p>
+<h4>Task Schedulers</h4>
+<p>A Task <code>Scheduler</code> can be used to create timers/appointments dynamically. Service(s) can be attached to the <code>Scheduler</code> so that they can be invoked when the Scheduler is triggered.</p>
+<p>Similar to Task Listeners, below are the two types of configurations that can be used to configure a Task Scheduler either as a timer or as an appointment.</p>
+<ul>
+<li><code>TimerConfiguration</code></li>
+<li><code>AppointmentConfiguration</code></li>
+</ul>
+<h5>Task Scheduler as a Timer</h5>
+<p>A <code>Scheduler</code> can be used to create timers via its <code>TimerConfiguration</code>.</p>
+<p>The following code snippet shows how to create a <code>task:Scheduler</code> as a timer.</p>
+<pre><code class="language-ballerina">task:TimerConfiguration timerConfiguration = {
+        intervalInMillis: 1000,
+        initialDelayInMillis: 0,
+        noOfRecurrences: 10
+};
+task:Scheduler timer = new(timerConfiguration);
+</code></pre>
+<p>For an example on the usage of the <code>task:Scheduler</code> as a timer, see the <a href="https://ballerina.io/swan-lake/learn/by-example/task-scheduler-timer.html">Task Scheduler Timer Example</a>.</p>
+<h4>Task Scheduler as an Appointment</h4>
+<p>A <code>Scheduler</code> can also be used to create appointments via its <code>AppointmentConfiguration</code>.</p>
+<p>The following code snippet shows how to create a Task Scheduler as an appointment.</p>
+<pre><code class="language-ballerina">task:AppointmentConfiguration appointmentConfiguration = {
+        appointmentDetails: &quot;* * * * * ?&quot;,
+        noOfRecurrences: 10
+};
+task:Scheduler appointment = new(appointmentConfiguration);
+</code></pre>
+<p>For an example on the usage of the <code>task:Scheduler</code> as an appointment, see the <a href="https://ballerina.io/swan-lake/learn/by-example/task-scheduler-appointment.html">Task Scheduler Appointment Example</a>.</p>
+
+
+    
+        
+            <section id="records">
+                <div class="main-method-title here">
+                    <a class="url-link" href="#records">
+                        <img class="url-link-img" src="../html-template-resources/images/link.svg">
+                    </a>
+                    <h2> Records </h2>
+                    <p>[3]</p>
+                </div>
+                <div class="ui divider"></div>
+                <table class="ui very basic table">
+                    
+                    
+                    <tr>
+                        <td class="module-title truncate records" id="AppointmentConfiguration" title="AppointmentConfiguration">
+                            <a class="records " href="records/AppointmentConfiguration.html">AppointmentConfiguration</a>
+                        </td>
+                        <td class="module-desc">
+                            
+                            <p>Configurations related to an appointment, which are used to define the behavior of an appointment when initializing
+the <code>task:Listener</code>.
+                        </td>
+                    </tr>
+                    
+                    
+                    
+                    <tr>
+                        <td class="module-title truncate records" id="AppointmentData" title="AppointmentData">
+                            <a class="records " href="records/AppointmentData.html">AppointmentData</a>
+                        </td>
+                        <td class="module-desc">
+                            
+                            <p>The CRON expression required for scheduling an appointment.
+                        </td>
+                    </tr>
+                    
+                    
+                    
+                    <tr>
+                        <td class="module-title truncate records" id="TimerConfiguration" title="TimerConfiguration">
+                            <a class="records " href="records/TimerConfiguration.html">TimerConfiguration</a>
+                        </td>
+                        <td class="module-desc">
+                            
+                            <p>Configurations related to a timer, which are used to define the behavior of a timer when initializing the
+<code>task:Listener</code>.
+                        </td>
+                    </tr>
+                    
+                    
+                </table>
+            </section>
+        
+    
+
+    
+        
+            <section id="objects">
+                <div class="main-method-title here">
+                    <a class="url-link" href="#objects">
+                        <img class="url-link-img" src="../html-template-resources/images/link.svg">
+                    </a>
+                    <h2> Objects </h2>
+                    <p>[1]</p>
+                </div>
+                <div class="ui divider"></div>
+                <table class="ui very basic table">
+                    
+                    
+                    <tr>
+                        <td class="module-title truncate objects" id="Scheduler" title="Scheduler">
+                            <a class="objects " href="objects/Scheduler.html">Scheduler</a>
+                        </td>
+                        <td class="module-desc">
+                            
+                            <p>Represents a ballerina task Scheduler, which can be used to run jobs periodically, using the given configurations.
+                        </td>
+                    </tr>
+                    
+                    
+                </table>
+            </section>
+        
+    
+
+    
+
+    
+    <section id="listeners">
+        <div class="main-method-title here">
+            <a class="url-link" href="#listeners">
+                <img class="url-link-img" src="../html-template-resources/images/link.svg">
+            </a>
+            <h2> Listeners </h2>
+            <p>[1]</p>
+        </div>
+        <div class="ui divider"></div>
+        <table class="ui very basic table">
+            
+            <tr>
+                <td class="module-title truncate listeners" id="Listener" title="Listener">
+                    <a class="listeners " href="listeners/Listener.html">Listener</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Represents a ballerina task listener, which can be used to schedule and execute tasks periodically.
+                </td>
+            </tr>
+            
+        </table>
+    </section>
+    
+
+
+    
+
+
+    
+
+
+    
+
+    
+    <section id="types">
+        <div class="main-method-title here">
+            <a class="url-link" href="#types">
+                <img class="url-link-img" src="../html-template-resources/images/link.svg">
+            </a>
+            <h2> Types </h2>
+            <p>[1]</p>
+        </div>
+        <div class="ui divider"></div>
+        <table class="ui very basic table">
+            
+                <tr>
+                    <td class="module-title truncate types" id="Error" title="Error">
+                        <a class="types " href="types.html#Error">Error</a>
+                    </td>
+                    <td class="module-desc">
+                        
+                        <p>Represents the Union error type of the ballerina/task module.
+                    </td>
+                </tr>
+            
+            
+        </table>
+    </section>
+    
+
+    
+    <section id="errors">
+        <div class="main-method-title here">
+            <a class="url-link" href="#errors">
+                <img class="url-link-img" src="../html-template-resources/images/link.svg">
+            </a>
+            <h2> Errors </h2>
+            <p>[2]</p>
+        </div>
+        <div class="ui divider"></div>
+        <table class="ui very basic table">
+            
+            <tr>
+                <td class="module-title truncate errors" id="ListenerError" title="ListenerError">
+                    <a class="errors " href="errors.html#ListenerError">ListenerError</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Error type specific to the <code>task:Listener</code> object functions.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate errors" id="SchedulerError" title="SchedulerError">
+                    <a class="errors " href="errors.html#SchedulerError">SchedulerError</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Error type specific to the <code>task:Scheduler</code> object functions.
+                </td>
+            </tr>
+            
+        </table>
+    </section>
+    
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/components/prism-core.min.js"></script>
+<script src="../syntax-highlighter/prism-ballerina.js"></script>
+<script>
+    function toggleMenu() {
+        $('#mobMenu').transition('slide down')
+    }
+    $(document).ready(function () {
+        $('.ui.dropdown').dropdown();
+        $('#version-picker').dropdown('set selected', "1.2");
+        $('#version-picker-mob').dropdown('set selected', "1.2");
+
+    });
+
+    let mainNavLinks = document.querySelectorAll(".toc .ui.visible.left.vertical.sidebar.menu .menu a");
+    console.log(mainNavLinks);
+    let contentWrapper = document.querySelector(".content");
+    contentWrapper.addEventListener("scroll", event => {
+      let fromTop = contentWrapper.scrollTop;
+
+      mainNavLinks.forEach(link => {
+        let section = document.querySelector("#" + link.attributes.getNamedItem("data").textContent);
+
+        if (
+          section.offsetTop <= fromTop &&
+          section.offsetTop + section.offsetHeight > fromTop
+        ) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    });
+
+</script>
+<script>
+    var rootPath = "../";
+</script>
+<script src="../doc-search/search-data.js"></script>
+<script src="../doc-search/search.js"></script>
+<script>
+    var str = "";
+    var currentModule = "task";
+    searchData.modules.forEach(function(module) {
+        var active = "";
+        if (currentModule==module.id) {
+            active = " active";
+        }
+        str += '<a class="item' + active + '" href="' + rootPath + module.id + '/index.html">' + module.id + '</a>';
+    });
+    document.getElementById("modules-list").innerHTML = str;
+    document.getElementById("modules-list-mob").innerHTML = str;
+</script>
+
+
+
