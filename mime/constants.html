@@ -1,0 +1,527 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="This module provides functions to encapsulate multiple body parts such as attachments into a single message. The
+communication of such messages follow the MIME (Multipurpose Internet Mail Extensions) specification as specified in
+the RFC 2045 standard.
+">
+    <meta name="keywords" content="ballerina,ballerina lang,api docs,mime">
+
+    <title>API Docs - Constants : mime</title>
+
+    <script src="../html-template-resources/jquery.min.js"></script>
+    <link rel="stylesheet" href="../html-template-resources/semantic.min.css">
+    <link rel="stylesheet" href="../html-template-resources/components/icon.min.css">
+    <link rel="stylesheet" href="../html-template-resources/styles/css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/themes/prism.min.css" rel="stylesheet" />
+    <script src="../html-template-resources/semantic.min.js"></script>
+
+</head>
+
+
+<body>
+    <div class="pusher">
+        <div class="mobile-logo-div">
+            <div class="ui secondary menu">
+                <a href="../index.html">
+                    <img class="mobile-logo" src="../html-template-resources/images/ballerina-logo.png">
+                </a>
+                <div class="right item">
+                    <button class="ui icon button" onclick="toggleMenu()">
+                     <i class="large bars icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="toc">
+            <div class="ui visible left vertical sidebar menu">
+                <a href="
+                    ../index.html">
+                    <img class="logo" src="../html-template-resources/images/ballerina-logo.png">
+                </a>
+                
+                    
+                    <div class="header">
+                        <a class="capitalize" href="../mime/index.html">
+                            mime Module
+                        </a>
+                    </div>
+                    <div class="menu">
+    
+    
+        
+            <a class="item" data="objects" href="../mime/index.html#objects">Objects</a>
+        
+    
+    
+    
+    
+        <a class="item" data="functions" href="../mime/index.html#functions">Functions</a>
+    
+    
+        <a class="item" data="constants" href="../mime/index.html#constants">Constants</a>
+    
+    
+    
+        <a class="item" ata="types" href="../mime/index.html#types">Types</a>
+    
+    
+        <a class="item" data="errors" href="../mime/index.html#errors">Errors</a>
+    
+    <div class="ui divider"></div>
+</div>
+
+                    <div class="header capitalize">
+                        Other Modules
+                    </div>
+                    <div id="modules-list" class="menu"></div>
+                    <div class="ui divider"></div>
+                
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="row nav-bar">
+                <div class="ui secondary menu">
+                    <div class="search-bar">
+                        <div class="ui category search item search-bar">
+                            <i class="search link icon"></i>
+                            <div class="ui transparent icon input">
+                                <input class="prompt" id="searchBox" type="text" placeholder="Search API Docs..."/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right menu">
+                        <a class="item active">Learn</a>
+                        <a class="item">Events</a>
+                        <a class="item">Central</a>
+                        <a class="item">Community</a>
+                        <a class="item">Blog</a>
+                        <div class="ui dropdown item ballerina" id="version-picker">
+                            Version
+                            <i class="dropdown icon"></i>
+                            <div class="menu">
+                                <a class="item" value="1.0">1.0</a>
+                                <a class="item" value="1.1">1.1</a>
+                                <a class="item" value="1.2">1.2</a>
+                                <a class="item" value="swan-lake">Swan Lake</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div id="mobMenu" class="mob-menu">
+                    <div class="ui stackable secondary menu">
+                        <div class="item">
+                            <div class="search-bar">
+                                <div class="ui category search item search-bar">
+                                    <i class="search link icon"></i>
+                                    <div class="ui transparent icon input">
+                                        <input class="prompt" id="searchBoxMob" type="text" placeholder="Search API Docs..."/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                            
+                            <div class="ui dropdown item capitalize">
+                                mime Module <i class="dropdown icon"></i>
+                                <div class="menu">
+    
+    
+        
+            <a class="item" data="objects" href="../mime/index.html#objects">Objects</a>
+        
+    
+    
+    
+    
+        <a class="item" data="functions" href="../mime/index.html#functions">Functions</a>
+    
+    
+        <a class="item" data="constants" href="../mime/index.html#constants">Constants</a>
+    
+    
+    
+        <a class="item" ata="types" href="../mime/index.html#types">Types</a>
+    
+    
+        <a class="item" data="errors" href="../mime/index.html#errors">Errors</a>
+    
+    <div class="ui divider"></div>
+</div>
+
+                            </div>
+                            <div class="ui dropdown item">
+                                Other Modules <i class="dropdown icon"></i>
+                                <div id="modules-list-mob" class="menu"></div>
+                            </div>
+                        
+
+                            <div class="ui dropdown item" id="version-picker-mob">
+                                Version <i class="dropdown icon"></i>
+                                <div class="menu">
+                                    <a class="item" value="1.0">1.0</a>
+                                    <a class="item" value="1.1">1.1</a>
+                                    <a class="item" value="1.2">1.2</a>
+                                    <a class="item" value="swan-lake">Swan Lake</a>
+                                </div>
+                            </div>
+                            <div class="ui dropdown item ballerina">
+                                Ballerina <i class="dropdown icon"></i>
+                                <div class="menu">
+                                    <a class="item active">Learn</a>
+                                    <a class="item">Events</a>
+                                    <a class="item">Central</a>
+                                    <a class="item">Community</a>
+                                </div>
+                            </div>
+
+                    </div>
+                </div>
+                <div id="search-impl"></div>
+                <div id="main">
+                    
+                        <div class="ui breadcrumb">
+                            <a class="section" href="
+                                 ../index.html">Modules</a>
+                            <i class="right angle icon divider"></i>
+                            <a class="section capitalize " href="../mime/index.html">mime</a>
+                            
+                                <i class="right angle icon divider"></i>
+                                <a class="section active" href="../mime/index.html#constants">
+    Constants
+</a>
+                                
+                            
+                        </div>
+                    
+
+                    <div class="ui very padded segment module-data">
+                            <h1 class="capitalize">
+    Constants
+
+                            
+                            </h1>
+                        
+    <div class="constants">
+        <div class="fields-listing">
+            <ul>
+                
+                    <li id="LEADING">
+                        <b >LEADING</b>
+                        <span class="type">  <span class="builtin-type">string</span></span> leading
+                    </li>
+                    
+                    <p>Header is placed before the payload of the request/response.</p>
+
+                
+                    <li id="TRAILING">
+                        <b >TRAILING</b>
+                        <span class="type">  <span class="builtin-type">string</span></span> trailing
+                    </li>
+                    
+                    <p>Header is placed after the payload of the request/response.</p>
+
+                
+                    <li id="APPLICATION_OCTET_STREAM">
+                        <b >APPLICATION_OCTET_STREAM</b>
+                        <span class="type">  <span class="builtin-type">string</span></span> application/octet-stream
+                    </li>
+                    
+                    <p>Represents the <code>application/octet-stream</code> media type.</p>
+
+                
+                    <li id="APPLICATION_JSON">
+                        <b >APPLICATION_JSON</b>
+                        <span class="type">  <span class="builtin-type">string</span></span> application/json
+                    </li>
+                    
+                    <p>Represents the <code>application/json</code> media type.</p>
+
+                
+                    <li id="APPLICATION_XML">
+                        <b >APPLICATION_XML</b>
+                        <span class="type">  <span class="builtin-type">string</span></span> application/xml
+                    </li>
+                    
+                    <p>Represents the <code>application/xml</code> media type.</p>
+
+                
+                    <li id="APPLICATION_SVG_XML">
+                        <b >APPLICATION_SVG_XML</b>
+                        <span class="type">  <span class="builtin-type">string</span></span> application/svg+xml
+                    </li>
+                    
+                    <p>Represents the <code>application/svg+xml</code> media type.</p>
+
+                
+                    <li id="APPLICATION_XHTML_XML">
+                        <b >APPLICATION_XHTML_XML</b>
+                        <span class="type">  <span class="builtin-type">string</span></span> application/xhtml+xml
+                    </li>
+                    
+                    <p>Represents the <code>application/xhtml+xml</code> media type.</p>
+
+                
+                    <li id="APPLICATION_SOAP_XML">
+                        <b >APPLICATION_SOAP_XML</b>
+                        <span class="type">  <span class="builtin-type">string</span></span> application/soap+xml
+                    </li>
+                    
+                    <p>Represents the <code>application/soap+xml</code> media type.</p>
+
+                
+                    <li id="APPLICATION_FORM_URLENCODED">
+                        <b >APPLICATION_FORM_URLENCODED</b>
+                        <span class="type">  <span class="builtin-type">string</span></span> application/x-www-form-urlencoded
+                    </li>
+                    
+                    <p>Represents the <code>application/x-www-form-urlencoded</code> media type.</p>
+
+                
+                    <li id="APPLICATION_PDF">
+                        <b >APPLICATION_PDF</b>
+                        <span class="type">  <span class="builtin-type">string</span></span> application/pdf
+                    </li>
+                    
+                    <p>Represents the <code>application/pdf</code> media type.</p>
+
+                
+                    <li id="IMAGE_JPEG">
+                        <b >IMAGE_JPEG</b>
+                        <span class="type">  <span class="builtin-type">string</span></span> image/jpeg
+                    </li>
+                    
+                    <p>Represents the <code>image/jpeg</code> media type.</p>
+
+                
+                    <li id="IMAGE_GIF">
+                        <b >IMAGE_GIF</b>
+                        <span class="type">  <span class="builtin-type">string</span></span> image/gif
+                    </li>
+                    
+                    <p>Represents the <code>image/gif</code> media type.</p>
+
+                
+                    <li id="IMAGE_PNG">
+                        <b >IMAGE_PNG</b>
+                        <span class="type">  <span class="builtin-type">string</span></span> image/png
+                    </li>
+                    
+                    <p>Represents the <code>image/png</code> media type.</p>
+
+                
+                    <li id="MULTIPART_FORM_DATA">
+                        <b >MULTIPART_FORM_DATA</b>
+                        <span class="type">  <span class="builtin-type">string</span></span> multipart/form-data
+                    </li>
+                    
+                    <p>Represents the <code>multipart/form-data</code> media type.</p>
+
+                
+                    <li id="MULTIPART_MIXED">
+                        <b >MULTIPART_MIXED</b>
+                        <span class="type">  <span class="builtin-type">string</span></span> multipart/mixed
+                    </li>
+                    
+                    <p>Represents the <code>multipart/mixed</code> media type.</p>
+
+                
+                    <li id="MULTIPART_ALTERNATIVE">
+                        <b >MULTIPART_ALTERNATIVE</b>
+                        <span class="type">  <span class="builtin-type">string</span></span> multipart/alternative
+                    </li>
+                    
+                    <p>Represents the <code>multipart/alternative</code> media type.</p>
+
+                
+                    <li id="MULTIPART_RELATED">
+                        <b >MULTIPART_RELATED</b>
+                        <span class="type">  <span class="builtin-type">string</span></span> multipart/related
+                    </li>
+                    
+                    <p>Represents the <code>multipart/related</code> media type.</p>
+
+                
+                    <li id="MULTIPART_PARALLEL">
+                        <b >MULTIPART_PARALLEL</b>
+                        <span class="type">  <span class="builtin-type">string</span></span> multipart/parallel
+                    </li>
+                    
+                    <p>Represents the <code>multipart/parallel</code> media type.</p>
+
+                
+                    <li id="TEXT_PLAIN">
+                        <b >TEXT_PLAIN</b>
+                        <span class="type">  <span class="builtin-type">string</span></span> text/plain
+                    </li>
+                    
+                    <p>Represents the <code>text/plain</code> media type.</p>
+
+                
+                    <li id="TEXT_HTML">
+                        <b >TEXT_HTML</b>
+                        <span class="type">  <span class="builtin-type">string</span></span> text/html
+                    </li>
+                    
+                    <p>Represents the <code>text/html</code> media type.</p>
+
+                
+                    <li id="TEXT_XML">
+                        <b >TEXT_XML</b>
+                        <span class="type">  <span class="builtin-type">string</span></span> text/xml
+                    </li>
+                    
+                    <p>Represents the <code>text/xml</code> media type.</p>
+
+                
+                    <li id="BOUNDARY">
+                        <b >BOUNDARY</b>
+                        <span class="type">  <span class="builtin-type">string</span></span> boundary
+                    </li>
+                    
+                    <p>Key name for <code>boundary</code> parameter in MediaType. This is needed for composite type media types.</p>
+
+                
+                    <li id="START">
+                        <b >START</b>
+                        <span class="type">  <span class="builtin-type">string</span></span> start
+                    </li>
+                    
+                    <p>Key name for <code>start</code> parameter in MediaType. This determines which part in the multipart message contains the
+payload.</p>
+
+                
+                    <li id="TYPE">
+                        <b >TYPE</b>
+                        <span class="type">  <span class="builtin-type">string</span></span> type
+                    </li>
+                    
+                    <p>Key name for <code>type</code> parameter in MediaType. This indicates the MIME media type of the <code>root</code> body part.</p>
+
+                
+                    <li id="CHARSET">
+                        <b >CHARSET</b>
+                        <span class="type">  <span class="builtin-type">string</span></span> charset
+                    </li>
+                    
+                    <p>Key name for <code>charset</code> parameter in MediaType. This indicates the character set of the body text.</p>
+
+                
+                    <li id="DEFAULT_CHARSET">
+                        <b >DEFAULT_CHARSET</b>
+                        <span class="type">  <span class="builtin-type">string</span></span> UTF-8
+                    </li>
+                    
+                    <p>Default charset to be used with MIME encoding and decoding.</p>
+
+                
+                    <li id="CONTENT_ID">
+                        <b >CONTENT_ID</b>
+                        <span class="type">  <span class="builtin-type">string</span></span> content-id
+                    </li>
+                    
+                    <p>Represents <code>content-id</code> header name.</p>
+
+                
+                    <li id="CONTENT_LENGTH">
+                        <b >CONTENT_LENGTH</b>
+                        <span class="type">  <span class="builtin-type">string</span></span> content-length
+                    </li>
+                    
+                    <p>Represents <code>content-length</code> header name.</p>
+
+                
+                    <li id="CONTENT_TYPE">
+                        <b >CONTENT_TYPE</b>
+                        <span class="type">  <span class="builtin-type">string</span></span> content-type
+                    </li>
+                    
+                    <p>Represents <code>content-type</code> header name.</p>
+
+                
+                    <li id="CONTENT_DISPOSITION">
+                        <b >CONTENT_DISPOSITION</b>
+                        <span class="type">  <span class="builtin-type">string</span></span> content-disposition
+                    </li>
+                    
+                    <p>Represents <code>content-disposition</code> header name.</p>
+
+                
+            </ul>
+        </div>
+    </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/components/prism-core.min.js"></script>
+<script src="../syntax-highlighter/prism-ballerina.js"></script>
+<script>
+    function toggleMenu() {
+        $('#mobMenu').transition('slide down')
+    }
+    $(document).ready(function () {
+        $('.ui.dropdown').dropdown();
+        $('#version-picker').dropdown('set selected', "1.2");
+        $('#version-picker-mob').dropdown('set selected', "1.2");
+
+    });
+
+    let mainNavLinks = document.querySelectorAll(".toc .ui.visible.left.vertical.sidebar.menu .menu a");
+    console.log(mainNavLinks);
+    let contentWrapper = document.querySelector(".content");
+    contentWrapper.addEventListener("scroll", event => {
+      let fromTop = contentWrapper.scrollTop;
+
+      mainNavLinks.forEach(link => {
+        let section = document.querySelector("#" + link.attributes.getNamedItem("data").textContent);
+
+        if (
+          section.offsetTop <= fromTop &&
+          section.offsetTop + section.offsetHeight > fromTop
+        ) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    });
+
+</script>
+<script>
+    var rootPath = "../";
+</script>
+<script src="../doc-search/search-data.js"></script>
+<script src="../doc-search/search.js"></script>
+<script>
+    var str = "";
+    var currentModule = "mime";
+    searchData.modules.forEach(function(module) {
+        var active = "";
+        if (currentModule==module.id) {
+            active = " active";
+        }
+        str += '<a class="item' + active + '" href="' + rootPath + module.id + '/index.html">' + module.id + '</a>';
+    });
+    document.getElementById("modules-list").innerHTML = str;
+    document.getElementById("modules-list-mob").innerHTML = str;
+</script>
+
+
+

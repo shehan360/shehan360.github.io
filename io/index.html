@@ -1,0 +1,809 @@
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="This module is designed to support input and output operations via channels in a canonical way, either in a blocking,
+or non-blocking manner.
+">
+    <meta name="keywords" content="ballerina,ballerina lang,api docs,io">
+
+    <title>API Docs - ballerina/io</title>
+
+    <script src="../html-template-resources/jquery.min.js"></script>
+    <link rel="stylesheet" href="../html-template-resources/semantic.min.css">
+    <link rel="stylesheet" href="../html-template-resources/components/icon.min.css">
+    <link rel="stylesheet" href="../html-template-resources/styles/css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/themes/prism.min.css" rel="stylesheet" />
+    <script src="../html-template-resources/semantic.min.js"></script>
+
+</head>
+
+
+<body>
+    <div class="pusher">
+        <div class="mobile-logo-div">
+            <div class="ui secondary menu">
+                <a href="../index.html">
+                    <img class="mobile-logo" src="../html-template-resources/images/ballerina-logo.png">
+                </a>
+                <div class="right item">
+                    <button class="ui icon button" onclick="toggleMenu()">
+                     <i class="large bars icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="toc">
+            <div class="ui visible left vertical sidebar menu">
+                <a href="
+                    ../index.html">
+                    <img class="logo" src="../html-template-resources/images/ballerina-logo.png">
+                </a>
+                
+                    
+                    <div class="header">
+                        <a class="capitalize" href="../io/index.html">
+                            io Module
+                        </a>
+                    </div>
+                    <div class="menu">
+    
+    
+        
+            <a class="item" data="objects" href="../io/index.html#objects">Objects</a>
+        
+    
+    
+    
+    
+        <a class="item" data="functions" href="../io/index.html#functions">Functions</a>
+    
+    
+        <a class="item" data="constants" href="../io/index.html#constants">Constants</a>
+    
+    
+    
+        <a class="item" ata="types" href="../io/index.html#types">Types</a>
+    
+    
+        <a class="item" data="errors" href="../io/index.html#errors">Errors</a>
+    
+    <div class="ui divider"></div>
+</div>
+
+                    <div class="header capitalize">
+                        Other Modules
+                    </div>
+                    <div id="modules-list" class="menu"></div>
+                    <div class="ui divider"></div>
+                
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="row nav-bar">
+                <div class="ui secondary menu">
+                    <div class="search-bar">
+                        <div class="ui category search item search-bar">
+                            <i class="search link icon"></i>
+                            <div class="ui transparent icon input">
+                                <input class="prompt" id="searchBox" type="text" placeholder="Search API Docs..."/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right menu">
+                        <a class="item active">Learn</a>
+                        <a class="item">Events</a>
+                        <a class="item">Central</a>
+                        <a class="item">Community</a>
+                        <a class="item">Blog</a>
+                        <div class="ui dropdown item ballerina" id="version-picker">
+                            Version
+                            <i class="dropdown icon"></i>
+                            <div class="menu">
+                                <a class="item" value="1.0">1.0</a>
+                                <a class="item" value="1.1">1.1</a>
+                                <a class="item" value="1.2">1.2</a>
+                                <a class="item" value="swan-lake">Swan Lake</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-content">
+                <div id="mobMenu" class="mob-menu">
+                    <div class="ui stackable secondary menu">
+                        <div class="item">
+                            <div class="search-bar">
+                                <div class="ui category search item search-bar">
+                                    <i class="search link icon"></i>
+                                    <div class="ui transparent icon input">
+                                        <input class="prompt" id="searchBoxMob" type="text" placeholder="Search API Docs..."/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                            
+                            <div class="ui dropdown item capitalize">
+                                io Module <i class="dropdown icon"></i>
+                                <div class="menu">
+    
+    
+        
+            <a class="item" data="objects" href="../io/index.html#objects">Objects</a>
+        
+    
+    
+    
+    
+        <a class="item" data="functions" href="../io/index.html#functions">Functions</a>
+    
+    
+        <a class="item" data="constants" href="../io/index.html#constants">Constants</a>
+    
+    
+    
+        <a class="item" ata="types" href="../io/index.html#types">Types</a>
+    
+    
+        <a class="item" data="errors" href="../io/index.html#errors">Errors</a>
+    
+    <div class="ui divider"></div>
+</div>
+
+                            </div>
+                            <div class="ui dropdown item">
+                                Other Modules <i class="dropdown icon"></i>
+                                <div id="modules-list-mob" class="menu"></div>
+                            </div>
+                        
+
+                            <div class="ui dropdown item" id="version-picker-mob">
+                                Version <i class="dropdown icon"></i>
+                                <div class="menu">
+                                    <a class="item" value="1.0">1.0</a>
+                                    <a class="item" value="1.1">1.1</a>
+                                    <a class="item" value="1.2">1.2</a>
+                                    <a class="item" value="swan-lake">Swan Lake</a>
+                                </div>
+                            </div>
+                            <div class="ui dropdown item ballerina">
+                                Ballerina <i class="dropdown icon"></i>
+                                <div class="menu">
+                                    <a class="item active">Learn</a>
+                                    <a class="item">Events</a>
+                                    <a class="item">Central</a>
+                                    <a class="item">Community</a>
+                                </div>
+                            </div>
+
+                    </div>
+                </div>
+                <div id="search-impl"></div>
+                <div id="main">
+                    
+                        <div class="ui breadcrumb">
+                            <a class="section" href="
+                                 ../index.html">Modules</a>
+                            <i class="right angle icon divider"></i>
+                            <a class="section capitalize active" href="../io/index.html">io</a>
+                            
+                        </div>
+                    
+
+                    <div class="ui very padded segment module-data">
+                            <h1 class="capitalize">
+    Module: io
+
+                            
+                            </h1>
+                        
+    <h2>ballerina/io:0.5.0</h2>
+    <h2>Module Overview</h2>
+<p>This module is designed to support input and output operations via channels in a canonical way, either in a blocking,
+or non-blocking manner.</p>
+<p><img src="resources/package-architecture.svg" alt="architecture" /></p>
+<h3>Channels</h3>
+<p>A channel represents an I/O source or sink of some bytes, characters, or records that are opened for reading or
+writing respectively.</p>
+<h3>Byte channels</h3>
+<p>The most primitive channel is the <code>ByteChannel</code> which reads and writes 8-bit bytes. For an example on the <code>ByteChannel</code>, see the <a href="https://ballerina.io/swan-lake/learn/by-example/byte-io.html">Byte I/O Example</a>.</p>
+<h3>Character channels</h3>
+<p>The <code>CharacterChannel</code> is used to read and write characters. The charset encoding is specified when creating the <code>CharacterChannel</code>. For an example on the <code>CharacterChannel</code>, see the <a href="https://ballerina.io/swan-lake/learn/by-example/character-io.html">Read/Write Files Example</a>.</p>
+<p>If a <code>ReadableCharacterChannel</code> points to a JSON or XML source, it can be read and then written directly into a variable of
+the respective type. For examples on reading/writing JSON or XML sources, see the <a href="https://ballerina.io/swan-lake/learn/by-example/json-io.html">JSON I/O Example</a> and <a href="https://ballerina.io/swan-lake/learn/by-example/xml-io.html">XML I/O Example</a>.</p>
+<h3>Record channels</h3>
+<p>Also, Ballerina supports I/O for delimited records. For an example on reading the records in a text file, see the <a href="https://ballerina.io/swan-lake/learn/by-example/record-io.html">Record I/O Example</a>.</p>
+<p>A <code>.CSV</code> file can be read and written directly into a <code>CSVChannel</code> as shown in this <a href="https://ballerina.io/swan-lake/learn/by-example/csv-io.html">CSV I/O Example</a>.</p>
+<h3>Data Channels</h3>
+<p>Ballerina supports performing data i/o operations.</p>
+<p>A Person object could be serialized into a file or a network socket as seen in the <a href="https://ballerina.io/swan-lake/learn/by-example/data-io.html">Data I/O Example</a>.</p>
+
+
+    
+
+    
+        
+            <section id="objects">
+                <div class="main-method-title here">
+                    <a class="url-link" href="#objects">
+                        <img class="url-link-img" src="../html-template-resources/images/link.svg">
+                    </a>
+                    <h2> Objects </h2>
+                    <p>[11]</p>
+                </div>
+                <div class="ui divider"></div>
+                <table class="ui very basic table">
+                    
+                    
+                    <tr>
+                        <td class="module-title truncate objects" id="ReadableByteChannel" title="ReadableByteChannel">
+                            <a class="objects " href="objects/ReadableByteChannel.html">ReadableByteChannel</a>
+                        </td>
+                        <td class="module-desc">
+                            
+                            <p>ReadableByteChannel represents an input resource (i.
+                        </td>
+                    </tr>
+                    
+                    
+                    
+                    <tr>
+                        <td class="module-title truncate objects" id="ReadableCSVChannel" title="ReadableCSVChannel">
+                            <a class="objects " href="objects/ReadableCSVChannel.html">ReadableCSVChannel</a>
+                        </td>
+                        <td class="module-desc">
+                            
+                            <p>Represents a ReadableCSVChannel which could be used to read records from CSV file.
+                        </td>
+                    </tr>
+                    
+                    
+                    
+                    <tr>
+                        <td class="module-title truncate objects" id="ReadableCharacterChannel" title="ReadableCharacterChannel">
+                            <a class="objects " href="objects/ReadableCharacterChannel.html">ReadableCharacterChannel</a>
+                        </td>
+                        <td class="module-desc">
+                            
+                            <p>Represents a channel, which could be used to read characters through a given ReadableByteChannel.
+                        </td>
+                    </tr>
+                    
+                    
+                    
+                    <tr>
+                        <td class="module-title truncate objects" id="ReadableDataChannel" title="ReadableDataChannel">
+                            <a class="objects " href="objects/ReadableDataChannel.html">ReadableDataChannel</a>
+                        </td>
+                        <td class="module-desc">
+                            
+                            <p>Represents a data channel for reading data.
+                        </td>
+                    </tr>
+                    
+                    
+                    
+                    <tr>
+                        <td class="module-title truncate objects" id="ReadableTextRecordChannel" title="ReadableTextRecordChannel">
+                            <a class="objects " href="objects/ReadableTextRecordChannel.html">ReadableTextRecordChannel</a>
+                        </td>
+                        <td class="module-desc">
+                            
+                            <p>Represents a channel which will allow to read</p>
+
+                        </td>
+                    </tr>
+                    
+                    
+                    
+                    <tr>
+                        <td class="module-title truncate objects" id="StringReader" title="StringReader">
+                            <a class="objects " href="objects/StringReader.html">StringReader</a>
+                        </td>
+                        <td class="module-desc">
+                            
+                            <p>Represents a reader which will wrap string content as a channel.
+                        </td>
+                    </tr>
+                    
+                    
+                    
+                    <tr>
+                        <td class="module-title truncate objects" id="WritableByteChannel" title="WritableByteChannel">
+                            <a class="objects " href="objects/WritableByteChannel.html">WritableByteChannel</a>
+                        </td>
+                        <td class="module-desc">
+                            
+                            <p>WritableByteChannel represents an output resource (i.
+                        </td>
+                    </tr>
+                    
+                    
+                    
+                    <tr>
+                        <td class="module-title truncate objects" id="WritableCSVChannel" title="WritableCSVChannel">
+                            <a class="objects " href="objects/WritableCSVChannel.html">WritableCSVChannel</a>
+                        </td>
+                        <td class="module-desc">
+                            
+                            <p>Represents a WritableCSVChannel, which could be used to write records from the CSV file.
+                        </td>
+                    </tr>
+                    
+                    
+                    
+                    <tr>
+                        <td class="module-title truncate objects" id="WritableCharacterChannel" title="WritableCharacterChannel">
+                            <a class="objects " href="objects/WritableCharacterChannel.html">WritableCharacterChannel</a>
+                        </td>
+                        <td class="module-desc">
+                            
+                            <p>Represents a channel which could be used to write characters through a given WritableCharacterChannel.
+                        </td>
+                    </tr>
+                    
+                    
+                    
+                    <tr>
+                        <td class="module-title truncate objects" id="WritableDataChannel" title="WritableDataChannel">
+                            <a class="objects " href="objects/WritableDataChannel.html">WritableDataChannel</a>
+                        </td>
+                        <td class="module-desc">
+                            
+                            <p>Represents a WritableDataChannel for writing data.
+                        </td>
+                    </tr>
+                    
+                    
+                    
+                    <tr>
+                        <td class="module-title truncate objects" id="WritableTextRecordChannel" title="WritableTextRecordChannel">
+                            <a class="objects " href="objects/WritableTextRecordChannel.html">WritableTextRecordChannel</a>
+                        </td>
+                        <td class="module-desc">
+                            
+                            <p>Represents a channel, which will allow to write records through a given WritableCharacterChannel.
+                        </td>
+                    </tr>
+                    
+                    
+                </table>
+            </section>
+        
+    
+
+    
+
+    
+
+
+    
+    <section id="functions">
+        <div class="main-method-title here">
+            <a class="url-link" href="#functions">
+                <img class="url-link-img" src="../html-template-resources/images/link.svg">
+            </a>
+            <h2> Functions </h2>
+            <p>[9]</p>
+        </div>
+        <div class="ui divider"></div>
+        <table class="ui very basic table">
+            
+            <tr>
+                <td class="module-title truncate functions" id="createReadableChannel" title="createReadableChannel">
+                    <a class="functions " href="functions.html#createReadableChannel">createReadableChannel</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Creates an in-memory channel, which will be a reference stream of bytes.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate functions" id="openReadableCsvFile" title="openReadableCsvFile">
+                    <a class="functions " href="functions.html#openReadableCsvFile">openReadableCsvFile</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Retrieves a readable CSV channel from a given file path.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate functions" id="openReadableFile" title="openReadableFile">
+                    <a class="functions " href="functions.html#openReadableFile">openReadableFile</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Retrieves a <code>ReadableByteChannel</code> from a given file path.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate functions" id="openWritableCsvFile" title="openWritableCsvFile">
+                    <a class="functions " href="functions.html#openWritableCsvFile">openWritableCsvFile</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Retrieves a writable CSV channel from a given file path.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate functions" id="openWritableFile" title="openWritableFile">
+                    <a class="functions " href="functions.html#openWritableFile">openWritableFile</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Retrieves a <code>WritableByteChannel</code> from a given file path.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate functions" id="print" title="print">
+                    <a class="functions " href="functions.html#print">print</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Prints <code>any</code> or <code>error</code> value(s) to the STDOUT.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate functions" id="println" title="println">
+                    <a class="functions " href="functions.html#println">println</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Prints <code>any</code> or <code>error</code> value(s) to the STDOUT followed by a new line.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate functions" id="readln" title="readln">
+                    <a class="functions " href="functions.html#readln">readln</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Retrieves the input read from the STDIN.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate functions" id="sprintf" title="sprintf">
+                    <a class="functions " href="functions.html#sprintf">sprintf</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Returns a formatted string using the specified format string and arguments.
+                </td>
+            </tr>
+            
+        </table>
+    </section>
+    
+
+
+    
+    <section id="constants">
+        <div class="main-method-title here">
+            <a class="url-link" href="#constants">
+                <img class="url-link-img" src="../html-template-resources/images/link.svg">
+            </a>
+            <h2> Constants </h2>
+            <p>[11]</p>
+        </div>
+        <div class="ui divider"></div>
+        <table class="ui very basic table">
+            
+            <tr>
+                <td class="module-title truncate constant" id="DEFAULT" title="DEFAULT">
+                    <a class="constant " href="constants.html#DEFAULT">DEFAULT</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Default value is the format specified by the CSVChannel.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate constant" id="CSV" title="CSV">
+                    <a class="constant " href="constants.html#CSV">CSV</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Field separator will be &quot;,&quot; and the record separator will be a new line.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate constant" id="TDF" title="TDF">
+                    <a class="constant " href="constants.html#TDF">TDF</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Field separator will be a tab and the record separator will be a new line.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate constant" id="COMMA" title="COMMA">
+                    <a class="constant " href="constants.html#COMMA">COMMA</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Comma (,) will be used as the field separator.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate constant" id="TAB" title="TAB">
+                    <a class="constant " href="constants.html#TAB">TAB</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Tab (/t) will be use as the field separator.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate constant" id="COLON" title="COLON">
+                    <a class="constant " href="constants.html#COLON">COLON</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Colon (:) will be use as the field separator.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate constant" id="CSV_RECORD_SEPARATOR" title="CSV_RECORD_SEPARATOR">
+                    <a class="constant " href="constants.html#CSV_RECORD_SEPARATOR">CSV_RECORD_SEPARATOR</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Represents the record separator of the CSV file.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate constant" id="FS_COLON" title="FS_COLON">
+                    <a class="constant " href="constants.html#FS_COLON">FS_COLON</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Represents the colon separator, which should be used to identify colon-separated files.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate constant" id="MINIMUM_HEADER_COUNT" title="MINIMUM_HEADER_COUNT">
+                    <a class="constant " href="constants.html#MINIMUM_HEADER_COUNT">MINIMUM_HEADER_COUNT</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Represents the minimum number of headers, which will be included in the CSV.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate constant" id="BIG_ENDIAN" title="BIG_ENDIAN">
+                    <a class="constant " href="constants.html#BIG_ENDIAN">BIG_ENDIAN</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Specifies the bytes to be in the order of most significant byte first.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate constant" id="LITTLE_ENDIAN" title="LITTLE_ENDIAN">
+                    <a class="constant " href="constants.html#LITTLE_ENDIAN">LITTLE_ENDIAN</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Specifies the byte order to be the least significant byte first.
+                </td>
+            </tr>
+            
+        </table>
+    </section>
+    
+
+
+    
+
+    
+    <section id="types">
+        <div class="main-method-title here">
+            <a class="url-link" href="#types">
+                <img class="url-link-img" src="../html-template-resources/images/link.svg">
+            </a>
+            <h2> Types </h2>
+            <p>[3]</p>
+        </div>
+        <div class="ui divider"></div>
+        <table class="ui very basic table">
+            
+                <tr>
+                    <td class="module-title truncate types" id="Error" title="Error">
+                        <a class="types " href="types.html#Error">Error</a>
+                    </td>
+                    <td class="module-desc">
+                        
+                        <p>Represents IO module related errors.
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td class="module-title truncate types" id="Format" title="Format">
+                        <a class="types " href="types.html#Format">Format</a>
+                    </td>
+                    <td class="module-desc">
+                        
+                        <p>The format, which will be used to represent the CSV.
+                    </td>
+                </tr>
+            
+                <tr>
+                    <td class="module-title truncate types" id="Separator" title="Separator">
+                        <a class="types " href="types.html#Separator">Separator</a>
+                    </td>
+                    <td class="module-desc">
+                        
+                        <p>Field separators, which are supported by the <code>DelimitedTextRecordChannel</code>.
+                    </td>
+                </tr>
+            
+            
+                <tr>
+                    <td class="module-title truncate types" id="ByteOrder" title="ByteOrder">
+                        <a class="types " href="types.html#ByteOrder">ByteOrder</a>
+                    </td>
+                    <td class="module-desc">
+                        
+                        <p>Represents network byte order.
+                    </td>
+                </tr>
+            
+        </table>
+    </section>
+    
+
+    
+    <section id="errors">
+        <div class="main-method-title here">
+            <a class="url-link" href="#errors">
+                <img class="url-link-img" src="../html-template-resources/images/link.svg">
+            </a>
+            <h2> Errors </h2>
+            <p>[5]</p>
+        </div>
+        <div class="ui divider"></div>
+        <table class="ui very basic table">
+            
+            <tr>
+                <td class="module-title truncate errors" id="AccessDeniedError" title="AccessDeniedError">
+                    <a class="errors " href="errors.html#AccessDeniedError">AccessDeniedError</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>This will get returned due to file permission issues.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate errors" id="ConnectionTimedOutError" title="ConnectionTimedOutError">
+                    <a class="errors " href="errors.html#ConnectionTimedOutError">ConnectionTimedOutError</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>This will return when connection timed out happen when try to connect to a remote host.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate errors" id="EofError" title="EofError">
+                    <a class="errors " href="errors.html#EofError">EofError</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>This will get returned if read operations are performed on a channel after it closed.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate errors" id="FileNotFoundError" title="FileNotFoundError">
+                    <a class="errors " href="errors.html#FileNotFoundError">FileNotFoundError</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>This will get returned if the file is not available in the given file path.
+                </td>
+            </tr>
+            
+            <tr>
+                <td class="module-title truncate errors" id="GenericError" title="GenericError">
+                    <a class="errors " href="errors.html#GenericError">GenericError</a>
+                </td>
+                <td class="module-desc">
+                    
+                    <p>Represents generic IO error.
+                </td>
+            </tr>
+            
+        </table>
+    </section>
+    
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.14.0/components/prism-core.min.js"></script>
+<script src="../syntax-highlighter/prism-ballerina.js"></script>
+<script>
+    function toggleMenu() {
+        $('#mobMenu').transition('slide down')
+    }
+    $(document).ready(function () {
+        $('.ui.dropdown').dropdown();
+        $('#version-picker').dropdown('set selected', "1.2");
+        $('#version-picker-mob').dropdown('set selected', "1.2");
+
+    });
+
+    let mainNavLinks = document.querySelectorAll(".toc .ui.visible.left.vertical.sidebar.menu .menu a");
+    console.log(mainNavLinks);
+    let contentWrapper = document.querySelector(".content");
+    contentWrapper.addEventListener("scroll", event => {
+      let fromTop = contentWrapper.scrollTop;
+
+      mainNavLinks.forEach(link => {
+        let section = document.querySelector("#" + link.attributes.getNamedItem("data").textContent);
+
+        if (
+          section.offsetTop <= fromTop &&
+          section.offsetTop + section.offsetHeight > fromTop
+        ) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+    });
+
+</script>
+<script>
+    var rootPath = "../";
+</script>
+<script src="../doc-search/search-data.js"></script>
+<script src="../doc-search/search.js"></script>
+<script>
+    var str = "";
+    var currentModule = "io";
+    searchData.modules.forEach(function(module) {
+        var active = "";
+        if (currentModule==module.id) {
+            active = " active";
+        }
+        str += '<a class="item' + active + '" href="' + rootPath + module.id + '/index.html">' + module.id + '</a>';
+    });
+    document.getElementById("modules-list").innerHTML = str;
+    document.getElementById("modules-list-mob").innerHTML = str;
+</script>
+
+
+
